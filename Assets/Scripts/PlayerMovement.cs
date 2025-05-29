@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -8,26 +9,36 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float speed;
     [SerializeField] float jumpForce;
 
-    void Start() {
+    [SerializeField] Transform GroundCheck;
+    [SerializeField] LayerMask Ground;
+
+    void Start()
+    {
         rb = GetComponent<Rigidbody2D>();
     }
 
-    void FixedUpdate() {
+    void FixedUpdate()
+    {
         rb.velocity = new Vector2(x, rb.velocity.y).normalized * speed;
     }
 
-    void Update() {
+    void Update()
+    {
         InputDirectionMovement();
         Jump();
     }
 
-    void InputDirectionMovement() {
+    void InputDirectionMovement()
+    {
         x = Input.GetAxisRaw("Horizontal");
     }
 
-    void Jump(){
-        if(Input.GetButtonDown("Jump")) {
-            rb.AddForce(new Vector2(0, jumpForce));
+    void Jump()
+    {
+        bool isGrounded = Physics2D.Raycast(GroundCheck.position, Vector2.down, 0.1f, Ground);
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        {
+            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
     }
 }
