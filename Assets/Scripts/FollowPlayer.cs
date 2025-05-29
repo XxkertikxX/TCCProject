@@ -15,7 +15,9 @@ public class FollowPlayer : MonoBehaviour
         if (CanFollowY) {
             pos.y = Mathf.Lerp(pos.y, Target.position.y, Time.deltaTime*5);
         }
-        transform.position = pos;
+        if (transform.position.x < pos.x) {
+            transform.position = pos;
+        }
     }
 
     void FollowX() {
