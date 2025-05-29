@@ -12,33 +12,27 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] Transform GroundCheck;
     [SerializeField] LayerMask Ground;
 
-    void Start()
-    {
+    void Start() {
         rb = GetComponent<Rigidbody2D>();
     }
 
-    void FixedUpdate()
-    {
+    void FixedUpdate() {
         rb.velocity = new Vector2(x, rb.velocity.y).normalized * speed;
     }
 
-    void Update()
-    {
+    void Update() {
         InputDirectionMovement();
         Jump();
     }
 
-    void InputDirectionMovement()
-    {
+    void InputDirectionMovement() {
         x = Input.GetAxisRaw("Horizontal");
     }
 
-    void Jump()
-    {
+    void Jump() {
         bool isGrounded = Physics2D.Raycast(GroundCheck.position, Vector2.down, 0.1f, Ground);
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
-        {
-            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded) {
+            rb.AddForce(Vector2.up * jumpForce);
         }
     }
 }
