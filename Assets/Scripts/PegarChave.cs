@@ -5,7 +5,7 @@ using UnityEngine;
 public class PegarChave : MonoBehaviour
 {
     static public bool HaveKey;
-    void private void OnTriggerEnter2D(Collider2D collision) {
+    void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.CompareTag("Key")) {
             Destroy(collision.gameObject);
             HaveKey = true;
