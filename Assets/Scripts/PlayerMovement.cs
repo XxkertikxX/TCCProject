@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
     void Jump() {
         bool isGrounded = Physics2D.Raycast(GroundCheck.position, Vector2.down, 0.1f, Ground);
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded) {
-            rb.AddForce(Vector2.up * jumpForce);
+            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
     }
 }
