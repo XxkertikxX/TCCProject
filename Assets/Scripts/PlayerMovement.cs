@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void FixedUpdate() {
-        rb.velocity = new Vector2(x, rb.velocity.y).normalized * speed;
+        rb.velocity = new Vector2(x * speed, rb.velocity.y);
     }
 
     void Update() {
