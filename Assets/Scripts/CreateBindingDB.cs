@@ -4,8 +4,8 @@ using LiteDB;
 public class CreateBindingDB : MonoBehaviour
 {
     void Start() {
+        DestroyExistentDB();
         using (var db = new LiteDatabase(Path())) {
-            DestroyExistentDB();
             var col = db.GetCollection<KeyBinding>("bindings");
             CreateKeys(col);
         }
