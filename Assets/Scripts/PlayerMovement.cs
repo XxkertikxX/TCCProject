@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -13,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] LayerMask Ground;
 
     void Start() {
+        Bindings.UpdateBindings();
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -26,12 +26,20 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void InputDirectionMovement() {
-        x = Input.GetAxisRaw("Horizontal");
+        x = 0;
+        DirectionX(Bindings.bindings["Left"], -1);
+        DirectionX(Bindings.bindings["Right"], 1);
+    }
+
+    void DirectionX(KeyCode key, int direction) {
+        if (Input.GetKey(key)) {
+            x += direction;
+        }
     }
 
     void Jump() {
         bool isGrounded = Physics2D.Raycast(GroundCheck.position, Vector2.down, 0.1f, Ground);
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded) {
+        if (Input.GetKeyDown(Bindings.bindings["Jump"]) && isGrounded) {
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
     }
