@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 using LiteDB;
 
 public class ChangeBinding : MonoBehaviour

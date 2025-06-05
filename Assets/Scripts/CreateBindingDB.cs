@@ -14,7 +14,7 @@ public class CreateBindingDB : MonoBehaviour
                 
             var col = db.GetCollection<KeyBinding>("bindings");
 
-            col.Upsert(new KeyBinding { KeyName = "Jump", Key = KeyCode.Space });
+            col.Upsert(new KeyBinding { keyName = "Jump", key = KeyCode.Space });
         }
     }
 }
