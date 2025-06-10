@@ -1,4 +1,4 @@
-interface ISkills
+public interface ISkills
 {
     public void Skill1(StatusCharacters Character);
 
