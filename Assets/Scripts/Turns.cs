@@ -7,10 +7,10 @@ public class Turns : MonoBehaviour
     Queue<ISkills> characters;
 
     private void OnEnable() {
-        PushCharacters();
+        TakeCharacters();
     }
 
-    void PushCharacters() {
+    void TakeCharacters() {
         GameObject[] Char = GameObject.FindGameObjectsWithTag("Character");
         foreach (var c in Char) {
             statusCharacters.Add(c.GetComponent<StatusCharacters>());
