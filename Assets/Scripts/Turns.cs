@@ -4,7 +4,7 @@ using UnityEngine;
 public class Turns : MonoBehaviour
 {
     List<StatusCharacters> statusCharacters;
-    Queue<ISkills> characters;
+    Queue<ISkill> characters;
 
     private void OnEnable() {
         TakeCharacters();
@@ -17,7 +17,12 @@ public class Turns : MonoBehaviour
         }
     }
 
-    void OrderAttack() {
+    void OrderAttack()
+    {
+        List<StatusCharacters> statsChar;
 
+        for (int i = 0; i < characters.Count; i++)
+        {
+        }
     }
 }
