@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
-
+using System.Linq;
 public class Turns : MonoBehaviour
 {
     List<StatusCharacters> statusCharacters;
@@ -8,6 +8,7 @@ public class Turns : MonoBehaviour
 
     private void OnEnable() {
         TakeCharacters();
+        OrderAttack();
     }
 
     void TakeCharacters() {
@@ -17,12 +18,7 @@ public class Turns : MonoBehaviour
         }
     }
 
-    void OrderAttack()
-    {
-        List<StatusCharacters> statsChar;
-
-        for (int i = 0; i < characters.Count; i++)
-        {
-        }
+    void OrderAttack() {
+        statusCharacters = statusCharacters.OrderByDescending(stats => stats.speedAttack).ToList();
     }
 }
