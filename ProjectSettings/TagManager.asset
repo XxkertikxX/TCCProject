@@ -5,7 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - troca
-  - Key
+  - Character
+  - Enemy
   layers:
   - Default
   - TransparentFX
