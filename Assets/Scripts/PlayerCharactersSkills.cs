@@ -3,8 +3,19 @@ using UnityEngine;
 
 public class PlayerCharactersSkills : MonoBehaviour
 {
-    public List<ISkill> skills;
+    public StatusCharacters character;
+
+    void OnEnable() {
+        TextUpdate();
+    }
+    
     public void PressButtonSkill(int PosSkill) {
-        skills[PosSkill].Skill();
+        character.skills[PosSkill].Skill();
+        character.AttackInTheTurn = true;
+        gameObject.SetActive(false);
+    }
+
+    void TextUpdate() {
+        
     }
 }
