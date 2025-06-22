@@ -18,7 +18,7 @@ public class EnemyTurn : MonoBehaviour
     bool AllCharactersPlay() {
         var characters = GameObject.FindGameObjectsWithTag("Character");
         foreach (var character in characters) {
-            if (character.GetComponent<CharacterStatus>().character.AttackInTheTurn) {
+            if (!character.GetComponent<CharacterStatus>().character.AttackInTheTurn) {
                 return false;
             }
         }
