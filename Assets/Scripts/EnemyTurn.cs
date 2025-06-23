@@ -7,6 +7,7 @@ public class EnemyTurn : MonoBehaviour
     void Update() {
         if (AllCharactersPlay()) {
             EnemyAttack();
+            ResetTurn();
         }
     }
     void EnemyAttack() {
@@ -22,5 +23,12 @@ public class EnemyTurn : MonoBehaviour
             }
         }
         return true;
+    }
+
+    void ResetTurn(){
+        var characters = GameObject.FindGameObjectsWithTag("Character");
+        foreach(var character in characters) {
+            character.GetComponent<CharacterStatus>().character.AttackInTheTurn = false;
+        }
     }
 }
