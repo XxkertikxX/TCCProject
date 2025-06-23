@@ -7,7 +7,7 @@ public class SystemRhythm : MonoBehaviour
     [SerializeField] Transform InstantiatePosition;
     [SerializeField] int TimesForInvoke;
     [SerializeField] float TimePerInvokeLine;
-
+    
     void OnEnable() {
         StartCoroutine(SpawnLines());
     }
