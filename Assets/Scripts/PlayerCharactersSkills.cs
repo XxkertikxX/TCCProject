@@ -2,23 +2,19 @@ using UnityEngine;
 
 public class PlayerCharactersSkills : MonoBehaviour
 {
-    public StatusCharacters character;
+    static public StatusCharacters character;
 
     void OnEnable() {
         TextUpdate();
     }
-    
-    public void PressButtonSkill(int PosSkill) {
-        character.skills[PosSkill].Skill(character.damage, Enemyhp());
-        character.AttackInTheTurn = true;
+
+    public void PressButtonSkill(int posSkill) {
+        SystemRhythm.PosSkill = posSkill;
         gameObject.SetActive(false);
+        RhythmObj.Rhythm.SetActive(true);
     }
 
-    hp Enemyhp() {
-        return GameObject.FindGameObjectWithTag("Enemy").GetComponent<hp>();
-    }
-    
     void TextUpdate() {
-        
+
     }
 }
