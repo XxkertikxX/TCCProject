@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerCharactersSkills : MonoBehaviour
@@ -10,11 +9,15 @@ public class PlayerCharactersSkills : MonoBehaviour
     }
     
     public void PressButtonSkill(int PosSkill) {
-        character.skills[PosSkill].Skill();
+        character.skills[PosSkill].Skill(character.damage, Enemyhp());
         character.AttackInTheTurn = true;
         gameObject.SetActive(false);
     }
 
+    hp Enemyhp() {
+        return GameObject.FindGameObjectWithTag("Enemy").GetComponent<hp>();
+    }
+    
     void TextUpdate() {
         
     }

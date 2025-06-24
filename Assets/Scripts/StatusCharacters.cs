@@ -7,5 +7,5 @@ public class StatusCharacters : ScriptableObject
     public float hp;
     public float damage;
     public bool AttackInTheTurn;
-    public List<ISkill> skills;
+    public List<SkillBase> skills;
 }
