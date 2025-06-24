@@ -17,6 +17,10 @@ public class hp : MonoBehaviour
         }
     }
 
+    public void Heal(float heal) {
+        life += heal;
+    }
+
     bool IsDead() {
         if (life <= 0) {
             return true;
