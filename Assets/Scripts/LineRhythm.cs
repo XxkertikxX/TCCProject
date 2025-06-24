@@ -2,18 +2,17 @@ using UnityEngine;
 
 public class LineRhythm : MonoBehaviour
 {
+    public int linesMissingSpawn;
+
     float totallyLineCoord;
     float totallyLineSize;
-    Transform centerLine;
     float speed = 1f;
 
     float damage;
     
-    void Start(){
-        GameObject totallyLine = GameObject.FindGameObjectWithTag("TotallyLine");
-        totallyLineCoord = totallyLine.GetComponent<Renderer>().bounds.max.x;
-        totallyLineSize = totallyLine.GetComponent<Renderer>().bounds.size.x;
-        centerLine = GameObject.FindGameObjectWithTag("CenterLine").GetComponent<Transform>();
+    void Start()  {
+        totallyLineCoord = RhythmObj.rendTotallyLine.bounds.max.x;
+        totallyLineSize = RhythmObj.rendTotallyLine.bounds.size.x;
     }
 
     void Update(){
@@ -33,7 +32,7 @@ public class LineRhythm : MonoBehaviour
     }
 
     float PerDamage(){
-        float distance = Mathf.Abs(transform.position.x - centerLine.position.x);
+        float distance = Mathf.Abs(transform.position.x - RhythmObj.centerLine.position.x);
         return 1f - (distance / (totallyLineSize / 2f));
     }
 
@@ -45,6 +44,9 @@ public class LineRhythm : MonoBehaviour
     }
 
     void OnDestroy() {
+        if (linesMissingSpawn == 1) {
+            RhythmObj.Rhythm.SetActive(false);
+        }
         CatalystSkills.Damage += damage;
     }
 }
