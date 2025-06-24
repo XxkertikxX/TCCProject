@@ -24,12 +24,14 @@ public class DialogueTrigger : MonoBehaviour
     void Start()
     {
         if (promptApertarE)
+        {
             promptApertarE.SetActive(false);
+        }
     }
 
     void Update()
     {
-        if (DialogueManager.Instancia.DialogoAtivo) return;
+        if (DialogueManager.Instancia.DialogoAtivo) { return; }
 
         bool estaNoChao = Physics2D.Raycast(GroundCheck.position, Vector2.down, 0.1f, camadaDoChao);
 
@@ -51,30 +53,36 @@ public class DialogueTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D outro)
     {
-        if (!outro.CompareTag("Player")) return;
+        if (!outro.CompareTag("Player")) { return; }
         dentroDoTrigger = true;
         if (!precisaInteragir)
         {
             bool estaNoChao = Physics2D.Raycast(GroundCheck.position, Vector2.down, 0.1f, camadaDoChao);
             if (estaNoChao && (!soUmaVez || !jaFalou))
+            {
                 AcionarDialogo();
+            }
         }
     }
 
     private void OnTriggerExit2D(Collider2D outro)
     {
-        if (!outro.CompareTag("Player")) return;
+        if (!outro.CompareTag("Player")) { return; }
         dentroDoTrigger = false;
-        if (promptApertarE)
+        if (promptApertarE) 
+        {
             promptApertarE.SetActive(false);
+        }
     }
 
     private void AcionarDialogo()
     {
-        if (soUmaVez && jaFalou) return;
+        if (soUmaVez && jaFalou) { return; }
         jaFalou = true;
         if (promptApertarE)
+        {
             promptApertarE.SetActive(false);
+        }
         DialogueManager.Instancia.IniciarDialogo(linhas);
     }
 }
