@@ -11,7 +11,7 @@ public class DialogueManager : MonoBehaviour
     public Image imagemNPC;
     public float velocidadeDivaga = 0.05f;
     public float velocidadeRapidin = 0.01f;
-    [SerializeField] GameObject Battle;
+    [SerializeField] SetupBattle Battle = null;
 
     private Coroutine Divaga;
     private DialogueTrigger.LinhaDialogo[] linhas;
@@ -29,12 +29,11 @@ public class DialogueManager : MonoBehaviour
     }
 
     void Start() {
-        telaDeDialogo.SetActive(false);
         velocidadeAtual = velocidadeDivaga;
     }
 
     void Update() {
-        if (!telaDeDialogo.activeSelf) return;
+        //if (!telaDeDialogo.activeSelf) return;
 
         if (Input.GetKey(KeyCode.Space) && !textoPronto)
             velocidadeAtual = velocidadeRapidin;
@@ -46,7 +45,7 @@ public class DialogueManager : MonoBehaviour
     }
 
     public void IniciarDialogo(DialogueTrigger.LinhaDialogo[] novasLinhas) {
-        if (telaDeDialogo.activeSelf) return;
+        //if (telaDeDialogo.activeSelf) return;
         linhas = novasLinhas;
         indiceAtual = 0;
         Time.timeScale = 0f;
@@ -97,7 +96,7 @@ public class DialogueManager : MonoBehaviour
         if (movimentador != null)
             movimentador.enabled = true;
         if(Battle != null){
-            Battle.SetActive(false);
+            Battle.ActiveUI();
         }
     }
 }

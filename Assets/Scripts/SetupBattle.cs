@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SetupBattle : MonoBehaviour
@@ -12,7 +10,7 @@ public class SetupBattle : MonoBehaviour
         dial.IniciarDialogo(dialogo.linhas);
     }
 
-    void OnDisable(){
+    public void ActiveUI(){
         UI.SetActive(true);
     }
 }
