@@ -1005,9 +1005,11 @@ GameObject:
   m_Component:
   - component: {fileID: 734198229}
   - component: {fileID: 734198228}
+  - component: {fileID: 734198231}
+  - component: {fileID: 734198230}
   m_Layer: 0
   m_Name: Perso4
-  m_TagString: Player
+  m_TagString: Character
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1080,6 +1082,33 @@ Transform:
   m_Father: {fileID: 1627341858}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &734198230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 734198227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4e8975a6fc5f7a4db4c179fbeb105b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: {fileID: 0}
+--- !u!114 &734198231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 734198227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40c91fc081b6d8c40a43249abc30f431, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeText: {fileID: 1852864130}
+  lifeSlider: {fileID: 363852466}
 --- !u!1 &747662620
 GameObject:
   m_ObjectHideFlags: 0
@@ -2466,9 +2495,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1573877227}
   - component: {fileID: 1573877226}
+  - component: {fileID: 1573877229}
+  - component: {fileID: 1573877228}
   m_Layer: 0
   m_Name: Perso2
-  m_TagString: Player
+  m_TagString: Character
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2541,6 +2572,33 @@ Transform:
   m_Father: {fileID: 1627341858}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1573877228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1573877225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4e8975a6fc5f7a4db4c179fbeb105b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: {fileID: 0}
+--- !u!114 &1573877229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1573877225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40c91fc081b6d8c40a43249abc30f431, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeText: {fileID: 957091214}
+  lifeSlider: {fileID: 932849237}
 --- !u!1 &1581351825
 GameObject:
   m_ObjectHideFlags: 0
@@ -2551,9 +2609,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1581351827}
   - component: {fileID: 1581351826}
+  - component: {fileID: 1581351829}
+  - component: {fileID: 1581351828}
   m_Layer: 0
   m_Name: Perso3
-  m_TagString: Player
+  m_TagString: Character
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2626,6 +2686,33 @@ Transform:
   m_Father: {fileID: 1627341858}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1581351828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1581351825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4e8975a6fc5f7a4db4c179fbeb105b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: {fileID: 0}
+--- !u!114 &1581351829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1581351825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40c91fc081b6d8c40a43249abc30f431, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeText: {fileID: 2077079115}
+  lifeSlider: {fileID: 1646578032}
 --- !u!1 &1591294720
 GameObject:
   m_ObjectHideFlags: 0
@@ -3715,7 +3802,7 @@ GameObject:
   - component: {fileID: 2030265206}
   m_Layer: 0
   m_Name: Inimigo
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4018,9 +4105,11 @@ GameObject:
   m_Component:
   - component: {fileID: 2036108936}
   - component: {fileID: 2036108935}
+  - component: {fileID: 2036108938}
+  - component: {fileID: 2036108937}
   m_Layer: 0
   m_Name: Perso1
-  m_TagString: Player
+  m_TagString: Character
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4093,6 +4182,33 @@ Transform:
   m_Father: {fileID: 1627341858}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2036108937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2036108934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4e8975a6fc5f7a4db4c179fbeb105b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: {fileID: 0}
+--- !u!114 &2036108938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2036108934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40c91fc081b6d8c40a43249abc30f431, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeText: {fileID: 1743475826}
+  lifeSlider: {fileID: 247390343}
 --- !u!1 &2038286413
 GameObject:
   m_ObjectHideFlags: 0
