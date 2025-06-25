@@ -72,28 +72,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   linhas:
-  - nomeDoPersonagem: DEUS
+  - nomeDoPersonagem: 
     imagemDoPersonagem: {fileID: 21300000, guid: 92821fc1e1c465d4cbab8b96ea6dca05, type: 3}
-    textoDoDialogo: "Aqui \xE9 um trigger q quando c passa ele ativa o dialogo"
-  - nomeDoPersonagem: DEUS
+    textoDoDialogo: 
+  - nomeDoPersonagem: 
     imagemDoPersonagem: {fileID: 21300000, guid: 92821fc1e1c465d4cbab8b96ea6dca05, type: 3}
-    textoDoDialogo: Basicamente isso aq vai ser oq a gente vai usar por agora
-  - nomeDoPersonagem: MANOEL GOMES
+    textoDoDialogo: 
+  - nomeDoPersonagem: 
     imagemDoPersonagem: {fileID: 21300000, guid: 92821fc1e1c465d4cbab8b96ea6dca05, type: 3}
-    textoDoDialogo: "Antes do jogo come\xE7ar e antes da batalha do tatu"
-  - nomeDoPersonagem: JOGO DO CELULA BITCH
+    textoDoDialogo: 
+  - nomeDoPersonagem: 
     imagemDoPersonagem: {fileID: 21300000, guid: 92821fc1e1c465d4cbab8b96ea6dca05, type: 3}
-    textoDoDialogo: "Caso necess\xE1rio depois eu coloco um m\xE9todo para esperar
-      um tempo para o dialogo come\xE7ar"
-  - nomeDoPersonagem: JOGO DO CELULA BITCH
+    textoDoDialogo: 
+  - nomeDoPersonagem: 
     imagemDoPersonagem: {fileID: 21300000, guid: 92821fc1e1c465d4cbab8b96ea6dca05, type: 3}
-    textoDoDialogo: "Para a gente conseguir fazer algo antes do dialogo come\xE7ar
-      de novo, a eloah quer colocar a anima\xE7\xE3o do tatu no meio do dialogo por
-      exemplo"
-  - nomeDoPersonagem: JOGO DO CELULA BITCH
+    textoDoDialogo: 
+  - nomeDoPersonagem: 
     imagemDoPersonagem: {fileID: 21300000, guid: 92821fc1e1c465d4cbab8b96ea6dca05, type: 3}
-    textoDoDialogo: "Lembrando q isso aqui s\xF3 funciona uma vez, tem 2 op\xE7\xF5es
-      abaixo (do inspector do trigger) para ajudar nessas coisas"
+    textoDoDialogo: 
   precisaInteragir: 0
   soUmaVez: 1
   promptApertarE: {fileID: 0}

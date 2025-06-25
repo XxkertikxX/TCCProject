@@ -543,6 +543,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6208849185876481076, guid: 0627218ac1dbd174ab0b006c64259148, type: 3}
+      propertyPath: m_SortingOrder
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 8013602021913825142, guid: 0627218ac1dbd174ab0b006c64259148, type: 3}
       propertyPath: m_RootOrder
       value: 1
