@@ -38,6 +38,6 @@ public class hp : MonoBehaviour
 
     void UpdateUI(){
         lifeText.text = $"{life}/{Character.hp}";
-        lifeSlider.value = Character.hp / life;
+        lifeSlider.value = life / Character.hp;
     }
 }

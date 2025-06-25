@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df712c756b3eff94eaf78d84e4729a87, type: 3}
   m_Name: New Scr Skills Attack
   m_EditorClassIdentifier: 
-  TimesForInvoke: 0
-  TimePerInvokeLine: 0
+  TimesForInvoke: 3
+  TimePerInvokeLine: 3
