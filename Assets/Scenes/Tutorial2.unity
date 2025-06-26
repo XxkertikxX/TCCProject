@@ -438,10 +438,7 @@ Transform:
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 =======
-=======
->>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 --- !u!114 &354778804
@@ -479,9 +476,6 @@ MonoBehaviour:
   m_Flags: 3
   m_ColliderType: 1
 <<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
-=======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
@@ -582,7 +576,6 @@ PrefabInstance:
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
       value: -13.9
 =======
       value: -2.62
@@ -590,10 +583,13 @@ PrefabInstance:
 =======
       value: -2.62
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
+<<<<<<< HEAD
 =======
       value: -2.62
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 >>>>>>> parent of 024ee6a (CORROPEU)
+=======
+>>>>>>> parent of 579f202 (CORROPEU)
       objectReference: {fileID: 0}
     - target: {fileID: 6208849184958914160, guid: 0627218ac1dbd174ab0b006c64259148, type: 3}
       propertyPath: m_LocalPosition.y
@@ -692,9 +688,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 <<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
-=======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
@@ -792,10 +785,7 @@ Transform:
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 =======
-=======
->>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 --- !u!213 &702363838
@@ -1298,9 +1288,6 @@ Sprite:
   m_Bones: []
   m_SpriteID: 
 <<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
-=======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
@@ -1621,10 +1608,7 @@ PrefabInstance:
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 =======
-=======
->>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 --- !u!1 &1279132541
@@ -2015,9 +1999,6 @@ Tilemap:
     e32: 0
     e33: 1
 <<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
-=======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
@@ -2738,10 +2719,7 @@ Transform:
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 =======
-=======
->>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 --- !u!114 &1959733297
@@ -2779,9 +2757,6 @@ MonoBehaviour:
   m_Flags: 3
   m_ColliderType: 1
 <<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
-=======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
