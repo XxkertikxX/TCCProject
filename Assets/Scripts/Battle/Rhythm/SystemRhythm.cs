@@ -34,6 +34,8 @@ public class SystemRhythm : MonoBehaviour
     }
 
     hp Enemyhp() {
-        return GameObject.FindGameObjectWithTag("Enemy").GetComponent<hp>();
+        GameObject enemy = GameObject.FindGameObjectWithTag("Enemy");
+        hp enemyHP = enemy.GetComponent<hp>();
+        return enemyHP;
     }
 }
