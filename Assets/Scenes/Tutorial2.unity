@@ -497,7 +497,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 --- !u!114 &354778804
@@ -535,6 +538,9 @@ MonoBehaviour:
   m_Flags: 3
   m_ColliderType: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
+=======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
@@ -631,7 +637,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: -13.9
+=======
+      value: -2.62
+>>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
       value: -2.62
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
@@ -734,6 +744,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
+=======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
@@ -828,7 +841,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 --- !u!213 &702363838
@@ -1331,6 +1347,9 @@ Sprite:
   m_Bones: []
   m_SpriteID: 
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
+=======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
@@ -1648,7 +1667,10 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: d9e73c4427c23224b84db8e838fb0aa2, type: 3}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 --- !u!1 &1279132541
@@ -2039,6 +2061,9 @@ Tilemap:
     e32: 0
     e33: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
+=======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
@@ -2966,7 +2991,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 --- !u!114 &1959733297
@@ -3004,6 +3032,9 @@ MonoBehaviour:
   m_Flags: 3
   m_ColliderType: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
+=======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)

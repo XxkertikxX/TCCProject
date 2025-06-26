@@ -300,8 +300,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 =======
+=======
+>>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
@@ -320,7 +323,11 @@ GameObject:
   m_Layer: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_Name: Moitas_Perto
+=======
+  m_Name: Moitas
+>>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
   m_Name: Moitas
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
@@ -347,7 +354,11 @@ Transform:
   m_Father: {fileID: 1468445794}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 2
+=======
+  m_RootOrder: 1
+>>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
   m_RootOrder: 1
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
@@ -604,7 +615,10 @@ Tilemap:
     e33: 1
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
@@ -2302,8 +2316,11 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: f5f47459172c0bf4898cf879f5ef4a81, type: 3}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 =======
+=======
+>>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
@@ -2321,9 +2338,14 @@ GameObject:
   - component: {fileID: 1444908770}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   - component: {fileID: 1444908772}
   m_Layer: 0
   m_Name: "Ch\xE3oAnd\xE1vel"
+=======
+  m_Layer: 0
+  m_Name: "Ch\xE3o"
+>>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
   m_Layer: 0
   m_Name: "Ch\xE3o"
@@ -2532,7 +2554,10 @@ Tilemap:
       m_AllTileFlags: 1073741825
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
   - first: {x: -6, y: -2, z: 0}
@@ -2776,6 +2801,9 @@ Tilemap:
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
+=======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
@@ -2783,6 +2811,7 @@ Tilemap:
   m_TileAssetArray:
   - m_RefCount: 12
     m_Data: {fileID: 11400000, guid: dcb3f7aff8a4e924f910627e0c7d6d85, type: 2}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   - m_RefCount: 0
@@ -2799,6 +2828,8 @@ Tilemap:
   m_TileMatrixArray:
   - m_RefCount: 12
 =======
+=======
+>>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
   - m_RefCount: 12
@@ -2815,6 +2846,9 @@ Tilemap:
   m_TileMatrixArray:
   - m_RefCount: 36
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
+=======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
@@ -2838,7 +2872,11 @@ Tilemap:
   m_TileColorArray:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   - m_RefCount: 12
+=======
+  - m_RefCount: 36
+>>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
   - m_RefCount: 36
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
@@ -2872,6 +2910,7 @@ Tilemap:
     e33: 1
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!19719996 &1444908772
 TilemapCollider2D:
   m_ObjectHideFlags: 0
@@ -2892,6 +2931,8 @@ TilemapCollider2D:
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
+=======
+>>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 --- !u!1 &1468445792
 GameObject:
   m_ObjectHideFlags: 0
@@ -2905,7 +2946,11 @@ GameObject:
   m_Layer: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_Name: Grade_TileMap_Chao
+=======
+  m_Name: Grade_TileMap
+>>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
   m_Name: Grade_TileMap
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
@@ -2939,7 +2984,11 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalPosition: {x: 0, y: -0.28, z: 0}
+=======
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+>>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
   m_LocalPosition: {x: 0, y: 0, z: 0}
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
@@ -2950,6 +2999,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1444908769}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   - {fileID: 1315111864}
@@ -2963,11 +3013,16 @@ Transform:
 =======
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
+=======
+>>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
   - {fileID: 271258805}
   m_Father: {fileID: 2077660845}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
+=======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
@@ -3600,8 +3655,11 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 0627218ac1dbd174ab0b006c64259148, type: 3}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 =======
+=======
+>>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
@@ -3637,11 +3695,17 @@ Transform:
   - {fileID: 1468445794}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   - {fileID: 28208383}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 >>>>>>> Stashed changes
+=======
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+>>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
   m_Father: {fileID: 0}
   m_RootOrder: 2
