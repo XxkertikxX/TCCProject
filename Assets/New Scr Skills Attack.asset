@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: New Scr Skills Attack
   m_EditorClassIdentifier: 
   TimesForInvoke: 3
-  TimePerInvokeLine: 3
+  TimePerInvokeLine: 2
