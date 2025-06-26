@@ -21,22 +21,18 @@ public class DialogueTrigger : MonoBehaviour
     private bool jaFalou = false;
     private bool dentroDoTrigger = false;
 
-    void Start()
-    {
-        if (promptApertarE)
-        {
+    void Start() {
+        if (promptApertarE) {
             promptApertarE.SetActive(false);
         }
     }
 
-    void Update()
-    {
+    void Update() {
         if (DialogueManager.Instancia.DialogoAtivo) { return; }
 
         bool estaNoChao = Physics2D.Raycast(GroundCheck.position, Vector2.down, 0.1f, camadaDoChao);
 
-        if (precisaInteragir)
-        {
+        if (precisaInteragir) {
             bool mostrarPrompt = dentroDoTrigger && estaNoChao && (!soUmaVez || !jaFalou);
             if (promptApertarE)
                 promptApertarE.SetActive(mostrarPrompt);
@@ -44,43 +40,35 @@ public class DialogueTrigger : MonoBehaviour
             if (mostrarPrompt && Input.GetKeyDown(KeyCode.E))
                 AcionarDialogo();
         }
-        else
-        {
+        else {
             if (dentroDoTrigger && estaNoChao && (!soUmaVez || !jaFalou))
                 AcionarDialogo();
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D outro)
-    {
+    private void OnTriggerEnter2D(Collider2D outro) {
         if (!outro.CompareTag("Player")) { return; }
         dentroDoTrigger = true;
-        if (!precisaInteragir)
-        {
+        if (!precisaInteragir) {
             bool estaNoChao = Physics2D.Raycast(GroundCheck.position, Vector2.down, 0.1f, camadaDoChao);
-            if (estaNoChao && (!soUmaVez || !jaFalou))
-            {
+            if (estaNoChao && (!soUmaVez || !jaFalou)) {
                 AcionarDialogo();
             }
         }
     }
 
-    private void OnTriggerExit2D(Collider2D outro)
-    {
+    private void OnTriggerExit2D(Collider2D outro) {
         if (!outro.CompareTag("Player")) { return; }
         dentroDoTrigger = false;
-        if (promptApertarE) 
-        {
+        if (promptApertarE)  {
             promptApertarE.SetActive(false);
         }
     }
 
-    private void AcionarDialogo()
-    {
+    private void AcionarDialogo() {
         if (soUmaVez && jaFalou) { return; }
         jaFalou = true;
-        if (promptApertarE)
-        {
+        if (promptApertarE) {
             promptApertarE.SetActive(false);
         }
         DialogueManager.Instancia.IniciarDialogo(linhas);

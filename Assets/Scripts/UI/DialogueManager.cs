@@ -33,8 +33,6 @@ public class DialogueManager : MonoBehaviour
     }
 
     void Update() {
-        //if (!telaDeDialogo.activeSelf) return;
-
         if (Input.GetKey(KeyCode.Space) && !textoPronto)
             velocidadeAtual = velocidadeRapidin;
         else
@@ -45,7 +43,6 @@ public class DialogueManager : MonoBehaviour
     }
 
     public void IniciarDialogo(DialogueTrigger.LinhaDialogo[] novasLinhas) {
-        //if (telaDeDialogo.activeSelf) return;
         linhas = novasLinhas;
         indiceAtual = 0;
         Time.timeScale = 0f;

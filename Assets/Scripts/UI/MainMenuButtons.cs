@@ -1,23 +1,20 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MainMenuButtons : MonoBehaviour
 {
-    public void StartGame()
-    {
+    public void StartGame() {
 
     }
-    public void OpenMenu(GameObject menu)
-    {
+
+    public void OpenMenu(GameObject menu) {
         menu.SetActive(true);
     }
-    public void CloseMenu(GameObject menu)
-    {
+
+    public void CloseMenu(GameObject menu) {
         menu.SetActive(false);
     }
-    public void ExitGame()
-    {
+
+    public void ExitGame() {
         Application.Quit();
     }
 }
