@@ -301,6 +301,7 @@ Transform:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 =======
 =======
@@ -623,6 +624,8 @@ Tilemap:
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
+=======
+>>>>>>> parent of 1afc89b (VIsual Fases)
 --- !u!1 &301163115 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1629892508665224755, guid: e2b1b29455462d244aea8192229b9aaa, type: 3}
@@ -2985,6 +2988,7 @@ Transform:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalPosition: {x: 0, y: -0.28, z: 0}
 =======
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -2995,10 +2999,14 @@ Transform:
 =======
   m_LocalPosition: {x: 0, y: 0, z: 0}
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
+=======
+  m_LocalPosition: {x: -4.8891253, y: -2.313694, z: 0.06871024}
+>>>>>>> parent of 1afc89b (VIsual Fases)
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1444908769}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3016,6 +3024,8 @@ Transform:
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
   - {fileID: 271258805}
+=======
+>>>>>>> parent of 1afc89b (VIsual Fases)
   m_Father: {fileID: 2077660845}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3688,7 +3698,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2077660844}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 4.8891253, y: 2.313694, z: -0.06871024}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
