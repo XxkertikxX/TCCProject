@@ -9890,6 +9890,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5f47459172c0bf4898cf879f5ef4a81, type: 3}
+--- !u!1 &484868703 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8805425509553843516, guid: f5f47459172c0bf4898cf879f5ef4a81, type: 3}
+  m_PrefabInstance: {fileID: 484868702}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &484868704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 484868703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc6513abf14a6284386791353cfdf582, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NextScene: TesteUiCombate
 --- !u!4 &504882326 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8291208295854824849, guid: f5f47459172c0bf4898cf879f5ef4a81, type: 3}
@@ -10164,7 +10182,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 604015752}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.15489, y: -1.7943573, z: 0}
+  m_LocalPosition: {x: 44.64, y: -7.36, z: 0}
   m_LocalScale: {x: 100, y: 30, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

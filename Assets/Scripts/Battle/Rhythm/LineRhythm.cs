@@ -6,7 +6,7 @@ public class LineRhythm : MonoBehaviour
 
     float totallyLineCoord;
     float totallyLineSize;
-    float speed = 1f;
+    float speed = 3f;
 
     float damage;
     
@@ -21,7 +21,7 @@ public class LineRhythm : MonoBehaviour
     }
 
     void FixedUpdate(){
-        transform.position += new Vector3(speed, 0, 0);
+        transform.position += new Vector3(speed * Time.fixedDeltaTime, 0, 0);
     }
 
     void Click(){

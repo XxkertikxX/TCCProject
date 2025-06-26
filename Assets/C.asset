@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 67
   damage: 76
-  AttackInTheTurn: 1
+  AttackInTheTurn: 0
   skills:
   - {fileID: 11400000, guid: ad8bcafb4410c5f4ea9f166e65b7abef, type: 2}

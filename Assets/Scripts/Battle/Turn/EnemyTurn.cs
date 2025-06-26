@@ -1,8 +1,10 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyTurn : MonoBehaviour
 {
     [SerializeField] StatusCharacters Enemy;
+    [SerializeField] string Scene;
 
     void Update() {
         if (AllCharactersPlay()) {
@@ -41,4 +43,7 @@ public class EnemyTurn : MonoBehaviour
         return GameObject.FindGameObjectsWithTag("Character");
     }
 
+    void OnDestroy(){
+        SceneManager.LoadScene(Scene);
+    }
 }
