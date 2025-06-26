@@ -496,7 +496,10 @@ Transform:
   m_PrefabInstance: {fileID: 1200122287}
   m_PrefabAsset: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 --- !u!114 &354778804
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -531,6 +534,9 @@ MonoBehaviour:
   m_InstancedGameObject: {fileID: 0}
   m_Flags: 3
   m_ColliderType: 1
+<<<<<<< HEAD
+>>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
+=======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 --- !u!1001 &484868702
 PrefabInstance:
@@ -624,7 +630,11 @@ PrefabInstance:
     - target: {fileID: 6208849184958914160, guid: 0627218ac1dbd174ab0b006c64259148, type: 3}
       propertyPath: m_LocalPosition.x
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: -13.9
+=======
+      value: -2.62
+>>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
       value: -2.62
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
@@ -723,6 +733,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1aabf7ec7b9c0254fa0169b373bce3a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
+>>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
+=======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 --- !u!1 &604015752
 GameObject:
@@ -814,7 +827,10 @@ Transform:
   m_PrefabInstance: {fileID: 1598885231}
   m_PrefabAsset: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 --- !u!213 &702363838
 Sprite:
   m_ObjectHideFlags: 0
@@ -1314,6 +1330,9 @@ Sprite:
   m_PhysicsShape: []
   m_Bones: []
   m_SpriteID: 
+<<<<<<< HEAD
+>>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
+=======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 --- !u!1 &1036157448
 GameObject:
@@ -1628,7 +1647,10 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9e73c4427c23224b84db8e838fb0aa2, type: 3}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 --- !u!1 &1279132541
 GameObject:
   m_ObjectHideFlags: 0
@@ -2016,6 +2038,9 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+<<<<<<< HEAD
+>>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
+=======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 --- !u!4 &1324204732 stripped
 Transform:
@@ -2940,7 +2965,10 @@ Transform:
   m_PrefabInstance: {fileID: 542244834}
   m_PrefabAsset: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 --- !u!114 &1959733297
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2975,6 +3003,9 @@ MonoBehaviour:
   m_InstancedGameObject: {fileID: 0}
   m_Flags: 3
   m_ColliderType: 1
+<<<<<<< HEAD
+>>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
+=======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 --- !u!4 &2093353784 stripped
 Transform:
