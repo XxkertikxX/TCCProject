@@ -1,10 +1,7 @@
 fileFormatVersion: 2
-guid: 781acd4c9b8b89248a83e210af898db3
+guid: c0922627220c8fe4a8a15fae11805f01
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: 8064199976444501998
-    second: Tutorial (Pause)_0
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -105,6 +102,18 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -120,22 +129,106 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Tutorial (Pause)_0
+      name: dialogo e luta 1_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1920
-        height: 1080
+        x: 407
+        y: 679
+        width: 479
+        height: 284
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: eef10b1172bc9ef60800000000000000
-      internalID: 8064199976444501998
+      spriteID: 36ab0950ded5a7b46bc8d222f9560c6b
+      internalID: -1913316517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dialogo e luta 1_1
+      rect:
+        serializedVersion: 2
+        x: 943
+        y: 660
+        width: 479
+        height: 285
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e696e7909a9bbb04bb0d056f7a7fbc32
+      internalID: 637192399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dialogo e luta 1_2
+      rect:
+        serializedVersion: 2
+        x: 1483
+        y: 459
+        width: 480
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 529cac3c0b525114c89f86157d939203
+      internalID: 2027092746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dialogo e luta 1_3
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 378
+        width: 479
+        height: 285
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2c73cdaac9e978489db328a8fbf481c
+      internalID: 1519586390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dialogo e luta 1_4
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 49
+        width: 1951
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 192285a4b4ca90f48a6ef10fb3f623b6
+      internalID: -199426939
       vertices: []
       indices: 
       edges: []
@@ -143,7 +236,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -151,7 +244,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Tutorial (Pause)_0: 8064199976444501998
+      dialogo e luta 1_2: 2027092746
+      dialogo e luta 1_1: 637192399
+      dialogo e luta 1_3: 1519586390
+      dialogo e luta 1_0: -1913316517
+      dialogo e luta 1_4: -199426939
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
