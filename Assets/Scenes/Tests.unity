@@ -302,14 +302,20 @@ Transform:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 0ba4dc6 (CORROPEU)
 <<<<<<< Updated upstream
 =======
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
+<<<<<<< HEAD
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
+=======
+>>>>>>> parent of 0ba4dc6 (CORROPEU)
 --- !u!1 &271258804
 GameObject:
   m_ObjectHideFlags: 0
@@ -325,16 +331,22 @@ GameObject:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 0ba4dc6 (CORROPEU)
   m_Name: Moitas_Perto
 =======
   m_Name: Moitas
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
+<<<<<<< HEAD
 =======
   m_Name: Moitas
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
   m_Name: Moitas
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
+=======
+>>>>>>> parent of 0ba4dc6 (CORROPEU)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -356,16 +368,22 @@ Transform:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 0ba4dc6 (CORROPEU)
   m_RootOrder: 2
 =======
   m_RootOrder: 1
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
+<<<<<<< HEAD
 =======
   m_RootOrder: 1
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
   m_RootOrder: 1
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
+=======
+>>>>>>> parent of 0ba4dc6 (CORROPEU)
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &271258806
 TilemapRenderer:
@@ -617,6 +635,7 @@ Tilemap:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> Stashed changes
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
@@ -626,6 +645,11 @@ Tilemap:
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
 >>>>>>> parent of 1afc89b (VIsual Fases)
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
+>>>>>>> parent of 0ba4dc6 (CORROPEU)
 --- !u!1 &301163115 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1629892508665224755, guid: e2b1b29455462d244aea8192229b9aaa, type: 3}
@@ -2320,14 +2344,20 @@ PrefabInstance:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 0ba4dc6 (CORROPEU)
 <<<<<<< Updated upstream
 =======
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
+<<<<<<< HEAD
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
+=======
+>>>>>>> parent of 0ba4dc6 (CORROPEU)
 --- !u!1 &1444908768
 GameObject:
   m_ObjectHideFlags: 0
@@ -2342,6 +2372,9 @@ GameObject:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 0ba4dc6 (CORROPEU)
   - component: {fileID: 1444908772}
   m_Layer: 0
   m_Name: "Ch\xE3oAnd\xE1vel"
@@ -2349,6 +2382,7 @@ GameObject:
   m_Layer: 0
   m_Name: "Ch\xE3o"
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
+<<<<<<< HEAD
 =======
   m_Layer: 0
   m_Name: "Ch\xE3o"
@@ -2357,6 +2391,8 @@ GameObject:
   m_Layer: 0
   m_Name: "Ch\xE3o"
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
+=======
+>>>>>>> parent of 0ba4dc6 (CORROPEU)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2558,11 +2594,15 @@ Tilemap:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
+=======
+=======
+>>>>>>> parent of 0ba4dc6 (CORROPEU)
   - first: {x: -6, y: -2, z: 0}
     second:
       serializedVersion: 2
@@ -2805,10 +2845,13 @@ Tilemap:
       m_AllTileFlags: 1073741825
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
+=======
+>>>>>>> parent of 0ba4dc6 (CORROPEU)
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
   m_AnimatedTiles: {}
   m_TileAssetArray:
@@ -2817,6 +2860,9 @@ Tilemap:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 0ba4dc6 (CORROPEU)
   - m_RefCount: 0
     m_Data: {fileID: 0}
   - m_RefCount: 0
@@ -2831,10 +2877,13 @@ Tilemap:
   m_TileMatrixArray:
   - m_RefCount: 12
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
+=======
+>>>>>>> parent of 0ba4dc6 (CORROPEU)
   - m_RefCount: 12
     m_Data: {fileID: 11400000, guid: f63db57d7376899498d076fd42902c52, type: 2}
   - m_RefCount: 12
@@ -2850,10 +2899,13 @@ Tilemap:
   - m_RefCount: 36
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
+=======
+>>>>>>> parent of 0ba4dc6 (CORROPEU)
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
     m_Data:
       e00: 1
@@ -2876,16 +2928,22 @@ Tilemap:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 0ba4dc6 (CORROPEU)
   - m_RefCount: 12
 =======
   - m_RefCount: 36
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
+<<<<<<< HEAD
 =======
   - m_RefCount: 36
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
   - m_RefCount: 36
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
+=======
+>>>>>>> parent of 0ba4dc6 (CORROPEU)
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -2914,6 +2972,9 @@ Tilemap:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 0ba4dc6 (CORROPEU)
 --- !u!19719996 &1444908772
 TilemapCollider2D:
   m_ObjectHideFlags: 0
@@ -2932,10 +2993,13 @@ TilemapCollider2D:
   m_ExtrusionFactor: 0.00001
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
+<<<<<<< HEAD
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
+=======
+>>>>>>> parent of 0ba4dc6 (CORROPEU)
 --- !u!1 &1468445792
 GameObject:
   m_ObjectHideFlags: 0
@@ -2950,16 +3014,22 @@ GameObject:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 0ba4dc6 (CORROPEU)
   m_Name: Grade_TileMap_Chao
 =======
   m_Name: Grade_TileMap
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
+<<<<<<< HEAD
 =======
   m_Name: Grade_TileMap
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
   m_Name: Grade_TileMap
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
+=======
+>>>>>>> parent of 0ba4dc6 (CORROPEU)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2989,10 +3059,14 @@ Transform:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 0ba4dc6 (CORROPEU)
   m_LocalPosition: {x: 0, y: -0.28, z: 0}
 =======
   m_LocalPosition: {x: 0, y: 0, z: 0}
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
+<<<<<<< HEAD
 =======
   m_LocalPosition: {x: 0, y: 0, z: 0}
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
@@ -3002,6 +3076,8 @@ Transform:
 =======
   m_LocalPosition: {x: -4.8891253, y: -2.313694, z: 0.06871024}
 >>>>>>> parent of 1afc89b (VIsual Fases)
+=======
+>>>>>>> parent of 0ba4dc6 (CORROPEU)
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3010,6 +3086,9 @@ Transform:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 0ba4dc6 (CORROPEU)
   - {fileID: 1315111864}
   - {fileID: 271258805}
   - {fileID: 460733393}
@@ -3019,10 +3098,13 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 >>>>>>> Stashed changes
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
+=======
+>>>>>>> parent of 0ba4dc6 (CORROPEU)
   - {fileID: 271258805}
 =======
 >>>>>>> parent of 1afc89b (VIsual Fases)
@@ -3031,10 +3113,13 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
+=======
+>>>>>>> parent of 0ba4dc6 (CORROPEU)
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 --- !u!1 &1498886813 stripped
 GameObject:
@@ -3666,14 +3751,20 @@ PrefabInstance:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 0ba4dc6 (CORROPEU)
 <<<<<<< Updated upstream
 =======
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
+<<<<<<< HEAD
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
+=======
+>>>>>>> parent of 0ba4dc6 (CORROPEU)
 --- !u!1 &2077660844
 GameObject:
   m_ObjectHideFlags: 0
@@ -3706,6 +3797,9 @@ Transform:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 0ba4dc6 (CORROPEU)
   - {fileID: 28208383}
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -3716,6 +3810,7 @@ Transform:
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
+<<<<<<< HEAD
 =======
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -3726,6 +3821,8 @@ Transform:
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
+=======
+>>>>>>> parent of 0ba4dc6 (CORROPEU)
 --- !u!1001 &870227370937335352
 PrefabInstance:
   m_ObjectHideFlags: 0

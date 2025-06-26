@@ -498,11 +498,15 @@ Transform:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
+=======
+=======
+>>>>>>> parent of 0ba4dc6 (CORROPEU)
 --- !u!114 &354778804
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -539,10 +543,13 @@ MonoBehaviour:
   m_ColliderType: 1
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
+=======
+>>>>>>> parent of 0ba4dc6 (CORROPEU)
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 --- !u!1001 &484868702
 PrefabInstance:
@@ -638,16 +645,22 @@ PrefabInstance:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 0ba4dc6 (CORROPEU)
       value: -13.9
 =======
       value: -2.62
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
+<<<<<<< HEAD
 =======
       value: -2.62
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
       value: -2.62
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
+=======
+>>>>>>> parent of 0ba4dc6 (CORROPEU)
       objectReference: {fileID: 0}
     - target: {fileID: 6208849184958914160, guid: 0627218ac1dbd174ab0b006c64259148, type: 3}
       propertyPath: m_LocalPosition.y
@@ -745,10 +758,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
+=======
+>>>>>>> parent of 0ba4dc6 (CORROPEU)
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 --- !u!1 &604015752
 GameObject:
@@ -842,11 +858,15 @@ Transform:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
+=======
+=======
+>>>>>>> parent of 0ba4dc6 (CORROPEU)
 --- !u!213 &702363838
 Sprite:
   m_ObjectHideFlags: 0
@@ -1348,10 +1368,13 @@ Sprite:
   m_SpriteID: 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
+=======
+>>>>>>> parent of 0ba4dc6 (CORROPEU)
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 --- !u!1 &1036157448
 GameObject:
@@ -1668,11 +1691,15 @@ PrefabInstance:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
+=======
+=======
+>>>>>>> parent of 0ba4dc6 (CORROPEU)
 --- !u!1 &1279132541
 GameObject:
   m_ObjectHideFlags: 0
@@ -2062,10 +2089,13 @@ Tilemap:
     e33: 1
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
+=======
+>>>>>>> parent of 0ba4dc6 (CORROPEU)
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 --- !u!4 &1324204732 stripped
 Transform:
@@ -2992,11 +3022,15 @@ Transform:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
+=======
+=======
+>>>>>>> parent of 0ba4dc6 (CORROPEU)
 --- !u!114 &1959733297
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3033,10 +3067,13 @@ MonoBehaviour:
   m_ColliderType: 1
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
+=======
+>>>>>>> parent of 0ba4dc6 (CORROPEU)
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 --- !u!4 &2093353784 stripped
 Transform:
