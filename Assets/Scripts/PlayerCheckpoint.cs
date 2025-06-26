@@ -3,7 +3,6 @@ using UnityEngine;
 public class PlayerCheckpoint : MonoBehaviour
 {
     private Vector3 lastCheckpointPosition;
-    public GameObject playerGO;
 
     private void Start()
     {
@@ -12,13 +11,13 @@ public class PlayerCheckpoint : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Checkpoint"))
         {
             lastCheckpointPosition = transform.position;
         }
         else if (other.CompareTag("Hole"))
         {
-            playerGO.transform.position = lastCheckpointPosition;
+            transform.position = lastCheckpointPosition;
         }
     }
 }
