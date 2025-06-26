@@ -157,8 +157,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
-=======
 --- !u!1 &46513911
 GameObject:
   m_ObjectHideFlags: 0
@@ -217,7 +215,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
->>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 --- !u!1001 &48258765
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -297,7 +294,7 @@ GameObject:
   - component: {fileID: 232592948}
   m_Layer: 0
   m_Name: Camera
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -499,6 +496,7 @@ Transform:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
@@ -507,6 +505,8 @@ Transform:
 =======
 =======
 >>>>>>> parent of 0ba4dc6 (CORROPEU)
+=======
+>>>>>>> parent of 08be132 (Revert "Update Tutorial2.unity")
 --- !u!114 &354778804
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -544,6 +544,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
@@ -551,6 +552,8 @@ MonoBehaviour:
 =======
 >>>>>>> parent of 0ba4dc6 (CORROPEU)
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
+=======
+>>>>>>> parent of 08be132 (Revert "Update Tutorial2.unity")
 --- !u!1001 &484868702
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -624,6 +627,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5f47459172c0bf4898cf879f5ef4a81, type: 3}
+--- !u!1 &484868703 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8805425509553843516, guid: f5f47459172c0bf4898cf879f5ef4a81, type: 3}
+  m_PrefabInstance: {fileID: 484868702}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &484868704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 484868703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc6513abf14a6284386791353cfdf582, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NextScene: TesteUiCombate
 --- !u!4 &504882326 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8291208295854824849, guid: f5f47459172c0bf4898cf879f5ef4a81, type: 3}
@@ -646,6 +667,7 @@ PrefabInstance:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> parent of 0ba4dc6 (CORROPEU)
       value: -13.9
@@ -661,10 +683,13 @@ PrefabInstance:
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
 >>>>>>> parent of 0ba4dc6 (CORROPEU)
+=======
+      value: -2.62
+>>>>>>> parent of 08be132 (Revert "Update Tutorial2.unity")
       objectReference: {fileID: 0}
     - target: {fileID: 6208849184958914160, guid: 0627218ac1dbd174ab0b006c64259148, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.2
+      value: -7.66
       objectReference: {fileID: 0}
     - target: {fileID: 6208849185876481072, guid: 0627218ac1dbd174ab0b006c64259148, type: 3}
       propertyPath: m_LocalPosition.x
@@ -737,8 +762,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6208849185876481072, guid: 0627218ac1dbd174ab0b006c64259148, type: 3}
   m_PrefabInstance: {fileID: 542244834}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
-=======
 --- !u!1 &542244836 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6208849185876481073, guid: 0627218ac1dbd174ab0b006c64259148, type: 3}
@@ -759,6 +782,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
@@ -766,6 +790,8 @@ MonoBehaviour:
 =======
 >>>>>>> parent of 0ba4dc6 (CORROPEU)
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
+=======
+>>>>>>> parent of 08be132 (Revert "Update Tutorial2.unity")
 --- !u!1 &604015752
 GameObject:
   m_ObjectHideFlags: 0
@@ -843,7 +869,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 604015752}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.15489, y: -1.7943573, z: 0}
+  m_LocalPosition: {x: 44.64, y: -7.36, z: 0}
   m_LocalScale: {x: 100, y: 30, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -859,6 +885,7 @@ Transform:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
@@ -867,6 +894,8 @@ Transform:
 =======
 =======
 >>>>>>> parent of 0ba4dc6 (CORROPEU)
+=======
+>>>>>>> parent of 08be132 (Revert "Update Tutorial2.unity")
 --- !u!213 &702363838
 Sprite:
   m_ObjectHideFlags: 0
@@ -1369,6 +1398,7 @@ Sprite:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
@@ -1376,6 +1406,8 @@ Sprite:
 =======
 >>>>>>> parent of 0ba4dc6 (CORROPEU)
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
+=======
+>>>>>>> parent of 08be132 (Revert "Update Tutorial2.unity")
 --- !u!1 &1036157448
 GameObject:
   m_ObjectHideFlags: 0
@@ -1692,6 +1724,7 @@ PrefabInstance:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
@@ -1700,6 +1733,8 @@ PrefabInstance:
 =======
 =======
 >>>>>>> parent of 0ba4dc6 (CORROPEU)
+=======
+>>>>>>> parent of 08be132 (Revert "Update Tutorial2.unity")
 --- !u!1 &1279132541
 GameObject:
   m_ObjectHideFlags: 0
@@ -2090,6 +2125,7 @@ Tilemap:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
@@ -2097,6 +2133,8 @@ Tilemap:
 =======
 >>>>>>> parent of 0ba4dc6 (CORROPEU)
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
+=======
+>>>>>>> parent of 08be132 (Revert "Update Tutorial2.unity")
 --- !u!4 &1324204732 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8291208295854824849, guid: f5f47459172c0bf4898cf879f5ef4a81, type: 3}
@@ -2230,6 +2268,10 @@ PrefabInstance:
     - target: {fileID: 8886279922850481105, guid: d9e73c4427c23224b84db8e838fb0aa2, type: 3}
       propertyPath: m_Layer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8886279922850481105, guid: d9e73c4427c23224b84db8e838fb0aa2, type: 3}
+      propertyPath: m_TagString
+      value: Hole
       objectReference: {fileID: 0}
     - target: {fileID: 8886279922850481106, guid: d9e73c4427c23224b84db8e838fb0aa2, type: 3}
       propertyPath: m_Size.x
@@ -3023,6 +3065,7 @@ Transform:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
@@ -3031,6 +3074,8 @@ Transform:
 =======
 =======
 >>>>>>> parent of 0ba4dc6 (CORROPEU)
+=======
+>>>>>>> parent of 08be132 (Revert "Update Tutorial2.unity")
 --- !u!114 &1959733297
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3068,6 +3113,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
 =======
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
@@ -3075,6 +3121,8 @@ MonoBehaviour:
 =======
 >>>>>>> parent of 0ba4dc6 (CORROPEU)
 >>>>>>> parent of 0a7999a (Tutorial 2 - Visual Feito)
+=======
+>>>>>>> parent of 08be132 (Revert "Update Tutorial2.unity")
 --- !u!4 &2093353784 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8291208295854824849, guid: f5f47459172c0bf4898cf879f5ef4a81, type: 3}
