@@ -869,12 +869,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3677428163134357414, guid: f5f47459172c0bf4898cf879f5ef4a81, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 150954b043ee246478c1a0535827add3, type: 3}
+    - target: {fileID: 3677428163134357414, guid: f5f47459172c0bf4898cf879f5ef4a81, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3677428163134357414, guid: f5f47459172c0bf4898cf879f5ef4a81, type: 3}
       propertyPath: m_Color.g
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3677428163134357414, guid: f5f47459172c0bf4898cf879f5ef4a81, type: 3}
       propertyPath: m_Color.r
@@ -887,6 +891,10 @@ PrefabInstance:
     - target: {fileID: 5421217484767251097, guid: f5f47459172c0bf4898cf879f5ef4a81, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934681638114363835, guid: f5f47459172c0bf4898cf879f5ef4a81, type: 3}
+      propertyPath: m_Size.x
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8291208295854824849, guid: f5f47459172c0bf4898cf879f5ef4a81, type: 3}
       propertyPath: m_RootOrder
@@ -2199,6 +2207,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.5, y: 1.34}
   m_EdgeRadius: 0
+--- !u!1 &1323922298 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8805425509553843516, guid: f5f47459172c0bf4898cf879f5ef4a81, type: 3}
+  m_PrefabInstance: {fileID: 484868702}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1323922301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1323922298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50d5b28643c7fd0498d4e964d3f6f42e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cenaCombate: TesteUICombate
 --- !u!4 &1324204732 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8291208295854824849, guid: f5f47459172c0bf4898cf879f5ef4a81, type: 3}
