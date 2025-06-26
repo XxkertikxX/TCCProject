@@ -1102,7 +1102,7 @@ GameObject:
   - component: {fileID: 5594427848270076390}
   - component: {fileID: 5594427848270076388}
   - component: {fileID: 5594427848270076389}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: "Ch\xE3oVIsual"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1251,7 +1251,7 @@ GameObject:
   - component: {fileID: 5594427848555548142}
   - component: {fileID: 5594427848555548143}
   - component: {fileID: 5594427848555548141}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: "Ch\xE3oAndavel"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
