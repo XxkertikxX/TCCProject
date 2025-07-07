@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    static public PlayerMovement playerMovement;
+    public bool isGrounded;
+
     Rigidbody2D rb;
 
     float x;
@@ -12,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] LayerMask Ground;
 
     void Start() {
+        playerMovement = gameObject.GetComponent<PlayerMovement>();
         Bindings.UpdateBindings();
         rb = GetComponent<Rigidbody2D>();
     }
@@ -38,9 +42,13 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void Jump() {
-        bool isGrounded = Physics2D.Raycast(GroundCheck.position, Vector2.down, 0.1f, Ground);
+        isGrounded = Physics2D.Raycast(GroundCheck.position, Vector2.down, 0.1f, Ground);
         if (Input.GetKeyDown(Bindings.bindings["Jump"]) && isGrounded) {
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
+    }
+
+    void OnDisable() {
+        rb.velocity = new Vector2(0, 0);
     }
 }

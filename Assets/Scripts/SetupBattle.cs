@@ -3,24 +3,37 @@ using UnityEngine.UI;
 
 public class SetupBattle : MonoBehaviour
 {
-    [SerializeField] DialogueManager dial;
-    [SerializeField] DialogueTrigger dialogo;
     [SerializeField] GameObject UI;
+    [SerializeField] ScrDialog scrDialog;
+
+
+    private void OnEnable() {
+        DialogManager.onDialogClose += ActiveUI;
+    }
 
     void Start(){
-        dial.IniciarDialogo(dialogo.linhas);
+        dialogManager().scrDialog = scrDialog;
+        dialogManager().startDialog();
         StatesUIButton(false);
     }
     
-    public void ActiveUI(){
+    DialogManager dialogManager(){
+        return DialogManager.dialogManager;
+    }
+    
+    private void ActiveUI(){
         UI.SetActive(true);
         StatesUIButton(true);
     }
 
-    void StatesUIButton(bool state){
+    private void StatesUIButton(bool state){
         Button[] botoes = FindObjectsOfType<Button>();
         foreach (Button b in botoes) {
             b.interactable = state;
         }
+    }
+
+    private void OnDisable() {
+        DialogManager.onDialogClose -= ActiveUI;
     }
 }
