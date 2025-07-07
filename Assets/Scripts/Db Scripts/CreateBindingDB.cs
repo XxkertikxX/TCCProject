@@ -21,8 +21,12 @@ public class CreateBindingDB : MonoBehaviour
     }
 
     void CreateKeys(ILiteCollection<KeyBinding> col){
-        col.Upsert(new KeyBinding { keyName = "Jump", key = KeyCode.Space });
-        col.Upsert(new KeyBinding { keyName = "Left", key = KeyCode.A });
-        col.Upsert(new KeyBinding { keyName = "Right", key = KeyCode.D });
+        CreateKey("Jump", KeyCode.Space, col);
+        CreateKey("Left", KeyCode.A, col);
+        CreateKey("Right", KeyCode.D, col);
+    }
+
+    void CreateKey(string KeyName, KeyCode Key, ILiteCollection<KeyBinding> col) {
+        col.Upsert(new KeyBinding { keyName = KeyName, key = Key});
     }
 }

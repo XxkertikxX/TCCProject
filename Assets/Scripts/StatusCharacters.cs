@@ -5,7 +5,6 @@ using System.Collections.Generic;
 public class StatusCharacters : ScriptableObject
 {
     public float hp;
-    public float damage;
-    public bool AttackInTheTurn;
+    public float power;
     public List<SkillBase> skills;
 }

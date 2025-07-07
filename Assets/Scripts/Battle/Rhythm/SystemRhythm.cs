@@ -13,7 +13,7 @@ public class SystemRhythm : MonoBehaviour
     }
 
     IEnumerator SpawnLines() {
-        SkillBase skill = PlayerCharactersSkills.character.skills[PosSkill];
+        SkillBase skill = CharStatus().skills[PosSkill];
         int TimesForInvoke = skill.TimesForInvoke;
         while (TimesForInvoke > 0) {
             var line = Instantiate(Line, InstantiatePosition.position, Quaternion.identity);
@@ -28,14 +28,15 @@ public class SystemRhythm : MonoBehaviour
     }
     
     void UseSkill() {
-        var character = PlayerCharactersSkills.character;
-        character.skills[PosSkill].Skill(character.damage, Enemyhp());
-        character.AttackInTheTurn = true;
+        CharStatus().skills[PosSkill].Skill(CharStatus().power);
+        character().attackInTheTurn = true;
     }
-
-    hp Enemyhp() {
-        GameObject enemy = GameObject.FindGameObjectWithTag("Enemy");
-        hp enemyHP = enemy.GetComponent<hp>();
-        return enemyHP;
+    
+    StatusCharacters CharStatus(){
+        return character().character;
+    }
+    
+    CharacterStatus character(){
+        return PlayerCharactersSkills.character;
     }
 }
