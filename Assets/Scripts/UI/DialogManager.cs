@@ -42,7 +42,9 @@ public class DialogManager : MonoBehaviour
     }
 
     private IEnumerator typingLine() {
-        foreach (char c in scrDialog.textsDialog[index]) {
+        readyText = false;
+        foreach (char c in scrDialog.textsDialog[index])
+        {
             textSpeak.text += c;
             yield return new WaitForSecondsRealtime(actualSpeed);
         }
@@ -50,7 +52,7 @@ public class DialogManager : MonoBehaviour
     }
 
     private void nextLine() {
-        if (index < scrDialog.textsDialog.Length) {
+        if (index < scrDialog.textsDialog.Length - 1) {
             index++;
             startLine();
         }
