@@ -9,5 +9,5 @@ public class ScrDialog : ScriptableObject {
 public class LineDialog {
     public string nameCharacter;
     public Sprite imageCharacter;
-    [TextArea] public string textsDialog;
+    [TextArea] public string textDialog;
 }
