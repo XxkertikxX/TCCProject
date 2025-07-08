@@ -11,22 +11,22 @@ public class SetupBattle : MonoBehaviour
         DialogManager.onDialogClose += ActiveUI;
     }
 
-    void Start(){
-        dialogManager().scrDialog = scrDialog;
-        dialogManager().startDialog();
+    void Start() {
+        dialogManager().dialogs = scrDialog.lineDialog;
+        dialogManager().openDialog();
         StatesUIButton(false);
     }
     
-    DialogManager dialogManager(){
+    DialogManager dialogManager() {
         return DialogManager.dialogManager;
     }
     
-    private void ActiveUI(){
+    private void ActiveUI() {
         UI.SetActive(true);
         StatesUIButton(true);
     }
 
-    private void StatesUIButton(bool state){
+    private void StatesUIButton(bool state) {
         Button[] botoes = FindObjectsOfType<Button>();
         foreach (Button b in botoes) {
             b.interactable = state;

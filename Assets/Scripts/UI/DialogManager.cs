@@ -4,13 +4,11 @@ using UnityEngine.UI;
 using System;
 public class DialogManager : MonoBehaviour
 {
+    public static event Action onDialogOpen;
     public static event Action onDialogClose;
     public static DialogManager dialogManager { get; private set; }
-    public bool activeDialog => screenDialog.activeSelf;
-    public ScrDialog scrDialog;
+    public LineDialog[] dialogs;
 
-    [SerializeField] GameObject screenDialog;
-    [SerializeField] GameObject screenHUD;
     [SerializeField] Text textName;
     [SerializeField] Text textSpeak;
     [SerializeField] Image imageNPC;
@@ -31,8 +29,8 @@ public class DialogManager : MonoBehaviour
         }
     }
 
-    public void startDialog(){
-        setupDialog();
+    public void openDialog(){
+        onDialogOpen?.Invoke();
         startLine();
     }
 
@@ -43,8 +41,7 @@ public class DialogManager : MonoBehaviour
 
     private IEnumerator typingLine() {
         readyText = false;
-        foreach (char c in scrDialog.textsDialog[index])
-        {
+        foreach (char c in dialogs[index].textsDialog) {
             textSpeak.text += c;
             yield return new WaitForSecondsRealtime(actualSpeed);
         }
@@ -52,7 +49,7 @@ public class DialogManager : MonoBehaviour
     }
 
     private void nextLine() {
-        if (index < scrDialog.textsDialog.Length - 1) {
+        if (index < dialogs.Length - 1) {
             index++;
             startLine();
         }
@@ -63,26 +60,12 @@ public class DialogManager : MonoBehaviour
 
     private void closeDialog() {
         onDialogClose?.Invoke();
-        setupEndDialog();
-    }
-
-    private void setupDialog() {
-        index = 0;
-        Time.timeScale = 0f;
-        screenHUD.SetActive(false);
-        screenDialog.SetActive(true);
-    }
-    
-    private void setupEndDialog(){
-        Time.timeScale = 1f;
-        screenDialog.SetActive(false);
-        screenHUD.SetActive(true);
     }
     
     private void setupLine(){
         readyText = false;
-        textName.text = scrDialog.nameCharacter[index];
+        textName.text = dialogs[index].nameCharacter;
         textSpeak.text = null;
-        imageNPC.sprite = scrDialog.imageCharacter[index];
+        imageNPC.sprite = dialogs[index].imageCharacter;
     }
 }

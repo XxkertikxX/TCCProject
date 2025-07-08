@@ -2,23 +2,22 @@ using UnityEngine;
 
 public class DialogTrigger : MonoBehaviour
 {
-    private ScrDialog dialog;
+    [SerializeField] ScrDialog dialog;
     [SerializeField] bool precisaInteragir;
     [SerializeField] GameObject promptApertarE;
     private PlayerMovement playerMovement;
-
+    private bool inDialog = false;
     void Awake() {
         playerMovement = PlayerMovement.playerMovement;
     }
 
     void OnEnable() {
-        DialogManager.onDialogClose += activeMovement;
+        DialogManager.onDialogOpen += setupOpenDialog;
+        DialogManager.onDialogClose += setupCloseDialog;
     }
 
     private void OnTriggerStay2D(Collider2D collision) {
-        if (DialogManager.dialogManager.activeDialog) return;
-
-        if (collision.CompareTag("Player")) {
+        if (collision.CompareTag("Player") && inDialog == false) {
             mustActiveDialog();
         }
     }
@@ -58,19 +57,25 @@ public class DialogTrigger : MonoBehaviour
 
     private void setupActiveDialog() {
         playerMovement.enabled = false;
-        DialogManager.dialogManager.scrDialog = dialog;
-        DialogManager.dialogManager.startDialog();
+        DialogManager.dialogManager.dialogs = dialog.lineDialog;
+        DialogManager.dialogManager.openDialog();
     }
 
     private bool isGrounded() {
         return playerMovement.isGrounded;
     }
-
-    private void activeMovement() {
+    
+    private void setupOpenDialog(){
+        inDialog = true;
+    }
+    
+    private void setupCloseDialog() {
+        inDialog = false;
         playerMovement.enabled = true;
     }
     
     void OnDisable() {
-        DialogManager.onDialogClose -= activeMovement;
+        DialogManager.onDialogOpen -= setupOpenDialog;
+        DialogManager.onDialogClose -= setupCloseDialog;
     }
 }
