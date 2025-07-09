@@ -31,14 +31,14 @@ public class SystemRhythm : MonoBehaviour
     
     private void UseSkill() {
         CharStatus().Skills[PosSkill].Skill(CharStatus().Power);
-        character().AttackInTheTurn = true;
+        Character().AttackInTheTurn = true;
     }
     
     private StatusCharacters CharStatus(){
-        return character().Character;
+        return Character().Character;
     }
     
-    private CharacterStatus character(){
+    private CharacterStatus Character(){
         return PlayerCharactersSkills.Character;
     }
 }

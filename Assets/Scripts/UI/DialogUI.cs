@@ -6,22 +6,22 @@ public class DialogUI : MonoBehaviour
     [SerializeField] private GameObject screenHUD;
 
     void OnEnable() {
-        DialogManager.OnDialogOpen += setupDialog;
-        DialogManager.OnDialogClose += setupEndDialog;
+        DialogManager.OnDialogOpen += SetupDialog;
+        DialogManager.OnDialogClose += SetupEndDialog;
     }
 
     void OnDisable() {
-        DialogManager.OnDialogOpen -= setupDialog;
-        DialogManager.OnDialogClose -= setupEndDialog;
+        DialogManager.OnDialogOpen -= SetupDialog;
+        DialogManager.OnDialogClose -= SetupEndDialog;
     }
     
-    private void setupDialog() {
+    private void SetupDialog() {
         Time.timeScale = 0f;
         screenDialog.SetActive(true);
         screenHUD.SetActive(false);
     }
     
-    private void setupEndDialog(){
+    private void SetupEndDialog(){
         Time.timeScale = 1f;
         screenDialog.SetActive(false);
         screenHUD.SetActive(true);

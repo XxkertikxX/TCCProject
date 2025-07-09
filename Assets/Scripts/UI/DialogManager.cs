@@ -8,6 +8,7 @@ public class DialogManager : MonoBehaviour
     public static event Action OnDialogOpen;
     public static event Action OnDialogClose;
     public static DialogManager InstanceDialogManager { get; private set; }
+    
     public LineDialog[] Dialogs;
 
     [SerializeField] private Text textName;
@@ -23,7 +24,7 @@ public class DialogManager : MonoBehaviour
     }
 
     void Update() {
-        actualSpeed = writeSpeed();
+        actualSpeed = WriteSpeed();
 
         if (Input.GetKeyDown(KeyCode.Return)) {
             ContinueDialog();
@@ -32,7 +33,7 @@ public class DialogManager : MonoBehaviour
 
     private void ContinueDialog() {
         if (coroutine == null) {
-            nextLine();
+            NextLine();
         }
         else {
             SkipLine();
@@ -45,18 +46,18 @@ public class DialogManager : MonoBehaviour
         textSpeak.text = Dialogs[index].TextDialog;
     }
     
-    public void openDialog() {
+    public void OpenDialog() {
         index = 0;
         OnDialogOpen?.Invoke();
-        startLine();
+        StartLine();
     }
 
-    private void startLine() {
-        setupLine();
-        coroutine = StartCoroutine(typingLine());
+    private void StartLine() {
+        SetupLine();
+        coroutine = StartCoroutine(TypingLine());
     }
 
-    private IEnumerator typingLine() {
+    private IEnumerator TypingLine() {
         foreach (char c in Dialogs[index].TextDialog) {
             textSpeak.text += c;
             yield return new WaitForSecondsRealtime(actualSpeed);
@@ -64,27 +65,27 @@ public class DialogManager : MonoBehaviour
         coroutine = null;
     }
 
-    private void nextLine() {
+    private void NextLine() {
         if (index < Dialogs.Length - 1) {
             index++;
-            startLine();
+            StartLine();
         }
         else {
-            closeDialog();
+            CloseDialog();
         }
     }
 
-    private void closeDialog() {
+    private void CloseDialog() {
         OnDialogClose?.Invoke();
     }
 
-    private void setupLine() {
+    private void SetupLine() {
         textName.text = Dialogs[index].NameCharacter;
         textSpeak.text = null;
         imageNPC.sprite = Dialogs[index].ImageCharacter;
     }
 
-    private float writeSpeed() {
+    private float WriteSpeed() {
         return Input.GetKey(KeyCode.Space) ? 0.01f : 0.05f;
     }
 }

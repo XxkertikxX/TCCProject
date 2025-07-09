@@ -12,13 +12,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask ground;
     
     private Rigidbody2D rb;
-
     private float x;
 
     void OnDisable() {
         rb.velocity = new Vector2(0, 0);
     }
-    
+
     void Start() {
         InstancePlayerMovement = gameObject.GetComponent<PlayerMovement>();
         Bindings.UpdateBindings();

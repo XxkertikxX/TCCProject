@@ -28,19 +28,19 @@ public class Parallax : MonoBehaviour
     }
 
     private void VerifyIfBackgroundOffScreen() {
-        if (offScreenBackgroundLeft()) {
+        if (OffScreenBackgroundLeft()) {
             RepositionBackground(backgroundLength);
         }
-        else if (offScreenBackgroundRight()) {
+        else if (OffScreenBackgroundRight()) {
             RepositionBackground(-backgroundLength);
         }
     }
 
-    private bool offScreenBackgroundLeft(){
+    private bool OffScreenBackgroundLeft(){
         return CamBackgroundPos() > inicialPosition + backgroundLength;
     }
 
-    private bool offScreenBackgroundRight(){
+    private bool OffScreenBackgroundRight(){
         return CamBackgroundPos() < inicialPosition - backgroundLength;
     }
 

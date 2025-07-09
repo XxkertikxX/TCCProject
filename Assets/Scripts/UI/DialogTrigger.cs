@@ -14,18 +14,18 @@ public class DialogTrigger : MonoBehaviour
     }
 
     void OnEnable() {
-        DialogManager.OnDialogOpen += setupOpenDialog;
-        DialogManager.OnDialogClose += setupCloseDialog;
+        DialogManager.OnDialogOpen += SetupOpenDialog;
+        DialogManager.OnDialogClose += SetupCloseDialog;
     }
 
     void OnDisable() {
-        DialogManager.OnDialogOpen -= setupOpenDialog;
-        DialogManager.OnDialogClose -= setupCloseDialog;
+        DialogManager.OnDialogOpen -= SetupOpenDialog;
+        DialogManager.OnDialogClose -= SetupCloseDialog;
     }
 
     void OnTriggerStay2D(Collider2D collision) {
         if (collision.CompareTag("Player") && inDialog == false) {
-            mustActiveDialog();
+            MustActiveDialog();
         }
     }
 
@@ -37,43 +37,43 @@ public class DialogTrigger : MonoBehaviour
         }
     }
 
-    private void mustActiveDialog() {
+    private void MustActiveDialog() {
         if (needsInteract) {
-            promptActiveDialogue();
+            PromptActiveDialogue();
         }
         else {
-            if (isGrounded()) {
-                activeDialog();
+            if (IsGrounded()) {
+                ActiveDialog();
             }
         }
     }
 
-    private void promptActiveDialogue() {
-        promptPressE.SetActive(isGrounded());
+    private void PromptActiveDialogue() {
+        promptPressE.SetActive(IsGrounded());
 
-        if (Input.GetKeyDown(KeyCode.E) && isGrounded()) {
-            activeDialog();
+        if (Input.GetKeyDown(KeyCode.E) && IsGrounded()) {
+            ActiveDialog();
         }
     }
 
-    private void activeDialog() {
+    private void ActiveDialog() {
         if (promptPressE != null) {
             promptPressE.SetActive(false);
         }
     }
 
-    private bool isGrounded() {
+    private bool IsGrounded() {
         return playerMovement.IsGrounded;
     }
     
-    private void setupOpenDialog(){
+    private void SetupOpenDialog(){
         inDialog = true;
         playerMovement.enabled = false;
         DialogManager.InstanceDialogManager.Dialogs = dialog.LineDialog;
-        DialogManager.InstanceDialogManager.openDialog();
+        DialogManager.InstanceDialogManager.OpenDialog();
     }
     
-    private void setupCloseDialog() {
+    private void SetupCloseDialog() {
         inDialog = false;
         playerMovement.enabled = true;
     }

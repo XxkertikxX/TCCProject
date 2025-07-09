@@ -14,14 +14,14 @@ public class SetupBattle : MonoBehaviour
     void OnDisable() {
         DialogManager.OnDialogClose -= ActiveUI;
     }
-    
+
     void Start() {
-        dialogManager().Dialogs = scrDialog.LineDialog;
-        dialogManager().openDialog();
+        InstanceDialogManager().Dialogs = scrDialog.LineDialog;
+        InstanceDialogManager().OpenDialog();
         StatesUIButton(false);
     }
     
-    private DialogManager dialogManager() {
+    private DialogManager InstanceDialogManager() {
         return DialogManager.InstanceDialogManager;
     }
     

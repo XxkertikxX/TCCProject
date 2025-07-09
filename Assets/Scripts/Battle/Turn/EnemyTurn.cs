@@ -34,12 +34,12 @@ public class EnemyTurn : MonoBehaviour
     }
 
     private void ResetTurn() {
-        foreach (var character in characters()) {
+        foreach (var character in Characters()) {
             character.GetComponent<CharacterStatus>().AttackInTheTurn = false;
         }
     }
 
-    private GameObject[] characters() {
+    private GameObject[] Characters() {
         return GameObject.FindGameObjectsWithTag("Character");
     }
 }

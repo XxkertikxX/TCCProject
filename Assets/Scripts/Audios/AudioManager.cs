@@ -5,8 +5,8 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip[] audioClip;
 
-    public void mouseInteractions() {
-        audioSource.clip = audioClip[indexAudio()];
+    public void MouseInteractions() {
+        audioSource.clip = audioClip[IndexAudio()];
         
         if (!audioSource.isPlaying) {
             audioSource.Play();
@@ -17,7 +17,7 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    private int indexAudio() {
+    private int IndexAudio() {
         return Random.Range(0, audioClip.Length);
     }
 }
