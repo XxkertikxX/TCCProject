@@ -5,21 +5,21 @@ using System;
 
 public class DialogManager : MonoBehaviour
 {
-    public static event Action onDialogOpen;
-    public static event Action onDialogClose;
-    public static DialogManager dialogManager { get; private set; }
-    public LineDialog[] dialogs;
+    public static event Action OnDialogOpen;
+    public static event Action OnDialogClose;
+    public static DialogManager InstanceDialogManager { get; private set; }
+    public LineDialog[] Dialogs;
 
-    [SerializeField] Text textName;
-    [SerializeField] Text textSpeak;
-    [SerializeField] Image imageNPC;
+    [SerializeField] private Text textName;
+    [SerializeField] private Text textSpeak;
+    [SerializeField] private Image imageNPC;
 
     private int index;
     private float actualSpeed;
     private Coroutine coroutine = null;
 
     void Awake() {
-        dialogManager = this;
+        InstanceDialogManager = this;
     }
 
     void Update() {
@@ -42,12 +42,12 @@ public class DialogManager : MonoBehaviour
     private void SkipLine() {
         StopCoroutine(coroutine);
         coroutine = null;
-        textSpeak.text = dialogs[index].textDialog;
+        textSpeak.text = Dialogs[index].TextDialog;
     }
     
     public void openDialog() {
         index = 0;
-        onDialogOpen?.Invoke();
+        OnDialogOpen?.Invoke();
         startLine();
     }
 
@@ -57,7 +57,7 @@ public class DialogManager : MonoBehaviour
     }
 
     private IEnumerator typingLine() {
-        foreach (char c in dialogs[index].textDialog) {
+        foreach (char c in Dialogs[index].TextDialog) {
             textSpeak.text += c;
             yield return new WaitForSecondsRealtime(actualSpeed);
         }
@@ -65,7 +65,7 @@ public class DialogManager : MonoBehaviour
     }
 
     private void nextLine() {
-        if (index < dialogs.Length - 1) {
+        if (index < Dialogs.Length - 1) {
             index++;
             startLine();
         }
@@ -75,13 +75,13 @@ public class DialogManager : MonoBehaviour
     }
 
     private void closeDialog() {
-        onDialogClose?.Invoke();
+        OnDialogClose?.Invoke();
     }
 
     private void setupLine() {
-        textName.text = dialogs[index].nameCharacter;
+        textName.text = Dialogs[index].NameCharacter;
         textSpeak.text = null;
-        imageNPC.sprite = dialogs[index].imageCharacter;
+        imageNPC.sprite = Dialogs[index].ImageCharacter;
     }
 
     private float writeSpeed() {

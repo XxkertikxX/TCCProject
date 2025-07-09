@@ -3,8 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class EnemyTurn : MonoBehaviour
 {
-    [SerializeField] StatusCharacters Enemy;
-    [SerializeField] string Scene;
+    [SerializeField] private StatusCharacters enemy;
+    [SerializeField] private string scene;
 
     void Update() {
         if (AllCharactersPlay()) {
@@ -12,33 +12,34 @@ public class EnemyTurn : MonoBehaviour
             ResetTurn();
         }
     }
-    void EnemyAttack() {
-        int randomSkill = Random.Range(0, Enemy.skills.Count);
+    
+    void OnDestroy(){
+        SceneManager.LoadScene(scene);
+    }
+    
+    private void EnemyAttack() {
+        int randomSkill = Random.Range(0, enemy.Skills.Count);
         CatalystSkills.Damage = 1;
-        Enemy.skills[randomSkill].Skill(Enemy.power);
+        enemy.Skills[randomSkill].Skill(enemy.Power);
     }
 
-    bool AllCharactersPlay() {
+    private bool AllCharactersPlay() {
         var characters = GameObject.FindGameObjectsWithTag("Character");
         foreach (var character in characters) {
-            if (!character.GetComponent<CharacterStatus>().attackInTheTurn) {
+            if (!character.GetComponent<CharacterStatus>().AttackInTheTurn) {
                 return false;
             }
         }
         return true;
     }
 
-    void ResetTurn() {
+    private void ResetTurn() {
         foreach (var character in characters()) {
-            character.GetComponent<CharacterStatus>().attackInTheTurn = false;
+            character.GetComponent<CharacterStatus>().AttackInTheTurn = false;
         }
     }
 
-    GameObject[] characters() {
+    private GameObject[] characters() {
         return GameObject.FindGameObjectsWithTag("Character");
-    }
-
-    void OnDestroy(){
-        SceneManager.LoadScene(Scene);
     }
 }

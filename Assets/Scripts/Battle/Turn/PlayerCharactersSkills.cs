@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerCharactersSkills : MonoBehaviour
 {
-    static public CharacterStatus character;
+    static public CharacterStatus Character;
 
     void OnEnable() {
         TextUpdate();
@@ -14,7 +14,7 @@ public class PlayerCharactersSkills : MonoBehaviour
         RhythmObj.Rhythm.SetActive(true);
     }
 
-    void TextUpdate() {
+    private void TextUpdate() {
 
     }
 }

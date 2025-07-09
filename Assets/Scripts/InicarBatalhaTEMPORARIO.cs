@@ -3,9 +3,9 @@ using UnityEngine.SceneManagement;
 
 public class InicarBatalhaTEMPORARIO : MonoBehaviour
 {
-    [SerializeField] string combatScene;
+    [SerializeField] private string combatScene;
     
-    private void OnCollisionEnter2D(Collision2D collision) {
+    void OnCollisionEnter2D(Collision2D collision) {
         if(collision.gameObject.CompareTag("Player")) {
             SceneManager.LoadScene(combatScene);
         }

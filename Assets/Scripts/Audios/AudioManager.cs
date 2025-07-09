@@ -2,22 +2,22 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    [SerializeField] AudioSource _audioSource;
-    [SerializeField] AudioClip[] _audioClip;
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip[] audioClip;
 
     public void mouseInteractions() {
-        _audioSource.clip = _audioClip[indexAudio()];
+        audioSource.clip = audioClip[indexAudio()];
         
-        if (!_audioSource.isPlaying) {
-            _audioSource.Play();
+        if (!audioSource.isPlaying) {
+            audioSource.Play();
         }
         else {
-            _audioSource.Stop();
-            _audioSource.Play();
+            audioSource.Stop();
+            audioSource.Play();
         }
     }
 
     private int indexAudio() {
-        return Random.Range(0, _audioClip.Length);
+        return Random.Range(0, audioClip.Length);
     }
 }

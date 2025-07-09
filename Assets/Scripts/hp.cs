@@ -3,14 +3,15 @@ using UnityEngine.UI;
 
 public class hp : MonoBehaviour
 {
-    StatusCharacters Character;
-    float life;
-    [SerializeField] Text lifeText;
-    [SerializeField] Slider lifeSlider;
+    [SerializeField] private Text lifeText;
+    [SerializeField] private Slider lifeSlider;
+
+    private StatusCharacters character ;
+    private float life;
 
     void Start() {
-        Character = GetComponent<CharacterStatus>().character;
-        life = Character.hp;
+        character = GetComponent<CharacterStatus>().Character;
+        life = character.Hp;
     }
 
 
@@ -29,15 +30,15 @@ public class hp : MonoBehaviour
         life += heal;
     }
 
-    bool IsDead() {
+    private bool IsDead() {
         if (life <= 0) {
             return true;
         }
         return false;
     }
 
-    void UpdateUI(){
-        lifeText.text = $"{life}/{Character.hp}";
-        lifeSlider.value = life / Character.hp;
+    private void UpdateUI(){
+        lifeText.text = $"{life}/{character.Hp}";
+        lifeSlider.value = life / character.Hp;
     }
 }

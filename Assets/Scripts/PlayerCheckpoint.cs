@@ -4,11 +4,11 @@ public class PlayerCheckpoint : MonoBehaviour
 {
     private Vector3 lastCheckpointPosition;
 
-    private void Start() {
+    void Start() {
         lastCheckpointPosition = transform.position;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision) {
+    void OnTriggerEnter2D(Collider2D collision) {
         if (collision.CompareTag("Checkpoint")) {
             lastCheckpointPosition = transform.position;
         }

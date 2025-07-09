@@ -2,20 +2,25 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    static public PlayerMovement playerMovement;
-    public bool isGrounded;
+    static public PlayerMovement InstancePlayerMovement;
+    public bool IsGrounded;
 
-    Rigidbody2D rb;
+    [SerializeField] private float speed;
+    [SerializeField] private float jumpForce;
 
-    float x;
-    [SerializeField] float speed;
-    [SerializeField] float jumpForce;
+    [SerializeField] private Transform groundCheck;
+    [SerializeField] private LayerMask ground;
+    
+    private Rigidbody2D rb;
 
-    [SerializeField] Transform GroundCheck;
-    [SerializeField] LayerMask Ground;
+    private float x;
 
+    void OnDisable() {
+        rb.velocity = new Vector2(0, 0);
+    }
+    
     void Start() {
-        playerMovement = gameObject.GetComponent<PlayerMovement>();
+        InstancePlayerMovement = gameObject.GetComponent<PlayerMovement>();
         Bindings.UpdateBindings();
         rb = GetComponent<Rigidbody2D>();
     }
@@ -29,26 +34,22 @@ public class PlayerMovement : MonoBehaviour
         Jump();
     }
 
-    void InputDirectionMovement() {
+    private void InputDirectionMovement() {
         x = 0;
-        DirectionX(Bindings.bindings["Left"], -1);
-        DirectionX(Bindings.bindings["Right"], 1);
+        DirectionX(Bindings.BindingsDic["Left"], -1);
+        DirectionX(Bindings.BindingsDic["Right"], 1);
     }
 
-    void DirectionX(KeyCode key, int direction) {
+    private void DirectionX(KeyCode key, int direction) {
         if (Input.GetKey(key)) {
             x += direction;
         }
     }
 
-    void Jump() {
-        isGrounded = Physics2D.Raycast(GroundCheck.position, Vector2.down, 0.1f, Ground);
-        if (Input.GetKeyDown(Bindings.bindings["Jump"]) && isGrounded) {
+    private void Jump() {
+        IsGrounded = Physics2D.Raycast(groundCheck.position, Vector2.down, 0.1f, ground);
+        if (Input.GetKeyDown(Bindings.BindingsDic["Jump"]) && IsGrounded) {
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
-    }
-
-    void OnDisable() {
-        rb.velocity = new Vector2(0, 0);
     }
 }

@@ -2,14 +2,19 @@ using UnityEngine;
 
 public class DialogUI : MonoBehaviour
 {
-    [SerializeField] GameObject screenDialog;
-    [SerializeField] GameObject screenHUD;
+    [SerializeField] private GameObject screenDialog;
+    [SerializeField] private GameObject screenHUD;
 
     void OnEnable() {
-        DialogManager.onDialogOpen += setupDialog;
-        DialogManager.onDialogClose += setupEndDialog;
+        DialogManager.OnDialogOpen += setupDialog;
+        DialogManager.OnDialogClose += setupEndDialog;
     }
 
+    void OnDisable() {
+        DialogManager.OnDialogOpen -= setupDialog;
+        DialogManager.OnDialogClose -= setupEndDialog;
+    }
+    
     private void setupDialog() {
         Time.timeScale = 0f;
         screenDialog.SetActive(true);
@@ -20,10 +25,5 @@ public class DialogUI : MonoBehaviour
         Time.timeScale = 1f;
         screenDialog.SetActive(false);
         screenHUD.SetActive(true);
-    }
-
-    void OnDisable() {
-        DialogManager.onDialogOpen -= setupDialog;
-        DialogManager.onDialogClose -= setupEndDialog;
     }
 }

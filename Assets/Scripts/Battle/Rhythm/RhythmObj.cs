@@ -2,18 +2,18 @@ using UnityEngine;
 
 public class RhythmObj : MonoBehaviour
 {
-    [SerializeField] GameObject rh;
-    [SerializeField] Transform center;
-    [SerializeField] Renderer rend;
+    [SerializeField] private GameObject _rhythm;
+    [SerializeField] private Transform _centerLine;
+    [SerializeField] private Renderer _rendTotallyLine;
 
 
     public static GameObject Rhythm;
-    public static Transform centerLine;
-    public static Renderer rendTotallyLine;
+    public static Transform CenterLine;
+    public static Renderer RendTotallyLine;
 
     void Start() {
-        Rhythm = rh;
-        centerLine = center;
-        rendTotallyLine = rend;
+        Rhythm = _rhythm;
+        CenterLine = _centerLine;
+        RendTotallyLine = _rendTotallyLine;
     }
 }

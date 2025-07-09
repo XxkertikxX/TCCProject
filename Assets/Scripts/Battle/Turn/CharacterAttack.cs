@@ -2,12 +2,12 @@ using UnityEngine;
 
 public class CharacterAttack : MonoBehaviour
 {
-    [SerializeField] GameObject CaixaTurnAttack;
+    [SerializeField] private GameObject caixaTurnAttack;
     
-    public void ClickCharacter(CharacterStatus Character){
-        if (!Character.attackInTheTurn) {
-            CaixaTurnAttack.SetActive(true);
-            PlayerCharactersSkills.character = Character;
+    public void ClickCharacter(CharacterStatus character){
+        if (!character.AttackInTheTurn) {
+            caixaTurnAttack.SetActive(true);
+            PlayerCharactersSkills.Character = character;
         }
     }
 }

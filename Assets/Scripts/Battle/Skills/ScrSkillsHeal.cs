@@ -4,8 +4,8 @@ using UnityEngine;
 public class ScrSkillsHeal : SkillBase
 {
     public override void Skill(float power) {
-        float Heal = power * (CatalystSkills.Damage / TimesForInvoke);
-        float RoundHeal = Mathf.Round(Heal);
-        targetType.targets()[0].Hp.Heal(RoundHeal);
+        float heal = power * (CatalystSkills.Damage / TimesForInvoke);
+        float roundHeal = Mathf.Round(heal);
+        TargetType.targets()[0].Hp.Heal(roundHeal);
     }
 }

@@ -3,22 +3,26 @@ using UnityEngine.UI;
 
 public class SetupBattle : MonoBehaviour
 {
-    [SerializeField] GameObject UI;
-    [SerializeField] ScrDialog scrDialog;
+    [SerializeField] private GameObject UI;
+    [SerializeField] private ScrDialog scrDialog;
 
 
-    private void OnEnable() {
-        DialogManager.onDialogClose += ActiveUI;
+    void OnEnable() {
+        DialogManager.OnDialogClose += ActiveUI;
     }
 
+    void OnDisable() {
+        DialogManager.OnDialogClose -= ActiveUI;
+    }
+    
     void Start() {
-        dialogManager().dialogs = scrDialog.lineDialog;
+        dialogManager().Dialogs = scrDialog.LineDialog;
         dialogManager().openDialog();
         StatesUIButton(false);
     }
     
-    DialogManager dialogManager() {
-        return DialogManager.dialogManager;
+    private DialogManager dialogManager() {
+        return DialogManager.InstanceDialogManager;
     }
     
     private void ActiveUI() {
@@ -31,9 +35,5 @@ public class SetupBattle : MonoBehaviour
         foreach (Button b in botoes) {
             b.interactable = state;
         }
-    }
-
-    private void OnDisable() {
-        DialogManager.onDialogClose -= ActiveUI;
     }
 }

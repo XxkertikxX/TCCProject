@@ -9,11 +9,11 @@ public class targetRandomCharacter : TypeSkill
         return characterStatus;
     }
 
-    int randomTarget() {
+    private int randomTarget() {
         return Random.Range(0, characters().Length);
     }
 
-    GameObject[] characters() {
+    private GameObject[] characters() {
         return GameObject.FindGameObjectsWithTag("Character");
     }
 }

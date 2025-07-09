@@ -4,7 +4,7 @@ using UnityEngine;
 public class ScrSkillsAttack : SkillBase
 {
     public override void Skill(float power) {
-        float Damage = power * (CatalystSkills.Damage / TimesForInvoke);
-        float RoundDamage = Mathf.Round(Damage);
+        float damage = power * (CatalystSkills.Damage / TimesForInvoke);
+        float RoundDamage = Mathf.Round(damage);
     }
 }

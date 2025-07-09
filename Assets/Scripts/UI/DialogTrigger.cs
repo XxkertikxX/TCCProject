@@ -2,36 +2,43 @@ using UnityEngine;
 
 public class DialogTrigger : MonoBehaviour
 {
-    [SerializeField] ScrDialog dialog;
-    [SerializeField] bool precisaInteragir;
-    [SerializeField] GameObject promptApertarE;
+    [SerializeField] private ScrDialog dialog;
+    [SerializeField] private bool needsInteract;
+    [SerializeField] private GameObject promptPressE;
+
     private PlayerMovement playerMovement;
     private bool inDialog = false;
+
     void Awake() {
-        playerMovement = PlayerMovement.playerMovement;
+        playerMovement = PlayerMovement.InstancePlayerMovement;
     }
 
     void OnEnable() {
-        DialogManager.onDialogOpen += setupOpenDialog;
-        DialogManager.onDialogClose += setupCloseDialog;
+        DialogManager.OnDialogOpen += setupOpenDialog;
+        DialogManager.OnDialogClose += setupCloseDialog;
     }
 
-    private void OnTriggerStay2D(Collider2D collision) {
+    void OnDisable() {
+        DialogManager.OnDialogOpen -= setupOpenDialog;
+        DialogManager.OnDialogClose -= setupCloseDialog;
+    }
+    
+    void OnTriggerStay2D(Collider2D collision) {
         if (collision.CompareTag("Player") && inDialog == false) {
             mustActiveDialog();
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision) {
+    void OnTriggerExit2D(Collider2D collision) {
         if (!collision.CompareTag("Player")) return;
 
-        if (promptApertarE != null) {
-            promptApertarE.SetActive(false);
+        if (promptPressE != null) {
+            promptPressE.SetActive(false);
         }
     }
 
     private void mustActiveDialog() {
-        if (precisaInteragir) {
+        if (needsInteract) {
             promptActiveDialogue();
         }
         else {
@@ -42,7 +49,7 @@ public class DialogTrigger : MonoBehaviour
     }
 
     private void promptActiveDialogue() {
-        promptApertarE.SetActive(isGrounded());
+        promptPressE.SetActive(isGrounded());
 
         if (Input.GetKeyDown(KeyCode.E)) {
             activeDialog();
@@ -50,19 +57,19 @@ public class DialogTrigger : MonoBehaviour
     }
 
     private void activeDialog() {
-        if (promptApertarE != null) {
-            promptApertarE.SetActive(false);
+        if (promptPressE != null) {
+            promptPressE.SetActive(false);
         }
     }
 
     private void setupActiveDialog() {
         playerMovement.enabled = false;
-        DialogManager.dialogManager.dialogs = dialog.lineDialog;
-        DialogManager.dialogManager.openDialog();
+        DialogManager.InstanceDialogManager.Dialogs = dialog.LineDialog;
+        DialogManager.InstanceDialogManager.openDialog();
     }
 
     private bool isGrounded() {
-        return playerMovement.isGrounded;
+        return playerMovement.IsGrounded;
     }
     
     private void setupOpenDialog(){
@@ -72,10 +79,5 @@ public class DialogTrigger : MonoBehaviour
     private void setupCloseDialog() {
         inDialog = false;
         playerMovement.enabled = true;
-    }
-    
-    void OnDisable() {
-        DialogManager.onDialogOpen -= setupOpenDialog;
-        DialogManager.onDialogClose -= setupCloseDialog;
     }
 }

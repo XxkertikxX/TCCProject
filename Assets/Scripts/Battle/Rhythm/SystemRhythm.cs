@@ -4,39 +4,41 @@ using UnityEngine;
 public class SystemRhythm : MonoBehaviour
 {
     static public int PosSkill;
-    [SerializeField] GameObject Line;
-    [SerializeField] Transform InstantiatePosition;
+
+    [SerializeField] private GameObject line;
+    [SerializeField] private Transform instantiatePosition;
 
     void OnEnable() {
         CatalystSkills.Damage = 0;
         StartCoroutine(SpawnLines());
     }
 
-    IEnumerator SpawnLines() {
-        SkillBase skill = CharStatus().skills[PosSkill];
-        int TimesForInvoke = skill.TimesForInvoke;
-        while (TimesForInvoke > 0) {
-            var line = Instantiate(Line, InstantiatePosition.position, Quaternion.identity);
-            line.GetComponent<LineRhythm>().linesMissingSpawn = TimesForInvoke;
-            TimesForInvoke--;
-            yield return new WaitForSeconds(skill.TimePerInvokeLine);
-        }
-    }
-
     void OnDisable() {
         UseSkill();
     }
     
-    void UseSkill() {
-        CharStatus().skills[PosSkill].Skill(CharStatus().power);
-        character().attackInTheTurn = true;
+    private IEnumerator SpawnLines() {
+        SkillBase skill = CharStatus().Skills[PosSkill];
+        int TimesForInvoke = skill.TimesForInvoke;
+        
+        while (TimesForInvoke > 0) {
+            var line = Instantiate(this.line, instantiatePosition.position, Quaternion.identity);
+            line.GetComponent<LineRhythm>().LinesMissingSpawn = TimesForInvoke;
+            TimesForInvoke--;
+            yield return new WaitForSeconds(skill.TimePerInvokeLine);
+        }
     }
     
-    StatusCharacters CharStatus(){
-        return character().character;
+    private void UseSkill() {
+        CharStatus().Skills[PosSkill].Skill(CharStatus().Power);
+        character().AttackInTheTurn = true;
     }
     
-    CharacterStatus character(){
-        return PlayerCharactersSkills.character;
+    private StatusCharacters CharStatus(){
+        return character().Character;
+    }
+    
+    private CharacterStatus character(){
+        return PlayerCharactersSkills.Character;
     }
 }

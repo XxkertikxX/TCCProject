@@ -10,23 +10,24 @@ public class CreateBindingDB : MonoBehaviour
             CreateKeys(col);
         }
     }
-    void DestroyExistentDB(){
+
+    private void DestroyExistentDB(){
         if (System.IO.File.Exists(Path())) {
             System.IO.File.Delete(Path());
         }
     }
 
-    string Path() {
+    private string Path() {
         return Application.persistentDataPath + "/bindings.db";
     }
 
-    void CreateKeys(ILiteCollection<KeyBinding> col){
+    private void CreateKeys(ILiteCollection<KeyBinding> col){
         CreateKey("Jump", KeyCode.Space, col);
         CreateKey("Left", KeyCode.A, col);
         CreateKey("Right", KeyCode.D, col);
     }
 
-    void CreateKey(string KeyName, KeyCode Key, ILiteCollection<KeyBinding> col) {
-        col.Upsert(new KeyBinding { keyName = KeyName, key = Key});
+    private void CreateKey(string KeyName, KeyCode Key, ILiteCollection<KeyBinding> col) {
+        col.Upsert(new KeyBinding { KeyName = KeyName, Key = Key});
     }
 }

@@ -4,28 +4,28 @@ using LiteDB;
 
 public class ChangeBinding : MonoBehaviour
 {
-    public IEnumerator WaitClick(string KeyName) {
+    public IEnumerator WaitClick(string keyName) {
         yield return new WaitForAnyKeyDown();
 
-        KeyCode Key = PressKey();
+        KeyCode key = PressKey();
         
-        Binding(KeyName, Key);
+        Binding(keyName, key);
     }
     
-    void Binding(string KeyName, KeyCode keyCode){
+    private void Binding(string keyName, KeyCode keyCode){
         using (var db = new LiteDatabase("bindings.db")) {
             var col = db.GetCollection<KeyBinding>("bindings");
 
             var bind = new KeyBinding {
-                keyName = KeyName,
-                key = keyCode
+                KeyName = keyName,
+                Key = keyCode
             };
 
             col.Upsert(bind);
         }
     }
 
-    KeyCode PressKey(){
+    private KeyCode PressKey(){
         foreach (KeyCode key in System.Enum.GetValues(typeof(KeyCode))) {
             if (Input.GetKeyDown(key))
                 return key;

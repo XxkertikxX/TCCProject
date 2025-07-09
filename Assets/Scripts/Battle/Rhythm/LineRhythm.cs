@@ -2,17 +2,16 @@ using UnityEngine;
 
 public class LineRhythm : MonoBehaviour
 {
-    public int linesMissingSpawn;
+    public int LinesMissingSpawn;
 
-    float totallyLineCoord;
-    float totallyLineSize;
-    float speed = 3f;
-
-    float damage;
+    private float totallyLineCoord;
+    private float totallyLineSize;
+    private float speed = 3f;
+    private float damage;
     
     void Start()  {
-        totallyLineCoord = RhythmObj.rendTotallyLine.bounds.max.x;
-        totallyLineSize = RhythmObj.rendTotallyLine.bounds.size.x;
+        totallyLineCoord = RhythmObj.RendTotallyLine.bounds.max.x;
+        totallyLineSize = RhythmObj.RendTotallyLine.bounds.size.x;
     }
 
     void Update(){
@@ -23,30 +22,30 @@ public class LineRhythm : MonoBehaviour
     void FixedUpdate(){
         transform.position += new Vector3(speed * Time.fixedDeltaTime, 0, 0);
     }
-
-    void Click(){
+    
+    void OnDestroy() {
+        if (LinesMissingSpawn == 1) {
+            RhythmObj.Rhythm.SetActive(false);
+        }
+        CatalystSkills.Damage += damage;
+    }
+    
+    private void Click(){
         if(Input.GetMouseButtonDown(0)){
             damage = PerDamage();
             Destroy(gameObject);
         }
     }
 
-    float PerDamage(){
-        float distance = Mathf.Abs(transform.position.x - RhythmObj.centerLine.position.x);
+    private float PerDamage(){
+        float distance = Mathf.Abs(transform.position.x - RhythmObj.CenterLine.position.x);
         return 1f - (distance / (totallyLineSize / 2f));
     }
 
-    void DestroyLineOutLimits(){
+    private void DestroyLineOutLimits(){
         if(transform.position.x > totallyLineCoord){
             damage = 0;
             Destroy(gameObject);
         }
-    }
-
-    void OnDestroy() {
-        if (linesMissingSpawn == 1) {
-            RhythmObj.Rhythm.SetActive(false);
-        }
-        CatalystSkills.Damage += damage;
     }
 }

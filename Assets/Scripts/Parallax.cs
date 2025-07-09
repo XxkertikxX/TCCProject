@@ -2,14 +2,15 @@ using UnityEngine;
 
 public class Parallax : MonoBehaviour
 {
-    Transform Cam;
-    [SerializeField] float ParallaxSpeed;
-    float InicialPosition;
-    float backgroundLength;
+    [SerializeField] private float parallaxSpeed;
+    
+    private Transform cam;
+    private float inicialPosition;
+    private float backgroundLength;
 
     void Start() {
-        Cam = Camera.main.transform;
-        InicialPosition = transform.position.x;
+        cam = Camera.main.transform;
+        inicialPosition = transform.position.x;
         backgroundLength = GetComponent<SpriteRenderer>().bounds.size.x;
     }
 
@@ -18,15 +19,15 @@ public class Parallax : MonoBehaviour
         VerifyIfBackgroundOffScreen();
     }
 
-    void ParallaxEffect() {
-        transform.position = new Vector3(InicialPosition + Distance(), transform.position.y, transform.position.z);
+    private void ParallaxEffect() {
+        transform.position = new Vector3(inicialPosition + Distance(), transform.position.y, transform.position.z);
     }
 
-    float Distance() {
-        return Cam.position.x * ParallaxSpeed;
+    private float Distance() {
+        return cam.position.x * parallaxSpeed;
     }
 
-    void VerifyIfBackgroundOffScreen() {
+    private void VerifyIfBackgroundOffScreen() {
         if (offScreenBackgroundLeft()) {
             RepositionBackground(backgroundLength);
         }
@@ -35,19 +36,19 @@ public class Parallax : MonoBehaviour
         }
     }
 
-    bool offScreenBackgroundLeft(){
-        return CamBackgroundPos() > InicialPosition + backgroundLength;
+    private bool offScreenBackgroundLeft(){
+        return CamBackgroundPos() > inicialPosition + backgroundLength;
     }
 
-    bool offScreenBackgroundRight(){
-        return CamBackgroundPos() < InicialPosition - backgroundLength;
+    private bool offScreenBackgroundRight(){
+        return CamBackgroundPos() < inicialPosition - backgroundLength;
     }
 
-    void RepositionBackground(float offSet) {
-        InicialPosition += offSet;
+    private void RepositionBackground(float offSet) {
+        inicialPosition += offSet;
     }
 
-    float CamBackgroundPos() {
-        return Cam.position.x * (1 - ParallaxSpeed);
+    private float CamBackgroundPos() {
+        return cam.position.x * (1 - parallaxSpeed);
     }
 }

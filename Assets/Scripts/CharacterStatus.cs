@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class CharacterStatus : MonoBehaviour
 {
-    public StatusCharacters character;
+    public StatusCharacters Character;
     public hp Hp;
-    [HideInInspector] public bool attackInTheTurn = false;
+    [HideInInspector] public bool AttackInTheTurn = false;
 }
