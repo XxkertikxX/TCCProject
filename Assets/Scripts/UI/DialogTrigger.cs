@@ -22,7 +22,7 @@ public class DialogTrigger : MonoBehaviour
         DialogManager.OnDialogOpen -= setupOpenDialog;
         DialogManager.OnDialogClose -= setupCloseDialog;
     }
-    
+
     void OnTriggerStay2D(Collider2D collision) {
         if (collision.CompareTag("Player") && inDialog == false) {
             mustActiveDialog();
@@ -51,7 +51,7 @@ public class DialogTrigger : MonoBehaviour
     private void promptActiveDialogue() {
         promptPressE.SetActive(isGrounded());
 
-        if (Input.GetKeyDown(KeyCode.E)) {
+        if (Input.GetKeyDown(KeyCode.E) && isGrounded()) {
             activeDialog();
         }
     }
@@ -62,18 +62,15 @@ public class DialogTrigger : MonoBehaviour
         }
     }
 
-    private void setupActiveDialog() {
-        playerMovement.enabled = false;
-        DialogManager.InstanceDialogManager.Dialogs = dialog.LineDialog;
-        DialogManager.InstanceDialogManager.openDialog();
-    }
-
     private bool isGrounded() {
         return playerMovement.IsGrounded;
     }
     
     private void setupOpenDialog(){
         inDialog = true;
+        playerMovement.enabled = false;
+        DialogManager.InstanceDialogManager.Dialogs = dialog.LineDialog;
+        DialogManager.InstanceDialogManager.openDialog();
     }
     
     private void setupCloseDialog() {
