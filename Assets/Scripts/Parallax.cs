@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Parallax : MonoBehaviour
 {
-    [SerializeField] internal float parallaxSpeed;
+    [Range (0, 1)] [SerializeField] internal float parallaxSpeed;
     internal float inicialPosition;
 
     private float backgroundLength;
@@ -45,7 +45,7 @@ public class Parallax : MonoBehaviour
     }
 
     private void BackgroundInCamera(){
-                if (!OffScreenBackgroundLeft() && !OffScreenBackgroundRight()) {
+        if (!OffScreenBackgroundLeft() && !OffScreenBackgroundRight()) {
             hasRepositioned = false;
         }
     }

@@ -19,10 +19,26 @@ public class ParallaxTest
 
     [UnityTest]
     public IEnumerator Parallax_MoveBackground_Test(){
-        camera.transform.position = new Vector3(10f, 0, 0);
+        Debug.Log(background.transform.position.x);
+        camera.transform.position = new Vector3(5f, 0, 0);
         yield return new WaitForSeconds(1);
         float expectedPositionX = parallax.inicialPosition + camera.transform.position.x * parallax.parallaxSpeed;
-        Assert.That(background.transform.position.x, Is.EqualTo(expectedPositionX).Within(0.01f));
+        Debug.Log(background.transform.position.x);
+        Assert.That(background.transform.position.x, Is.EqualTo(4.727074f).Within(0.01f));
+    }
+
+    [UnityTest]
+    public IEnumerator Parallax_BoundsLeft_Test(){
+        camera.transform.position = new Vector3(-2.23f, 0, 0);
+        yield return new WaitForSeconds(1);
+        Assert.That(background.transform.position.x, Is.EqualTo(-3.34f).Within(0.05f));
+    }
+
+    [UnityTest]
+    public IEnumerator Parallax_BoundsRight_Test(){
+        camera.transform.position = new Vector3(2.23f, 0, 0);
+        yield return new WaitForSeconds(1);
+        Assert.That(background.transform.position.x, Is.EqualTo(3.34f).Within(0.05f));
     }
 
     [UnityTearDown]
@@ -36,12 +52,15 @@ public class ParallaxTest
         camera = new GameObject("Main Camera");
         camera.AddComponent<Camera>();
         camera.tag = "MainCamera";
+        camera.transform.position = Vector3.zero;
     }
 
     private void CreateBackground(){
         background = new GameObject("Background");
         SpriteRenderer spriteRenderer = background.AddComponent<SpriteRenderer>();
         spriteRenderer.sprite = Sprite.Create(Texture2D.whiteTexture, new Rect(0,0,1,1), new Vector2(0.5f, 0.5f));
+        background.transform.localScale = new Vector3(20f, 5f, 1f);
+        background.transform.position = Vector3.zero;
     }
 
     private void CreateParallax(){
