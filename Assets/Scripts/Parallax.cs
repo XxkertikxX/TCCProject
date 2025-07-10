@@ -3,10 +3,10 @@ using UnityEngine;
 public class Parallax : MonoBehaviour
 {
     [SerializeField] internal float parallaxSpeed;
-    
-    private Transform cam;
-    private float inicialPosition;
+    internal float inicialPosition;
+
     private float backgroundLength;
+    private Transform cam;
 
     void Start() {
         cam = Camera.main.transform;
