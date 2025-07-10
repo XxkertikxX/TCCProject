@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Parallax : MonoBehaviour
 {
-    [SerializeField] private float parallaxSpeed;
+    [SerializeField] internal float parallaxSpeed;
     
     private Transform cam;
     private float inicialPosition;
