@@ -3,11 +3,10 @@ using UnityEngine;
 public class Parallax : MonoBehaviour
 {
     [Range (0, 1)] [SerializeField] internal float parallaxSpeed;
-    internal float inicialPosition;
 
+    private float inicialPosition;
     private float backgroundLength;
     private Transform cam;
-    private bool hasRepositioned = false;
 
     void Start() {
         cam = Camera.main.transform;
@@ -18,7 +17,6 @@ public class Parallax : MonoBehaviour
     void Update() {
         ParallaxEffect();
         VerifyIfBackgroundOffScreen();
-        BackgroundInCamera();
     }
 
     private void ParallaxEffect() {
@@ -30,25 +28,23 @@ public class Parallax : MonoBehaviour
     }
 
     private void VerifyIfBackgroundOffScreen() {
-        if (!hasRepositioned && OffScreenBackgroundLeft()) {
-            RepositionBackground(-backgroundLength, CameraBoundsSize());
+        if (OffScreenBackgroundLeft()) {
+            RepositionBackground(-backgroundLength, -CameraBoundsSize());
         }
-        else if (!hasRepositioned && OffScreenBackgroundRight()) {
-            RepositionBackground(backgroundLength, -CameraBoundsSize());
+        if (OffScreenBackgroundRight()) {
+            RepositionBackground(backgroundLength, CameraBoundsSize());
         }
     }
 
     private void RepositionBackground(float offset, float cameraBounds) {
-        transform.position += new Vector3(offset + cameraBounds, 0, 0);
+        transform.position += new Vector3(DistanceRepositionBackground(offset) - cameraBounds, 0, 0);
         inicialPosition = transform.position.x - Distance();
-        hasRepositioned = true;
     }
 
-    private void BackgroundInCamera(){
-        if (!OffScreenBackgroundLeft() && !OffScreenBackgroundRight()) {
-            hasRepositioned = false;
-        }
+    private float DistanceRepositionBackground(float backgroundLength){
+        return cam.position.x - transform.position.x + backgroundLength/2;
     }
+
     private bool OffScreenBackgroundLeft() {
         return BackgroundEdge(-backgroundLength) > CameraEdge(-CameraBoundsSize());
     }
@@ -62,10 +58,10 @@ public class Parallax : MonoBehaviour
     }
 
     private float CameraEdge(float cameraBoundsSize){
-        return cam.position.x + cameraBoundsSize/2;
+        return cam.position.x + cameraBoundsSize;
     }
 
-    private float CameraBoundsSize(){
-        return 2 * Camera.main.orthographicSize * Camera.main.aspect;
+    internal float CameraBoundsSize(){
+        return Camera.main.orthographicSize * Camera.main.aspect;
     }
 }
