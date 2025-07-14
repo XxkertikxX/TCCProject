@@ -29,10 +29,10 @@ public class Parallax : MonoBehaviour
 
     private void VerifyIfBackgroundOffScreen() {
         if (OffScreenBackgroundLeft()) {
-            RepositionBackground(-backgroundLength, -CameraBoundsSize());
+            RepositionBackground(-backgroundLength, -HalfCameraWidth());
         }
         if (OffScreenBackgroundRight()) {
-            RepositionBackground(backgroundLength, CameraBoundsSize());
+            RepositionBackground(backgroundLength, HalfCameraWidth());
         }
     }
 
@@ -46,22 +46,22 @@ public class Parallax : MonoBehaviour
     }
 
     private bool OffScreenBackgroundLeft() {
-        return BackgroundEdge(-backgroundLength) > CameraEdge(-CameraBoundsSize());
+        return BackgroundEdge(-backgroundLength) > CameraEdge(-HalfCameraWidth());
     }
 
     private bool OffScreenBackgroundRight() {
-        return BackgroundEdge(backgroundLength) < CameraEdge(CameraBoundsSize());
+        return BackgroundEdge(backgroundLength) < CameraEdge(HalfCameraWidth());
     }
 
     private float BackgroundEdge(float backgroundX){
         return transform.position.x + backgroundX / 2f;
     }
 
-    private float CameraEdge(float cameraBoundsSize){
-        return cam.position.x + cameraBoundsSize;
+    private float CameraEdge(float halfCameraWidth){
+        return cam.position.x + halfCameraWidth;
     }
 
-    internal float CameraBoundsSize(){
+    private float HalfCameraWidth(){
         return Camera.main.orthographicSize * Camera.main.aspect;
     }
 }
