@@ -8,6 +8,7 @@ public class ParallaxTest
     private GameObject camera;
     private GameObject background;
     private Parallax parallax;
+    private float parallaxSpeed = 0.5f;
 
     [UnitySetUp]
     public IEnumerator Setup(){
@@ -19,26 +20,27 @@ public class ParallaxTest
 
     [UnityTest]
     public IEnumerator Parallax_MoveBackground_Test(){
-        Debug.Log(background.transform.position.x);
-        camera.transform.position = new Vector3(5f, 0, 0);
-        yield return new WaitForSeconds(1);
-        float expectedPositionX = parallax.inicialPosition + camera.transform.position.x * parallax.parallaxSpeed;
-        Debug.Log(background.transform.position.x);
-        Assert.That(background.transform.position.x, Is.EqualTo(4.727074f).Within(0.01f));
+        float inicialPosition = background.transform.position.x;
+        camera.transform.position = new Vector3(1f, 0, 0);
+        yield return new WaitForSeconds(0.01f);
+        float expectedPositionX = inicialPosition + camera.transform.position.x * parallaxSpeed;
+        Assert.That(background.transform.position.x, Is.EqualTo(expectedPositionX).Within(0.01f));
     }
 
     [UnityTest]
     public IEnumerator Parallax_BoundsLeft_Test(){
-        camera.transform.position = new Vector3(-2.23f, 0, 0);
-        yield return new WaitForSeconds(1);
-        Assert.That(background.transform.position.x, Is.EqualTo(-3.34f).Within(0.05f));
+        camera.transform.position = new Vector3(-100, 0, 0);
+        float expectedPositionX = camera.transform.position.x - HalfBackgroundLength() + HalfCameraLenght();
+        yield return new WaitForSeconds(0.01f);
+        Assert.That(background.transform.position.x, Is.EqualTo(expectedPositionX).Within(0.01f));
     }
 
     [UnityTest]
     public IEnumerator Parallax_BoundsRight_Test(){
-        camera.transform.position = new Vector3(2.23f, 0, 0);
-        yield return new WaitForSeconds(1);
-        Assert.That(background.transform.position.x, Is.EqualTo(3.34f).Within(0.05f));
+        camera.transform.position = new Vector3(100, 0, 0);
+        float expectedPositionX = camera.transform.position.x + HalfBackgroundLength() - HalfCameraLenght();
+        yield return new WaitForSeconds(0.01f);
+        Assert.That(background.transform.position.x, Is.EqualTo(expectedPositionX).Within(0.01f));
     }
 
     [UnityTearDown]
@@ -52,19 +54,25 @@ public class ParallaxTest
         camera = new GameObject("Main Camera");
         camera.AddComponent<Camera>();
         camera.tag = "MainCamera";
-        camera.transform.position = Vector3.zero;
     }
 
     private void CreateBackground(){
         background = new GameObject("Background");
         SpriteRenderer spriteRenderer = background.AddComponent<SpriteRenderer>();
         spriteRenderer.sprite = Sprite.Create(Texture2D.whiteTexture, new Rect(0,0,1,1), new Vector2(0.5f, 0.5f));
-        background.transform.localScale = new Vector3(20f, 5f, 1f);
-        background.transform.position = Vector3.zero;
+        background.transform.localScale = new Vector3(2000f, 5f, 1f); //2000 pixels de sprite || 20 unidades unity
     }
 
     private void CreateParallax(){
         parallax = background.AddComponent<Parallax>();
-        parallax.parallaxSpeed = 0.5f;
+        parallax.parallaxSpeed = parallaxSpeed;
+    }
+
+    private float HalfBackgroundLength(){
+        return background.GetComponent<SpriteRenderer>().bounds.size.x/2;
+    }
+
+    private float HalfCameraLenght(){
+        return Camera.main.orthographicSize * Camera.main.aspect;
     }
 }
