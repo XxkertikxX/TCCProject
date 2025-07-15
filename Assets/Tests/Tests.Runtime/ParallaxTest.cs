@@ -15,14 +15,14 @@ public class ParallaxTest
         CreateCamera();
         CreateBackground();
         CreateParallax();
-        yield return new WaitForEndOfFrame();
+        yield return new WaitForSeconds(0.1f);
     }
 
     [UnityTest]
     public IEnumerator Parallax_MoveBackground_Test(){
         float inicialPosition = background.transform.position.x;
         camera.transform.position = new Vector3(1f, 0, 0);
-        yield return new WaitForSeconds(0.01f);
+        yield return new WaitForSeconds(0.1f);
         float expectedPositionX = inicialPosition + camera.transform.position.x * parallaxSpeed;
         Assert.That(background.transform.position.x, Is.EqualTo(expectedPositionX).Within(0.01f));
     }
@@ -31,7 +31,7 @@ public class ParallaxTest
     public IEnumerator Parallax_BoundsLeft_Test(){
         camera.transform.position = new Vector3(-100, 0, 0);
         float expectedPositionX = camera.transform.position.x - HalfBackgroundLength() + HalfCameraLenght();
-        yield return new WaitForSeconds(0.01f);
+        yield return new WaitForSeconds(0.1f);
         Assert.That(background.transform.position.x, Is.EqualTo(expectedPositionX).Within(0.01f));
     }
 
@@ -39,7 +39,7 @@ public class ParallaxTest
     public IEnumerator Parallax_BoundsRight_Test(){
         camera.transform.position = new Vector3(100, 0, 0);
         float expectedPositionX = camera.transform.position.x + HalfBackgroundLength() - HalfCameraLenght();
-        yield return new WaitForSeconds(0.01f);
+        yield return new WaitForSeconds(0.1f);
         Assert.That(background.transform.position.x, Is.EqualTo(expectedPositionX).Within(0.01f));
     }
 
@@ -47,7 +47,7 @@ public class ParallaxTest
     public IEnumerator TearDown(){
         GameObject.Destroy(camera);
         GameObject.Destroy(background);
-        yield return new WaitForEndOfFrame();
+        yield return new WaitForSeconds(0.1f);
     }
 
     private void CreateCamera(){
