@@ -3,7 +3,7 @@ using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
 
-public class PlayerCheckpointTest
+public class PlayerCheckpointTest : RuntimeTestBase
 {
     private GameObject player;
     private GameObject checkpoint;
@@ -33,14 +33,6 @@ public class PlayerCheckpointTest
         yield return new WaitForSeconds(0.1f);
         Assert.AreEqual(checkpoint.transform.position, player.transform.position);
     }
-
-    [UnityTearDown]
-    public IEnumerator TearDown() {
-        GameObject.Destroy(player);
-        GameObject.Destroy(checkpoint);
-        GameObject.Destroy(hole);
-        yield return new WaitForSeconds(0.1f);
-    }
     
     private void CreatePlayer() {
         player = new GameObject("Player");
@@ -52,8 +44,7 @@ public class PlayerCheckpointTest
     private GameObject CreateGameObject(string name, Vector3 position) {
         GameObject obj = new GameObject(name);
         obj.tag = name;
-        BoxCollider2D box2D = obj.AddComponent<BoxCollider2D>();
-        box2D.isTrigger = true;
+        obj.AddComponent<BoxCollider2D>().isTrigger = true;
         obj.transform.position = position;
         return obj;
     }
