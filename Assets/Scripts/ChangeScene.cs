@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class ChangeScene : MonoBehaviour
 {
-    [SerializeField] private string nextScene;
+    [SerializeField] internal string nextScene;
 
     void OnTriggerEnter2D(Collider2D collision) {
         if (collision.CompareTag("Player")) {
