@@ -3,7 +3,7 @@ using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
 
-public class ParallaxTest
+public class ParallaxTest : RuntimeTestBase
 {
     private GameObject camera;
     private GameObject background;
@@ -41,13 +41,6 @@ public class ParallaxTest
         float expectedPositionX = camera.transform.position.x + HalfBackgroundLength() - HalfCameraLenght();
         yield return new WaitForSeconds(0.1f);
         Assert.That(background.transform.position.x, Is.EqualTo(expectedPositionX).Within(0.01f));
-    }
-
-    [UnityTearDown]
-    public IEnumerator TearDown(){
-        GameObject.Destroy(camera);
-        GameObject.Destroy(background);
-        yield return new WaitForSeconds(0.1f);
     }
 
     private void CreateCamera(){
