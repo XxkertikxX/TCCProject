@@ -2,13 +2,13 @@ using UnityEngine;
 
 public abstract class SkillBase : ScriptableObject
 {
-    [SerializeField] private int _timesForInvoke;
-    [SerializeField] private float _timePerInvokeLine;
-    [SerializeField] private TypeSkill _targetType;
+    [SerializeField] private int timesForInvoke;
+    [SerializeField] private float timePerInvokeLine;
+    [SerializeField] private TypeSkill targetType;
 
-    public int TimesForInvoke => _timesForInvoke;
-    public float TimePerInvokeLine => _timePerInvokeLine;
-    public TypeSkill TargetType => _targetType;
+    public int TimesForInvoke => timesForInvoke;
+    public float TimePerInvokeLine => timePerInvokeLine;
+    public TypeSkill TargetType => targetType;
 
     public abstract void Skill(float power);
 }
