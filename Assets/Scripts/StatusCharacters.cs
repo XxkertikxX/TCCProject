@@ -4,11 +4,11 @@ using System.Collections.Generic;
 [CreateAssetMenu(menuName = "CharacterCreator")]
 public class StatusCharacters : ScriptableObject
 {
-    [SerializeField] private float _hp;
-    [SerializeField] private float _power;
-    [SerializeField] private List<SkillBase> _skills;
+    [SerializeField] private float hp;
+    [SerializeField] private float power;
+    [SerializeField] private List<SkillBase> skills;
 
-    public float Hp => _hp;
-    public float Power => _power;
-    public List<SkillBase> Skills => _skills;
+    public float Hp => hp;
+    public float Power => power;
+    public List<SkillBase> Skills => skills;
 }
