@@ -9,17 +9,17 @@ public class LineRhythm : MonoBehaviour
     private float speed = 3f;
     private float damage;
     
-    void Start()  {
+    void Start() {
         totallyLineCoord = RhythmObj.RendTotallyLine.bounds.max.x;
         totallyLineSize = RhythmObj.RendTotallyLine.bounds.size.x;
     }
 
-    void Update(){
+    void Update() {
         Click();
         DestroyLineOutLimits();
     }
 
-    void FixedUpdate(){
+    void FixedUpdate() {
         transform.position += new Vector3(speed * Time.fixedDeltaTime, 0, 0);
     }
     
@@ -30,19 +30,19 @@ public class LineRhythm : MonoBehaviour
         CatalystSkills.Damage += damage;
     }
     
-    private void Click(){
+    private void Click() {
         if(Input.GetMouseButtonDown(0)){
             damage = PerDamage();
             Destroy(gameObject);
         }
     }
 
-    private float PerDamage(){
+    private float PerDamage() {
         float distance = Mathf.Abs(transform.position.x - RhythmObj.CenterLine.position.x);
         return 1f - (distance / (totallyLineSize / 2f));
     }
 
-    private void DestroyLineOutLimits(){
+    private void DestroyLineOutLimits() {
         if(transform.position.x > totallyLineCoord){
             damage = 0;
             Destroy(gameObject);
