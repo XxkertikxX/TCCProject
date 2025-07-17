@@ -17,6 +17,6 @@ public class DialogInterfaceBase : MonoBehaviour
     
     private void Setup(){
         index = 0;
-        dialogs = DialogManager.InstanceDialogManager.dialogs;
+        dialogs = DialogManager.InstanceDialogManager.Dialogs;
     }
 }

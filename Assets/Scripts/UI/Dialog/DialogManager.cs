@@ -9,14 +9,14 @@ public class DialogManager : MonoBehaviour
     public static event Action OnDialogClose;
     public static DialogManager InstanceDialogManager { get; private set; }
 
-    public LineDialog[] dialogs;
+    public LineDialog[] Dialogs;
 
     void Awake() {
         InstanceDialogManager = this;
     }
 
     public void OpenDialog(ScrDialog dialog) {
-        dialogs = dialog.LineDialog;
+        Dialogs = dialog.LineDialog;
         OnDialogOpen?.Invoke();
     }
     
