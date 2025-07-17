@@ -20,5 +20,4 @@ public abstract class DialogStartBase : MonoBehaviour
 
     protected abstract void SetupOpenDialog();
     protected abstract void SetupCloseDialog();
-    
 }
