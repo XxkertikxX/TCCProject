@@ -5,16 +5,6 @@ public class DialogStartScene : DialogStartBase
 {
     [SerializeField] private GameObject UI;
 
-    void OnEnable() {
-        DialogManager.OnDialogOpen += SetupOpenDialog;
-        DialogManager.OnDialogClose += SetupCloseDialog;
-    }
-
-    void OnDisable() {
-        DialogManager.OnDialogOpen -= SetupOpenDialog;
-        DialogManager.OnDialogClose -= SetupCloseDialog;
-    }
-
     void Start(){
         StartDialog();
     }

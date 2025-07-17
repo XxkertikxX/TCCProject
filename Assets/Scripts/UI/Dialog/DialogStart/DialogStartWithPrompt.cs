@@ -11,16 +11,6 @@ public class DialogStartWithPrompt : DialogStartBase
         playerMovement = PlayerMovement.InstancePlayerMovement;
     }
 
-    void OnEnable() {
-        DialogManager.OnDialogOpen += SetupOpenDialog;
-        DialogManager.OnDialogClose += SetupCloseDialog;
-    }
-
-    void OnDisable() {
-        DialogManager.OnDialogOpen -= SetupOpenDialog;
-        DialogManager.OnDialogClose -= SetupCloseDialog;
-    }
-
     void OnTriggerStay2D(Collider2D collision) {
         if (collision.CompareTag("Player")) {
             PromptActiveDialogue();
