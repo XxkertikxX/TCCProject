@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SetupBattle : DialogStartBase
+public class DialogStartScene : DialogStartBase
 {
     [SerializeField] private GameObject UI;
 
