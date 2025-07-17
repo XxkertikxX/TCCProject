@@ -9,7 +9,7 @@ public class DialogManager : MonoBehaviour
     public static event Action OnDialogClose;
     public static DialogManager InstanceDialogManager { get; private set; }
     
-    public LineDialog[] Dialogs;
+    private LineDialog[] dialogs;
 
     [SerializeField] private Text textName;
     [SerializeField] private Text textSpeak;
@@ -30,7 +30,14 @@ public class DialogManager : MonoBehaviour
             ContinueDialog();
         }
     }
-
+    
+    public void OpenDialog(ScrDialog dialog) {
+        dialogs = dialog.LineDialog;
+        index = 0;
+        OnDialogOpen?.Invoke();
+        StartLine();
+    }
+    
     private void ContinueDialog() {
         if (coroutine == null) {
             NextLine();
@@ -43,13 +50,7 @@ public class DialogManager : MonoBehaviour
     private void SkipLine() {
         StopCoroutine(coroutine);
         coroutine = null;
-        textSpeak.text = Dialogs[index].TextDialog;
-    }
-    
-    public void OpenDialog() {
-        index = 0;
-        OnDialogOpen?.Invoke();
-        StartLine();
+        textSpeak.text = dialogs[index].TextDialog;
     }
 
     private void StartLine() {
@@ -58,7 +59,7 @@ public class DialogManager : MonoBehaviour
     }
 
     private IEnumerator TypingLine() {
-        foreach (char c in Dialogs[index].TextDialog) {
+        foreach (char c in dialogs[index].TextDialog) {
             textSpeak.text += c;
             yield return new WaitForSecondsRealtime(actualSpeed);
         }
@@ -66,7 +67,7 @@ public class DialogManager : MonoBehaviour
     }
 
     private void NextLine() {
-        if (index < Dialogs.Length - 1) {
+        if (index < dialogs.Length - 1) {
             index++;
             StartLine();
         }
@@ -80,9 +81,9 @@ public class DialogManager : MonoBehaviour
     }
 
     private void SetupLine() {
-        textName.text = Dialogs[index].NameCharacter;
+        textName.text = dialogs[index].NameCharacter;
         textSpeak.text = null;
-        imageNPC.sprite = Dialogs[index].ImageCharacter;
+        imageNPC.sprite = dialogs[index].ImageCharacter;
     }
 
     private float WriteSpeed() {
