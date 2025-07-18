@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask ground;
-    
+
     private Rigidbody2D rb;
     private float x;
 
@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = new Vector2(0, 0);
     }
 
-    void Start() {
+    void Awake() {
         InstancePlayerMovement = gameObject.GetComponent<PlayerMovement>();
         Bindings.UpdateBindings();
         rb = GetComponent<Rigidbody2D>();
@@ -40,15 +40,23 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private void DirectionX(KeyCode key, int direction) {
-        if (Input.GetKey(key)) {
+        if (InputKey(key)) {
             x += direction;
         }
     }
-
+    
+    protected virtual bool InputKey(KeyCode key) {
+        return Input.GetKey(key);
+    }
+    
     private void Jump() {
-        IsGrounded = Physics2D.Raycast(groundCheck.position, Vector2.down, 0.1f, ground);
-        if (Input.GetKeyDown(Bindings.BindingsDic["Jump"]) && IsGrounded) {
+        IsGrounded = Physics2D.Raycast(groundCheck.position, Vector2.down, 0.05f, ground);
+        if (InputKeyDown(Bindings.BindingsDic["Jump"]) && IsGrounded) {
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
+    }
+    
+    protected virtual bool InputKeyDown(KeyCode key) {
+        return Input.GetKeyDown(key);
     }
 }
