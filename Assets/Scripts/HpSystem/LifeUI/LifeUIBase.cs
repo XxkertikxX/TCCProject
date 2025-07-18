@@ -1,27 +1,16 @@
-using UnityEngine;
-
-public abstract class LifeUIBase : MonoBehaviour
+public abstract class LifeUIBase : LifeBase
 {
-    protected LifeSystem lifeSystem;
-
-    void Start() {
-        lifeSystem = GetComponent<LifeSystem>();
+    protected override void Inicialize() {
         UpdateUI();
     }
 
     void OnEnable() {
         lifeSystem.OnLifeChanged += UpdateUI;
-        lifeSystem.OnDeath += Death;
     }
 
     void OnDisable() {
         lifeSystem.OnLifeChanged -= UpdateUI;
-        lifeSystem.OnDeath -= Death;
     }
 
     protected abstract void UpdateUI();
-    
-    protected virtual void Death() {
-        Destroy(gameObject);   
-    }
 }
