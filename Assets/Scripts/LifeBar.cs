@@ -24,8 +24,6 @@ public class LifeBar : hp
         lifeText.text = $"{life}/{character.Hp}";
         lifeSlider.value = life / character.Hp;
     }
-    
-    private void Death() {
-        Destroy(gameObject);
-    }
+
+    private void Death() => Destroy(gameObject);
 }
