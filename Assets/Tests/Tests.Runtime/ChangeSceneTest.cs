@@ -33,7 +33,8 @@ public class ChangeSceneTest : RuntimeTestBase
     
     private void CreateChangeSceneObj(){
         changeScene = new GameObject("ChangeScene");
-        changeScene.AddComponent<ChangeScene>().nextScene = nameScene;
+        var changeSceneScr = changeScene.AddComponent<ChangeScene>();
+        Reflection.SetField(changeSceneScr, "nextScene", nameScene);
         changeScene.AddComponent<BoxCollider2D>().isTrigger = true;
         changeScene.transform.position = new Vector3(5, 0, 0);
     }
