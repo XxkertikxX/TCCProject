@@ -4,6 +4,8 @@ using UnityEngine;
 public class ScrSkillsCrowdControl : SkillBase
 {
     public override void Skill(float power) {
-        //Em criação
+        foreach (var target in TargetType.targets()) {
+            target.AttackInTheTurn = true;
+        }
     }
 }
