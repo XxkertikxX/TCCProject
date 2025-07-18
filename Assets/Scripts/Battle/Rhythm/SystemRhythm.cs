@@ -18,7 +18,7 @@ public class SystemRhythm : MonoBehaviour
     }
     
     private IEnumerator SpawnLines() {
-        SkillBase skill = CharStatus().Skills[PosSkill];
+        SkillBase skill = CharStatus().skills[PosSkill];
         int TimesForInvoke = skill.TimesForInvoke;
         
         while (TimesForInvoke > 0) {
@@ -30,7 +30,7 @@ public class SystemRhythm : MonoBehaviour
     }
     
     private void UseSkill() {
-        CharStatus().Skills[PosSkill].Skill(CharStatus().Power);
+        CharStatus().skills[PosSkill].Skill(CharStatus().power);
         Character().AttackInTheTurn = true;
     }
     

@@ -3,6 +3,6 @@ using UnityEngine;
 public class CharacterStatus : MonoBehaviour
 {
     public StatusCharacters Character;
-    public hp Hp;
+    public LifeSystem Hp;
     [HideInInspector] public bool AttackInTheTurn = false;
 }
