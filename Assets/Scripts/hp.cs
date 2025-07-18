@@ -1,44 +1,30 @@
-using UnityEngine;
-using UnityEngine.UI;
+    using System;
+    using UnityEngine;
 
-public class hp : MonoBehaviour
-{
-    [SerializeField] private Text lifeText;
-    [SerializeField] private Slider lifeSlider;
+    public class hp : MonoBehaviour
+    {
+        protected event Action OnLifeChanged;
 
-    private StatusCharacters character ;
-    private float life;
+        protected StatusCharacters character;
+        protected float life;
 
-    void Start() {
-        character = GetComponent<CharacterStatus>().Character;
-        life = character.Hp;
-    }
+        void Start() {
+            character = GetComponent<CharacterStatus>().Character;
+            life = character.Hp;
+        }
+        
+        public void AddLife(float life) {            
+            this.life += life;
+            OnLifeChanged?.Invoke();
+            if (IsDead()) {
+                Destroy(gameObject);
+            }
+        }
 
-
-    void Update() {
-        UpdateUI();
-    }
-    
-    public void TakeDamage(float Damage) {
-        life -= Damage;
-        if (IsDead()) {
-            Destroy(gameObject);
+        private bool IsDead() {
+            if (life <= 0) {
+                return true;
+            }
+            return false;
         }
     }
-
-    public void Heal(float heal) {
-        life += heal;
-    }
-
-    private bool IsDead() {
-        if (life <= 0) {
-            return true;
-        }
-        return false;
-    }
-
-    private void UpdateUI(){
-        lifeText.text = $"{life}/{character.Hp}";
-        lifeSlider.value = life / character.Hp;
-    }
-}
