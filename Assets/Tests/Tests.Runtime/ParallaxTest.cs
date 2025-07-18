@@ -8,7 +8,7 @@ public class ParallaxTest : RuntimeTestBase
     private GameObject camera;
     private GameObject background;
     private Parallax parallax;
-    private float parallaxSpeed = 0.5f;
+    private float parallaxSpeed;
 
     [UnitySetUp]
     public IEnumerator Setup(){
@@ -58,7 +58,8 @@ public class ParallaxTest : RuntimeTestBase
 
     private void CreateParallax(){
         parallax = background.AddComponent<Parallax>();
-        parallax.parallaxSpeed = parallaxSpeed;
+        Reflection.SetField(parallax, "parallaxSpeed", 0.5f);
+        parallaxSpeed = Reflection.GetField<float>(parallax, "parallaxSpeed");
     }
 
     private float HalfBackgroundLength(){
