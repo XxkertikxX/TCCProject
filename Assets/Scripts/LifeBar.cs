@@ -12,14 +12,20 @@ public class LifeBar : hp
 
     void OnEnable() {
         OnLifeChanged += UpdateUI;
+        OnDeath += Death;
     }
 
     void OnDisable() {
         OnLifeChanged -= UpdateUI;
+        OnDeath -= Death;
     }
 
     private void UpdateUI() {
         lifeText.text = $"{life}/{character.Hp}";
         lifeSlider.value = life / character.Hp;
+    }
+    
+    private void Death() {
+        Destroy(gameObject);
     }
 }
