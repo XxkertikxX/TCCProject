@@ -1,31 +1,33 @@
-using System;
 using UnityEngine;
 
 public class LifeSystem : MonoBehaviour
 {
-    public event Action OnLifeChanged;
-    public event Action OnDeath;
+    private IDeath deathHandler;
+    private ILifeUI lifeUI;
 
     private float maxLife;
     private float actualLife;
 
-    public float MaxLife => maxLife;
-    public float ActualLife => actualLife;
-
     void Awake() {
-        maxLife = GetComponent<CharacterStatus>().Character.hp;
+        PullComponents();
         actualLife = maxLife;
     }
-        
-    public void AddLife(float life) {            
+
+    void Start() {
+        lifeUI.UpdateUI(actualLife, maxLife);
+    }
+
+    public void AddLife(float life) {
         actualLife = Mathf.Clamp(actualLife + life, 0, maxLife);
-        OnLifeChanged?.Invoke();
-        InvokeEventOnDeath();
+        lifeUI.UpdateUI(actualLife, maxLife);
+        if (actualLife == 0) {
+            deathHandler.Death();
+        }
     }
     
-    private void InvokeEventOnDeath() {
-        if (actualLife == 0) {
-            OnDeath?.Invoke();
-        }
-    }      
+    private void PullComponents() {
+        maxLife = GetComponent<CharacterStatus>().Character.hp;
+        deathHandler = GetComponent<IDeath>();
+        lifeUI = GetComponent<ILifeUI>();
+    }
 }
