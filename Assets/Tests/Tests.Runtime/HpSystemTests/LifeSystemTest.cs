@@ -1,9 +1,7 @@
 using System.Collections;
-using System.Data;
 using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
-using UnityEngine.TextCore.Text;
 
 public class LifeSystemTest : RuntimeTestBase
 {
