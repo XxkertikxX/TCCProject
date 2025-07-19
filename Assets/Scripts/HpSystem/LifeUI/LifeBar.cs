@@ -1,13 +1,13 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class LifeBar : LifeUIBase
+public class LifeBar : MonoBehaviour, ILifeUI
 {
     [SerializeField] private Text lifeText;
     [SerializeField] private Slider lifeSlider;
 
-    protected override void UpdateUI() {
-        lifeText.text = $"{lifeSystem.ActualLife}/{lifeSystem.MaxLife}";
-        lifeSlider.value = lifeSystem.ActualLife / lifeSystem.MaxLife;
+    public void UpdateUI(float actualLife, float maxLife) {
+        lifeText.text = $"{actualLife}/{maxLife}";
+        lifeSlider.value = actualLife / maxLife;
     }
 }
