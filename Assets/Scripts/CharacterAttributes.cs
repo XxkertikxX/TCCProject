@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CharacterStatus : MonoBehaviour
+public class CharacterAttributes : MonoBehaviour
 {
     public StatusCharacters Character;
     public LifeSystem Hp;

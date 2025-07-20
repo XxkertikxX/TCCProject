@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerCharactersSkills : MonoBehaviour
 {
-    static public CharacterStatus Character;
+    static public CharacterAtributes Character;
 
     void OnEnable() {
         TextUpdate();

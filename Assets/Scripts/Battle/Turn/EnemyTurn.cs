@@ -26,7 +26,7 @@ public class EnemyTurn : MonoBehaviour
     private bool AllCharactersPlay() {
         var characters = GameObject.FindGameObjectsWithTag("Character");
         foreach (var character in characters) {
-            if (!character.GetComponent<CharacterStatus>().AttackInTheTurn) {
+            if (!character.GetComponent<CharacterAtributes>().AttackInTheTurn) {
                 return false;
             }
         }
@@ -35,7 +35,7 @@ public class EnemyTurn : MonoBehaviour
 
     private void ResetTurn() {
         foreach (var character in Characters()) {
-            character.GetComponent<CharacterStatus>().AttackInTheTurn = false;
+            character.GetComponent<CharacterAtributes>().AttackInTheTurn = false;
         }
     }
 

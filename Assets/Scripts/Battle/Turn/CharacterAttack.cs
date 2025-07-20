@@ -4,7 +4,7 @@ public class CharacterAttack : MonoBehaviour
 {
     [SerializeField] private GameObject caixaTurnAttack;
     
-    public void ClickCharacter(CharacterStatus character){
+    public void ClickCharacter(CharacterAtributes character){
         if (!character.AttackInTheTurn) {
             caixaTurnAttack.SetActive(true);
             PlayerCharactersSkills.Character = character;

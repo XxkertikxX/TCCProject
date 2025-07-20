@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class targetEnemy : TypeSkill
 {
-    public override CharacterStatus[] targets(){
+    public override CharacterAtributes[] targets(){
         return null;
     }
 }

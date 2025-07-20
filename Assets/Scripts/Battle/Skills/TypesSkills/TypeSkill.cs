@@ -2,5 +2,5 @@ using UnityEngine;
 
 public abstract class TypeSkill : ScriptableObject
 {
-    public abstract CharacterStatus[] targets();
+    public abstract CharacterAtributes[] targets();
 }
