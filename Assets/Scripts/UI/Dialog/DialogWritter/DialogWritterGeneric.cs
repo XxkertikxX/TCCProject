@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DialogInterfaceGeneric : DialogInterfaceBase
+public class DialogWriterGeneric : DialogWriterBase
 {
     [SerializeField] private Text textName;
     [SerializeField] private Image imageNPC;
@@ -10,6 +10,8 @@ public class DialogInterfaceGeneric : DialogInterfaceBase
     private Coroutine coroutine = null;
 
     void Update() {
+        if (!dialogStart) return;
+        
         if (Input.GetKeyDown(KeyCode.Return)) {
             ContinueDialog();
         }
@@ -25,12 +27,12 @@ public class DialogInterfaceGeneric : DialogInterfaceBase
     }
     
     private void NextLine() {
-        if (index < dialogs.Length - 1) {
+        if (index < dialogs.Length) {
             index++;
             StartLine();
         }
         else {
-            DialogManager.InstanceDialogManager.CloseDialog();
+            DialogManager.Instance.CloseDialog();
         }
     }
     private void SkipLine() {
@@ -39,7 +41,7 @@ public class DialogInterfaceGeneric : DialogInterfaceBase
         textSpeak.text = dialogs[index].TextDialog;
     }
 
-    private void StartLine() {
+    protected override void StartLine() {
         SetupLine();
         coroutine = StartCoroutine(TypingLine());
     }
@@ -47,7 +49,7 @@ public class DialogInterfaceGeneric : DialogInterfaceBase
     private IEnumerator TypingLine() {
         foreach (char c in dialogs[index].TextDialog) {
             textSpeak.text += c;
-            yield return new WaitForSecondsRealtime(WriteSpeed());
+            yield return new WaitForSeconds(WriteSpeed());
         }
         coroutine = null;
     }

@@ -65,7 +65,7 @@ public class LifeSystemTest : RuntimeTestBase
     private void CreateStatusCharacter() {
         var status = ScriptableObject.CreateInstance<StatusCharacters>();
         status.hp = 100f;
-        Character.AddComponent<CharacterAtributes>().Character = status;
+        Character.AddComponent<CharacterAttributes>().Character = status;
     }
     
     private float GetActualLife() {

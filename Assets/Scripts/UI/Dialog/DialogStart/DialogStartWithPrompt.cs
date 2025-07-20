@@ -20,14 +20,6 @@ public class DialogStartWithPrompt : DialogStartBase
         promptPressKey.SetActive(false);
     }
     
-    protected override void SetupOpenDialog(){
-        playerMovement.enabled = false;
-    }
-    
-    protected override void SetupCloseDialog() {
-        playerMovement.enabled = true;
-    }
-    
     private void PromptActiveDialogue() {
         promptPressKey.SetActive(CanActivePrompt());
 

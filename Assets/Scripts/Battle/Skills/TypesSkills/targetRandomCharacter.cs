@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class targetRandomCharacter : TypeSkill
 {
-    private CharacterAtributes[] characterStatus = new CharacterAtributes[1];
+    private CharacterAttributes[] characterStatus = new CharacterAttributes[1];
     
-    public override CharacterAtributes[] targets(){
-        characterStatus[0] = Characters()[RandomTarget()].GetComponent<CharacterAtributes>();
+    public override CharacterAttributes[] targets(){
+        characterStatus[0] = Characters()[RandomTarget()].GetComponent<CharacterAttributes>();
         return characterStatus;
     }
 

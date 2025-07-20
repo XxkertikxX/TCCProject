@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class targetAllCharacters : TypeSkill
 {
-    public override CharacterAtributes[] targets(){
+    public override CharacterAttributes[] targets(){
         return null;
     }
 }

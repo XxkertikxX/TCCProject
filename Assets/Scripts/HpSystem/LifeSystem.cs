@@ -26,7 +26,7 @@ public class LifeSystem : MonoBehaviour
     }
     
     private void PullComponents() {
-        maxLife = GetComponent<CharacterAtributes>().Character.hp;
+        maxLife = GetComponent<CharacterAttributes>().Character.hp;
         deathHandler = GetComponent<IDeath>();
         lifeUI = GetComponent<ILifeUI>();
     }

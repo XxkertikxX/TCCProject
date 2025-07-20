@@ -38,7 +38,7 @@ public class SystemRhythm : MonoBehaviour
         return Character().Character;
     }
     
-    private CharacterAtributes Character(){
+    private CharacterAttributes Character(){
         return PlayerCharactersSkills.Character;
     }
 }
