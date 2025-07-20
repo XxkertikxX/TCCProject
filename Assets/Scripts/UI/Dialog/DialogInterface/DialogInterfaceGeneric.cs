@@ -59,8 +59,8 @@ public class DialogInterfaceGeneric : DialogInterfaceBase
     }
 
     private float WriteSpeed() {
-        const float LOWEST_SPEED = 0.01f;
-        const float FAST_SPEED = 0.05f;
-        return Input.GetKey(KeyCode.Space) ? LOWEST_SPEED : FAST_SPEED;
+        const float lowestSpeed = 0.01f;
+        const float fastSpeed = 0.05f;
+        return Input.GetKey(KeyCode.Space) ? lowestSpeed : fastSpeed;
     }
 }
