@@ -5,7 +5,6 @@ public class DialogStartWithPrompt : DialogStartBase
     [SerializeField] private GameObject promptPressKey;
 
     private PlayerMovement playerMovement;
-    private bool inDialog;
 
     void Awake() {
         playerMovement = PlayerMovement.InstancePlayerMovement;
@@ -22,12 +21,10 @@ public class DialogStartWithPrompt : DialogStartBase
     }
     
     protected override void SetupOpenDialog(){
-        inDialog = true;
         playerMovement.enabled = false;
     }
     
     protected override void SetupCloseDialog() {
-        inDialog = false;
         playerMovement.enabled = true;
     }
     
@@ -40,7 +37,7 @@ public class DialogStartWithPrompt : DialogStartBase
     }
 
     private bool CanActivePrompt(){
-        return IsGrounded() && !inDialog;
+        return IsGrounded() && playerMovement.enabled;
     }
     
     private bool IsGrounded() {
