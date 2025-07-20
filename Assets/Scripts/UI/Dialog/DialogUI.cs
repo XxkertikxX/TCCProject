@@ -16,13 +16,11 @@ public class DialogUI : MonoBehaviour
     }
     
     private void SetupDialog() {
-        Time.timeScale = 0f;
         screenDialog.SetActive(true);
         screenHUD.SetActive(false);
     }
     
     private void SetupEndDialog(){
-        Time.timeScale = 1f;
         screenDialog.SetActive(false);
         screenHUD.SetActive(true);
     }
