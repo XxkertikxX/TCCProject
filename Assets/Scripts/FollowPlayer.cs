@@ -1,4 +1,4 @@
-using System.Threading.Tasks;
+/*using System.Threading.Tasks;
 using UnityEngine;
 
 public class FollowPlayer : MonoBehaviour
@@ -28,4 +28,4 @@ public class FollowPlayer : MonoBehaviour
         await Task.Delay(150 * index);
         CanFollowY = true;
     }
-}
+}*/
