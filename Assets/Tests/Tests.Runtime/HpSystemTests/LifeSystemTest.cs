@@ -26,8 +26,8 @@ public class LifeSystemTest : RuntimeTestBase
         const float lifeToRemove = -60f;
         const float expectedLife = 100 + lifeToAdd + lifeToRemove;
 
-        lifeSystem.AddLife(lifeToRemove);
-        lifeSystem.AddLife(lifeToAdd);
+        lifeSystem.ModifyLife(lifeToRemove);
+        lifeSystem.ModifyLife(lifeToAdd);
         yield return new WaitForSeconds(0.1f);
 
         Assert.AreEqual(expectedLife, GetActualLife());
@@ -37,21 +37,21 @@ public class LifeSystemTest : RuntimeTestBase
     public IEnumerator AddLifeClamp_Test() { 
         const float lifeToAdd = 20f;
         
-        lifeSystem.AddLife(lifeToAdd);
+        lifeSystem.ModifyLife(lifeToAdd);
         yield return new WaitForSeconds(0.1f);
         Assert.AreEqual(100, GetActualLife());
     }
 
     [UnityTest]
     public IEnumerator UpdateUI_Test() { 
-        lifeSystem.AddLife(0);
+        lifeSystem.ModifyLife(0);
         yield return new WaitForSeconds(0.1f);
         Assert.NotNull(Character.GetComponent<BoxCollider2D>());
     }
     
     [UnityTest]
     public IEnumerator Death_Test() { 
-        lifeSystem.AddLife(-200f);
+        lifeSystem.ModifyLife(-200f);
         yield return new WaitForSeconds(0.1f);
         Assert.NotNull(Character.GetComponent<Rigidbody2D>());
     }

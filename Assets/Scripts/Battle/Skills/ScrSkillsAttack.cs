@@ -7,7 +7,7 @@ public class ScrSkillsAttack : SkillBase
         float damage = power * (CatalystSkills.Damage / TimesForInvoke);
         float RoundDamage = -Mathf.Round(damage);
         foreach (var target in TargetType.targets()) {
-            target.Hp.AddLife(RoundDamage);
+            target.Hp.ModifyLife(RoundDamage);
         }
     }
 }

@@ -17,9 +17,10 @@ public class LifeSystem : MonoBehaviour
         lifeUI.UpdateUI(actualLife, maxLife);
     }
 
-    public void AddLife(float life) {
-        actualLife = Mathf.Clamp(actualLife + life, 0, maxLife);
+    public void ModifyLife(float lifeChange) {
+        actualLife = Mathf.Clamp(actualLife + lifeChange, 0, maxLife);
         lifeUI.UpdateUI(actualLife, maxLife);
+
         if (actualLife == 0) {
             deathHandler.Death();
         }

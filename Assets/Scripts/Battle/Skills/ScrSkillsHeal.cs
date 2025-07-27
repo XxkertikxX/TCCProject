@@ -7,7 +7,7 @@ public class ScrSkillsHeal : SkillBase
         float heal = power * (CatalystSkills.Damage / TimesForInvoke);
         float roundHeal = Mathf.Round(heal);
         foreach (var target in TargetType.targets()) {
-            target.Hp.AddLife(roundHeal);
+            target.Hp.ModifyLife(roundHeal);
         }
     }
 }
