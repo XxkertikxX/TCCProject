@@ -4,7 +4,7 @@ using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
 
-public class PlayerMovementSystemTest : RuntimeTestBase
+public class PlayerMovementTest : RuntimeTestBase
 {
     private GameObject player;
     private GameObject ground;

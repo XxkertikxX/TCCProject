@@ -29,11 +29,6 @@ public class PlayerMovementSystem : MonoBehaviour
         }
     }
 
-/*************  ✨ Windsurf Command ⭐  *************/
-        /// <summary>
-        /// Update is called every frame, if the condiction of vertical movement is true, the vertical movement is called.
-        /// </summary>
-/*******  1c4787c7-a03f-4ef2-8ef7-c52151383e0d  *******/
     void Update() {
         if(verticalMovementCondiction.CanMove()){
             verticalMovement.MoveY();
