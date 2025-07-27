@@ -2,11 +2,12 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    static public PlayerMovement InstancePlayerMovement;
     public bool IsGrounded;
 
-    [SerializeField] private float speed;
-    [SerializeField] private float jumpForce;
+    private IButtonInput inputButton;
+
+    private float speed = 5f;
+    private float jumpForce = 10f;
 
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask ground;
@@ -19,9 +20,8 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void Awake() {
-        InstancePlayerMovement = gameObject.GetComponent<PlayerMovement>();
-        Bindings.UpdateBindings();
         rb = GetComponent<Rigidbody2D>();
+        inputButton = GetComponent<IButtonInput>();
     }
 
     void FixedUpdate() {
@@ -35,28 +35,21 @@ public class PlayerMovement : MonoBehaviour
 
     private void InputDirectionMovement() {
         x = 0;
-        DirectionX(Bindings.BindingsDic["Left"], -1);
-        DirectionX(Bindings.BindingsDic["Right"], 1);
+        x -= DirectionX("Left");
+        x += DirectionX("Right");
     }
 
-    private void DirectionX(KeyCode key, int direction) {
-        if (InputKey(key)) {
-            x += direction;
+    private float DirectionX(string key) {
+        if (inputButton.InputButton(key)) {
+            return 1;
         }
-    }
-    
-    protected virtual bool InputKey(KeyCode key) {
-        return Input.GetKey(key);
+        return 0;
     }
     
     private void Jump() {
         IsGrounded = Physics2D.Raycast(groundCheck.position, Vector2.down, 0.05f, ground);
-        if (InputKeyDown(Bindings.BindingsDic["Jump"]) && IsGrounded) {
+        if (inputButton.InputButtonDown("Jump") && IsGrounded) {
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
-    }
-    
-    protected virtual bool InputKeyDown(KeyCode key) {
-        return Input.GetKeyDown(key);
     }
 }
