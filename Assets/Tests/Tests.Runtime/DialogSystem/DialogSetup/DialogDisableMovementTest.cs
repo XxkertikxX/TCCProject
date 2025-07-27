@@ -6,7 +6,7 @@ using UnityEngine.TestTools;
 public class DialogDisableMovementTest : RuntimeTestBase
 {
     private GameObject player;
-    private PlayerMovement playerMovement;
+    private PlayerMovementSystem playerMovement;
     private IDialogSetup dialogDisableMovement;
 
     [UnitySetUp]
@@ -30,7 +30,7 @@ public class DialogDisableMovementTest : RuntimeTestBase
         player.tag = "Player";
         player.AddComponent<Rigidbody2D>();
         player.AddComponent<InputSystemTest>();
-        playerMovement = player.AddComponent<PlayerMovement>();
+        playerMovement = player.AddComponent<PlayerMovementSystem>();
         dialogDisableMovement = player.AddComponent<DialogDisableMovement>();
     }
     

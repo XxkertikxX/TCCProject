@@ -10,7 +10,7 @@ public class PlayerMovementTest : RuntimeTestBase
     private GameObject ground;
 
     private InputSystemTest inputSystemTest;
-    private PlayerMovement playerMovement;
+    private PlayerMovementSystem playerMovement;
     private Rigidbody2D rb;
 
     private float speed;
@@ -93,7 +93,7 @@ public class PlayerMovementTest : RuntimeTestBase
     
     private void AddComponents(){
         inputSystemTest = player.AddComponent<InputSystemTest>();
-        playerMovement = player.AddComponent<PlayerMovement>();
+        playerMovement = player.AddComponent<PlayerMovementSystem>();
     }
     
     private void GetFieldsPlayer(){

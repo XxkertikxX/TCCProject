@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class DialogDisableMovement : MonoBehaviour, IDialogSetup
 {
-    private PlayerMovement playerMovement;
+    private PlayerMovementSystem playerMovement;
 
     void Start() {
-        playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
+        playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovementSystem>();
     }
 
     public void SetupOpenDialog() {

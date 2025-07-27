@@ -4,10 +4,10 @@ public class DialogStartWithPrompt : DialogStartBase
 {
     [SerializeField] private GameObject promptPressKey;
 
-    private PlayerMovement playerMovement;
+    private PlayerMovementSystem playerMovement;
 
     void Awake() {
-        playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
+        playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovementSystem>();
     }
 
     void OnTriggerStay2D(Collider2D collision) {
@@ -33,6 +33,6 @@ public class DialogStartWithPrompt : DialogStartBase
     }
     
     private bool IsGrounded() {
-        return playerMovement.IsGrounded;
+        return playerMovement.verticalMovementCondiction.CanMove();
     }
 }
