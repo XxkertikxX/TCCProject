@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
     private float x;
 
     void OnDisable() {
-        rb.velocity = new Vector2(0, 0);
+        rb.velocity = Vector2.zero;
     }
 
     void Awake() {
@@ -35,15 +35,12 @@ public class PlayerMovement : MonoBehaviour
 
     private void InputDirectionMovement() {
         x = 0;
-        x -= DirectionX("Left");
-        x += DirectionX("Right");
+        x -= GetDirectionX("Left");
+        x += GetDirectionX("Right");
     }
 
-    private float DirectionX(string key) {
-        if (inputButton.InputButton(key)) {
-            return 1;
-        }
-        return 0;
+    private float GetDirectionX(string inputKey) {
+        return inputButton.InputButton(inputKey) ? 1f : 0f;
     }
     
     private void Jump() {
