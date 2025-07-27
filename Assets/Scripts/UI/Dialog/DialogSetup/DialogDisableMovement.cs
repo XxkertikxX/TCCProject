@@ -5,7 +5,7 @@ public class DialogDisableMovement : MonoBehaviour, IDialogSetup
     private PlayerMovement playerMovement;
 
     void Start() {
-        playerMovement = PlayerMovement.InstancePlayerMovement;
+        playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
     }
 
     public void SetupOpenDialog() {
