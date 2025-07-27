@@ -1,10 +1,11 @@
 using UnityEngine;
 
-public class DialogStartBase : MonoBehaviour
+public abstract class DialogStartBase : MonoBehaviour
 {
     [SerializeField] private ScrDialog dialog;
 
     protected void StartDialog() {
-        DialogManager.Instance.OpenDialog(dialog);
+        DialogManager.OpenDialog();
+        CatalystDialog.Dialog = dialog.LineDialog;
     }
 }

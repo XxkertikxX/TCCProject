@@ -3,22 +3,14 @@ using System;
 
 public class DialogManager : MonoBehaviour
 {
-    public static event Action OnDialogOpen;
-    public static event Action OnDialogClose;
-    public static DialogManager Instance { get; private set; }
+    static public event Action OnDialogOpen;
+    static public event Action OnDialogClose;
 
-    public LineDialog[] Dialogs;
-
-    void Awake() {
-        Instance = this;
-    }
-
-    public void OpenDialog(ScrDialog dialog) {
-        Dialogs = dialog.LineDialog;
+    static public void OpenDialog() {
         OnDialogOpen?.Invoke();
     }
     
-    public void CloseDialog() {
+    static public void CloseDialog() {
         OnDialogClose?.Invoke();
     }
 }

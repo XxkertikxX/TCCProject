@@ -32,7 +32,7 @@ public class DialogWriterGeneric : DialogWriterBase
             StartLine();
         }
         else {
-            DialogManager.Instance.CloseDialog();
+            DialogManager.CloseDialog();
         }
     }
     private void SkipLine() {

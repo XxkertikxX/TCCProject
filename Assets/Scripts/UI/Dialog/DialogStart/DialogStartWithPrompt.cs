@@ -7,7 +7,7 @@ public class DialogStartWithPrompt : DialogStartBase
     private PlayerMovement playerMovement;
 
     void Awake() {
-        playerMovement = PlayerMovement.InstancePlayerMovement;
+        playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
     }
 
     void OnTriggerStay2D(Collider2D collision) {

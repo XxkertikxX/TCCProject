@@ -2,7 +2,7 @@ using UnityEngine;
 
 [CreateAssetMenu(menuName = "new dialog")]
 public class ScrDialog : ScriptableObject {
-    [SerializeField] LineDialog[] lineDialog;
+    [SerializeField] private LineDialog[] lineDialog;
 
     public LineDialog[] LineDialog => lineDialog;
 }

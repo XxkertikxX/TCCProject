@@ -21,7 +21,6 @@ public abstract class DialogWriterBase : MonoBehaviour
 
     private void Setup() {
         dialogStart = true;
-        dialogs = DialogManager.Instance.Dialogs;
         index = 0;
         StartLine();
     }
