@@ -11,7 +11,8 @@ public class ParallaxTest : RuntimeTestBase
     private float parallaxSpeed;
 
     [UnitySetUp]
-    public IEnumerator Setup(){
+    public IEnumerator Setup()
+    {
         CreateCamera();
         CreateBackground();
         CreateParallax();
@@ -53,7 +54,8 @@ public class ParallaxTest : RuntimeTestBase
         background = new GameObject("Background");
         SpriteRenderer spriteRenderer = background.AddComponent<SpriteRenderer>();
         spriteRenderer.sprite = Sprite.Create(Texture2D.whiteTexture, new Rect(0,0,1,1), new Vector2(0.5f, 0.5f));
-        background.transform.localScale = new Vector3(2000f, 5f, 1f); //2000 pixels de sprite || 20 unidades unity
+        background.transform.localScale = new Vector3(5000f, 5f, 1f); //5000 pixels de sprite || 50 unidades unity
+        background.transform.position = new Vector3(0, 0, 0);
     }
 
     private void CreateParallax(){

@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
@@ -8,7 +9,8 @@ public class PlayerMovementTest : RuntimeTestBase
     private GameObject player;
     private GameObject ground;
 
-    private PlayerMovementForTest playerMovement;
+    private InputSystemTest inputSystemTest;
+    private PlayerMovement playerMovement;
     private Rigidbody2D rb;
 
     private float speed;
@@ -25,32 +27,32 @@ public class PlayerMovementTest : RuntimeTestBase
 
     [UnityTest]
     public IEnumerator MovementRight_Test(){
-        DefineInputs(true, false, false);
+        DefineInputs(new List<string>(){"Right"});
         yield return new WaitForSeconds(0.1f);
         Assert.AreEqual(speed, rb.velocity.x);
     }
 
     [UnityTest]
     public IEnumerator MovementLeft_Test(){
-        DefineInputs(false, true, false);
+        DefineInputs(new List<string>(){"Left"});
         yield return new WaitForSeconds(0.1f);
         Assert.AreEqual(-speed, rb.velocity.x);
     }
 
     [UnityTest]
     public IEnumerator MovementLeftAndRight_Test(){
-        DefineInputs(true, true, false);
+        DefineInputs(new List<string>(){"Left", "Right"});
         yield return new WaitForSeconds(0.1f);
         Assert.AreEqual(0, rb.velocity.x);
     }
 
     [UnityTest]
     public IEnumerator Jump_Test() {
-        DefineInputs(false, false, true);
+        DefineInputs(new List<string>(){"Jump"});
         yield return null; //Simular GetKeyDown, porém se no PlayerMovement o método InputKeyDown for 
         //alterado incorretamente, dará sucesso no teste mas não funcionará, o teste é parcialmente falho,
         //ele apenas testa o pulo em si e supõe que o resto está correto.
-        playerMovement.jump = false;
+        DefineInputs(new List<string>());
         yield return new WaitForSeconds(0.1f);
         Assert.AreEqual(jumpForce, rb.velocity.y);
     }
@@ -80,8 +82,8 @@ public class PlayerMovementTest : RuntimeTestBase
     private void CreatePlayer() {
         player = new GameObject("Player");
         AddRidigbody2D();
-        playerMovement = player.AddComponent<PlayerMovementForTest>();
-        AddFieldsPlayer();
+        AddComponents();
+        GetFieldsPlayer();
     }
     
     private void AddRidigbody2D(){
@@ -89,12 +91,16 @@ public class PlayerMovementTest : RuntimeTestBase
         rb.gravityScale = 0f;
     }
     
-    private void AddFieldsPlayer(){
-        Reflection.SetField(playerMovement, "speed", 5f);
+    private void AddComponents(){
+        inputSystemTest = player.AddComponent<InputSystemTest>();
+        playerMovement = player.AddComponent<PlayerMovement>();
+    }
+    
+    private void GetFieldsPlayer(){
         speed = Reflection.GetField<float>(playerMovement, "speed");
-        Reflection.SetField(playerMovement, "jumpForce", 10f);
         jumpForce = Reflection.GetField<float>(playerMovement, "jumpForce");
     }
+    
     private GameObject CreateGroundCheck() {
         var groundCheck = new GameObject("GroundCheck");
         groundCheck.transform.SetParent(player.transform);
@@ -108,39 +114,13 @@ public class PlayerMovementTest : RuntimeTestBase
         ground.transform.position = new Vector3(0, -1, 0);
         ground.layer = LayerMask.NameToLayer("Ground");
     }
-    
+
     private void AddFieldLayerGround(){
         LayerMask mask = 1 << LayerMask.NameToLayer("Ground");
         Reflection.SetField(playerMovement, "ground", mask);
     }
-
-    private void DefineInputs(bool right, bool left, bool jump) {
-        playerMovement.right = right;
-        playerMovement.left = left;
-        playerMovement.jump = jump;
-    }
-}
-
-public class PlayerMovementForTest : PlayerMovement
-{
-    internal bool right;
-    internal bool left;
-    internal bool jump;
-
-    protected override bool InputKey(KeyCode key) {
-        if (key == Bindings.BindingsDic["Left"]) {
-            return left;
-        }
-        else if (key == Bindings.BindingsDic["Right"]) {
-            return right;
-        }
-        return false;
-    }
-
-    protected override bool InputKeyDown(KeyCode key) {
-        if(key == Bindings.BindingsDic["Jump"]) {
-            return jump;
-        }
-        return false;
+    
+    private void DefineInputs(List<string> inputs) {
+        inputSystemTest.Input = inputs;
     }
 }
