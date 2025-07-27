@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class DialogUI : MonoBehaviour, IDialogSetup
+public class DialogEnableUI : MonoBehaviour, IDialogSetup
 {
     [SerializeField] private GameObject screenDialog;
     [SerializeField] private GameObject screenHUD;
