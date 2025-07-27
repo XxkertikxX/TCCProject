@@ -4,9 +4,17 @@ using LiteDB;
 
 public class Bindings : MonoBehaviour
 {
-    public static Dictionary<string, KeyCode> BindingsDic;
+    public Dictionary<string, KeyCode> BindingsDic;
 
-    static public void UpdateBindings() {
+    void OnEnable() {
+        ChangeBinding.OnBindingChanged += UpdateBindings;
+    }
+    
+    void OnDisable() {
+        ChangeBinding.OnBindingChanged -= UpdateBindings;
+    }
+    
+    private void UpdateBindings() {
         string path = Application.persistentDataPath + "/bindings.db";
         using (var db = new LiteDatabase(path)) {
             ResetDictionary();
@@ -14,17 +22,17 @@ public class Bindings : MonoBehaviour
         }
     }
 
-    static private void ResetDictionary() {
+    private void ResetDictionary() {
         BindingsDic = new Dictionary<string, KeyCode>();
     }
 
-    static private void UpdateDictionary(LiteDatabase db) {
+    private void UpdateDictionary(LiteDatabase db) {
         foreach (var binding in Col(db).FindAll()) {
             BindingsDic.Add(binding.KeyName, binding.Key);
         }
     }
 
-    static private ILiteCollection<KeyBinding> Col(LiteDatabase db) {
+    private ILiteCollection<KeyBinding> Col(LiteDatabase db) {
         return db.GetCollection<KeyBinding>("bindings");
     }
 }

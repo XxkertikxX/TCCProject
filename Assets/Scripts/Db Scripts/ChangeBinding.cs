@@ -1,14 +1,15 @@
 using UnityEngine;
+using System;
 using System.Collections;
 using LiteDB;
 
 public class ChangeBinding : MonoBehaviour
 {
+    public static event Action OnBindingChanged;
+    
     public IEnumerator WaitClick(string keyName) {
         yield return new WaitForAnyKeyDown();
-
         KeyCode key = PressKey();
-        
         Binding(keyName, key);
     }
     
@@ -20,7 +21,8 @@ public class ChangeBinding : MonoBehaviour
                 KeyName = keyName,
                 Key = keyCode
             };
-
+            
+            OnBindingChanged?.Invoke();
             col.Upsert(bind);
         }
     }
