@@ -38,11 +38,11 @@ public class PlayerMovementSystemTest : RuntimeTestBase
     private void AddComponents(){
         rb = player.AddComponent<Rigidbody2D>();
         rb.gravityScale = 0f;
-        playerMovement = player.AddComponent<PlayerMovementSystem>();
         player.AddComponent<MovementTestMoveLeft>();
         player.AddComponent<MovementTestMoveUp>();
+        playerMovement = player.AddComponent<PlayerMovementSystem>();
     }
 }
 
-public class MovementTestMoveLeft : MonoBehaviour, IMovement {public void Move(Rigidbody2D rb) { rb.velocity += Vector2.left;} public bool Apply(IButtonInput input) {return true;}}
-public class MovementTestMoveUp : MonoBehaviour, IMovement {public void Move(Rigidbody2D rb) { rb.velocity += Vector2.up;} public bool Apply(IButtonInput input) {return true;}}
+public class MovementTestMoveLeft : MonoBehaviour, IMovement {public void Move(Rigidbody2D rb) { rb.velocity = new Vector2(1, rb.velocity.y);} public bool Apply(IButtonInput input) {return true;}}
+public class MovementTestMoveUp : MonoBehaviour, IMovement {public void Move(Rigidbody2D rb) { rb.velocity = new Vector2(rb.velocity.x, 1);} public bool Apply(IButtonInput input) {return true;}}

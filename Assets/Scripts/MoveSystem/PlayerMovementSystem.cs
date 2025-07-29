@@ -3,10 +3,7 @@ using UnityEngine;
 using System;
 using System.Linq;
 
-[RequireComponent(typeof(IMovement))]
 [RequireComponent(typeof(Rigidbody2D))]
-[RequireComponent(typeof(IButtonInput))]
-
 public class PlayerMovementSystem : MonoBehaviour
 {
     private List<IMovement> movements;
