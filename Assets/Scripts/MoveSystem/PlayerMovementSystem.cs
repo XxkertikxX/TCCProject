@@ -1,37 +1,34 @@
+using System.Collections.Generic;
 using UnityEngine;
 using System;
+using System.Linq;
+
+[RequireComponent(typeof(IMovement))]
+[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(IButtonInput))]
 
 public class PlayerMovementSystem : MonoBehaviour
 {
-    static public event Action OnDisablePlayerMovementSystem; 
+    private List<IMovement> movements;
 
-    private IHorizontalMovement horizontalMovement;
-    private IHorizontalMovementCondiction horizontalMovementCondiction;
-
-    private IVerticalMovement verticalMovement;
-    public IVerticalMovementCondiction verticalMovementCondiction;
+    private Rigidbody2D rb;
+    private IButtonInput input;
 
     void OnDisable() {
-        OnDisablePlayerMovementSystem?.Invoke();
+        rb.velocity = Vector2.zero;
     }
 
     void Awake() {
-        horizontalMovement = GetComponent<IHorizontalMovement>();
-        horizontalMovementCondiction = GetComponent<IHorizontalMovementCondiction>();
-
-        verticalMovement = GetComponent<IVerticalMovement>();
-        verticalMovementCondiction = GetComponent<IVerticalMovementCondiction>();
+        movements = GetComponents<IMovement>().ToList();
+        rb = GetComponent<Rigidbody2D>();
+        input = GetComponent<IButtonInput>();
     }
 
     void FixedUpdate() {
-        if(horizontalMovementCondiction.CanMove()){
-            horizontalMovement.MoveX();
-        }
-    }
-
-    void Update() {
-        if(verticalMovementCondiction.CanMove()){
-            verticalMovement.MoveY();
+        foreach (var move in movements) {
+            if(move.Apply(input)) {
+                move.Move(rb);
+            }
         }
     }
 }
