@@ -31,7 +31,8 @@ public class LifeBarTest : RuntimeTestBase
     }
 
     private void CreateLifeBar() {
-        lifeBar = new LifeBar();
+        GameObject life = new GameObject("Life");
+        lifeBar = life.AddComponent<LifeBar>();
     }
     
     private void CreateUI() {
