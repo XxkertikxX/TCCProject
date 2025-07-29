@@ -8,30 +8,48 @@ public class PlayerMovementWalkTest : RuntimeTestBase
 {
     private Rigidbody2D rb;
     private InputSystemTest inputSystemTest;
-    private float speed;
+    private PlayerMovementWalk playerMovementWalk;
+
+    [SetUp]
+    public void Setup() {
+        CreatePlayer();
+    }
 
     [UnityTest]
     public IEnumerator MovementRight_Test(){
-        DefineInputs(new List<string>(){"Right"});
+        ApplyMovement(new List<string>(){"Right"});
         yield return new WaitForSeconds(0.1f);
-        Assert.AreEqual(speed, rb.velocity.x);
+        Assert.AreEqual(GetSpeed(), rb.velocity.x);
     }
 
     [UnityTest]
     public IEnumerator MovementLeft_Test(){
-        DefineInputs(new List<string>(){"Left"});
+        ApplyMovement(new List<string>(){"Left"});
         yield return new WaitForSeconds(0.1f);
-        Assert.AreEqual(-speed, rb.velocity.x);
+        Assert.AreEqual(-GetSpeed(), rb.velocity.x);
     }
 
     [UnityTest]
     public IEnumerator MovementLeftAndRight_Test(){
-        DefineInputs(new List<string>(){"Left", "Right"});
+        ApplyMovement(new List<string>(){"Left", "Right"});
         yield return new WaitForSeconds(0.1f);
         Assert.AreEqual(0, rb.velocity.x);
     }
 
-    private void DefineInputs(List<string> inputs) {
+    private void CreatePlayer() {
+        GameObject player = new GameObject("Player");
+        rb = player.AddComponent<Rigidbody2D>();
+        inputSystemTest = player.AddComponent<InputSystemTest>();
+        playerMovementWalk = player.AddComponent<PlayerMovementWalk>();
+    }
+
+    private float GetSpeed() {
+        return Reflection.GetField<float>(playerMovementWalk, "speed");
+    }
+
+    private void ApplyMovement(List<string> inputs) {
         inputSystemTest.Input = inputs;
+        playerMovementWalk.Apply(inputSystemTest);
+        playerMovementWalk.Move(rb);
     }
 }
