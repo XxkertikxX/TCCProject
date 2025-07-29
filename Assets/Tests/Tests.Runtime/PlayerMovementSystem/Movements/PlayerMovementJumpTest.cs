@@ -81,6 +81,7 @@ public class PlayerMovementJumpTest : RuntimeTestBase
         GameObject groundCheck = new GameObject("GroundCheck");
         groundCheck.transform.SetParent(player.transform);
         groundCheck.transform.localPosition = new Vector3(0, -1, 0);
+        Reflection.SetField(playerMovementJump, "groundCheck", groundCheck.transform);
     }
 
     private void CreateGround() {
