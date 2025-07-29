@@ -29,10 +29,6 @@ public class DialogStartWithPrompt : DialogStartBase
     }
 
     private bool CanActivePrompt(){
-        return IsGrounded() && playerMovement.enabled;
-    }
-    
-    private bool IsGrounded() {
-        return playerMovement.verticalMovementCondiction.CanMove();
+        return playerMovement.enabled;
     }
 }
