@@ -8,21 +8,34 @@ public class DialogStartWithPromptTest : RuntimeTestBase
     private DialogStartWithPrompt dialogPrompt;
     private GameObject prompt;
 
+    private PlayerMovementSystem playerMovement;
+
     [SetUp]
     public void Setup() {
         CreatePlayer();
-        prompt = new GameObject("Prompt");
         CreateDialogPrompt();
+        CreatePrompt();
     }
 
     [UnityTest]
-
+    public IEnumerator Collision_Test() {
+        yield return new WaitForSeconds(0.1f);
+        Assert.IsTrue(prompt.activeInHierarchy);
+    }
 
     private void CreatePlayer() {
         GameObject player = new GameObject("Player");
         player.tag = "Player";
-        player.AddComponent<PlayerMovementSystem>();
+        playerMovement = player.AddComponent<PlayerMovementSystem>();
         player.AddComponent<BoxCollider2D>();
+        player.AddComponent<InputSystemTest>();
+        player.AddComponent<InputCatalyst>();
+    }
+
+    private void CreatePrompt() {
+        prompt = new GameObject("Prompt");
+        Reflection.SetField(dialogPrompt, "promptPressKey", prompt);
+        prompt.SetActive(false);
     }
 
     private void CreateDialogPrompt() {
