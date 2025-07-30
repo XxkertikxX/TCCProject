@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
@@ -9,6 +10,7 @@ public class DialogStartWithPromptTest : RuntimeTestBase
     private GameObject prompt;
 
     private PlayerMovementSystem playerMovement;
+    private InputSystemTest inputSystemTest;
 
     [SetUp]
     public void Setup() {
@@ -18,9 +20,15 @@ public class DialogStartWithPromptTest : RuntimeTestBase
     }
 
     [UnityTest]
-    public IEnumerator Collision_Test() {
+    public IEnumerator VerifyIfPromptActive() {
         yield return new WaitForSeconds(0.1f);
         Assert.IsTrue(prompt.activeInHierarchy);
+    }
+
+    [UnityTest]
+    public IEnumerator VerifyIfDialogOpen(){
+        inputSystemTest.Input = new List<string>();
+        yield return null;
     }
 
     private void CreatePlayer() {
@@ -28,7 +36,7 @@ public class DialogStartWithPromptTest : RuntimeTestBase
         player.tag = "Player";
         playerMovement = player.AddComponent<PlayerMovementSystem>();
         player.AddComponent<BoxCollider2D>();
-        player.AddComponent<InputSystemTest>();
+        inputSystemTest = player.AddComponent<InputSystemTest>();
         player.AddComponent<InputCatalyst>();
     }
 
