@@ -23,7 +23,7 @@ public class DialogStartWithPrompt : DialogStartBase
     private void PromptActiveDialogue() {
         promptPressKey.SetActive(CanActivePrompt());
 
-        if (input.InputButtonDown("Interact") && CanActivePrompt()) {
+        if (InputCatalyst.input.InputButtonDown("Interact") && CanActivePrompt()) {
             StartDialog();
         }
     }
