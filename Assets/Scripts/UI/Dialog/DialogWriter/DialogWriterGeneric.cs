@@ -2,21 +2,25 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DialogWriterGeneric : DialogWriterBase
+public class DialogWriterGeneric : MonoBehaviour, IDialogWriter
 {
+    [SerializeField] private Text textSpeak;
     [SerializeField] private Text textName;
     [SerializeField] private Image imageNPC;
-
+    private LineDialog[] dialogs;
     private Coroutine coroutine = null;
 
     void Update() {
-        if (!dialogStart) return;
-        
         if (Input.GetKeyDown(KeyCode.Return)) {
             ContinueDialog();
         }
     }
-    
+
+    public void StartLine() {
+        SetupLine();
+        coroutine = StartCoroutine(TypingLine());
+    }
+
     private void ContinueDialog() {
         if (coroutine == null) {
             NextLine();
@@ -27,6 +31,7 @@ public class DialogWriterGeneric : DialogWriterBase
     }
     
     private void NextLine() {
+        int index = 0;
         if (index < dialogs.Length) {
             index++;
             StartLine();
@@ -36,17 +41,14 @@ public class DialogWriterGeneric : DialogWriterBase
         }
     }
     private void SkipLine() {
+        int index = 0;
         StopCoroutine(coroutine);
         coroutine = null;
         textSpeak.text = dialogs[index].TextDialog;
     }
 
-    protected override void StartLine() {
-        SetupLine();
-        coroutine = StartCoroutine(TypingLine());
-    }
-
     private IEnumerator TypingLine() {
+        int index = 0;
         foreach (char c in dialogs[index].TextDialog) {
             textSpeak.text += c;
             yield return new WaitForSeconds(WriteSpeed());
@@ -55,6 +57,7 @@ public class DialogWriterGeneric : DialogWriterBase
     }
 
     private void SetupLine() {
+        int index = 0;
         textSpeak.text = null;
         textName.text = dialogs[index].NameCharacter;
         imageNPC.sprite = dialogs[index].ImageCharacter;

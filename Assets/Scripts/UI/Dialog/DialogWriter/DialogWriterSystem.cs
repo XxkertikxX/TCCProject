@@ -1,13 +1,14 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
-public abstract class DialogWriterBase : MonoBehaviour
+public class DialogWriterSystem : MonoBehaviour
 {
-    [SerializeField] protected Text textSpeak;
-    protected LineDialog[] dialogs;
-    protected int index;
+    static public event Action OnNextLine;
 
-    protected bool dialogStart = false;
+    private IDialogWriter dialogWriter;
+    private LineDialog[] dialogs;
+    private int index;
 
     void OnEnable() {
         DialogManager.OnDialogOpen += Setup;
@@ -20,14 +21,11 @@ public abstract class DialogWriterBase : MonoBehaviour
     }
 
     private void Setup() {
-        dialogStart = true;
-        index = 0;
-        StartLine();
+        dialogs = CatalystDialog.Dialog;
+        dialogWriter.StartLine();
     }
     
     private void EndSetup() {
-        dialogStart = false;
-    }
 
-    protected abstract void StartLine();
+    }
 }
