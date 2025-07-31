@@ -9,7 +9,6 @@ public class PlayerMovementSystem : MonoBehaviour
     private List<IMovement> movements;
 
     private Rigidbody2D rb;
-    private IButtonInput input;
 
     void OnDisable() {
         rb.velocity = Vector2.zero;
@@ -18,12 +17,11 @@ public class PlayerMovementSystem : MonoBehaviour
     void Awake() {
         movements = GetComponents<IMovement>().ToList();
         rb = GetComponent<Rigidbody2D>();
-        input = GetComponent<IButtonInput>();
     }
 
     void FixedUpdate() {
         foreach (var move in movements) {
-            if(move.Apply(input)) {
+            if(move.Apply(InputCatalyst.input)) {
                 move.Move(rb);
             }
         }
