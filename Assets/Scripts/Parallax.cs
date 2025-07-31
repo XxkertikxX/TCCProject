@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using UnityEngine.Tilemaps;
 public class Parallax : MonoBehaviour
 {
     [Range (0, 1)] [SerializeField] private float parallaxSpeed;
@@ -12,6 +12,7 @@ public class Parallax : MonoBehaviour
         cam = Camera.main.transform;
         inicialPosition = transform.position.x;
         backgroundLength = GetComponent<SpriteRenderer>().bounds.size.x;
+        backgroundLength = GetComponent<TilemapRenderer>().bounds.size.x;
     }
 
     void Update() {
