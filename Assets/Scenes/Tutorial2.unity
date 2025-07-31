@@ -305,6 +305,42 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5f47459172c0bf4898cf879f5ef4a81, type: 3}
+--- !u!1 &55345327 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6414084552312400812, guid: 7ef104a2fd48e814f92c25d52b80d92a, type: 3}
+  m_PrefabInstance: {fileID: 1959460633}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &55345329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 55345327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b080bd541ed91341a3cd9c1953e034c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parallaxSpeed: 0.305
+--- !u!1 &120529240 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6414084551373064827, guid: 7ef104a2fd48e814f92c25d52b80d92a, type: 3}
+  m_PrefabInstance: {fileID: 1959460633}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &120529242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 120529240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b080bd541ed91341a3cd9c1953e034c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parallaxSpeed: 0.551
 --- !u!1 &142309047
 GameObject:
   m_ObjectHideFlags: 0
@@ -493,7 +529,7 @@ GameObject:
   - component: {fileID: 232592948}
   m_Layer: 0
   m_Name: Camera
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2306,7 +2342,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50d5b28643c7fd0498d4e964d3f6f42e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cenaCombate: Battle
 --- !u!4 &1324204732 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8291208295854824849, guid: f5f47459172c0bf4898cf879f5ef4a81, type: 3}
@@ -3028,7 +3063,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc6513abf14a6284386791353cfdf582, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NextScene: Tutorial3
+  nextScene: 
 --- !u!1 &1937943376
 GameObject:
   m_ObjectHideFlags: 0
@@ -3142,7 +3177,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6414084551190566914, guid: 7ef104a2fd48e814f92c25d52b80d92a, type: 3}
       propertyPath: m_LocalScale.y
-      value: 29.97247
+      value: 18.981565
       objectReference: {fileID: 0}
     - target: {fileID: 6414084551190566914, guid: 7ef104a2fd48e814f92c25d52b80d92a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3150,7 +3185,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6414084551190566914, guid: 7ef104a2fd48e814f92c25d52b80d92a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.216
+      value: -6.7114
       objectReference: {fileID: 0}
     - target: {fileID: 6414084551373064824, guid: 7ef104a2fd48e814f92c25d52b80d92a, type: 3}
       propertyPath: m_Size.x
@@ -6702,7 +6737,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6414084552200345091, guid: 7ef104a2fd48e814f92c25d52b80d92a, type: 3}
       propertyPath: m_LocalScale.y
-      value: 29.97247
+      value: 18.981565
       objectReference: {fileID: 0}
     - target: {fileID: 6414084552200345091, guid: 7ef104a2fd48e814f92c25d52b80d92a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6710,7 +6745,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6414084552200345091, guid: 7ef104a2fd48e814f92c25d52b80d92a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.216
+      value: -6.7114
       objectReference: {fileID: 0}
     - target: {fileID: 6414084552312400801, guid: 7ef104a2fd48e814f92c25d52b80d92a, type: 3}
       propertyPath: m_Size.x
