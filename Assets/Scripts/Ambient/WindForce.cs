@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class WindForce : MonoBehaviour
 {
-    float windSpeed = .5f;
     public Vector2 windDirection;
     public float windForce;
 
@@ -13,7 +12,7 @@ public class WindForce : MonoBehaviour
         if(collision == null || collision.gameObject.tag != "Player")
         {
             return;
-        } Debug.Log("Esta no collider");
+        }
         Rigidbody2D playerRB = collision.gameObject.GetComponent<Rigidbody2D>();
         playerRB.AddForce(windDirection * windForce);
     }
@@ -22,8 +21,20 @@ public class WindForce : MonoBehaviour
         if (collision == null || collision.gameObject.tag != "Player")
         {
             return;
-        }Debug.Log("Saiu do collider");
+        }
         Rigidbody2D playerRB = collision.gameObject.GetComponent<Rigidbody2D>();
         //playerRB.velocity = Vector2.zero;
+        //StartCoroutine(Momentum(playerRB));
+    }
+
+    IEnumerator Momentum(Rigidbody2D playerRB)
+    {
+        float timing = 1f;
+        while (timing > 0f)
+        {
+            playerRB.velocity -= windDirection * Time.deltaTime * windForce;
+            timing -= Time.deltaTime;
+            yield return playerRB.velocity;
+        }
     }
 }
