@@ -14,6 +14,10 @@ public class Bindings : MonoBehaviour
         ChangeBinding.OnBindingChanged -= UpdateBindings;
     }
     
+    void Start() {
+        UpdateBindings();
+    }
+
     private void UpdateBindings() {
         string path = Application.persistentDataPath + "/bindings.db";
         using (var db = new LiteDatabase(path)) {
