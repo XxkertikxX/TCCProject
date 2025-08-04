@@ -1,7 +1,6 @@
-using Codice.Client.BaseCommands.WkStatus.Printers;
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
+using UnityEngine.Assertions.Must;
 
 public enum SoundTypes
 {
@@ -11,11 +10,11 @@ public enum SoundTypes
     Damage
 }
 
-[RequireComponent(typeof(AudioSource))]
+[RequireComponent(typeof(AudioSource)), ExecuteInEditMode]
 
 public class CharacterAudioManager : MonoBehaviour
 {
-    [SerializeField] private AudioClip[] soundsList;  
+    [SerializeField] private SoundList[] soundsList;  
     private static CharacterAudioManager instance;
     private AudioSource audioSource;
 
@@ -29,8 +28,30 @@ public class CharacterAudioManager : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
-    public static void PlaySound(SoundTypes audioClip, float volume = 1)
+    public static void PlaySound(SoundTypes audioClips, float volume = 1)
     {
-        instance.audioSource.PlayOneShot(instance.soundsList[(int)audioClip], volume);
+        AudioClip[] clips = instance.soundsList[(int)audioClips].Sounds;
+        AudioClip randomClip = clips[UnityEngine.Random.Range(0,clips.Length)];
+        instance.audioSource.PlayOneShot(randomClip, volume);
     }
+
+#if UNITY_EDITOR
+    private void OnEnable()
+    {
+        string[] names = Enum.GetNames(typeof(SoundTypes));
+        Array.Resize(ref soundsList, names.Length);
+        for (int i = 0; i < soundsList.Length; i++)
+        {
+            soundsList[i].name = names[i];
+        }
+    }
+
+#endif
+}
+[Serializable]
+public struct SoundList
+{
+    public AudioClip[] Sounds { get => sounds; }
+    [HideInInspector] public string name;
+    [SerializeField] private AudioClip[] sounds;
 }
