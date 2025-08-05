@@ -24,7 +24,7 @@ public class WindForce : MonoBehaviour
         }
         Rigidbody2D playerRB = collision.gameObject.GetComponent<Rigidbody2D>();
         //playerRB.velocity = Vector2.zero;
-        //StartCoroutine(Momentum(playerRB));
+        StartCoroutine(Momentum(playerRB));
     }
 
     IEnumerator Momentum(Rigidbody2D playerRB)
