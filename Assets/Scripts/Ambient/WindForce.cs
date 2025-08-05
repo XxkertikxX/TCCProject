@@ -23,7 +23,6 @@ public class WindForce : MonoBehaviour
             return;
         }
         Rigidbody2D playerRB = collision.gameObject.GetComponent<Rigidbody2D>();
-        //playerRB.velocity = Vector2.zero;
         StartCoroutine(Momentum(playerRB));
     }
 
@@ -32,9 +31,10 @@ public class WindForce : MonoBehaviour
         float timing = 1f;
         while (timing > 0f)
         {
-            playerRB.velocity -= windDirection * Time.deltaTime * windForce;
+            playerRB.velocity -= windDirection * Time.deltaTime * windForce * 0.01f; //arrumar loop do ciclo de vento
+            Debug.Log(playerRB.velocity);
             timing -= Time.deltaTime;
-            yield return playerRB.velocity;
+            yield return null;
         }
     }
 }
