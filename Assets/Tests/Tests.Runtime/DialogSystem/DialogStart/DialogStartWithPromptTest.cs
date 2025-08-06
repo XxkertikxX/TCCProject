@@ -4,13 +4,14 @@ using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
 
-public class DialogStartWithPromptTest : RuntimeTestBase
+public class DialogStartWithPromptTest : RuntimeTestInput
 {
+    private GameObject player;
+
     private DialogStartWithPrompt dialogPrompt;
     private GameObject prompt;
 
     private PlayerMovementSystem playerMovement;
-    private InputSystemTest inputSystemTest;
 
     [SetUp]
     public void Setup() {
@@ -21,23 +22,39 @@ public class DialogStartWithPromptTest : RuntimeTestBase
 
     [UnityTest]
     public IEnumerator VerifyIfPromptActive() {
+        player.transform.position = Vector3.zero;
+        playerMovement.enabled = true;
         yield return new WaitForSeconds(0.1f);
         Assert.IsTrue(prompt.activeInHierarchy);
     }
 
+    public IEnumerator VerifyIfPromptIsNotActivePlayerMovement() {
+        playerMovement.enabled = false;
+        yield return new WaitForSeconds(0.1f);
+        Assert.IsFalse(prompt.activeInHierarchy);
+    }
+
     [UnityTest]
-    public IEnumerator VerifyIfDialogOpen(){
-        inputSystemTest.Input = new List<string>();
-        yield return null;
+    public IEnumerator VerifyIfPromptIsNotActiveOnExit() {
+        player.transform.position = new Vector3(10, 10, 10);
+        yield return new WaitForSeconds(0.1f);
+        Assert.IsFalse(prompt.activeInHierarchy);
+    }
+
+    [UnityTest]
+    public IEnumerator VerifyIfDialogOpen() {
+        bool wasCalled = false;
+        inputSystemTest.Input = new List<string>() { "Interact" };
+        DialogManager.OnDialogOpen += () => wasCalled = true;
+        yield return new WaitForSeconds(0.1f);
+        Assert.IsTrue(wasCalled);
     }
 
     private void CreatePlayer() {
-        GameObject player = new GameObject("Player");
+        player = new GameObject("Player");
         player.tag = "Player";
         playerMovement = player.AddComponent<PlayerMovementSystem>();
         player.AddComponent<BoxCollider2D>();
-        inputSystemTest = player.AddComponent<InputSystemTest>();
-        player.AddComponent<InputCatalyst>();
     }
 
     private void CreatePrompt() {
@@ -48,6 +65,7 @@ public class DialogStartWithPromptTest : RuntimeTestBase
 
     private void CreateDialogPrompt() {
         GameObject dialogPromptObj = new GameObject("DialogPrompt");
+        dialogPromptObj.AddComponent<DialogManager>();
         dialogPrompt = dialogPromptObj.AddComponent<DialogStartWithPrompt>();
         dialogPromptObj.AddComponent<BoxCollider2D>().isTrigger = true;
     }

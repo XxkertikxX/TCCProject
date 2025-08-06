@@ -4,10 +4,9 @@ using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
 
-public class PlayerMovementWalkTest : RuntimeTestBase
+public class PlayerMovementWalkTest : RuntimeTestInput
 {
     private Rigidbody2D rb;
-    private InputSystemTest inputSystemTest;
     private PlayerMovementWalk playerMovementWalk;
 
     [SetUp]
@@ -39,7 +38,6 @@ public class PlayerMovementWalkTest : RuntimeTestBase
     private void CreatePlayer() {
         GameObject player = new GameObject("Player");
         rb = player.AddComponent<Rigidbody2D>();
-        inputSystemTest = player.AddComponent<InputSystemTest>();
         playerMovementWalk = player.AddComponent<PlayerMovementWalk>();
     }
 

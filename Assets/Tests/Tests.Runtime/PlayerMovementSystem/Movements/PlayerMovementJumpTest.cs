@@ -4,7 +4,7 @@ using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
 
-public class PlayerMovementJumpTest : RuntimeTestBase
+public class PlayerMovementJumpTest : RuntimeTestInput
 {
     private List<string> jump = new List<string>(){"Jump"};
     private List<string> notJump = new List<string>(){"Not Jump"};
@@ -16,7 +16,6 @@ public class PlayerMovementJumpTest : RuntimeTestBase
     private IMovement playerMovementJump;
 
     private Rigidbody2D rb;
-    private InputSystemTest input;
 
     private float jumpForce; 
 
@@ -41,7 +40,7 @@ public class PlayerMovementJumpTest : RuntimeTestBase
         DefineInputs(jump);
         player.transform.position = isGrounded;
         yield return new WaitForSeconds(0.1f);
-        Assert.IsTrue(playerMovementJump.Apply(input));
+        Assert.IsTrue(playerMovementJump.Apply(inputSystemTest));
     }
 
     [UnityTest]
@@ -49,7 +48,7 @@ public class PlayerMovementJumpTest : RuntimeTestBase
         DefineInputs(jump);
         player.transform.position = notGrounded;
         yield return new WaitForSeconds(0.1f);
-        Assert.IsFalse(playerMovementJump.Apply(input));
+        Assert.IsFalse(playerMovementJump.Apply(inputSystemTest));
     }
 
     [UnityTest]
@@ -57,7 +56,7 @@ public class PlayerMovementJumpTest : RuntimeTestBase
         DefineInputs(notJump);
         player.transform.position = isGrounded;
         yield return new WaitForSeconds(0.1f);
-        Assert.IsFalse(playerMovementJump.Apply(input));
+        Assert.IsFalse(playerMovementJump.Apply(inputSystemTest));
     }
 
     [UnityTest]
@@ -65,7 +64,7 @@ public class PlayerMovementJumpTest : RuntimeTestBase
         DefineInputs(notJump);
         player.transform.position = notGrounded;
         yield return new WaitForSeconds(0.1f);
-        Assert.IsFalse(playerMovementJump.Apply(input));
+        Assert.IsFalse(playerMovementJump.Apply(inputSystemTest));
     }
 
     private void CreatePlayer() {
@@ -73,7 +72,6 @@ public class PlayerMovementJumpTest : RuntimeTestBase
         playerMovementJump = player.AddComponent<PlayerMovementJump>();
         rb = player.AddComponent<Rigidbody2D>();
         rb.gravityScale = 0;
-        input = player.AddComponent<InputSystemTest>();
         DefineInputs(new List<string>(){"Jump"});
     }
 
@@ -97,6 +95,6 @@ public class PlayerMovementJumpTest : RuntimeTestBase
     }
 
     private void DefineInputs(List<string> inputs) {
-        input.Input = inputs;
+        inputSystemTest.Input = inputs;
     }
 }
