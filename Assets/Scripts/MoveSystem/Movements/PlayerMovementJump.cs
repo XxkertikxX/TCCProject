@@ -9,7 +9,6 @@ public class PlayerMovementJump : MonoBehaviour, IMovement
 
     public void Move(Rigidbody2D rb) {
         rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-        CharacterAudioManager.PlaySound(SoundTypes.Jump, 0.5f);
     }
 
     public bool Apply(IButtonInput input) {

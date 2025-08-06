@@ -30,7 +30,6 @@ Transform:
   m_Children:
   - {fileID: 6208849185876481072}
   - {fileID: 3690203596032702952}
-  - {fileID: 8530087500133315851}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -266,37 +265,6 @@ Transform:
   m_Father: {fileID: 6208849185876481072}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &7757112325547822364
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8530087500133315851}
-  m_Layer: 0
-  m_Name: Player_Movement
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8530087500133315851
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7757112325547822364}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 6208849184958914160}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &9171758257498556698
 GameObject:
   m_ObjectHideFlags: 0
@@ -344,17 +312,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soundsList:
   - name: Footsteps
-    sounds:
-    - {fileID: 8300000, guid: 71a9a4977669e4f429b443e6dac7cba6, type: 3}
+    sounds: []
   - name: Jump
-    sounds:
-    - {fileID: 8300000, guid: fc6b543a69007fe4e9b240d8a9bb2db9, type: 3}
+    sounds: []
   - name: Landing
-    sounds:
-    - {fileID: 8300000, guid: 33ea910972308994ea75832ef2738ad2, type: 3}
+    sounds: []
   - name: Damage
-    sounds:
-    - {fileID: 8300000, guid: 4d3ce3b4b13504b4f8bf86f4c4b0aeb3, type: 3}
+    sounds: []
 --- !u!82 &7595990550584510681
 AudioSource:
   m_ObjectHideFlags: 0
