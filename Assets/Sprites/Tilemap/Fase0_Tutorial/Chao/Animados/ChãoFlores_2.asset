@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: "Ch\xE3oFlores_2"
   m_EditorClassIdentifier: 
   m_AnimatedSprites:
-  - {fileID: 21300000, guid: 7eb7d7019c5d52044bdd51afa868fc74, type: 3}
-  - {fileID: 21300000, guid: 120302767b8781349afcbebd1330c8f2, type: 3}
-  - {fileID: 21300000, guid: 3ee2ee4d965e15f4193e8d7335b500a0, type: 3}
-  - {fileID: 21300000, guid: 120302767b8781349afcbebd1330c8f2, type: 3}
+  - {fileID: 21300000, guid: 212283659e7e0bc4daee94a70263b503, type: 3}
+  - {fileID: 21300000, guid: f4bb40f184b2cf84d8118ef62390de56, type: 3}
+  - {fileID: 21300000, guid: 911408d9f3382f74bb67936bb01f157f, type: 3}
+  - {fileID: 21300000, guid: f4bb40f184b2cf84d8118ef62390de56, type: 3}
   m_MinSpeed: 3
   m_MaxSpeed: 5
   m_AnimationStartTime: 0
