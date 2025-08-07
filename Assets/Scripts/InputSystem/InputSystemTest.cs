@@ -5,6 +5,10 @@ public class InputSystemTest : MonoBehaviour, IButtonInput
 {
     public List<string> Input = new List<string>() {""};
     
+    void Awake { 
+        InputCatalyst.input = this;
+    }
+    
     public bool InputButton(string key) {
         return Input.Contains(key);
     }

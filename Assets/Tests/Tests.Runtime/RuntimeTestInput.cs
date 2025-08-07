@@ -13,6 +13,5 @@ public class RuntimeTestInput : RuntimeTestBase
     private void CreateInputSystem() {
         GameObject input = new GameObject("Input");
         inputSystemTest = input.AddComponent<InputSystemTest>();
-        input.AddComponent<InputCatalyst>();
     }
 }

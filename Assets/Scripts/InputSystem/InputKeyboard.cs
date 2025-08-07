@@ -5,6 +5,7 @@ public class InputKeyboard : MonoBehaviour, IButtonInput
     private Bindings bindings;
     
     void Awake() {
+        InputCatalyst.input = this;
         bindings = GetComponent<Bindings>();
     }
     
