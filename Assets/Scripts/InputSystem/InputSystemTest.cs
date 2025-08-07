@@ -5,7 +5,7 @@ public class InputSystemTest : MonoBehaviour, IButtonInput
 {
     public List<string> Input = new List<string>() {""};
     
-    void Awake { 
+    void Awake() { 
         InputCatalyst.input = this;
     }
     
