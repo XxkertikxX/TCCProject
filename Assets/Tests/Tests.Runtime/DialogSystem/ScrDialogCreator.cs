@@ -10,6 +10,11 @@ public class ScrDialogCreator
                 NameCharacter = "Test Character",
                 ImageCharacter = null,
                 TextDialog = "This is a test dialog."
+            },
+            new LineDialog {
+                NameCharacter = "Test",
+                ImageCharacter = null,
+                TextDialog = "This is a test dialog. 2"
             }
         });
         return scrDialog;

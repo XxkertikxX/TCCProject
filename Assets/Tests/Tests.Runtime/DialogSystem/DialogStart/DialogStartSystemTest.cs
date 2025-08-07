@@ -22,10 +22,12 @@ public class DialogStartSystemTest : RuntimeTestBase
 
     private void CreateDialogSystem() {
         GameObject dialog = new GameObject("Dialog");
+        dialog.SetActive(false);
         dialogSystem = dialog.AddComponent<DialogStartSystem>();
         dialog.AddComponent<WriterTest>();
         SetAndGetScrDialog();
         SetAndGetDialogStartBase(dialog);
+        dialog.SetActive(true);
     }
     
     private void SetAndGetScrDialog() {
