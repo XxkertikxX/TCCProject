@@ -1,7 +1,6 @@
-using UnityEngine;
 using System;
 
-public class DialogManager : MonoBehaviour
+public class DialogManager
 {
     static public event Action OnDialogOpen;
     static public event Action OnDialogClose;

@@ -66,7 +66,6 @@ public class DialogStartWithPromptTest : RuntimeTestInput
 
     private void CreateDialogPrompt() {
         GameObject dialogPromptObj = new GameObject("DialogPrompt");
-        dialogPromptObj.AddComponent<DialogManager>();
         dialogPrompt = dialogPromptObj.AddComponent<DialogStartWithPrompt>();
         dialogPromptObj.AddComponent<BoxCollider2D>().isTrigger = true;
     }

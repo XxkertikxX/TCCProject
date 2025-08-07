@@ -32,7 +32,6 @@ public class ApplyDialogSetupsTest : RuntimeTestBase
     }
     
     private void AddComponents(){
-        dialogObject.AddComponent<DialogManager>();
         dialogObject.AddComponent<DialogSetupsTestAddRigidbody2D>();
         dialogObject.AddComponent<DialogSetupsTestAddBoxCollider2D>();
         dialogObject.AddComponent<ApplyDialogSetups>();
