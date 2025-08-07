@@ -22,5 +22,7 @@ public class PlayerMovementWalk : MonoBehaviour, IMovement
 
     private float GetDirectionX(IButtonInput input, string inputKey) {
         return input.InputButton(inputKey) ? 1f : 0f;
+
+
     }
 }
