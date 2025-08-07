@@ -36,6 +36,7 @@ public class DialogStartWithPromptTest : RuntimeTestInput
 
     [UnityTest]
     public IEnumerator VerifyIfPromptIsNotActiveOnExit() {
+        playerMovement.enabled = true;
         player.transform.position = new Vector3(10, 10, 10);
         yield return new WaitForSeconds(0.1f);
         Assert.IsFalse(prompt.activeInHierarchy);

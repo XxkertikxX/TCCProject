@@ -72,8 +72,8 @@ public class DialogWriterGeneric : MonoBehaviour, IDialogWriter
     }
 
     private float WriteSpeed() {
-        const float lowestSpeed = 0.01f;
-        const float fastSpeed = 0.05f;
-        return Input.GetKey(KeyCode.Space) ? lowestSpeed : fastSpeed;
+        const float lowestSpeed = 0.05f;
+        const float fastSpeed = 0.02f;
+        return InputCatalyst.input.InputButton("Jump") ? fastSpeed : lowestSpeed;
     }
 }
