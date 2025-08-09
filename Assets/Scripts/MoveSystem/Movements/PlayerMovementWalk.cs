@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerMovementWalk : MonoBehaviour, IMovement
 {    
-    private float speed = 5f;
+    public float speed = 5f;
     private float inputDirection;
 
     public void Move(Rigidbody2D rb) {

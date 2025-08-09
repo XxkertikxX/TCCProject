@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Checkpoint
   - Hole
+  - PlayerArea
   layers:
   - Default
   - TransparentFX
