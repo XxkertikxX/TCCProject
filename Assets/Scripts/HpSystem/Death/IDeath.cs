@@ -1,3 +1,3 @@
-interface IDeath {
+public interface IDeath {
     public void Death();
 }
