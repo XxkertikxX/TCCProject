@@ -13,9 +13,9 @@ public class LightningPlataformscr : MonoBehaviour, IEnviromentProperty
         platformRb.constraints = RigidbodyConstraints2D.FreezeAll;
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (other.CompareTag("PlayerArea"))
+        if (collision.CompareTag("PlayerArea"))
         {
              StartCoroutine(ApplyEffect(platformRb));
         }
