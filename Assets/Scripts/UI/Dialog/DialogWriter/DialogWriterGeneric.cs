@@ -18,7 +18,7 @@ public class DialogWriterGeneric : MonoBehaviour, IDialogWriter
     void Update() {
         if (!inDialog) return;
         
-        if (Input.GetKeyDown(KeyCode.Return)) {
+        if (InputCatalyst.input.InputButtonDown("Skip")) {
             ContinueDialog();
         }
     }
@@ -39,7 +39,6 @@ public class DialogWriterGeneric : MonoBehaviour, IDialogWriter
     }
     
     private void ContinueDialog() {
-        index++;
         if (coroutine == null) {
             NextLine();
             return;
@@ -48,6 +47,7 @@ public class DialogWriterGeneric : MonoBehaviour, IDialogWriter
     }
     
     private void NextLine() {
+        index++;
         if (index < dialogs.Length) {
             SetupLine();
             coroutine = StartCoroutine(TypingLine());
@@ -64,6 +64,7 @@ public class DialogWriterGeneric : MonoBehaviour, IDialogWriter
     }
 
     private IEnumerator TypingLine() {
+        yield return null;
         foreach (char c in dialogs[index].TextDialog) {
             textSpeak.text += c;
             yield return new WaitForSeconds(WriteSpeed());

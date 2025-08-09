@@ -25,46 +25,50 @@ public class DialogWriterGeneric_Test : RuntimeTestInput
 
         writer.Constructor(ScrDialogCreator.NewScrDialog().LineDialog);
         testDialogs = Reflection.GetField<LineDialog[]>(writer, "dialogs");
-        
     }
 
     [Test]
     public void SetupLine_Test() {
         writer.StartLine();
-
-        Assert.AreEqual("T", textSpeak.text); //Roda o foreach 1 frame junto do setup, por isso cria uma letra do diálogo
+        Assert.AreEqual(string.Empty, textSpeak.text);
         Assert.AreEqual("Test Character", textName.text);
         Assert.AreEqual(null, imageNPC.sprite);
     }
 
-    /*[UnityTest]
-    public IEnumerator Typing_Test() {
-        writer.StartLine();
-
-        string text;
-        foreach (char c in testDialogs[0].TextDialog) {
-            yield return new WaitForSeconds(0.05f);
-            text += c;
-            Assert.AreEqual(c, )
-        }
-    }*/
-
     [UnityTest]
     public IEnumerator WriteLowest_Test() {
         writer.StartLine();
-
-        yield return new WaitForSeconds(1.2f);
-        Assert.AreEqual("This is a test dialog.", textSpeak.text);
+        yield return AssertTyping(0, 0.05f);
+        Assert.AreEqual("Test Character", textName.text);
     }
     
     [UnityTest]
     public IEnumerator WriteFast_Test() {
         writer.StartLine();
         inputSystemTest.Input = new List<string>() {"Jump"};
-        yield return new WaitForSeconds(0.5f);
-        Assert.AreEqual("This is a test dialog.", textSpeak.text);
+        yield return AssertTyping(0, 0.02f);
+        Assert.AreEqual("Test Character", textName.text);
     }
-    
+
+    [UnityTest]
+    public IEnumerator PassText_Test() {
+        writer.StartLine();
+
+        Assert.AreEqual("Test Character", textName.text);
+        inputSystemTest.Input = new List<string>() {"Skip"}; 
+
+        yield return null;
+
+        Assert.AreEqual(testDialogs[0].TextDialog, textSpeak.text);
+
+        yield return null;
+
+        Assert.AreEqual("Test", textName.text);
+        inputSystemTest.Input = new List<string>() {};
+        
+        yield return AssertTyping(1, 0.05f);
+    }
+
     private void SetUI(DialogWriterGeneric writer) {
         Reflection.SetField(writer, "textSpeak", CreateUIText());
         Reflection.SetField(writer, "textName", CreateUIText());
@@ -83,5 +87,14 @@ public class DialogWriterGeneric_Test : RuntimeTestInput
     private Image CreateUIImage() {
         GameObject go = new GameObject("Image");
         return go.AddComponent<Image>();
+    }
+
+    private IEnumerator AssertTyping(int pos, float time) {
+        string text = null;
+        foreach(char c in testDialogs[pos].TextDialog.ToCharArray()) {
+            yield return new WaitForSeconds(time);
+            text += c;
+            Assert.AreEqual(text, textSpeak.text);
+        }
     }
 }
