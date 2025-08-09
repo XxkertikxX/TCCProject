@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class SystemRhythm : MonoBehaviour
+public class SystemRhythm : MonoBehaviour, IAttackRhythm
 {
     static public int PosSkill;
 
@@ -10,14 +10,13 @@ public class SystemRhythm : MonoBehaviour
 
     void OnEnable() {
         CatalystSkills.Damage = 0;
-        StartCoroutine(SpawnLines());
     }
 
     void OnDisable() {
         UseSkill();
     }
     
-    private IEnumerator SpawnLines() {
+    public IEnumerator Attack() {
         SkillBase skill = CharStatus().skills[PosSkill];
         int TimesForInvoke = skill.TimesForInvoke;
         

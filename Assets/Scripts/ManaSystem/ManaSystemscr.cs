@@ -4,31 +4,26 @@ using UnityEngine;
 
 public class ManaSystemscr : MonoBehaviour
 {
-    private IManaUI manaUI;
+    static private IManaUI manaUI;
 
-    private float maxMana;
-    private float actualMana;
+    static private float maxMana = 100;
+    static private float actualMana;
 
-    void Awake()
-    {
+    void Awake() {
         PullComponents();
         actualMana = maxMana;
     }
 
-    void Start()
-    {
+    void Start() {
         manaUI.UpdateUI(actualMana, maxMana);
     }
 
-    public void ModifyMana(float manaChange)
-    {
+    static public void ModifyMana(float manaChange) {
         actualMana = Mathf.Clamp(actualMana + manaChange, 0, maxMana);
         manaUI.UpdateUI(actualMana, maxMana);
     }
 
-    private void PullComponents()
-    {
-        maxMana = GetComponent<CharacterAttributes>().Character.hp;
+    private void PullComponents() {
         manaUI = GetComponent<IManaUI>();
     }
 }

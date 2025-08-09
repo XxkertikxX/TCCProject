@@ -4,7 +4,7 @@ using UnityEngine;
 public class ScrSkillsHeal : SkillBase
 {
     public override void Skill(float power) {
-        MpSystemscr.ModifyMana(-ManaConsume);
+        ManaSystemscr.ModifyMana(-ManaConsume);
         float heal = power * (CatalystSkills.Damage / TimesForInvoke);
         float roundHeal = Mathf.Round(heal);
         foreach (var target in TargetType.targets()) {
