@@ -12,7 +12,8 @@ public class LightningPlataformscr : MonoBehaviour, IEnviromentProperty
     private void Start()
     {
         platformRb.constraints = RigidbodyConstraints2D.FreezeAll;
-        thunderParticle = GetComponentInChildren<ParticleSystem>();
+        thunderParticle = GetComponentInChildren<ParticleSystem>(); 
+        thunderParticle.Stop();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -25,15 +26,10 @@ public class LightningPlataformscr : MonoBehaviour, IEnviromentProperty
 
     public IEnumerator ApplyEffect(Rigidbody2D targetRB)
     {
+        thunderParticle.Play();
         yield return new WaitForSeconds(delay);
-        StartCoroutine(Particle());
+        thunderParticle.Stop();
         targetRB.gravityScale = targetGravity;
         targetRB.constraints &= ~RigidbodyConstraints2D.FreezePositionY;
-    }
-    IEnumerator Particle()
-    {
-        thunderParticle.gameObject.SetActive(true);
-        yield return new WaitForSeconds(0.1f);
-        thunderParticle.gameObject.SetActive(false);
     }
 }
