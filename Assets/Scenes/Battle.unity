@@ -372,7 +372,6 @@ GameObject:
   - component: {fileID: 104922898}
   - component: {fileID: 104922897}
   - component: {fileID: 104922896}
-  - component: {fileID: 104922895}
   - component: {fileID: 104922894}
   m_Layer: 0
   m_Name: Liora
@@ -415,20 +414,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 11400000, guid: d2a25ce6e3c802c41920adef9dee2814, type: 2}
---- !u!114 &104922895
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 104922892}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40c91fc081b6d8c40a43249abc30f431, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lifeText: {fileID: 1743475826}
-  lifeSlider: {fileID: 247390343}
 --- !u!114 &104922896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -474,12 +459,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2084512387}
-        m_TargetAssemblyTypeName: CharacterAttack, Assembly-CSharp
+        m_TargetAssemblyTypeName: CharacterAttack, GameAssembly
         m_MethodName: ClickCharacter
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: d2a25ce6e3c802c41920adef9dee2814, type: 2}
-          m_ObjectArgumentAssemblyTypeName: StatusCharacters, Assembly-CSharp
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: CharacterAttributes, GameAssembly
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1618,7 +1603,6 @@ GameObject:
   - component: {fileID: 525768449}
   - component: {fileID: 525768450}
   - component: {fileID: 525768448}
-  - component: {fileID: 525768446}
   - component: {fileID: 525768445}
   m_Layer: 0
   m_Name: Ember
@@ -1661,20 +1645,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 11400000, guid: b20e4541823df544885b0cb064a458c1, type: 2}
---- !u!114 &525768446
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 525768443}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40c91fc081b6d8c40a43249abc30f431, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lifeText: {fileID: 957091214}
-  lifeSlider: {fileID: 932849237}
 --- !u!114 &525768448
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1758,12 +1728,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2084512387}
-        m_TargetAssemblyTypeName: CharacterAttack, Assembly-CSharp
+        m_TargetAssemblyTypeName: CharacterAttack, GameAssembly
         m_MethodName: ClickCharacter
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: b20e4541823df544885b0cb064a458c1, type: 2}
-          m_ObjectArgumentAssemblyTypeName: StatusCharacters, Assembly-CSharp
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: CharacterAttributes, GameAssembly
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2246,8 +2216,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2310d456cce6ef4fb52d703dcc7553c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Line: {fileID: 139820855966566637, guid: bb913d5593b4c394aaea05ec4f9a73f2, type: 3}
-  InstantiatePosition: {fileID: 279782331}
+  line: {fileID: 0}
+  instantiatePosition: {fileID: 0}
 --- !u!1 &702889970
 GameObject:
   m_ObjectHideFlags: 0
@@ -2580,7 +2550,6 @@ GameObject:
   - component: {fileID: 814553641}
   - component: {fileID: 814553640}
   - component: {fileID: 814553639}
-  - component: {fileID: 814553643}
   - component: {fileID: 814553642}
   m_Layer: 0
   m_Name: Alon
@@ -2655,12 +2624,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2084512387}
-        m_TargetAssemblyTypeName: CharacterAttack, Assembly-CSharp
+        m_TargetAssemblyTypeName: CharacterAttack, GameAssembly
         m_MethodName: ClickCharacter
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: b5347eceb2e3bed4db0c3c4457ff456d, type: 2}
-          m_ObjectArgumentAssemblyTypeName: StatusCharacters, Assembly-CSharp
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: CharacterAttributes, GameAssembly
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2717,20 +2686,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 11400000, guid: b5347eceb2e3bed4db0c3c4457ff456d, type: 2}
---- !u!114 &814553643
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 814553637}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40c91fc081b6d8c40a43249abc30f431, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lifeText: {fileID: 2077079115}
-  lifeSlider: {fileID: 1646578032}
 --- !u!1 &817324578
 GameObject:
   m_ObjectHideFlags: 0
@@ -2849,9 +2804,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48a3344d8c2fa084b83d97fc90698bfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rh: {fileID: 696834919}
-  center: {fileID: 919690569}
-  rend: {fileID: 2054078463}
+  rhythm: {fileID: 0}
+  centerLine: {fileID: 0}
+  rendTotallyLine: {fileID: 0}
 --- !u!1 &824573184
 GameObject:
   m_ObjectHideFlags: 0
@@ -5122,7 +5077,6 @@ GameObject:
   - component: {fileID: 1993797142}
   - component: {fileID: 1993797141}
   - component: {fileID: 1993797140}
-  - component: {fileID: 1993797139}
   - component: {fileID: 1993797138}
   m_Layer: 0
   m_Name: Clementine
@@ -5165,20 +5119,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 11400000, guid: 66f3818663af0ce4fa37e18905f10318, type: 2}
---- !u!114 &1993797139
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1993797136}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40c91fc081b6d8c40a43249abc30f431, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lifeText: {fileID: 1852864130}
-  lifeSlider: {fileID: 363852466}
 --- !u!114 &1993797140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5224,12 +5164,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2084512387}
-        m_TargetAssemblyTypeName: CharacterAttack, Assembly-CSharp
+        m_TargetAssemblyTypeName: CharacterAttack, GameAssembly
         m_MethodName: ClickCharacter
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 66f3818663af0ce4fa37e18905f10318, type: 2}
-          m_ObjectArgumentAssemblyTypeName: StatusCharacters, Assembly-CSharp
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: CharacterAttributes, GameAssembly
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -5448,8 +5388,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c91fc081b6d8c40a43249abc30f431, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifeText: {fileID: 194355}
-  lifeSlider: {fileID: 305250033}
 --- !u!114 &2030265209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5475,8 +5413,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e983cf2de33251c44ba6317ba516acc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Enemy: {fileID: 11400000, guid: 66f3818663af0ce4fa37e18905f10318, type: 2}
-  Scene: Tutorial3
+  enemy: {fileID: 0}
+  scene: 
 --- !u!1 &2034395750
 GameObject:
   m_ObjectHideFlags: 0
@@ -5922,7 +5860,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d706b7319b515954ab36b8285b74a4b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CaixaTurnAttack: {fileID: 642683606}
+  caixaTurnAttack: {fileID: 0}
 --- !u!1 &2108152954
 GameObject:
   m_ObjectHideFlags: 0
