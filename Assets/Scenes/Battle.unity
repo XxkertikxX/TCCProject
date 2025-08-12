@@ -2919,9 +2919,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48a3344d8c2fa084b83d97fc90698bfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rhythm: {fileID: 0}
-  centerLine: {fileID: 0}
-  rendTotallyLine: {fileID: 0}
+  rhythm: {fileID: 696834919}
+  centerLine: {fileID: 919690569}
+  rendTotallyLine: {fileID: 2054078463}
 --- !u!1 &824573184
 GameObject:
   m_ObjectHideFlags: 0
@@ -4134,6 +4134,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 840f648d6d074374980c303eb98cf25f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1541452069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1541452065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 784d731a072de5643980b30a734b93a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1623998551
 GameObject:
   m_ObjectHideFlags: 0
@@ -4149,6 +4161,7 @@ GameObject:
   - component: {fileID: 1623998555}
   - component: {fileID: 1623998554}
   - component: {fileID: 1623998553}
+  - component: {fileID: 1623998559}
   m_Layer: 0
   m_Name: Dialog
   m_TagString: Untagged
@@ -4248,6 +4261,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 988886e8bcbfc7d4389e2e1e6a6219b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1623998559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1623998551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21f160659aad8164e97849cc6aef371a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  screenDialog: {fileID: 17717848}
+  screenHUD: {fileID: 1527188941}
 --- !u!1 &1646578030
 GameObject:
   m_ObjectHideFlags: 0
