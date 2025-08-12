@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ManaBar : MonoBehaviour
+public class ManaBar : MonoBehaviour, IManaUI
 {
     [SerializeField] private Text manaText;
     [SerializeField] private Slider manaSlider;
@@ -9,6 +9,6 @@ public class ManaBar : MonoBehaviour
     public void UpdateUI(float actualMana, float maxMana)
     {
         manaText.text = $"{actualMana}/{maxMana}";
-        manaSlider.value = actualMana / maxMana;
+        manaSlider.value = actualMana;
     }
 }

@@ -17,7 +17,6 @@ public class ManaSystemscr : MonoBehaviour
     void Start() {
         manaUI.UpdateUI(actualMana, maxMana);
     }
-
     static public void ModifyMana(float manaChange) {
         actualMana = Mathf.Clamp(actualMana + manaChange, 0, maxMana);
         manaUI.UpdateUI(actualMana, maxMana);

@@ -27,9 +27,11 @@ public class CreateBindingDB : MonoBehaviour
         CreateKey("Right", KeyCode.D, col);
         CreateKey("Interact", KeyCode.E, col);
         CreateKey("Skip", KeyCode.Return, col);
+        CreateKey("Menu", KeyCode.Escape, col);
     }
 
-    private void CreateKey(string KeyName, KeyCode Key, ILiteCollection<KeyBinding> col) {
+    private void CreateKey(string KeyName, KeyCode Key, ILiteCollection<KeyBinding> col)
+    {
         col.Upsert(new KeyBinding { KeyName = KeyName, Key = Key});
     }
 }
