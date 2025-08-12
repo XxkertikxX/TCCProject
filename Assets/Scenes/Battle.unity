@@ -413,7 +413,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4e8975a6fc5f7a4db4c179fbeb105b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character: {fileID: 11400000, guid: d2a25ce6e3c802c41920adef9dee2814, type: 2}
 --- !u!114 &104922896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1644,7 +1643,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4e8975a6fc5f7a4db4c179fbeb105b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character: {fileID: 11400000, guid: b20e4541823df544885b0cb064a458c1, type: 2}
 --- !u!114 &525768448
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2685,7 +2683,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4e8975a6fc5f7a4db4c179fbeb105b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character: {fileID: 11400000, guid: b5347eceb2e3bed4db0c3c4457ff456d, type: 2}
 --- !u!1 &817324578
 GameObject:
   m_ObjectHideFlags: 0
@@ -4796,17 +4793,6 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 1111817671406928974, guid: 7507ccbcb11fcb24193021c404b1e660, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7507ccbcb11fcb24193021c404b1e660, type: 3}
---- !u!114 &1896411534 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1111817671406928973, guid: 7507ccbcb11fcb24193021c404b1e660, type: 3}
-  m_PrefabInstance: {fileID: 1896411533}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6361b9e8657a97940acadc8dc8d29851, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1918462373
 GameObject:
   m_ObjectHideFlags: 0
@@ -5054,17 +5040,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1951225424}
   m_CullTransparentMesh: 1
---- !u!114 &1987919989 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6520184256432975898, guid: e1c3cd6ef5202604ebc3e76a6e31d050, type: 3}
-  m_PrefabInstance: {fileID: 683035053}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09f9edf02b3a76d479fdadc27561fb9b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1993797136
 GameObject:
   m_ObjectHideFlags: 0
@@ -5118,7 +5093,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4e8975a6fc5f7a4db4c179fbeb105b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character: {fileID: 11400000, guid: 66f3818663af0ce4fa37e18905f10318, type: 2}
 --- !u!114 &1993797140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5300,7 +5274,6 @@ GameObject:
   - component: {fileID: 2030265207}
   - component: {fileID: 2030265206}
   - component: {fileID: 2030265210}
-  - component: {fileID: 2030265209}
   - component: {fileID: 2030265208}
   m_Layer: 0
   m_Name: Inimigo
@@ -5388,19 +5361,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c91fc081b6d8c40a43249abc30f431, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2030265209
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2030265205}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4e8975a6fc5f7a4db4c179fbeb105b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  character: {fileID: 11400000, guid: 66f3818663af0ce4fa37e18905f10318, type: 2}
 --- !u!114 &2030265210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5845,9 +5805,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8020891a33e8f34f9cc0dcffcb1521d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dial: {fileID: 1987919989}
-  dialogo: {fileID: 1896411534}
-  UI: {fileID: 2034996690}
 --- !u!114 &2084512387
 MonoBehaviour:
   m_ObjectHideFlags: 0

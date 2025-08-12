@@ -1,20 +1,24 @@
+using System.Collections;
 using UnityEngine;
 
 public class PlayerCharactersSkills : MonoBehaviour
 {
-    static public CharacterAttributes Character;
+    static public CharacterAttributes CharacterAttr;
+    private SkillBase skill;
 
-    void OnEnable() {
-        TextUpdate();
-    }
-
-    public void PressButtonSkill(int posSkill) {
-        SystemRhythm.PosSkill = posSkill;
+    public IEnumerator PressButtonSkill(int posSkill) {
+        skill = CharStatus().skills[posSkill];
         gameObject.SetActive(false);
-        RhythmObj.Rhythm.SetActive(true);
+        return CharacterAttr.Rhythm.Attack(skill);
+        UseSkill(posSkill);
     }
 
-    private void TextUpdate() {
-
+    private void UseSkill(int posSkill) {
+        skill.Skill(CharStatus().power);
+        CharacterAttr.AttackInTheTurn = true;
+    }
+    
+    private StatusCharacters CharStatus(){
+        return CharacterAttr.Character;
     }
 }

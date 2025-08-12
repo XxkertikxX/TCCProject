@@ -7,7 +7,7 @@ public class CharacterAttack : MonoBehaviour
     public void ClickCharacter(CharacterAttributes character){
         if (!character.AttackInTheTurn) {
             caixaTurnAttack.SetActive(true);
-            PlayerCharactersSkills.Character = character;
+            PlayerCharactersSkills.CharacterAttr = character;
         }
     }
 }
