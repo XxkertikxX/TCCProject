@@ -6,6 +6,6 @@ public class FootStep : MonoBehaviour
 {
     public void PlapFootSteps()
     {
-        CharacterAudioManager.PlaySound(SoundTypes.Footsteps);
+        GameAudioManager.PlaySound(SoundTypes.Footsteps);
     }
 }

@@ -9,7 +9,6 @@ public class ArrowsControl : MonoBehaviour
     {
         index += Select(InputCatalyst.input);
         buttons[index].Select();
-        Debug.Log(buttons[index].gameObject.name);
     }
 
     int Select(IButtonInput input)

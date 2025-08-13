@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6704403275785618902}
-  - component: {fileID: 5156870587340474107}
-  - component: {fileID: 528767190969578727}
+  - component: {fileID: 1041843595266078610}
+  - component: {fileID: 2986423218344194494}
   m_Layer: 0
   m_Name: Player_AudioManager
   m_TagString: Untagged
@@ -33,28 +33,7 @@ Transform:
   m_Father: {fileID: 4041607572145054286}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5156870587340474107
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1257716331407095076}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dc5bcd6e63ba694ca8f1fd743f6aba1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  soundsList:
-  - name: Footsteps
-    sounds: []
-  - name: Jump
-    sounds: []
-  - name: Landing
-    sounds: []
-  - name: Damage
-    sounds: []
---- !u!82 &528767190969578727
+--- !u!82 &1041843595266078610
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -66,13 +45,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.062
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 83
+  Priority: 128
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -150,6 +129,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2986423218344194494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1257716331407095076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dc5bcd6e63ba694ca8f1fd743f6aba1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundsList:
+  - name: Footsteps
+    sounds: []
+  - name: Jump
+    sounds: []
+  - name: Landing
+    sounds: []
+  - name: Damage
+    sounds: []
 --- !u!1 &3449056647170623045
 GameObject:
   m_ObjectHideFlags: 0
@@ -438,6 +438,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee62a9b7562949645990801a3aa55ff5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 5
 --- !u!114 &199411787128806352
 MonoBehaviour:
   m_ObjectHideFlags: 0
