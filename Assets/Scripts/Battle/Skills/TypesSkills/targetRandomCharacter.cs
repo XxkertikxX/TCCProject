@@ -1,11 +1,13 @@
 using UnityEngine;
+using System.Collections.Generic;
 
+[CreateAssetMenu(menuName = "TargetRandom")]
 public class targetRandomCharacter : TypeSkill
 {
-    private CharacterAttributes[] characterStatus = new CharacterAttributes[1];
+    private List<CharacterAttributes> characterStatus;
     
-    public override CharacterAttributes[] targets(){
-        characterStatus[0] = Characters()[RandomTarget()].GetComponent<CharacterAttributes>();
+    public override List<CharacterAttributes> Targets(){
+        characterStatus.Add(Characters()[RandomTarget()].GetComponent<CharacterAttributes>());
         return characterStatus;
     }
 

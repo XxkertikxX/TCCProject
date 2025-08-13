@@ -7,7 +7,8 @@ public class ScrSkillsAttack : SkillBase
         ManaSystemscr.ModifyMana(-ManaConsume);
         float damage = power * (rhythmDamage / TimesForInvoke);
         float RoundDamage = -Mathf.Round(damage);
-        foreach (var target in TargetType.targets()) {
+
+        foreach (var target in TargetType.Targets()) {
             target.Hp.ModifyLife(RoundDamage);
         }
     }
