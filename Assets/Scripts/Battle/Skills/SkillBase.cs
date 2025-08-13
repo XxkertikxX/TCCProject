@@ -12,5 +12,5 @@ public abstract class SkillBase : ScriptableObject
     public TypeSkill TargetType => targetType;
     public int ManaConsume => manaconsume;
 
-    public abstract void Skill(float power);
+    public abstract void Skill(float power, float rhythmDamage);
 }

@@ -376,6 +376,7 @@ GameObject:
   - component: {fileID: 104922899}
   - component: {fileID: 104922902}
   - component: {fileID: 104922901}
+  - component: {fileID: 104922903}
   m_Layer: 0
   m_Name: Liora
   m_TagString: Character
@@ -551,6 +552,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifeText: {fileID: 1743475826}
   lifeSlider: {fileID: 247390343}
+--- !u!114 &104922903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 104922892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39f8daa7897646243bff425e83e98d4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  line: {fileID: 139820855966566637, guid: bb913d5593b4c394aaea05ec4f9a73f2, type: 3}
+  instantiatePosition: {fileID: 279782331}
 --- !u!1 &131075771
 GameObject:
   m_ObjectHideFlags: 0
@@ -1650,6 +1665,7 @@ GameObject:
   - component: {fileID: 525768451}
   - component: {fileID: 525768454}
   - component: {fileID: 525768453}
+  - component: {fileID: 525768455}
   m_Layer: 0
   m_Name: Ember
   m_TagString: Character
@@ -1825,6 +1841,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifeText: {fileID: 957091214}
   lifeSlider: {fileID: 932849237}
+--- !u!114 &525768455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 525768443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39f8daa7897646243bff425e83e98d4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  line: {fileID: 139820855966566637, guid: bb913d5593b4c394aaea05ec4f9a73f2, type: 3}
+  instantiatePosition: {fileID: 279782331}
 --- !u!1 &545771673
 GameObject:
   m_ObjectHideFlags: 0
@@ -2626,6 +2656,7 @@ GameObject:
   - component: {fileID: 814553642}
   - component: {fileID: 814553645}
   - component: {fileID: 814553644}
+  - component: {fileID: 814553646}
   m_Layer: 0
   m_Name: Alon
   m_TagString: Character
@@ -2801,6 +2832,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifeText: {fileID: 2077079115}
   lifeSlider: {fileID: 1646578032}
+--- !u!114 &814553646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 814553637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39f8daa7897646243bff425e83e98d4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  line: {fileID: 139820855966566637, guid: bb913d5593b4c394aaea05ec4f9a73f2, type: 3}
+  instantiatePosition: {fileID: 279782331}
 --- !u!1 &817324578
 GameObject:
   m_ObjectHideFlags: 0
@@ -5263,6 +5308,7 @@ GameObject:
   - component: {fileID: 1993797143}
   - component: {fileID: 1993797146}
   - component: {fileID: 1993797145}
+  - component: {fileID: 1993797147}
   m_Layer: 0
   m_Name: Clementine
   m_TagString: Character
@@ -5438,6 +5484,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifeText: {fileID: 1852864130}
   lifeSlider: {fileID: 363852466}
+--- !u!114 &1993797147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1993797136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39f8daa7897646243bff425e83e98d4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  line: {fileID: 139820855966566637, guid: bb913d5593b4c394aaea05ec4f9a73f2, type: 3}
+  instantiatePosition: {fileID: 279782331}
 --- !u!1 &2022068054
 GameObject:
   m_ObjectHideFlags: 0

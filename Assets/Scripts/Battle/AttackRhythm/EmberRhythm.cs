@@ -2,19 +2,36 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EmberRhythm : MonoBehaviour, IAttackRhythm
-{    
+public class EmberRhythm : AttackRhythm
+{   
+    [SerializeField] private GameObject prefabRhythm;
+
     [SerializeField] private GameObject line;
     [SerializeField] private Transform instantiatePosition;
+
+    [SerializeField] private List<GameObject> lines;
     
-    public IEnumerator Attack(SkillBase skill) {
+    void Update() {
+        Click();
+    }
+
+    public override IEnumerator Attack(SkillBase skill) {
         int TimesForInvoke = skill.TimesForInvoke;
         
         while (TimesForInvoke > 0) {
-            var line = Instantiate(this.line, instantiatePosition.position, Quaternion.identity);
-            line.GetComponent<LineRhythm>().LinesMissingSpawn = TimesForInvoke;
+            lines.Add(Instantiate(this.line, instantiatePosition.position, Quaternion.identity));
             TimesForInvoke--;
             yield return new WaitForSeconds(skill.TimePerInvokeLine);
+        }
+    }
+
+    public override void ActiveRhythm(bool state) {
+        prefabRhythm.SetActive(state);
+    }
+
+    private void Click() {
+        if(Input.GetMouseButtonDown(0)){
+            Destroy(gameObject);
         }
     }
 }

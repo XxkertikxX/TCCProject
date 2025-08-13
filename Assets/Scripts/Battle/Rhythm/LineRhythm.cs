@@ -2,8 +2,6 @@ using UnityEngine;
 
 public class LineRhythm : MonoBehaviour
 {
-    public int LinesMissingSpawn;
-
     private float totallyLineCoord;
     private float totallyLineSize;
     private float speed = 3f;
@@ -15,7 +13,6 @@ public class LineRhythm : MonoBehaviour
     }
 
     void Update() {
-        Click();
         DestroyLineOutLimits();
     }
 
@@ -24,17 +21,8 @@ public class LineRhythm : MonoBehaviour
     }
     
     void OnDestroy() {
-        if (LinesMissingSpawn == 1) {
-            RhythmObj.Rhythm.SetActive(false);
-        }
+        damage = PerDamage();
         CatalystSkills.Damage += damage;
-    }
-    
-    private void Click() {
-        if(Input.GetMouseButtonDown(0)){
-            damage = PerDamage();
-            Destroy(gameObject);
-        }
     }
 
     private float PerDamage() {
