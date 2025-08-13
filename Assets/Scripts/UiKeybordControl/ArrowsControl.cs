@@ -14,11 +14,11 @@ public class ArrowsControl : MonoBehaviour
 
     int Select(IButtonInput input)
     {
-        if (input.InputButtonDown("Left"))
+        if (input.InputButtonDown("Up"))
         {
             return -1;
         }
-        if (input.InputButtonDown("Right"))
+        if (input.InputButtonDown("Down"))
         {
             return 1;
         }
