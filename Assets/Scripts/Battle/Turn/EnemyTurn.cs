@@ -19,7 +19,6 @@ public class EnemyTurn : MonoBehaviour
     
     private void EnemyAttack() {
         int randomSkill = Random.Range(0, enemy.skills.Count);
-        CatalystSkills.Damage = 1;
         enemy.skills[randomSkill].Skill(enemy.power, 1);
     }
 

@@ -22,7 +22,6 @@ public class LineRhythm : MonoBehaviour
     
     void OnDestroy() {
         damage = PerDamage();
-        CatalystSkills.Damage += damage;
     }
 
     private float PerDamage() {
