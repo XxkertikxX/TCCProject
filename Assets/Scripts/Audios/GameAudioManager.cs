@@ -1,24 +1,10 @@
 using System;
 using UnityEngine;
-public enum SoundTypes
-{
-    OVERWORLD,
-    Footsteps,
-    Jumping,
-    Landing,
-    TakingDamage,
-    COMBAT,
-    Attack,
-    MagicAttack,
-    EnemyAttack,
-    EnemyTakingDamage
-}
 
 [RequireComponent(typeof(AudioSource)), ExecuteInEditMode]
-
 public class GameAudioManager : MonoBehaviour
 {
-    [SerializeField] private SoundList[] soundsList;  
+    [SerializeField] private SoundList[] soundsList;
     private static GameAudioManager instance;
     private AudioSource audioSource;
     private void Awake()

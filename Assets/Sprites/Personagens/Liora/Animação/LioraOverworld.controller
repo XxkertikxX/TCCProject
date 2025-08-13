@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sound: 1
-  volume: 0.455
+  volume: 0.5
 --- !u!114 &-1485725020099360383
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -27,7 +27,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sound: 3
-  volume: 0.246
+  volume: 0.5
 --- !u!91 &9100000
 AnimatorController:
   m_ObjectHideFlags: 0
@@ -63,7 +63,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sound: 0
-  volume: 0.161
+  volume: 0.5
 --- !u!1102 &1469680662071927196
 AnimatorState:
   serializedVersion: 6
@@ -103,8 +103,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d04360e2fbac0c548a3db8d9411c14c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sound: 0
-  volume: 0
+  sound: 2
+  volume: 0.5
 --- !u!1102 &2633392646664664786
 AnimatorState:
   serializedVersion: 6

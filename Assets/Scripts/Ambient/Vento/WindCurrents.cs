@@ -13,11 +13,13 @@ public class WindCurrents : MonoBehaviour, IEnviromentProperty
 
     private void OnTriggerStay2D(Collider2D collision)
     {
+        if(collision.gameObject.tag != "Player") return;
         Rigidbody2D playerRB = getRB(collision.gameObject);
         playerRB.AddForce(windDirection.normalized * windForce * windResistenceMult);
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
+        if (collision.gameObject.tag != "Player") return;
         Rigidbody2D playerRB = getRB(collision.gameObject);
         StartCoroutine(ApplyEffect(playerRB));
     }
