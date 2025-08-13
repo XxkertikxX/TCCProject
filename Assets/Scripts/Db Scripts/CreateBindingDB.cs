@@ -30,6 +30,7 @@ public class CreateBindingDB : MonoBehaviour
         CreateKey("Menu", KeyCode.Escape, col);
         CreateKey("Down",KeyCode.DownArrow, col);
         CreateKey("Up", KeyCode.UpArrow, col);
+        CreateKey("Return", KeyCode.X, col);
     }
 
     private void CreateKey(string KeyName, KeyCode Key, ILiteCollection<KeyBinding> col)

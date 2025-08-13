@@ -8,7 +8,6 @@ public class LightningSpeed : MonoBehaviour, IEnviromentProperty
     [SerializeField] public PlayerMovementWalk playerMovementWalk;
     [SerializeField] float LightSpeed = 10;
     [SerializeField] float Duration = 13;
-    private bool Got = false;
     private float Speed;
 
     private void Start()
