@@ -526,6 +526,7 @@ MonoBehaviour:
   Character: {fileID: 11400000, guid: b20e4541823df544885b0cb064a458c1, type: 2}
   Hp: {fileID: 104922899}
   AttackInTheTurn: 0
+  Rhythm: {fileID: 0}
 --- !u!114 &104922901
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -564,8 +565,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39f8daa7897646243bff425e83e98d4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Damage: 0
+  prefabRhythm: {fileID: 0}
   line: {fileID: 139820855966566637, guid: bb913d5593b4c394aaea05ec4f9a73f2, type: 3}
   instantiatePosition: {fileID: 279782331}
+  lines: []
 --- !u!1 &131075771
 GameObject:
   m_ObjectHideFlags: 0
@@ -855,8 +859,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 642683611}
-        m_TargetAssemblyTypeName: PlayerCharactersSkills, Assembly-CSharp
+      - m_Target: {fileID: 1541452070}
+        m_TargetAssemblyTypeName: PlayerCharactersSkills, GameAssembly
         m_MethodName: PressButtonSkill
         m_Mode: 3
         m_Arguments:
@@ -1815,6 +1819,7 @@ MonoBehaviour:
   Character: {fileID: 11400000, guid: b20e4541823df544885b0cb064a458c1, type: 2}
   Hp: {fileID: 525768451}
   AttackInTheTurn: 0
+  Rhythm: {fileID: 0}
 --- !u!114 &525768453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1853,8 +1858,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39f8daa7897646243bff425e83e98d4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Damage: 0
+  prefabRhythm: {fileID: 0}
   line: {fileID: 139820855966566637, guid: bb913d5593b4c394aaea05ec4f9a73f2, type: 3}
   instantiatePosition: {fileID: 279782331}
+  lines: []
 --- !u!1 &545771673
 GameObject:
   m_ObjectHideFlags: 0
@@ -1904,7 +1912,6 @@ GameObject:
   - component: {fileID: 642683609}
   - component: {fileID: 642683608}
   - component: {fileID: 642683607}
-  - component: {fileID: 642683611}
   m_Layer: 5
   m_Name: Ataques
   m_TagString: Untagged
@@ -1995,18 +2002,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &642683611
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 642683606}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d489aeae0e07d62469e3c7106e476404, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &661467367
 GameObject:
   m_ObjectHideFlags: 0
@@ -2806,6 +2801,7 @@ MonoBehaviour:
   Character: {fileID: 11400000, guid: b20e4541823df544885b0cb064a458c1, type: 2}
   Hp: {fileID: 814553642}
   AttackInTheTurn: 0
+  Rhythm: {fileID: 0}
 --- !u!114 &814553644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2844,8 +2840,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39f8daa7897646243bff425e83e98d4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Damage: 0
+  prefabRhythm: {fileID: 0}
   line: {fileID: 139820855966566637, guid: bb913d5593b4c394aaea05ec4f9a73f2, type: 3}
   instantiatePosition: {fileID: 279782331}
+  lines: []
 --- !u!1 &817324578
 GameObject:
   m_ObjectHideFlags: 0
@@ -4191,6 +4190,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 784d731a072de5643980b30a734b93a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1541452070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1541452065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d489aeae0e07d62469e3c7106e476404, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttons: {fileID: 642683606}
 --- !u!1 &1623998551
 GameObject:
   m_ObjectHideFlags: 0
@@ -4600,8 +4612,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 642683611}
-        m_TargetAssemblyTypeName: PlayerCharactersSkills, Assembly-CSharp
+      - m_Target: {fileID: 1541452070}
+        m_TargetAssemblyTypeName: PlayerCharactersSkills, GameAssembly
         m_MethodName: PressButtonSkill
         m_Mode: 3
         m_Arguments:
@@ -5458,6 +5470,7 @@ MonoBehaviour:
   Character: {fileID: 11400000, guid: b20e4541823df544885b0cb064a458c1, type: 2}
   Hp: {fileID: 1993797143}
   AttackInTheTurn: 0
+  Rhythm: {fileID: 0}
 --- !u!114 &1993797145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5496,8 +5509,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39f8daa7897646243bff425e83e98d4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Damage: 0
+  prefabRhythm: {fileID: 0}
   line: {fileID: 139820855966566637, guid: bb913d5593b4c394aaea05ec4f9a73f2, type: 3}
   instantiatePosition: {fileID: 279782331}
+  lines: []
 --- !u!1 &2022068054
 GameObject:
   m_ObjectHideFlags: 0
@@ -5730,6 +5746,7 @@ MonoBehaviour:
   Character: {fileID: 11400000, guid: 66f3818663af0ce4fa37e18905f10318, type: 2}
   Hp: {fileID: 2030265208}
   AttackInTheTurn: 0
+  Rhythm: {fileID: 0}
 --- !u!1 &2034395750
 GameObject:
   m_ObjectHideFlags: 0
