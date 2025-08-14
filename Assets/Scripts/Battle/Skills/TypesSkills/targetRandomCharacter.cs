@@ -3,10 +3,9 @@ using System.Collections.Generic;
 
 [CreateAssetMenu(menuName = "TargetRandom")]
 public class targetRandomCharacter : TypeSkill
-{
-    private List<CharacterAttributes> characterStatus = new List<CharacterAttributes>();
-    
-    public override List<CharacterAttributes> Targets(){
+{    
+    public override List<CharacterAttributes> Targets() {
+        List<CharacterAttributes> characterStatus = new List<CharacterAttributes>();
         characterStatus.Add(Characters()[RandomTarget()].GetComponent<CharacterAttributes>());
         return characterStatus;
     }

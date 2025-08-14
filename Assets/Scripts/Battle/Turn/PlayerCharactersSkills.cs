@@ -23,7 +23,7 @@ public class PlayerCharactersSkills : MonoBehaviour
         CharacterAttr.AttackInTheTurn = true;
     }
     
-    private StatusCharacters CharStatus(){
+    private StatusCharacters CharStatus() {
         return CharacterAttr.Character;
     }
 }

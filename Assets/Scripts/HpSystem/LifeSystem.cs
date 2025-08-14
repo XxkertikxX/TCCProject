@@ -8,12 +8,9 @@ public class LifeSystem : MonoBehaviour
     private float maxLife;
     private float actualLife;
 
-    void Awake() {
+    void Start() {
         PullComponents();
         actualLife = maxLife;
-    }
-
-    void Start() {
         lifeUI.UpdateUI(actualLife, maxLife);
     }
 
