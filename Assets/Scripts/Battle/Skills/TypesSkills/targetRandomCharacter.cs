@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections.Generic;
 
 [CreateAssetMenu(menuName = "TargetRandom")]
-public class targetRandomCharacter : TypeSkill
+public class TargetRandomCharacter : TypeSkill
 {    
     public override List<CharacterAttributes> Targets() {
         List<CharacterAttributes> characterStatus = new List<CharacterAttributes>();

@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-public class targetThisCharacter : TypeSkill
+public class TargetThisCharacter : TypeSkill
 {
     public override List<CharacterAttributes> Targets() {
         return null;

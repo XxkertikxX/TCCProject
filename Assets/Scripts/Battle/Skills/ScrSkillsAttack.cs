@@ -8,7 +8,6 @@ public class ScrSkillsAttack : SkillBase
         float damage = power * (rhythmDamage / TimesForInvoke);
         float RoundDamage = -Mathf.Round(damage);
         foreach (var target in TargetType.Targets()) {
-            Debug.Log(target.Hp);
             target.Hp.ModifyLife(RoundDamage);
         }
     }

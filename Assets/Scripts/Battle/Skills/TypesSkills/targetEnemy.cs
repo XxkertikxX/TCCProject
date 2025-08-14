@@ -1,9 +1,16 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-public class targetEnemy : TypeSkill
+[CreateAssetMenu(menuName = "TargetEnemy")]
+public class TargetEnemy : TypeSkill
 {
     public override List<CharacterAttributes> Targets() {
-        return null;
+        List<CharacterAttributes> characterStatus = new List<CharacterAttributes>();
+        characterStatus.Add(Enemy().GetComponent<CharacterAttributes>());
+        return characterStatus;
+    }
+
+    private GameObject Enemy() {
+        return GameObject.FindGameObjectWithTag("Enemy");
     }
 }
