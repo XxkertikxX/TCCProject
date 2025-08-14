@@ -73,7 +73,7 @@ public class LifeSystemTest : RuntimeTestBase
     }
 }
 
-public class LifeUITest : MonoBehaviour, ILifeUI
+public class LifeUITest : MonoBehaviour, IDinamicUI
 {
     public void UpdateUI(float actualLife, float maxLife) {
         gameObject.AddComponent<BoxCollider2D>();

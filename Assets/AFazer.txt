@@ -1,0 +1,7 @@
+Mesclar ManaSystem com LifeSystem
+Refatorar Mecanicas de Mapa
+Testar Mecanicas de Mapa
+Testar DBs
+Refatorar Combate
+Testar Combate
+Criar mais 3 ritmos de Combate

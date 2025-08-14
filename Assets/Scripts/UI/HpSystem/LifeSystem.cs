@@ -3,7 +3,7 @@ using UnityEngine;
 public class LifeSystem : MonoBehaviour
 {
     private IDeath deathHandler;
-    private ILifeUI lifeUI;
+    private IDinamicUI lifeUI;
 
     private float maxLife;
     private float actualLife;
@@ -26,6 +26,6 @@ public class LifeSystem : MonoBehaviour
     private void PullComponents() {
         maxLife = GetComponent<CharacterAttributes>().Character.hp;
         deathHandler = GetComponent<IDeath>();
-        lifeUI = GetComponent<ILifeUI>();
+        lifeUI = GetComponent<IDinamicUI>();
     }
 }
