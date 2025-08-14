@@ -9,29 +9,64 @@ public class EmberRhythm : AttackRhythm
     [SerializeField] private GameObject line;
     [SerializeField] private Transform instantiatePosition;
 
-    [SerializeField] private List<GameObject> lines;
+    private int totalLines;
+    private int timesForInvoke = 1;
+
+    private Queue<GameObject> lines = new Queue<GameObject>();
     
     void Update() {
         Click();
+        CloseRhythm();
     }
 
     public override IEnumerator Attack(SkillBase skill) {
-        int TimesForInvoke = skill.TimesForInvoke;
+        ActiveRhythm(true);
+
+        totalLines = skill.TimesForInvoke;
+        timesForInvoke = totalLines;
         
-        while (TimesForInvoke > 0) {
-            lines.Add(Instantiate(this.line, instantiatePosition.position, Quaternion.identity));
-            TimesForInvoke--;
-            yield return new WaitForSeconds(skill.TimePerInvokeLine);
+        while (timesForInvoke > 0) {
+            yield return StartCoroutine(InvokeLine(skill));
         }
     }
 
-    public override void ActiveRhythm(bool state) {
+
+    private void ActiveRhythm(bool state) {
         prefabRhythm.SetActive(state);
     }
 
+    private IEnumerator InvokeLine(SkillBase skill) {
+        lines.Enqueue(Instantiate(line, instantiatePosition.position, Quaternion.identity));
+        timesForInvoke--;
+        yield return new WaitForSeconds(skill.TimePerInvokeLine);
+    }
+
     private void Click() {
-        if(Input.GetMouseButtonDown(0)){
-            Destroy(gameObject);
+        if (lines.Count > 0) {
+            RemoveLinesNull();
+            if(Input.GetMouseButtonDown(0)) {
+                DequeueLine();
+            }
+        }
+    }
+
+    private void RemoveLinesNull() {
+        while (lines.Count > 0 && lines.Peek() == null) {
+            lines.Dequeue();
+        }
+    }
+
+    private void DequeueLine() {
+        if (lines.Count > 0) {
+            var lineObj = lines.Dequeue();
+            Damage += lineObj.GetComponent<LineRhythm>().PerDamage() / totalLines;
+            Destroy(lineObj);
+        }
+    }
+
+    private void CloseRhythm() {
+        if(timesForInvoke == 0 && lines.Count == 0) {
+            ActiveRhythm(false);
         }
     }
 }

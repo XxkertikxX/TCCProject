@@ -566,10 +566,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 0
-  prefabRhythm: {fileID: 0}
+  prefabRhythm: {fileID: 696834919}
   line: {fileID: 139820855966566637, guid: bb913d5593b4c394aaea05ec4f9a73f2, type: 3}
   instantiatePosition: {fileID: 279782331}
-  lines: []
 --- !u!1 &131075771
 GameObject:
   m_ObjectHideFlags: 0
@@ -1859,10 +1858,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 0
-  prefabRhythm: {fileID: 0}
+  prefabRhythm: {fileID: 696834919}
   line: {fileID: 139820855966566637, guid: bb913d5593b4c394aaea05ec4f9a73f2, type: 3}
   instantiatePosition: {fileID: 279782331}
-  lines: []
 --- !u!1 &545771673
 GameObject:
   m_ObjectHideFlags: 0
@@ -2841,10 +2839,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 0
-  prefabRhythm: {fileID: 0}
+  prefabRhythm: {fileID: 696834919}
   line: {fileID: 139820855966566637, guid: bb913d5593b4c394aaea05ec4f9a73f2, type: 3}
   instantiatePosition: {fileID: 279782331}
-  lines: []
 --- !u!1 &817324578
 GameObject:
   m_ObjectHideFlags: 0
@@ -5536,10 +5533,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 0
-  prefabRhythm: {fileID: 0}
+  prefabRhythm: {fileID: 696834919}
   line: {fileID: 139820855966566637, guid: bb913d5593b4c394aaea05ec4f9a73f2, type: 3}
   instantiatePosition: {fileID: 279782331}
-  lines: []
 --- !u!1 &2022068054
 GameObject:
   m_ObjectHideFlags: 0

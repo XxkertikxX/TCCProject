@@ -14,9 +14,7 @@ public class PlayerCharactersSkills : MonoBehaviour
     private IEnumerator StartRhythm(AttackRhythm rhythm, int posSkill) {
         skill = CharStatus().skills[posSkill];
         buttons.SetActive(false);
-        rhythm.ActiveRhythm(true);
-        return rhythm.Attack(skill);
-        rhythm.ActiveRhythm(false);
+        yield return rhythm.Attack(skill);
         UseSkill(rhythm.Damage);
     }
 
