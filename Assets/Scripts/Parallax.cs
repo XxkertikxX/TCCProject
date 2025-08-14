@@ -11,8 +11,8 @@ public class Parallax : MonoBehaviour
     void Start() {
         cam = Camera.main.transform;
         inicialPosition = transform.position.x;
-        backgroundLength = GetComponent<SpriteRenderer>().bounds.size.x;
-        //backgroundLength = GetComponent<TilemapRenderer>().bounds.size.x;
+        //backgroundLength = GetComponent<SpriteRenderer>().bounds.size.x;
+        backgroundLength = GetComponent<TilemapRenderer>().bounds.size.x;
     }
 
     void Update() {

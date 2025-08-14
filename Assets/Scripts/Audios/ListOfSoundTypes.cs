@@ -8,7 +8,6 @@ public enum SoundTypes
     Footsteps,
     Jumping,
     Landing,
-
     LioraAttack1,
     LioraAttack2,
     LioraDamage,

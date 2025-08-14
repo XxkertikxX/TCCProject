@@ -20,6 +20,7 @@ public class EnemyTurn : MonoBehaviour
     private void EnemyAttack() {
         int randomSkill = Random.Range(0, enemy.skills.Count);
         enemy.skills[randomSkill].Skill(enemy.power, 1);
+        GameAudioManager.PlaySound(SoundTypes.EnemyAttack, 0.5f);
     }
 
     private bool AllCharactersPlay() {
