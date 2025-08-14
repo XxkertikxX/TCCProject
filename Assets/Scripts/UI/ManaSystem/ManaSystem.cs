@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ManaSystemscr : MonoBehaviour
+public class ManaSystem : MonoBehaviour
 {
-    static private IManaUI manaUI;
+    static private IDinamicUI manaUI;
 
     static private float maxMana = 100;
     static private float actualMana;
@@ -23,6 +23,6 @@ public class ManaSystemscr : MonoBehaviour
     }
 
     private void PullComponents() {
-        manaUI = GetComponent<IManaUI>();
+        manaUI = GetComponent<IDinamicUI>();
     }
 }

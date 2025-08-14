@@ -1,3 +1,0 @@
-public interface IManaUI {
-    public void UpdateUI(float actualMana, float maxMana);
-}
