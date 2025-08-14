@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: D
   m_EditorClassIdentifier: 
   hp: 67
-  damage: 76
-  AttackInTheTurn: 0
+  power: 5
   skills:
   - {fileID: 11400000, guid: ad8bcafb4410c5f4ea9f166e65b7abef, type: 2}
   - {fileID: 11400000, guid: ad8bcafb4410c5f4ea9f166e65b7abef, type: 2}
