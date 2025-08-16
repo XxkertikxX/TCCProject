@@ -18,8 +18,8 @@ public class EnemyTurn : MonoBehaviour
     }
     
     private void EnemyAttack() {
-        int randomSkill = Random.Range(0, enemy.skills.Count);
-        enemy.skills[randomSkill].Skill(enemy.power, 1);
+        int randomSkill = Random.Range(0, enemy.Skills.Count);
+        enemy.Skills[randomSkill].Skill(enemy.Power, 1);
         GameAudioManager.PlaySound(SoundTypes.EnemyAttack, 0.5f);
     }
 

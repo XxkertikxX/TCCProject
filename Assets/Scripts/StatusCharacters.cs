@@ -4,7 +4,7 @@ using System.Collections.Generic;
 [CreateAssetMenu(menuName = "CharacterCreator")]
 public class StatusCharacters : ScriptableObject
 {
-    public float hp;
-    public float power;
-    public List<SkillBase> skills;
+    public float Life;
+    public float Power;
+    public List<SkillBase> Skills;
 }

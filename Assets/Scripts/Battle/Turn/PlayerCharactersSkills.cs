@@ -12,14 +12,14 @@ public class PlayerCharactersSkills : MonoBehaviour
     }
 
     private IEnumerator StartRhythm(AttackRhythm rhythm, int posSkill) {
-        skill = CharStatus().skills[posSkill];
+        skill = CharStatus().Skills[posSkill];
         buttons.SetActive(false);
         yield return rhythm.Attack(skill);
         UseSkill(rhythm.Damage);
     }
 
     private void UseSkill(float rhythmDamage) {
-        skill.Skill(CharStatus().power, rhythmDamage);
+        skill.Skill(CharStatus().Power, rhythmDamage);
         CharacterAttr.AttackInTheTurn = true;
     }
     

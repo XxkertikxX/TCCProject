@@ -4,11 +4,11 @@ using UnityEngine;
 public class ScrSkillsAttack : SkillBase
 {
     public override void Skill(float power, float rhythmDamage) {
-        ManaSystem.ModifyMana(-ManaConsume);
+        ManaSystem.Mp.ModifyValue(-ManaConsume);
         float damage = power * (rhythmDamage / TimesForInvoke);
         float RoundDamage = -Mathf.Round(damage);
         foreach (var target in TargetType.Targets()) {
-            target.Hp.ModifyLife(RoundDamage);
+            target.LifeSystem.ModifyValue(RoundDamage);
         }
     }
 }
