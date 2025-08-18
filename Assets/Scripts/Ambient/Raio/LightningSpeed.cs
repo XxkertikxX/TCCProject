@@ -4,28 +4,22 @@ using UnityEngine;
 
 public class LightningSpeed : MonoBehaviour, IEnviromentProperty
 {
-    [SerializeField] Rigidbody2D playerrb;
-    [SerializeField] public PlayerMovementWalk playerMovementWalk;
-    [SerializeField] float LightSpeed = 10;
-    [SerializeField] float Duration = 13;
-    private float Speed;
+    [SerializeField] private float Duration = 13;
+    private MovementProperties movementProperties;
 
-    private void Start()
-    {
-        Speed = playerMovementWalk.speed;
+    private void Awake() {
+        movementProperties = GameObject.FindGameObjectWithTag("Player").GetComponent<MovementProperties>();
     }
 
-    public IEnumerator ApplyEffect(Rigidbody2D targetRB)
-    {
-        playerMovementWalk.speed = LightSpeed;
+    public IEnumerator ApplyEffect(Rigidbody2D targetRB) {
+        movementProperties.MultiplierSpeed = 2;
         yield return new WaitForSeconds(Duration);
-        playerMovementWalk.speed = Speed;
+        movementProperties.MultiplierSpeed = 1;
     }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            StartCoroutine(ApplyEffect(playerrb));
+    
+    private void OnTriggerEnter2D(Collider2D collision) {
+        if (collision.gameObject.CompareTag("Player")) {
+            StartCoroutine(ApplyEffect(null));
         }
     }
 }

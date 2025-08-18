@@ -44,5 +44,5 @@ public class PlayerMovementSystemTest : RuntimeTestBase
     }
 }
 
-public class MovementTestMoveLeft : MonoBehaviour, IMovement {public void Move(Rigidbody2D rb) { rb.velocity = new Vector2(1, rb.velocity.y);} public bool Apply(IButtonInput input) {return true;}}
-public class MovementTestMoveUp : MonoBehaviour, IMovement {public void Move(Rigidbody2D rb) { rb.velocity = new Vector2(rb.velocity.x, 1);} public bool Apply(IButtonInput input) {return true;}}
+public class MovementTestMoveLeft : MonoBehaviour, IMovement {public void Move(Rigidbody2D rb, MovementProperties movementProperties) { rb.velocity = new Vector2(1, rb.velocity.y);} public bool Apply(IButtonInput input) {return true;}}
+public class MovementTestMoveUp : MonoBehaviour, IMovement {public void Move(Rigidbody2D rb, MovementProperties movementProperties) { rb.velocity = new Vector2(rb.velocity.x, 1);} public bool Apply(IButtonInput input) {return true;}}

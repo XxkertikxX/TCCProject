@@ -2,11 +2,10 @@ using UnityEngine;
 
 public class PlayerMovementWalk : MonoBehaviour, IMovement
 {    
-    public float speed = 5f;
     private float inputDirection;
 
-    public void Move(Rigidbody2D rb) {
-        rb.velocity = new Vector2(inputDirection * speed, rb.velocity.y);
+    public void Move(Rigidbody2D rb, MovementProperties movementProperties) {
+        rb.velocity = new Vector2(inputDirection * GetSpeed(movementProperties), rb.velocity.y);
     }
 
     public bool Apply(IButtonInput input) {
@@ -15,12 +14,16 @@ public class PlayerMovementWalk : MonoBehaviour, IMovement
     }
 
     private void InputDirectionCalculator(IButtonInput input) {
-        inputDirection = 0;
+        inputDirection = 0f;
         inputDirection -= GetDirectionX(input, "Left");
         inputDirection += GetDirectionX(input, "Right");
     }
 
     private float GetDirectionX(IButtonInput input, string inputKey) {
         return input.InputButton(inputKey) ? 1f : 0f;
+    }
+    
+    private float GetSpeed(MovementProperties movementProperties) {
+        return movementProperties.Speed * movementProperties.MultiplierSpeed;
     }
 }

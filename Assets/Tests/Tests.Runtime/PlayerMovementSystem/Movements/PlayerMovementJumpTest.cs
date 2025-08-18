@@ -14,6 +14,7 @@ public class PlayerMovementJumpTest : RuntimeTestInput
     private GameObject player;
 
     private IMovement playerMovementJump;
+    private MovementProperties movementProperties;
 
     private Rigidbody2D rb;
 
@@ -25,12 +26,12 @@ public class PlayerMovementJumpTest : RuntimeTestInput
         CreateGround();
         CreateGroundCheck();
         AddFieldLayerGround();
-        jumpForce = Reflection.GetField<float>(playerMovementJump, "jumpForce");
+        jumpForce = movementProperties.JumpForce * movementProperties.MultiplierJumpForce;
     }
 
     [UnityTest]
     public IEnumerator Jump_Test() {
-        playerMovementJump.Move(rb);
+        playerMovementJump.Move(rb, movementProperties);
         yield return new WaitForSeconds(0.1f);
         Assert.AreEqual(jumpForce, rb.velocity.y);
     }
@@ -70,6 +71,7 @@ public class PlayerMovementJumpTest : RuntimeTestInput
     private void CreatePlayer() {
         player = new GameObject("Player");
         playerMovementJump = player.AddComponent<PlayerMovementJump>();
+        movementProperties = player.AddComponent<MovementProperties>();
         rb = player.AddComponent<Rigidbody2D>();
         rb.gravityScale = 0;
         DefineInputs(new List<string>(){"Jump"});

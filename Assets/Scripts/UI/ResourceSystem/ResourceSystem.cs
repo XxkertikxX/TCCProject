@@ -15,7 +15,6 @@ public class ResourceSystem : MonoBehaviour
 
     void Start() {
         PullComponents();
-        Debug.Log(actualValue);
         valueUI.UpdateUI(actualValue, maxValue);
     }
 

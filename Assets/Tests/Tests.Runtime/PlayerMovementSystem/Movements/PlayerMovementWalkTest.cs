@@ -8,6 +8,7 @@ public class PlayerMovementWalkTest : RuntimeTestInput
 {
     private Rigidbody2D rb;
     private PlayerMovementWalk playerMovementWalk;
+    private MovementProperties movementProperties;
 
     [SetUp]
     public void Setup() {
@@ -39,15 +40,16 @@ public class PlayerMovementWalkTest : RuntimeTestInput
         GameObject player = new GameObject("Player");
         rb = player.AddComponent<Rigidbody2D>();
         playerMovementWalk = player.AddComponent<PlayerMovementWalk>();
+        movementProperties = player.AddComponent<MovementProperties>();
     }
 
     private float GetSpeed() {
-        return Reflection.GetField<float>(playerMovementWalk, "speed");
+        return movementProperties.Speed * movementProperties.MultiplierSpeed;
     }
 
     private void ApplyMovement(List<string> inputs) {
         inputSystemTest.Input = inputs;
         playerMovementWalk.Apply(inputSystemTest);
-        playerMovementWalk.Move(rb);
+        playerMovementWalk.Move(rb, movementProperties);
     }
 }

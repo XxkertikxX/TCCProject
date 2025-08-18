@@ -1,4 +1,3 @@
-Mesclar ManaSystem com LifeSystem
 Refatorar Mecanicas de Mapa
 Testar Mecanicas de Mapa
 Testar DBs
