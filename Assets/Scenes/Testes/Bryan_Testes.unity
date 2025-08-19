@@ -4616,9 +4616,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd1dfa14237c711488b791c72a0ba2e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  platformRb: {fileID: 651504571}
   delay: 0.5
-  targetGravity: 1
 --- !u!50 &651504571
 Rigidbody2D:
   serializedVersion: 4
@@ -4766,9 +4764,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd1dfa14237c711488b791c72a0ba2e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  platformRb: {fileID: 705351604}
   delay: 0.5
-  targetGravity: 1
 --- !u!50 &705351604
 Rigidbody2D:
   serializedVersion: 4
@@ -5104,9 +5100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd1dfa14237c711488b791c72a0ba2e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  platformRb: {fileID: 998849857}
   delay: 0.5
-  targetGravity: 1
 --- !u!50 &998849857
 Rigidbody2D:
   serializedVersion: 4
@@ -5253,7 +5247,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41e7e63b22a60c54bba0785da1ce3d8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hide: 1
 --- !u!61 &1017803949
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5389,9 +5382,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd1dfa14237c711488b791c72a0ba2e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  platformRb: {fileID: 1165838337}
   delay: 0.5
-  targetGravity: 1
 --- !u!50 &1165838337
 Rigidbody2D:
   serializedVersion: 4
@@ -5713,9 +5704,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd62c2d143bfed74883c057d266006af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerrb: {fileID: 8485216877888606971}
-  playerMovementWalk: {fileID: 3013622593139462326}
-  LightSpeed: 15
   Duration: 13
 --- !u!212 &1266685527
 SpriteRenderer:
@@ -5843,9 +5831,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd1dfa14237c711488b791c72a0ba2e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  platformRb: {fileID: 1297294907}
   delay: 0.5
-  targetGravity: 1
 --- !u!50 &1297294907
 Rigidbody2D:
   serializedVersion: 4
@@ -6069,9 +6055,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd1dfa14237c711488b791c72a0ba2e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  platformRb: {fileID: 1789915520}
   delay: 0.5
-  targetGravity: 1
 --- !u!50 &1789915520
 Rigidbody2D:
   serializedVersion: 4
@@ -6219,9 +6203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd1dfa14237c711488b791c72a0ba2e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  platformRb: {fileID: 1896192656}
   delay: 0.5
-  targetGravity: 1
 --- !u!50 &1896192656
 Rigidbody2D:
   serializedVersion: 4
@@ -6369,9 +6351,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd1dfa14237c711488b791c72a0ba2e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  platformRb: {fileID: 1897960410}
   delay: 0.5
-  targetGravity: 1
 --- !u!50 &1897960410
 Rigidbody2D:
   serializedVersion: 4
@@ -6634,9 +6614,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd1dfa14237c711488b791c72a0ba2e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  platformRb: {fileID: 2035387331}
   delay: 0.5
-  targetGravity: 1
 --- !u!4 &2056775325 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7036079915175805695, guid: bfef4b0cc2d84484ab9a170e01018a11, type: 3}
@@ -6723,17 +6701,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfef4b0cc2d84484ab9a170e01018a11, type: 3}
---- !u!114 &3013622593139462326 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5183192457388682012, guid: 0176e239f4823f0448534ea7d9b17aa6, type: 3}
-  m_PrefabInstance: {fileID: 7943487571450510250}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee62a9b7562949645990801a3aa55ff5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &7943487571450510250
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6741,17 +6708,153 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2986423218344194494, guid: 0176e239f4823f0448534ea7d9b17aa6, type: 3}
+      propertyPath: soundsList.Array.size
+      value: 33
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986423218344194494, guid: 0176e239f4823f0448534ea7d9b17aa6, type: 3}
+      propertyPath: soundsList.Array.data[0].name
+      value: OpenMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986423218344194494, guid: 0176e239f4823f0448534ea7d9b17aa6, type: 3}
+      propertyPath: soundsList.Array.data[1].name
+      value: CloseMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986423218344194494, guid: 0176e239f4823f0448534ea7d9b17aa6, type: 3}
+      propertyPath: soundsList.Array.data[2].name
+      value: ClickButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986423218344194494, guid: 0176e239f4823f0448534ea7d9b17aa6, type: 3}
+      propertyPath: soundsList.Array.data[3].name
+      value: Ambient
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986423218344194494, guid: 0176e239f4823f0448534ea7d9b17aa6, type: 3}
+      propertyPath: soundsList.Array.data[4].name
+      value: Music
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986423218344194494, guid: 0176e239f4823f0448534ea7d9b17aa6, type: 3}
+      propertyPath: soundsList.Array.data[5].name
+      value: Footsteps
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986423218344194494, guid: 0176e239f4823f0448534ea7d9b17aa6, type: 3}
+      propertyPath: soundsList.Array.data[6].name
+      value: Jumping
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986423218344194494, guid: 0176e239f4823f0448534ea7d9b17aa6, type: 3}
+      propertyPath: soundsList.Array.data[7].name
+      value: Landing
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986423218344194494, guid: 0176e239f4823f0448534ea7d9b17aa6, type: 3}
+      propertyPath: soundsList.Array.data[8].name
+      value: LioraAttack1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986423218344194494, guid: 0176e239f4823f0448534ea7d9b17aa6, type: 3}
+      propertyPath: soundsList.Array.data[9].name
+      value: LioraAttack2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986423218344194494, guid: 0176e239f4823f0448534ea7d9b17aa6, type: 3}
+      propertyPath: soundsList.Array.data[10].name
+      value: LioraDamage
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986423218344194494, guid: 0176e239f4823f0448534ea7d9b17aa6, type: 3}
+      propertyPath: soundsList.Array.data[11].name
+      value: LioraDefeat
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986423218344194494, guid: 0176e239f4823f0448534ea7d9b17aa6, type: 3}
+      propertyPath: soundsList.Array.data[12].name
+      value: LioraEnteringBattle
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986423218344194494, guid: 0176e239f4823f0448534ea7d9b17aa6, type: 3}
+      propertyPath: soundsList.Array.data[13].name
+      value: AmberAttack1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986423218344194494, guid: 0176e239f4823f0448534ea7d9b17aa6, type: 3}
+      propertyPath: soundsList.Array.data[14].name
+      value: AmberAttack2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986423218344194494, guid: 0176e239f4823f0448534ea7d9b17aa6, type: 3}
+      propertyPath: soundsList.Array.data[15].name
+      value: AmberDamage
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986423218344194494, guid: 0176e239f4823f0448534ea7d9b17aa6, type: 3}
+      propertyPath: soundsList.Array.data[16].name
+      value: AmberDefeat
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986423218344194494, guid: 0176e239f4823f0448534ea7d9b17aa6, type: 3}
+      propertyPath: soundsList.Array.data[17].name
+      value: AmberEnteringBattle
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986423218344194494, guid: 0176e239f4823f0448534ea7d9b17aa6, type: 3}
+      propertyPath: soundsList.Array.data[18].name
+      value: ClementimeAttack1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986423218344194494, guid: 0176e239f4823f0448534ea7d9b17aa6, type: 3}
+      propertyPath: soundsList.Array.data[19].name
+      value: ClementimeAttack2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986423218344194494, guid: 0176e239f4823f0448534ea7d9b17aa6, type: 3}
+      propertyPath: soundsList.Array.data[20].name
+      value: ClementimeDamage
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986423218344194494, guid: 0176e239f4823f0448534ea7d9b17aa6, type: 3}
+      propertyPath: soundsList.Array.data[21].name
+      value: ClementimeDefeat
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986423218344194494, guid: 0176e239f4823f0448534ea7d9b17aa6, type: 3}
+      propertyPath: soundsList.Array.data[22].name
+      value: ClementimeEnteringBattle
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986423218344194494, guid: 0176e239f4823f0448534ea7d9b17aa6, type: 3}
+      propertyPath: soundsList.Array.data[23].name
+      value: AlonAttack1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986423218344194494, guid: 0176e239f4823f0448534ea7d9b17aa6, type: 3}
+      propertyPath: soundsList.Array.data[24].name
+      value: AlonAttack2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986423218344194494, guid: 0176e239f4823f0448534ea7d9b17aa6, type: 3}
+      propertyPath: soundsList.Array.data[25].name
+      value: AlonDamage
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986423218344194494, guid: 0176e239f4823f0448534ea7d9b17aa6, type: 3}
+      propertyPath: soundsList.Array.data[26].name
+      value: AlonDefeat
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986423218344194494, guid: 0176e239f4823f0448534ea7d9b17aa6, type: 3}
+      propertyPath: soundsList.Array.data[27].name
+      value: AlonEnteringBattle
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986423218344194494, guid: 0176e239f4823f0448534ea7d9b17aa6, type: 3}
+      propertyPath: soundsList.Array.data[28].name
+      value: EnemyAttack
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986423218344194494, guid: 0176e239f4823f0448534ea7d9b17aa6, type: 3}
+      propertyPath: soundsList.Array.data[29].name
+      value: EnemyDamage
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986423218344194494, guid: 0176e239f4823f0448534ea7d9b17aa6, type: 3}
+      propertyPath: soundsList.Array.data[30].name
+      value: EnemyDefeaty
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986423218344194494, guid: 0176e239f4823f0448534ea7d9b17aa6, type: 3}
+      propertyPath: soundsList.Array.data[31].name
+      value: BattleVictory
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986423218344194494, guid: 0176e239f4823f0448534ea7d9b17aa6, type: 3}
+      propertyPath: soundsList.Array.data[32].name
+      value: GameOver
+      objectReference: {fileID: 0}
     - target: {fileID: 4041607571191834638, guid: 0176e239f4823f0448534ea7d9b17aa6, type: 3}
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4041607571191834638, guid: 0176e239f4823f0448534ea7d9b17aa6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.1
+      value: -102.79
       objectReference: {fileID: 0}
     - target: {fileID: 4041607571191834638, guid: 0176e239f4823f0448534ea7d9b17aa6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.2
+      value: -1.05
       objectReference: {fileID: 0}
     - target: {fileID: 4041607571191834638, guid: 0176e239f4823f0448534ea7d9b17aa6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6791,8 +6894,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0176e239f4823f0448534ea7d9b17aa6, type: 3}
---- !u!50 &8485216877888606971 stripped
-Rigidbody2D:
-  m_CorrespondingSourceObject: {fileID: 2016878258728642897, guid: 0176e239f4823f0448534ea7d9b17aa6, type: 3}
-  m_PrefabInstance: {fileID: 7943487571450510250}
-  m_PrefabAsset: {fileID: 0}
