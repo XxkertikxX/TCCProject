@@ -6,18 +6,14 @@ public class HideScr : MonoBehaviour
 {
     private bool hide = false;
 
-    private IEnumerator ApplyEffect() {
-        yield return null;
-    }
-
     private void OnTriggerEnter2D(Collider2D collision) {
-        if (collision.gameObject.CompareTag("Player")) {
+        if (collision.gameObject.CompareTag("HideWall")) {
             hide = true;
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision) {
-        if (collision.gameObject.CompareTag("Player")) {
+        if (collision.gameObject.CompareTag("HideWall")) {
             hide = false;
         }
     }
