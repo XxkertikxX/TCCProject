@@ -45,9 +45,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: BackerGround
+    uniqueID: 4246498193
+    locked: 0
+  - name: BackGround
+    uniqueID: 905760743
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Chao
-    uniqueID: 905760743
+  - name: FrontLayer
+    uniqueID: 1653669969
     locked: 0

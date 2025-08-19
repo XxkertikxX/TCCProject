@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TestsRuntime.unity
     guid: c87afa3a15e5e4b43ac9ab987c086fbf
+  - enabled: 1
+    path: Assets/Scenes/Testes/ZSceneTest.unity
+    guid: 107e18fac989ae245864538914034342
   m_configObjects: {}
