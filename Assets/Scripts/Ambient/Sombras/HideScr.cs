@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HideScr : MonoBehaviour, IEnviromentProperty
+public class HideScr : MonoBehaviour
 {
     private bool hide = false;
 
-    public IEnumerator ApplyEffect(Rigidbody2D targetRB) {
+    private IEnumerator ApplyEffect() {
         yield return null;
     }
 

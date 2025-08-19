@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [ExecuteAlways]
-public class WindCurrents : MonoBehaviour, IEnviromentProperty
+public class WindCurrents : MonoBehaviour
 {
     [Header("Wind variables")]
     [SerializeField] private Vector2 windDirection;
@@ -23,7 +23,7 @@ public class WindCurrents : MonoBehaviour, IEnviromentProperty
         StartCoroutine(ApplyEffect(playerRB));
     }
 
-    public IEnumerator ApplyEffect(Rigidbody2D playerRB) {
+    private IEnumerator ApplyEffect(Rigidbody2D playerRB) {
         float timing = 1f;
         while (timing > 0f) {
             playerRB.velocity -= windDirection * Time.deltaTime * windForce;

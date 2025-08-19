@@ -11,6 +11,7 @@ public class ResourceSystem : MonoBehaviour
 
     public void Constructor(float maxValue) {
         this.maxValue = maxValue;
+        this.actualValue = maxValue;
     }
 
     void Start() {
@@ -28,7 +29,6 @@ public class ResourceSystem : MonoBehaviour
     }
 
     private void PullComponents() {
-        actualValue = maxValue;
         valueUI = GetComponent<IDinamicUI>();
     }
 }
