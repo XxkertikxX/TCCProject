@@ -2,17 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HideAbility : MonoBehaviour
+public class HideAbility : IAbility
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    private bool hide = false;
+
+    private void OnTriggerEnter2D(Collider2D collision) {
+        if (collision.gameObject.CompareTag("HideWall")) {
+            hide = true;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    private void OnTriggerExit2D(Collider2D collision) {
+        if (collision.gameObject.CompareTag("HideWall")) {
+            hide = false;
+        }
     }
+
+    //public 
 }
