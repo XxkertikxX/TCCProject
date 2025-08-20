@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ClementineRhythm : AttackRhythm
 {
-    public IEnumerator Attack(SkillBase skill) {
+    public override IEnumerator Attack(SkillBase skill) {
         yield return null;
     }
 }
