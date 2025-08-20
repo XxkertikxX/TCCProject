@@ -18,5 +18,5 @@ public class HideAbility : IAbility
         }
     }
 
-    public 
+    //public 
 }
