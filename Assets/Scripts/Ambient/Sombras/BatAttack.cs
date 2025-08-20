@@ -51,7 +51,9 @@ public class BatAttack : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (chasing && chaseOnlyIfPlayerInArea && !IsPlayerInsideArea())
+        bool playerHiding = IsPlayerHiding();
+
+        if (chasing && ((chaseOnlyIfPlayerInArea && !IsPlayerInsideArea()) || playerHiding))
         {
             SetChasing(false);
             SetRandomTarget();
@@ -73,7 +75,8 @@ public class BatAttack : MonoBehaviour
         {
             yield return new WaitForSeconds(Random.Range(minDecisionTime, maxDecisionTime));
 
-            bool canChase = !chaseOnlyIfPlayerInArea || IsPlayerInsideArea();
+            bool playerHiding = IsPlayerHiding();
+            bool canChase = (!chaseOnlyIfPlayerInArea || IsPlayerInsideArea()) && !playerHiding;
             bool willChase = Random.value < chaseProbability && canChase && player != null;
 
             if (willChase)
@@ -84,6 +87,7 @@ public class BatAttack : MonoBehaviour
                 while (t < dur)
                 {
                     if (chaseOnlyIfPlayerInArea && !IsPlayerInsideArea()) break;
+                    if (IsPlayerHiding()) break;
                     t += Time.deltaTime;
                     yield return null;
                 }
@@ -102,6 +106,30 @@ public class BatAttack : MonoBehaviour
     {
         if (player == null || triggerArea == null) return false;
         return triggerArea.bounds.Contains(player.position);
+    }
+
+    bool IsPlayerHiding()
+    {
+        if (player == null) return false;
+
+        var monos = player.GetComponents<MonoBehaviour>();
+        foreach (var m in monos)
+        {
+            var prop = m.GetType().GetProperty("Hide");
+            if (prop != null && prop.PropertyType == typeof(bool))
+            {
+                object val = prop.GetValue(m, null);
+                if (val is bool b && b) return true;
+            }
+        }
+
+        Collider2D[] hits = Physics2D.OverlapPointAll((Vector2)player.position);
+        foreach (var c in hits)
+        {
+            if (c != null && c.CompareTag("HideWall")) return true;
+        }
+
+        return false;
     }
 
     void SetRandomTarget()

@@ -5,6 +5,7 @@ using UnityEngine;
 public class HideAbility : IAbility
 {
     private bool hide = false;
+    public bool Hide { get { return hide; } set { hide = value; } }
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.CompareTag("HideWall")) {
@@ -18,5 +19,5 @@ public class HideAbility : IAbility
         }
     }
 
-    //public 
+    //public
 }
