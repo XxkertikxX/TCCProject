@@ -2,13 +2,19 @@ using UnityEngine;
 
 public class LineRhythm : MonoBehaviour
 {
+    private EmberRhythmProperties rhythmProperties;
+    
     private float totallyLineCoord;
     private float totallyLineSize;
     private float speed = 3f;
     
+    public void Constructor(EmberRhythmProperties rhythmProperties) {
+        this.rhythmProperties = rhythmProperties;
+    }
+    
     void Start() {
-        totallyLineCoord = RhythmObj.RendTotallyLine.bounds.max.x;
-        totallyLineSize = RhythmObj.RendTotallyLine.bounds.size.x;
+        totallyLineCoord = rhythmProperties.RendTotallyLine.bounds.max.x;
+        totallyLineSize = rhythmProperties.RendTotallyLine.bounds.size.x;
     }
 
     void Update() {
@@ -20,7 +26,7 @@ public class LineRhythm : MonoBehaviour
     }
 
     public float PerDamage() {
-        float distance = Mathf.Abs(transform.position.x - RhythmObj.CenterLine.position.x);
+        float distance = Mathf.Abs(transform.position.x - rhythmProperties.CenterLine.position.x);
         return 1f - (distance / (totallyLineSize / 2f));
     }
 

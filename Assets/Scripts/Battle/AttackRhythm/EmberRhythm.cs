@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class EmberRhythm : AttackRhythm
 {   
-    [SerializeField] private GameObject prefabRhythm;
-
-    [SerializeField] private GameObject line;
-    [SerializeField] private Transform instantiatePosition;
+    private EmberRhythmProperties rhythmProperties;
 
     private int totalLines;
     private int timesForInvoke = 1;
 
     private Queue<GameObject> lines = new Queue<GameObject>();
+    
+    void Awake() {
+        rhythmProperties = GetComponent<EmberRhythmProperties>();
+    }
     
     void Update() {
         Click();
@@ -32,15 +33,22 @@ public class EmberRhythm : AttackRhythm
 
 
     private void ActiveRhythm(bool state) {
-        prefabRhythm.SetActive(state);
+        rhythmProperties.Rhythm.SetActive(state);
     }
 
     private IEnumerator InvokeLine(SkillBase skill) {
-        lines.Enqueue(Instantiate(line, instantiatePosition.position, Quaternion.identity));
+        CreateLine();
         timesForInvoke--;
         yield return new WaitForSeconds(skill.TimePerInvokeLine);
     }
 
+    private void CreateLine() {
+        GameObject line = Instantiate(rhythmProperties.Line, rhythmProperties.InstantiatePosition.position, Quaternion.identity)
+        LineRhythm lineRhythm = line.AddComponent<LineRhythm>();
+        lineRhythm.Constructor(rhythmProperties);
+        lines.Enqueue(line);
+    }
+    
     private void Click() {
         if (lines.Count > 0) {
             RemoveLinesNull();
