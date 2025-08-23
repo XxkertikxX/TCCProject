@@ -1,3 +1,5 @@
+using UnityEngine;
+
 public class PlayerMovementRunning  : MonoBehaviour, IMovement
 {
     private float multiplierSpeed;
@@ -6,7 +8,7 @@ public class PlayerMovementRunning  : MonoBehaviour, IMovement
         movementProperties.MultiplierSpeed =  multiplierSpeed;
     }
     
-    public void Apply(IButtonInput input) {
+    public bool Apply(IButtonInput input) {
         MultiplierSpeedCalculator(input);
         return true;
     }

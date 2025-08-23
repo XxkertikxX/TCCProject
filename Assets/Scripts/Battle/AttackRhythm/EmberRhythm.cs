@@ -43,7 +43,7 @@ public class EmberRhythm : AttackRhythm
     }
 
     private void CreateLine() {
-        GameObject line = Instantiate(rhythmProperties.Line, rhythmProperties.InstantiatePosition.position, Quaternion.identity)
+        GameObject line = Instantiate(rhythmProperties.Line, rhythmProperties.InstantiatePosition.position, Quaternion.identity);
         LineRhythm lineRhythm = line.AddComponent<LineRhythm>();
         lineRhythm.Constructor(rhythmProperties);
         lines.Enqueue(line);
