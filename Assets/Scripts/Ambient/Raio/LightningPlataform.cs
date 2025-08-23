@@ -16,7 +16,7 @@ public class LightningPlataform : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        if (collision.CompareTag("PlayerArea")) {
+        if (collision.CompareTag("Player")) {
              StartCoroutine(ApplyEffect(platformRb));
         }
     }

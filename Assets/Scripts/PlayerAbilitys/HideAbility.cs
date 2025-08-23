@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HideAbility : IAbility
+public class HideAbility : MonoBehaviour
 {
     private bool hide = false;
     public bool Hide { get { return hide; } set { hide = value; } }
@@ -18,6 +18,4 @@ public class HideAbility : IAbility
             hide = false;
         }
     }
-
-    //public
 }
