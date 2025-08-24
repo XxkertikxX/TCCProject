@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class BatAttackAlert : MonoBehaviour
 {
+    [SerializeField] private GameObject alert;
+
     void OnEnable() {
         BatAttackSystem.OnBatAttack += ShowAlert;
         BatAttackSystem.OnBatEndAttack += RemoveAlert;
@@ -15,10 +17,10 @@ public class BatAttackAlert : MonoBehaviour
     }
 
     private void ShowAlert() {
-        gameObject.SetActive(false);
+        alert.SetActive(false);
     }
 
     private void RemoveAlert() {
-        gameObject.SetActive(false);
+        alert.SetActive(false);
     }
 }

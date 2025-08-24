@@ -32,30 +32,36 @@ public class BatAttackSystem : MonoBehaviour
         StartCoroutine(BehaviorLoop());
     }
 
+    void Update() {
+        VerifyEndChase();
+    }
+
     private IEnumerator BehaviorLoop() {
         while (true) {
             yield return new WaitForSeconds(UnityEngine.Random.Range(minDecisionTime, maxDecisionTime));
-            bool playerHiding = hideAbility.Hide;
-            VerifyChase(playerHiding);
+            VerifyChase();
             if(!chasing) {
                 SetRandomTarget();
             }
         }
     }
 
-    private void VerifyChase(bool playerHiding) {
-        if (MustChase(playerHiding) && !chasing) {
+    private void VerifyChase() {
+        if (MustChase() && !chasing) {
             chasing = true;
             OnBatAttack?.Invoke();
         }
-        else if (chasing && playerHiding) {
+    }
+
+    private void VerifyEndChase() {
+        if (chasing && hideAbility.Hide) {
             chasing = false;
             OnBatEndAttack?.Invoke();
         }
     }
 
-    private bool MustChase(bool playerHiding) {
-        bool canChase = (IsPlayerInsideArea()) && !playerHiding;
+    private bool MustChase() {
+        bool canChase = (IsPlayerInsideArea()) && !hideAbility.Hide;
         bool mustChase = UnityEngine.Random.value < chaseProbability && canChase;
         return mustChase;
     }
