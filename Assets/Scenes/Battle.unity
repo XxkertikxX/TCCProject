@@ -377,6 +377,7 @@ GameObject:
   - component: {fileID: 104922903}
   - component: {fileID: 104922904}
   - component: {fileID: 104922905}
+  - component: {fileID: 104922906}
   m_Layer: 0
   m_Name: Liora
   m_TagString: Character
@@ -540,9 +541,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 0
-  prefabRhythm: {fileID: 696834919}
-  line: {fileID: 139820855966566637, guid: bb913d5593b4c394aaea05ec4f9a73f2, type: 3}
-  instantiatePosition: {fileID: 279782331}
 --- !u!114 &104922904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -569,6 +567,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   valueText: {fileID: 1852864130}
   valueSlider: {fileID: 363852466}
+--- !u!114 &104922906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 104922892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4db9d9f11878ee140a0ce10d5db5321c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 0
+  Rhythm: {fileID: 0}
+  CenterLine: {fileID: 0}
+  directions: []
+  note: []
+  Input: []
 --- !u!1 &131075771
 GameObject:
   m_ObjectHideFlags: 0
@@ -1648,6 +1664,7 @@ GameObject:
   - component: {fileID: 525768455}
   - component: {fileID: 525768456}
   - component: {fileID: 525768457}
+  - component: {fileID: 525768458}
   m_Layer: 0
   m_Name: Ember
   m_TagString: Character
@@ -1811,9 +1828,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 0
-  prefabRhythm: {fileID: 696834919}
-  line: {fileID: 139820855966566637, guid: bb913d5593b4c394aaea05ec4f9a73f2, type: 3}
-  instantiatePosition: {fileID: 279782331}
 --- !u!114 &525768456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1840,6 +1854,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   valueText: {fileID: 957091214}
   valueSlider: {fileID: 932849237}
+--- !u!114 &525768458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 525768443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4db9d9f11878ee140a0ce10d5db5321c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 3
+  Rhythm: {fileID: 696834919}
+  CenterLine: {fileID: 919690569}
+  directions:
+  - Checker: {fileID: 11400000, guid: 06d2f74b82369d343b316a9b05db41c9, type: 2}
+    Direction: {x: 1, y: 0}
+    point: {fileID: 1052789845}
+    InstantiatePosition: {fileID: 279782331}
+  note:
+  - {fileID: 139820855966566637, guid: bb913d5593b4c394aaea05ec4f9a73f2, type: 3}
+  Input:
+  - 
 --- !u!1 &545771673
 GameObject:
   m_ObjectHideFlags: 0
@@ -2380,6 +2418,7 @@ Transform:
   - {fileID: 2054078462}
   - {fileID: 919690569}
   - {fileID: 279782331}
+  - {fileID: 1052789846}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2720,6 +2759,7 @@ GameObject:
   - component: {fileID: 814553646}
   - component: {fileID: 814553647}
   - component: {fileID: 814553648}
+  - component: {fileID: 814553649}
   m_Layer: 0
   m_Name: Alon
   m_TagString: Character
@@ -2883,9 +2923,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 0
-  prefabRhythm: {fileID: 696834919}
-  line: {fileID: 139820855966566637, guid: bb913d5593b4c394aaea05ec4f9a73f2, type: 3}
-  instantiatePosition: {fileID: 279782331}
 --- !u!114 &814553647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2912,6 +2949,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   valueText: {fileID: 2077079115}
   valueSlider: {fileID: 1646578032}
+--- !u!114 &814553649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 814553637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4db9d9f11878ee140a0ce10d5db5321c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 0
+  Rhythm: {fileID: 0}
+  CenterLine: {fileID: 0}
+  directions: []
+  note: []
+  Input: []
 --- !u!1 &817324578
 GameObject:
   m_ObjectHideFlags: 0
@@ -2960,7 +3015,6 @@ GameObject:
   - component: {fileID: 821819377}
   - component: {fileID: 821819376}
   - component: {fileID: 821819375}
-  - component: {fileID: 821819378}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -3018,21 +3072,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &821819378
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 821819374}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48a3344d8c2fa084b83d97fc90698bfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rhythm: {fileID: 696834919}
-  centerLine: {fileID: 919690569}
-  rendTotallyLine: {fileID: 2054078463}
 --- !u!1 &824573184
 GameObject:
   m_ObjectHideFlags: 0
@@ -4082,6 +4121,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 987128005}
   m_CullTransparentMesh: 1
+--- !u!1 &1052789845
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1052789846}
+  m_Layer: 0
+  m_Name: Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1052789846
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1052789845}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.481, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 696834920}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1173154847
 GameObject:
   m_ObjectHideFlags: 0
@@ -5667,6 +5737,7 @@ GameObject:
   - component: {fileID: 1993797147}
   - component: {fileID: 1993797148}
   - component: {fileID: 1993797149}
+  - component: {fileID: 1993797150}
   m_Layer: 0
   m_Name: Clementine
   m_TagString: Character
@@ -5830,9 +5901,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 0
-  prefabRhythm: {fileID: 696834919}
-  line: {fileID: 139820855966566637, guid: bb913d5593b4c394aaea05ec4f9a73f2, type: 3}
-  instantiatePosition: {fileID: 279782331}
 --- !u!114 &1993797148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5859,6 +5927,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   valueText: {fileID: 1743475826}
   valueSlider: {fileID: 247390343}
+--- !u!114 &1993797150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1993797136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4db9d9f11878ee140a0ce10d5db5321c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 0
+  Rhythm: {fileID: 0}
+  CenterLine: {fileID: 0}
+  directions: []
+  note: []
+  Input: []
 --- !u!1 &1999216847
 GameObject:
   m_ObjectHideFlags: 0

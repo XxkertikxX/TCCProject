@@ -9,7 +9,7 @@ public class EmberRhythm : AttackRhythm
     private int totalLines;
     private int timesForInvoke = 1;
 
-    private Queue<GameObject> lines = new Queue<GameObject>();
+    private Queue<GameObject> notes = new Queue<GameObject>();
     
     void Awake() {
         rhythmProperties = GetComponent<EmberRhythmProperties>();
@@ -19,6 +19,13 @@ public class EmberRhythm : AttackRhythm
         Click();
         DequeueLineOutLimits();
         CloseRhythm();
+    }
+
+    void FixedUpdate() {
+        foreach(GameObject note in notes) {
+            Vector2 direction = Direction(note).Direction;
+            note.GetComponent<RbMovement>().Move(direction, rhythmProperties.Speed);
+        }
     }
 
     public override IEnumerator Attack(SkillBase skill) {
@@ -44,14 +51,15 @@ public class EmberRhythm : AttackRhythm
     }
 
     private void CreateLine() {
-        GameObject line = Instantiate(rhythmProperties.Line, rhythmProperties.InstantiatePosition.position, Quaternion.identity);
-        LineRhythm lineRhythm = line.AddComponent<LineRhythm>();
-        lineRhythm.Constructor(rhythmProperties);
-        lines.Enqueue(line);
+        Directions direction = rhythmProperties.Direction();
+        GameObject note = Instantiate(rhythmProperties.Note(), direction.InstantiatePosition.position, Quaternion.identity);
+        NoteRhythm noteRhythm = note.AddComponent<NoteRhythm>();
+        noteRhythm.Direction = direction;
+        notes.Enqueue(note);
     }
     
     private void Click() {
-        if (lines.Count > 0) {
+        if (notes.Count > 0) {
             if(Input.GetMouseButtonDown(0)) {
                 DequeueLine();
             }
@@ -59,23 +67,32 @@ public class EmberRhythm : AttackRhythm
     }
 
     private void DequeueLine() {
-        if (lines.Count > 0) {
-            var lineObj = lines.Dequeue();
-            Damage += lineObj.GetComponent<LineRhythm>().PerDamage() / totalLines;
+        if (notes.Count > 0) {
+            var lineObj = notes.Dequeue();
+            Damage += Note(lineObj).PerDamage(rhythmProperties.CenterLine, 2) / totalLines;
             Destroy(lineObj);
         }
     }
 
     private void DequeueLineOutLimits() {
-        if(lines.Peek().GetComponent<LineRhythm>().DestroyLineOutLimits()) {
-            var lineObj = lines.Dequeue();
+        if(notes.Count <= 0) return;
+        if (Note(notes.Peek()).DestroyLineOutLimits()) {
+            var lineObj = notes.Dequeue();
             Destroy(lineObj);
         }
     }
 
     private void CloseRhythm() {
-        if(timesForInvoke == 0 && lines.Count == 0) {
+        if(timesForInvoke == 0 && notes.Count == 0) {
             ActiveRhythm(false);
         }
+    }
+
+    private NoteRhythm Note(GameObject note) {
+        return note.GetComponent<NoteRhythm>();
+    }
+
+    private Directions Direction(GameObject note) {
+        return Note(note).Direction;
     }
 }
