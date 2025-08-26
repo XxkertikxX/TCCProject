@@ -17,6 +17,7 @@ public class EmberRhythm : AttackRhythm
     
     void Update() {
         Click();
+        DequeueLineOutLimits();
         CloseRhythm();
     }
 
@@ -51,16 +52,9 @@ public class EmberRhythm : AttackRhythm
     
     private void Click() {
         if (lines.Count > 0) {
-            RemoveLinesNull();
             if(Input.GetMouseButtonDown(0)) {
                 DequeueLine();
             }
-        }
-    }
-
-    private void RemoveLinesNull() {
-        while (lines.Count > 0 && lines.Peek() == null) {
-            lines.Dequeue();
         }
     }
 
@@ -68,6 +62,13 @@ public class EmberRhythm : AttackRhythm
         if (lines.Count > 0) {
             var lineObj = lines.Dequeue();
             Damage += lineObj.GetComponent<LineRhythm>().PerDamage() / totalLines;
+            Destroy(lineObj);
+        }
+    }
+
+    private void DequeueLineOutLimits() {
+        if(lines.Peek().GetComponent<LineRhythm>().DestroyLineOutLimits()) {
+            var lineObj = lines.Dequeue();
             Destroy(lineObj);
         }
     }

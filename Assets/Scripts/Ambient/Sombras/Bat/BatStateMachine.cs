@@ -1,12 +1,12 @@
 using UnityEngine;
 
-[RequireComponent(typeof(BatMovement))]
+[RequireComponent(typeof(RbMovement))]
 public class BatStateMachine : MonoBehaviour
 {
     public GameObject Alert;
 
     public Collider2D TriggerArea;
-    public BatMovement Movement { get; private set; }
+    public RbMovement Movement { get; private set; }
     public Transform Player { get; private set; }
     public HideAbility HideAbility { get; private set; }
 
@@ -17,7 +17,7 @@ public class BatStateMachine : MonoBehaviour
     private void Awake() {
         Player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         HideAbility = Player.GetComponent<HideAbility>();
-        Movement = GetComponent<BatMovement>();
+        Movement = GetComponent<RbMovement>();
 
         PatrolState = new BatPatrolState(this);
         ChaseState = new BatChaseState(this);
@@ -35,7 +35,6 @@ public class BatStateMachine : MonoBehaviour
         CurrentState?.Exit();
         CurrentState = newState;
         CurrentState.Enter();
-        Debug.Log("Bat changed to state: " + newState.GetType().Name);
     }
 
     public bool IsPlayerInsideArea() {
