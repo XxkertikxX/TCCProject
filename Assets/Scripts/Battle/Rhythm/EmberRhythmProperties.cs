@@ -6,6 +6,8 @@ public class EmberRhythmProperties : MonoBehaviour
     public Transform CenterLine;
     public Renderer RendTotallyLine;
     
-    public GameObject Line;
-    public Transform InstantiatePosition;
+    public List<GameObject> Note;
+    public List<Transform> InstantiatePosition;
+    public List<Vector2> Direction;
+    public List<string> Input;
 }
