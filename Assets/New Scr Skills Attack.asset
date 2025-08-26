@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timesForInvoke: 5
   timePerInvokeLine: 1
-  targetType: {fileID: 11400000, guid: 0002654bf628f644f8dc089984b9da0e, type: 2}
+  targetType: {fileID: 11400000, guid: bfc86f864346a4c4ea9f696f75467d71, type: 2}
   manaconsume: 4

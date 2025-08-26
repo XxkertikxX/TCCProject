@@ -5,7 +5,8 @@ public class NoteRhythm : MonoBehaviour
     public Directions Direction;
     
     void Awake() {
-        gameObject.AddComponent<RbMovement>();
+        RbMovement rb = gameObject.AddComponent<RbMovement>();
+        rb.ResetGravityScale();
     }
 
     public float PerDamage(Transform center, float AreaSize) {

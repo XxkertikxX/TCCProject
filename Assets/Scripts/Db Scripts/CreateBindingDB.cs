@@ -31,6 +31,8 @@ public class CreateBindingDB : MonoBehaviour
         CreateKey("Menu", KeyCode.Escape, col);
         CreateKey("Down",KeyCode.DownArrow, col);
         CreateKey("Up", KeyCode.UpArrow, col);
+        CreateKey("Left2", KeyCode.LeftArrow, col);
+        CreateKey("Right2", KeyCode.RightArrow, col);
         CreateKey("Return", KeyCode.X, col);
     }
 
