@@ -37,6 +37,9 @@ public class EmberRhythm : AttackRhythm
         while (timesForInvoke > 0) {
             yield return StartCoroutine(InvokeLine(skill));
         }
+        while(notes.Count > 0) {
+            yield return null;
+        }
     }
 
 
@@ -60,7 +63,7 @@ public class EmberRhythm : AttackRhythm
     
     private void Click() {
         if (notes.Count > 0) {
-            if(Input.GetMouseButtonDown(0)) {
+            if(Input()) {
                 DequeueLine();
             }
         }
@@ -94,5 +97,14 @@ public class EmberRhythm : AttackRhythm
 
     private Directions Direction(GameObject note) {
         return Note(note).Direction;
+    }
+
+    private bool Input() {
+        foreach(string key in rhythmProperties.Input) {
+            if(InputCatalyst.input.InputButtonDown(key)) {
+                return true;
+            }
+        }
+        return false;
     }
 }

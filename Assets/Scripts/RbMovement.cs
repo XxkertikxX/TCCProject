@@ -12,4 +12,6 @@ public class RbMovement : MonoBehaviour
     }
 
     public void Stop() => rb.velocity = Vector2.zero;
+
+    public void ResetGravityScale() => rb.gravityScale = 0;
 }

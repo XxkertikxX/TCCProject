@@ -1877,7 +1877,10 @@ MonoBehaviour:
   note:
   - {fileID: 139820855966566637, guid: bb913d5593b4c394aaea05ec4f9a73f2, type: 3}
   Input:
-  - 
+  - Left2
+  - Right2
+  - Down
+  - Up
 --- !u!1 &545771673
 GameObject:
   m_ObjectHideFlags: 0
