@@ -4,6 +4,7 @@ using UnityEngine;
 public class PlayerCharactersSkills : MonoBehaviour
 {
     static public CharacterAttributes CharacterAttr;
+    [SerializeField] private SystemRhythm systemRhythm;
     [SerializeField] private GameObject buttons;
     private SkillBase skill;
 
@@ -14,8 +15,15 @@ public class PlayerCharactersSkills : MonoBehaviour
     private IEnumerator StartRhythm(AttackRhythm rhythm, int posSkill) {
         skill = CharStatus().Skills[posSkill];
         buttons.SetActive(false);
+        ActiveSystemRhythm(rhythm);
         yield return rhythm.Attack(skill);
+        systemRhythm.enabled = false;
         UseSkill(rhythm.Damage);
+    }
+
+    private void ActiveSystemRhythm(AttackRhythm rhythm) {
+        systemRhythm.enabled = true;
+        systemRhythm.Constructor(rhythm);
     }
 
     private void UseSkill(float rhythmDamage) {

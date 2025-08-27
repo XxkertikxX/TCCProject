@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class NoteRhythm : MonoBehaviour
+public class NoteMovement : MonoBehaviour
 {
     public Directions Direction;
     

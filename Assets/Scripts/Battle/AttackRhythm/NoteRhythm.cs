@@ -11,8 +11,8 @@ public class NoteRhythm : AttackRhythm
 
     private Queue<GameObject> notes = new Queue<GameObject>();
     
-    public override void Constructor() {
-        this.rhythmProperties = rhythmProperties
+    public override void Constructor(RhythmProperties rhythmProperties) {
+        this.rhythmProperties = rhythmProperties;
     }
     
     public override void Update() {
