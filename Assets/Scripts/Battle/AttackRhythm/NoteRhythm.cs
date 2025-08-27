@@ -2,26 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EmberRhythm : AttackRhythm
+public class NoteRhythm : AttackRhythm
 {   
-    private EmberRhythmProperties rhythmProperties;
+    private RhythmProperties rhythmProperties;
 
     private int totalLines;
     private int timesForInvoke = 1;
 
     private Queue<GameObject> notes = new Queue<GameObject>();
     
-    void Awake() {
-        rhythmProperties = GetComponent<EmberRhythmProperties>();
+    public override void Constructor() {
+        this.rhythmProperties = rhythmProperties
     }
     
-    void Update() {
+    public override void Update() {
         Click();
         DequeueLineOutLimits();
         CloseRhythm();
     }
 
-    void FixedUpdate() {
+    public override void FixedUpdate() {
         foreach(GameObject note in notes) {
             Vector2 direction = Direction(note).Direction;
             note.GetComponent<RbMovement>().Move(direction, rhythmProperties.Speed);
@@ -56,8 +56,8 @@ public class EmberRhythm : AttackRhythm
     private void CreateLine() {
         Directions direction = rhythmProperties.Direction();
         GameObject note = Instantiate(rhythmProperties.Note(), direction.InstantiatePosition.position, Quaternion.identity);
-        NoteRhythm noteRhythm = note.AddComponent<NoteRhythm>();
-        noteRhythm.Direction = direction;
+        NoteMovement noteMovement = note.AddComponent<NoteMovement>();
+        noteMovement.Direction = direction;
         notes.Enqueue(note);
     }
     
@@ -91,8 +91,8 @@ public class EmberRhythm : AttackRhythm
         }
     }
 
-    private NoteRhythm Note(GameObject note) {
-        return note.GetComponent<NoteRhythm>();
+    private NoteMovement Note(GameObject note) {
+        return note.GetComponent<NoteMovement>();
     }
 
     private Directions Direction(GameObject note) {
