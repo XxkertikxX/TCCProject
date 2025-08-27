@@ -1,8 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-[CreateAssetMenu(menuName = "RhythmProperties")]
-public class RhythmProperties : ScriptableObject
+public class RhythmProperties : MonoBehaviour
 {
     public float Speed;
 
