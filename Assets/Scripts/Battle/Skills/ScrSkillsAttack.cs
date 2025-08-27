@@ -1,13 +1,15 @@
 using UnityEngine;
+using System.Collections;
 
 [CreateAssetMenu(menuName = "SkillsAttackCreator")]
 public class ScrSkillsAttack : SkillBase
 {
-    public override void Skill(float power, float rhythmDamage) {
+    public override IEnumerator Skill(float power, float rhythmDamage) {
         ManaSystem.Mp.ModifyValue(-ManaConsume);
         float damage = power * (rhythmDamage / TimesForInvoke);
         float RoundDamage = -Mathf.Round(damage);
-        foreach (var target in TargetType.Targets()) {
+        yield return TargetType.Targets();
+        foreach (var target in TargetType.CharactersAttributes) {
             target.LifeSystem.ModifyValue(RoundDamage);
         }
     }

@@ -27,7 +27,7 @@ public class PlayerCharactersSkills : MonoBehaviour
     }
 
     private void UseSkill(float rhythmDamage) {
-        skill.Skill(CharStatus().Power, rhythmDamage);
+        StartCoroutine(skill.Skill(CharStatus().Power, rhythmDamage));
         CharacterAttr.AttackInTheTurn = true;
     }
     

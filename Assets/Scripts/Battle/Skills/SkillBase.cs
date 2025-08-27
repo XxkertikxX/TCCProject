@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public abstract class SkillBase : ScriptableObject
 {
@@ -12,5 +13,5 @@ public abstract class SkillBase : ScriptableObject
     public TypeSkill TargetType => targetType;
     public int ManaConsume => manaconsume;
 
-    public abstract void Skill(float power, float rhythmDamage);
+    public abstract IEnumerator Skill(float power, float rhythmDamage);
 }

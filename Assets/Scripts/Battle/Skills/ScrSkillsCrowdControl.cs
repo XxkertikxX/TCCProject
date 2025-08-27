@@ -1,11 +1,13 @@
 using UnityEngine;
+using System.Collections;
 
 [CreateAssetMenu(menuName = "SkillsCrowdControlCreator")]
 public class ScrSkillsCrowdControl : SkillBase
 {
-    public override void Skill(float power, float rhythmDamage) {
+    public override IEnumerator Skill(float power, float rhythmDamage) {
         ManaSystem.Mp.ModifyValue(-ManaConsume);
-        foreach (var target in TargetType.Targets()) {
+        yield return TargetType.Targets();
+        foreach (var target in TargetType.CharactersAttributes) {
             target.AttackInTheTurn = true;
         }
     }

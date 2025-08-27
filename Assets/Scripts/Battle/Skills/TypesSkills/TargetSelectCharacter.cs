@@ -1,8 +1,8 @@
-using UnityEngine;
-using System.Collections.Generic;
 using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-public class TargetThisCharacter : TypeSkill
+public class TargetSelectCharacter : TypeSkill
 {
     public override IEnumerator Targets() {
         yield return null;

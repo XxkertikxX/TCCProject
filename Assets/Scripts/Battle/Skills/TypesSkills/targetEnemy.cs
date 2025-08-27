@@ -1,13 +1,15 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System.Collections;
 
 [CreateAssetMenu(menuName = "TargetEnemy")]
 public class TargetEnemy : TypeSkill
 {
-    public override List<CharacterAttributes> Targets() {
+    public override IEnumerator Targets() {
         List<CharacterAttributes> characterStatus = new List<CharacterAttributes>();
         characterStatus.Add(Enemy().GetComponent<CharacterAttributes>());
-        return characterStatus;
+        CharactersAttributes = characterStatus;
+        yield return null;
     }
 
     private GameObject Enemy() {
