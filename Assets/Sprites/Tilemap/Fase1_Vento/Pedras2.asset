@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: Pedra2
+  m_Name: Pedras2
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 21300000, guid: 7a9b895224cb2aa44a1ba0960902594e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4591367cd95c3e445bed3d545f7c1891, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
