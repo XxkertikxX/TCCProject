@@ -5,9 +5,7 @@ using LiteDB;
 using UnityEngine.SceneManagement;
 
 public class SaveStats : MonoBehaviour
-{ [BsonId]
-
+{ 
     public Rigidbody2D playerRb; 
     public Scene GetScene; 
-  
 }

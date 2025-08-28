@@ -9,7 +9,7 @@ public class NoteRhythm : AttackRhythm
     private int totalLines;
     private int timesForInvoke = 1;
 
-    private Queue<GameObject> notes = new Queue<GameObject>();
+    private List<Queue<GameObject>> notes;
     
     void Awake() {
         rhythmProperties = GetComponent<RhythmProperties>();
@@ -22,13 +22,17 @@ public class NoteRhythm : AttackRhythm
     }
 
     public override void FixedUpdate() {
-        foreach(GameObject note in notes) {
-            Vector2 direction = Direction(note).Direction;
-            note.GetComponent<RbMovement>().Move(direction, rhythmProperties.Speed);
+        foreach(Queue<GameObject> queue in notes){
+            foreach(GameObject note in queue) {
+                Vector2 direction = Direction(note).Direction;
+                note.GetComponent<RbMovement>().Move(direction, rhythmProperties.Speed);
+            }
         }
     }
 
     public override IEnumerator Attack(SkillBase skill) {
+        notes = new List<Queue<GameObject>>(rhythmProperties.Index());
+
         ActiveRhythm(true);
 
         totalLines = skill.TimesForInvoke;
@@ -37,7 +41,8 @@ public class NoteRhythm : AttackRhythm
         while (timesForInvoke > 0) {
             yield return StartCoroutine(InvokeLine(skill));
         }
-        while(notes.Count > 0) {
+
+        while(!WithoutNotes()) {
             yield return null;
         }
     }
@@ -58,37 +63,51 @@ public class NoteRhythm : AttackRhythm
         GameObject note = Instantiate(rhythmProperties.Note(), direction.InstantiatePosition.position, Quaternion.identity);
         NoteMovement noteMovement = note.AddComponent<NoteMovement>();
         noteMovement.Direction = direction;
-        notes.Enqueue(note);
+        notes[direction.Index].Enqueue(note);
     }
     
     private void Click() {
-        if (notes.Count > 0) {
-            if(Input()) {
-                DequeueLine();
+        foreach(Queue<GameObject> queue in notes) {
+            if(Input(queue)) {
+                DequeueLine(queue);
             }
         }
     }
 
-    private void DequeueLine() {
-        if (notes.Count > 0) {
-            var lineObj = notes.Dequeue();
-            Damage += Note(lineObj).PerDamage(rhythmProperties.CenterLine, 2) / totalLines;
-            Destroy(lineObj);
+    private void DequeueLine(Queue<GameObject> queue) {
+        if (queue.Count > 0) {
+            var noteObj = queue.Dequeue();
+            Damage += Note(noteObj).PerDamage(rhythmProperties.CenterLine, 2) / totalLines;
+            Destroy(noteObj);
         }
     }
 
     private void DequeueLineOutLimits() {
-        if(notes.Count <= 0) return;
-        if (Note(notes.Peek()).DestroyLineOutLimits()) {
-            var lineObj = notes.Dequeue();
-            Destroy(lineObj);
+        foreach(Queue<GameObject> queue in notes) {
+            if(queue.Count == 0) continue;
+            if(Note(queue.Peek()).DestroyLineOutLimits()) {
+                var noteObj = queue.Dequeue();
+                Destroy(noteObj);
+            }
         }
     }
 
     private void CloseRhythm() {
-        if(timesForInvoke == 0 && notes.Count == 0) {
-            ActiveRhythm(false);
+        foreach(Queue<GameObject> queue in notes) {
+            if(timesForInvoke != 0 && queue.Count != 0){
+                return;
+            }
         }
+        ActiveRhythm(false);
+    }
+
+    private bool WithoutNotes() {
+        foreach (Queue<GameObject> queue in notes) {
+            if (queue.Count != 0) {
+                return false;
+            }
+        }
+        return true;
     }
 
     private NoteMovement Note(GameObject note) {
@@ -99,8 +118,8 @@ public class NoteRhythm : AttackRhythm
         return Note(note).Direction;
     }
 
-    private bool Input() {
-        foreach(string key in rhythmProperties.Input) {
+    private bool Input(Queue<GameObject> queue) {
+        foreach(string key in Direction(queue.Peek()).Input) {
             if(InputCatalyst.input.InputButtonDown(key)) {
                 return true;
             }

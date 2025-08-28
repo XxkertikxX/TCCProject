@@ -10,7 +10,6 @@ public class RhythmProperties : MonoBehaviour
     [SerializeField] private List<Directions> directions;
     
     [SerializeField] private List<GameObject> note;
-    public List<string> Input;
 
     public GameObject Note() {
         int index = Random.Range(0, note.Count);
@@ -21,6 +20,10 @@ public class RhythmProperties : MonoBehaviour
         int index = Random.Range(0, directions.Count);
         return directions[index];
     }
+
+    public int Index() {
+        return directions.Count;
+    }
 }
 
 [System.Serializable]
@@ -30,4 +33,8 @@ public class Directions {
     public Vector2 Direction;
     public GameObject point;
     public Transform InstantiatePosition;
+
+    public List<string> Input;
+
+    public int Index;
 }
