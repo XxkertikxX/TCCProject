@@ -2,11 +2,12 @@ using UnityEngine;
 
 public class NoteMovement : MonoBehaviour
 {
+    public RbMovement Rb;
     public Directions Direction;
     
     void Awake() {
-        RbMovement rb = gameObject.AddComponent<RbMovement>();
-        rb.ResetGravityScale();
+        Rb = gameObject.AddComponent<RbMovement>();
+        Rb.ResetGravityScale();
     }
 
     public float PerDamage(Transform center, float AreaSize) {

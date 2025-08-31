@@ -11,10 +11,10 @@ public class SystemRhythm : MonoBehaviour
     }
 
     void Update() {
-        attackRhythm.Update();
+        attackRhythm.UpdateAttack();
     }
 
     void FixedUpdate() {
-        attackRhythm.FixedUpdate();
+        attackRhythm.FixedUpdateAttack();
     }
 }
