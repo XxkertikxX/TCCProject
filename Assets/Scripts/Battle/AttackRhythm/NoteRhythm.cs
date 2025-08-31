@@ -9,29 +9,31 @@ public class NoteRhythm : AttackRhythm
     private int totalLines;
     private int timesForInvoke = 1;
 
-    private List<Queue<GameObject>> notes;
+    private List<Queue<NoteMovement>> notes = new List<Queue<NoteMovement>>();
     
     void Awake() {
         rhythmProperties = GetComponent<RhythmProperties>();
     }
     
-    public override void Update() {
+    public override void UpdateAttack() {
         Click();
         DequeueLineOutLimits();
         CloseRhythm();
     }
 
-    public override void FixedUpdate() {
-        foreach(Queue<GameObject> queue in notes){
-            foreach(GameObject note in queue) {
-                Vector2 direction = Direction(note).Direction;
-                note.GetComponent<RbMovement>().Move(direction, rhythmProperties.Speed);
+    public override void FixedUpdateAttack() {
+        foreach(Queue<NoteMovement> queue in notes){
+            foreach(NoteMovement note in queue) {
+                Vector2 direction = note.Direction.Direction;
+                note.Rb.Move(direction, rhythmProperties.Speed);
             }
         }
     }
 
     public override IEnumerator Attack(SkillBase skill) {
-        notes = new List<Queue<GameObject>>(rhythmProperties.Index());
+        for(int i = 0; i < rhythmProperties.Index(); i++) {
+            notes.Add(new Queue<NoteMovement>());
+        }
 
         ActiveRhythm(true);
 
@@ -63,46 +65,45 @@ public class NoteRhythm : AttackRhythm
         GameObject note = Instantiate(rhythmProperties.Note(), direction.InstantiatePosition.position, Quaternion.identity);
         NoteMovement noteMovement = note.AddComponent<NoteMovement>();
         noteMovement.Direction = direction;
-        notes[direction.Index].Enqueue(note);
+        notes[direction.Index].Enqueue(noteMovement);
     }
     
     private void Click() {
-        foreach(Queue<GameObject> queue in notes) {
-            if(Input(queue)) {
+        foreach(Queue<NoteMovement> queue in notes) {
+            if(queue.Count == 0) continue;
+            if(CheckInput(queue)) {
                 DequeueLine(queue);
             }
         }
     }
 
-    private void DequeueLine(Queue<GameObject> queue) {
-        if (queue.Count > 0) {
-            var noteObj = queue.Dequeue();
-            Damage += Note(noteObj).PerDamage(rhythmProperties.CenterLine, 2) / totalLines;
-            Destroy(noteObj);
-        }
+    private void DequeueLine(Queue<NoteMovement> queue) {
+        var note = queue.Dequeue();
+        Damage += note.PerDamage(rhythmProperties.CenterLine, 2) / totalLines;
+        Destroy(note.gameObject);
     }
 
     private void DequeueLineOutLimits() {
-        foreach(Queue<GameObject> queue in notes) {
+        foreach(Queue<NoteMovement> queue in notes) {
             if(queue.Count == 0) continue;
-            if(Note(queue.Peek()).DestroyLineOutLimits()) {
-                var noteObj = queue.Dequeue();
-                Destroy(noteObj);
+            if(queue.Peek().DestroyLineOutLimits()) {
+                var note = queue.Dequeue();
+                Destroy(note.gameObject);
             }
         }
     }
 
     private void CloseRhythm() {
-        foreach(Queue<GameObject> queue in notes) {
-            if(timesForInvoke != 0 && queue.Count != 0){
-                return;
-            }
+        if(timesForInvoke != 0) return;
+        foreach(Queue<NoteMovement> queue in notes) {
+            if(queue.Count != 0) return;
         }
+        Debug.Log(timesForInvoke);
         ActiveRhythm(false);
     }
 
     private bool WithoutNotes() {
-        foreach (Queue<GameObject> queue in notes) {
+        foreach (Queue<NoteMovement> queue in notes) {
             if (queue.Count != 0) {
                 return false;
             }
@@ -110,16 +111,9 @@ public class NoteRhythm : AttackRhythm
         return true;
     }
 
-    private NoteMovement Note(GameObject note) {
-        return note.GetComponent<NoteMovement>();
-    }
-
-    private Directions Direction(GameObject note) {
-        return Note(note).Direction;
-    }
-
-    private bool Input(Queue<GameObject> queue) {
-        foreach(string key in Direction(queue.Peek()).Input) {
+    private bool CheckInput(Queue<NoteMovement> queue) {
+        var firstNote = queue.Peek();
+        foreach(string key in firstNote.Direction.Input) {
             if(InputCatalyst.input.InputButtonDown(key)) {
                 return true;
             }

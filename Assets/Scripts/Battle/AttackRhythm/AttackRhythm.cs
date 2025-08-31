@@ -4,7 +4,7 @@ using UnityEngine;
 public abstract class AttackRhythm : MonoBehaviour {
     public float Damage = 0;
 
-    public abstract void Update();
-    public abstract void FixedUpdate();
+    public abstract void UpdateAttack();
+    public abstract void FixedUpdateAttack();
     public abstract IEnumerator Attack(SkillBase skill);
 }
