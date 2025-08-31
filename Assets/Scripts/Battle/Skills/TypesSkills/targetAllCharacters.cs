@@ -5,20 +5,16 @@ using System.Collections.Generic;
 [CreateAssetMenu(menuName = "TargetAllCharacters")]
 public class TargetAllCharacters : TypeSkill
 {
-    public override IEnumerator Targets()
-    {
+    public override IEnumerator Targets() {
         CharactersAttributes = GetAllAttributes();
         yield return null;
     }
 
-    private List<CharacterAttributes> GetAllAttributes()
-    {
-        var list = new List<CharacterAttributes>();
-        var chars = GameObject.FindGameObjectsWithTag("Character");
-        for (int i = 0; i < chars.Length; i++)
-        {
-            var a = chars[i].GetComponent<CharacterAttributes>();
-            if (a != null) list.Add(a);
+    private List<CharacterAttributes> GetAllAttributes() {
+        List<CharacterAttributes> list = new List<CharacterAttributes>();
+        GameObject[] chars = GameObject.FindGameObjectsWithTag("Character");
+        foreach (GameObject character in chars) {
+            list.Add(character.GetComponent<CharacterAttributes>());
         }
         return list;
     }

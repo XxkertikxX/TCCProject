@@ -9,29 +9,25 @@ public class TargetThisCharacter : TypeSkill
     public string FallbackName;
     public int FallbackIndex;
 
-    public override IEnumerator Targets()
-    {
+    public override IEnumerator Targets() {
         CharactersAttributes = BuildListFrom(GetTarget());
         yield return null;
     }
 
-    public void SetThisCharacter(GameObject go) 
-    {
+    public void SetThisCharacter(GameObject go)  {
         ThisCharacter = go; 
     }
-    public void ClearThisCharacter() 
-    {
+
+    public void ClearThisCharacter()  {
         ThisCharacter = null; 
     }
 
     private GameObject[] GetAllChars() => GameObject.FindGameObjectsWithTag("Character");
 
-    private GameObject GetTarget()
-    {
+    private GameObject GetTarget() {
         if (ThisCharacter != null) return ThisCharacter;
         var chars = GetAllChars();
-        if (!string.IsNullOrEmpty(FallbackName))
-        {
+        if (!string.IsNullOrEmpty(FallbackName)) {
             for (int i = 0; i < chars.Length; i++)
                 if (chars[i].name == FallbackName) return chars[i];
         }
@@ -39,9 +35,8 @@ public class TargetThisCharacter : TypeSkill
         return chars[Mathf.Clamp(FallbackIndex, 0, chars.Length - 1)];
     }
 
-    private List<CharacterAttributes> BuildListFrom(GameObject go)
-    {
-        var list = new List<CharacterAttributes>();
+    private List<CharacterAttributes> BuildListFrom(GameObject go) {
+        List<CharacterAttributes> list = new List<CharacterAttributes>();
         if (go == null) return list;
         var a = go.GetComponent<CharacterAttributes>();
         if (a != null) list.Add(a);

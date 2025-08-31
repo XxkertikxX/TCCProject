@@ -527,10 +527,14 @@ MonoBehaviour:
     InstantiatePosition: {fileID: 1882656872}
     Input:
     - Left
-    - Right
-    - Up
-    - Down
     Index: 0
+  - Checker: {fileID: 11400000, guid: 0f4d323a226287a4b93222f584e67bd6, type: 2}
+    Direction: {x: -1, y: 0}
+    point: {fileID: 1882656871}
+    InstantiatePosition: {fileID: 2012077142}
+    Input:
+    - Right
+    Index: 1
   note:
   - {fileID: 139820855966566637, guid: bb913d5593b4c394aaea05ec4f9a73f2, type: 3}
 --- !u!114 &179150709
