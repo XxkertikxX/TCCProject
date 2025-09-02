@@ -98,7 +98,6 @@ public class NoteRhythm : AttackRhythm
         foreach(Queue<NoteMovement> queue in notes) {
             if(queue.Count != 0) return;
         }
-        Debug.Log(timesForInvoke);
         ActiveRhythm(false);
     }
 
