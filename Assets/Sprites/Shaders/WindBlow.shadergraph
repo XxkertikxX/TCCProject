@@ -681,7 +681,7 @@
     },
     "m_Name": "Split",
     "m_DrawState": {
-        "m_Expanded": false,
+        "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
             "x": -1907.0001220703125,
@@ -756,7 +756,7 @@
     "m_ShaderOutputName": "T",
     "m_StageCapability": 3,
     "m_Value": {
-        "x": 0.07000000029802323,
+        "x": 0.6700000166893005,
         "y": 0.0,
         "z": 0.0,
         "w": 0.0
@@ -795,7 +795,7 @@
     "m_ShaderOutputName": "B",
     "m_StageCapability": 3,
     "m_Value": {
-        "x": 0.9100000262260437,
+        "x": 0.7799999713897705,
         "y": 1.0,
         "z": 1.0,
         "w": 1.0
@@ -2285,10 +2285,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -1654.0,
-            "y": -4.999998092651367,
-            "width": 119.0001220703125,
-            "height": 34.00000762939453
+            "x": -1655.0001220703125,
+            "y": -5.000027179718018,
+            "width": 119.0,
+            "height": 34.0000114440918
         }
     },
     "m_Slots": [
@@ -2363,7 +2363,7 @@
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
-    "m_Value": 1.5,
+    "m_Value": 7.519999980926514,
     "m_FloatType": 0,
     "m_RangeValues": {
         "x": 0.0,
@@ -2797,10 +2797,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -976.0000610351563,
-            "y": 144.00001525878907,
+            "x": -991.0,
+            "y": 170.0,
             "width": 116.0,
-            "height": 34.00001525878906
+            "height": 34.0
         }
     },
     "m_Slots": [
@@ -3163,7 +3163,7 @@
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
-    "m_Value": false
+    "m_Value": true
 }
 
 {
@@ -3539,8 +3539,8 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -1209.0,
-            "y": 29.0,
+            "x": -1229.0,
+            "y": 105.0,
             "width": 208.0,
             "height": 278.0
         }
