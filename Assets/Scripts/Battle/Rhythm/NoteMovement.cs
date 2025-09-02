@@ -12,7 +12,9 @@ public class NoteMovement : MonoBehaviour
 
     public float PerDamage(Transform center, float AreaSize) {
         float distance = Mathf.Abs(Direction.Checker.Axis(transform) - Direction.Checker.Axis(center));
-        return 1f - (distance / (AreaSize / 2f));
+        float centerDistance = (distance / (AreaSize / 2f));
+        float damage = 0.7f + (1 - centerDistance * 0.3f);
+        return damage;
     }
 
     public bool DestroyLineOutLimits() {
