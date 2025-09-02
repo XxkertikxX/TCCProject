@@ -12,7 +12,6 @@ public class Parallax : MonoBehaviour
         cam = Camera.main.transform;
         inicialPosition = transform.position.x;
         backgroundLength = GetComponent<SpriteRenderer>().bounds.size.x;
-        //backgroundLength = GetComponent<TilemapRenderer>().bounds.size.x;
     }
 
     void Update() {
@@ -30,21 +29,18 @@ public class Parallax : MonoBehaviour
 
     private void VerifyIfBackgroundOffScreen() {
         if (OffScreenBackgroundLeft()) {
-            RepositionBackground(-backgroundLength, -HalfCameraWidth());
+            RepositionBackground(-backgroundLength);
         }
         if (OffScreenBackgroundRight()) {
-            RepositionBackground(backgroundLength, HalfCameraWidth());
+            RepositionBackground(backgroundLength);
         }
     }
 
-    private void RepositionBackground(float offset, float cameraBounds) {
-        transform.position += new Vector3(DistanceRepositionBackground(offset) - cameraBounds, 0, 0);
+    private void RepositionBackground(float offset) {
+        transform.position += new Vector3(offset, 0, 0);
         inicialPosition = transform.position.x - Distance();
     }
 
-    private float DistanceRepositionBackground(float backgroundLength){
-        return cam.position.x - transform.position.x + backgroundLength/2;
-    }
 
     private bool OffScreenBackgroundLeft() {
         return BackgroundEdge(-backgroundLength) > CameraEdge(-HalfCameraWidth());
@@ -55,7 +51,7 @@ public class Parallax : MonoBehaviour
     }
 
     private float BackgroundEdge(float backgroundX){
-        return transform.position.x + backgroundX / 2f;
+        return transform.position.x + backgroundX * 3/2;
     }
 
     private float CameraEdge(float halfCameraWidth){

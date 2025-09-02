@@ -6,6 +6,6 @@ using System.Collections.Generic;
 public class TargetSelectCharacter : TypeSkill
 {
     public override IEnumerator Targets() {
-        
+        yield return null;
     }
 }
