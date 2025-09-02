@@ -1,13 +1,15 @@
 using UnityEngine;
+using System;
 
-public class CharacterAttack : MonoBehaviour
+public class CharacterAttack : ICharacterInteraction
 {
-    [SerializeField] private GameObject caixaTurnAttack;
-    
-    public void ClickCharacter(CharacterAttributes character){
+    static public ICharacterInteraction CharacterInteraction;
+    static public event Action OnCharacterPreparedAttack;
+
+    public void Interaction(CharacterAttributes character){
         if (!character.AttackInTheTurn) {
-            caixaTurnAttack.SetActive(true);
-            PlayerCharactersSkills.CharacterAttr = character;
+            OnCharacterPreparedAttack?.Invoke();
+            CharacterClick.CharacterAttr = character;
         }
     }
 }

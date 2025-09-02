@@ -7,7 +7,7 @@ public class TargetThisCharacter : TypeSkill
 {
     public override IEnumerator Targets() {
         CharactersAttributes = new List<CharacterAttributes>();
-        //CharacterAttributes.Add(PlayerCharactersSkills.CharacterAttr);
+        CharactersAttributes.Add(CharacterClick.CharacterAttr);
         yield return null;
     }
 }
