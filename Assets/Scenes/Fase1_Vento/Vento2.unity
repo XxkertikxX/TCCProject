@@ -301,7 +301,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e655886cf9212ae4e922392316fddaac, type: 2}
+  - {fileID: 2100000, guid: a28d573e197536b4baac12492ddc184f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -635,6 +635,10 @@ PrefabInstance:
       propertyPath: m_ChunkCullingBounds.y
       value: 0.96000004
       objectReference: {fileID: 0}
+    - target: {fileID: 1389811051, guid: 9dead4c77412b544889a77db8da0a206, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e655886cf9212ae4e922392316fddaac, type: 2}
     - target: {fileID: 1389811052, guid: 9dead4c77412b544889a77db8da0a206, type: 3}
       propertyPath: m_Size.x
       value: 18
