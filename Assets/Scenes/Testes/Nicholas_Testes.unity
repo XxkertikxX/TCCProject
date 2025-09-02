@@ -678,8 +678,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1633042731}
-        m_TargetAssemblyTypeName: CharacterAttack, GameAssembly
+      - m_Target: {fileID: 1633042733}
+        m_TargetAssemblyTypeName: CharacterClick, GameAssembly
         m_MethodName: ClickCharacter
         m_Mode: 2
         m_Arguments:
@@ -3138,7 +3138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   systemRhythm: {fileID: 995608519}
-  buttons: {fileID: 349770415}
+  boxSkill: {fileID: 349770415}
 --- !u!114 &995608517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3476,8 +3476,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52970d99caa048542aa420b08e79c05d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  valueText: {fileID: 321991835}
-  valueSlider: {fileID: 1296628938}
+  valueText: {fileID: 1671931462}
+  valueSlider: {fileID: 2081366502}
 --- !u!114 &1119753800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3575,8 +3575,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1633042731}
-        m_TargetAssemblyTypeName: CharacterAttack, GameAssembly
+      - m_Target: {fileID: 1633042733}
+        m_TargetAssemblyTypeName: CharacterClick, GameAssembly
         m_MethodName: ClickCharacter
         m_Mode: 2
         m_Arguments:
@@ -4836,8 +4836,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1633042731}
-        m_TargetAssemblyTypeName: CharacterAttack, GameAssembly
+      - m_Target: {fileID: 1633042733}
+        m_TargetAssemblyTypeName: CharacterClick, GameAssembly
         m_MethodName: ClickCharacter
         m_Mode: 2
         m_Arguments:
@@ -5269,8 +5269,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52970d99caa048542aa420b08e79c05d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  valueText: {fileID: 1671931462}
-  valueSlider: {fileID: 2081366502}
+  valueText: {fileID: 321991835}
+  valueSlider: {fileID: 1296628938}
 --- !u!114 &1611980707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5368,8 +5368,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1633042731}
-        m_TargetAssemblyTypeName: CharacterAttack, GameAssembly
+      - m_Target: {fileID: 1633042733}
+        m_TargetAssemblyTypeName: CharacterClick, GameAssembly
         m_MethodName: ClickCharacter
         m_Mode: 2
         m_Arguments:
@@ -5444,7 +5444,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1633042732}
-  - component: {fileID: 1633042731}
+  - component: {fileID: 1633042733}
+  - component: {fileID: 1633042734}
   m_Layer: 0
   m_Name: TurnoManager
   m_TagString: Untagged
@@ -5452,19 +5453,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1633042731
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1633042730}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d706b7319b515954ab36b8285b74a4b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  caixaTurnAttack: {fileID: 349770415}
 --- !u!4 &1633042732
 Transform:
   m_ObjectHideFlags: 0
@@ -5480,6 +5468,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1633042733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1633042730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2deb4b54998e31543adfd8234c78474e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1633042734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1633042730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 173a2a7f431d0794eae2c4ab9e69a63b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boxSkill: {fileID: 349770415}
 --- !u!1 &1671931460
 GameObject:
   m_ObjectHideFlags: 0

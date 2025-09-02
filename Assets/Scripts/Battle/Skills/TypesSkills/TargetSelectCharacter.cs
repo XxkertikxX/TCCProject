@@ -7,10 +7,9 @@ public class TargetSelectCharacter : TypeSkill
 {
     public override IEnumerator Targets() {
         ChangeCharacterInteraction();
-        List<CharacterAttributes> Characters = CharacterClick.CharactersSelect;
-        Characters = new List<CharacterAttributes>();
-        yield return new WaitUntil(() => Characters.Count >= 1);
-        CharactersAttributes = Characters;
+        CharacterClick.CharactersSelect = new List<CharacterAttributes>();
+        yield return new WaitUntil(() => CharacterClick.CharactersSelect.Count == 1);
+        CharactersAttributes = CharacterClick.CharactersSelect;;
         ResetCharacterInteraction();
     }
 
