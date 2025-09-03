@@ -7,24 +7,20 @@ public class SceneFade : MonoBehaviour
     private string nextScene;
     public static SceneFade instance;
 
-    private void Awake()
-    {
+    private void Awake() {
         fadeAnimator = GetComponent<Animator>();
         instance = this;
     }
 
-    public void EnterEnviromentScene(string name)
-    {
+    public void EnterEnviromentScene(string name) {
         nextScene = name;
         fadeAnimator.SetTrigger("EnterScene");
     }
-    public void EnterCombatScene()
-    {
+    public void EnterCombatScene() {
 
     }
 
-    public void OnfadeComplete() 
-    {
+    public void OnfadeComplete()  {
         SceneManager.LoadScene(nextScene);
     }
 }

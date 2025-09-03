@@ -5,10 +5,10 @@ using System.Collections;
 public class ScrSkillsCrowdControl : SkillBase
 {
     public override IEnumerator Skill(float power, float rhythmDamage) {
-        ManaSystem.Mp.ModifyValue(-ManaConsume);
         yield return TargetType.Targets();
+        ManaSystem.Mp.ModifyValue(-ManaConsume);
         foreach (var target in TargetType.CharactersAttributes) {
-            target.AttackInTheTurn = true;
+            target.TurnsForCanAttack += SkillPower;
         }
     }
 }

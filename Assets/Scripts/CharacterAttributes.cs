@@ -3,10 +3,11 @@ using UnityEngine;
 public class CharacterAttributes : MonoBehaviour
 {
     public StatusCharacters Character;
-    public ResourceSystem LifeSystem;
-    [HideInInspector] public bool AttackInTheTurn = false;
+    [HideInInspector] public ResourceSystem LifeSystem;
     [HideInInspector] public AttackRhythm Rhythm;
 
+    [HideInInspector] public int TurnsForCanAttack = 0;
+    
     void Awake() {
         Rhythm = GetComponent<AttackRhythm>();
     }
