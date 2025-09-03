@@ -3,7 +3,8 @@ using UnityEngine;
 public class ManaFactory : MonoBehaviour
 {
     void Awake() {
-        ResourceSystem resourceSystem = ResourceFactory.CreateResourceSystem(gameObject, 100);
+        SaveSystem saveSystem = new SaveSystem();
+        ResourceSystem resourceSystem = ResourceFactory.CreateResourceSystem(gameObject, saveSystem.Load().ManaTotal);
         CreateManaSystem(resourceSystem);
     }
     

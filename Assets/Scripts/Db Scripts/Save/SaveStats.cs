@@ -6,10 +6,18 @@ using UnityEngine.SceneManagement;
 
 public class SaveStats : MonoBehaviour
 { 
-    public Rigidbody2D playerRb; 
-    public Scene GetScene;
+    [BsonId]
+    public int ID;
+
+    public string SceneName;
     public int ManaBase;
     public int ManaTotal;
     public int Level;
-    public Transform Player;
+    public Vector3Stat Player;
+}
+
+public class Vector3Stat{
+    public float X;
+    public float Y;
+    public float Z;
 }

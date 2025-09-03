@@ -34,10 +34,10 @@ public class CreateBindingDB : MonoBehaviour
         CreateKey("Left2", KeyCode.LeftArrow, col);
         CreateKey("Right2", KeyCode.RightArrow, col);
         CreateKey("Return", KeyCode.X, col);
+        CreateKey("Save", KeyCode.S, col);
     }
 
-    private void CreateKey(string KeyName, KeyCode Key, ILiteCollection<KeyBinding> col)
-    {
+    private void CreateKey(string KeyName, KeyCode Key, ILiteCollection<KeyBinding> col) {
         col.Upsert(new KeyBinding { KeyName = KeyName, Key = Key});
     }
 }
