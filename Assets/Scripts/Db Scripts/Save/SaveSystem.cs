@@ -4,10 +4,17 @@ using UnityEngine.SceneManagement;
 
 public class SaveSystem
 {
-    public void Save(int level) {
+    public void Save() {
         using (var db = new LiteDatabase(Path())) {
             var col = db.GetCollection<SaveStats>("save_stats");
-            col.Upsert(Update(level));
+            col.Upsert(Update());
+        }
+    }
+    
+    public SaveStats Load() {
+        using (var db = new LiteDatabase(Path())) {
+            var col = db.GetCollection<SaveStats>("save_stats");
+            return col.FindOne(Query.All());
         }
     }
 
@@ -22,23 +29,16 @@ public class SaveSystem
         return newSaveStats;
     }   
 
-    public SaveStats Load() {
-        using (var db = new LiteDatabase(Path())) {
-            var col = db.GetCollection<SaveStats>("save_stats");
-            return col.FindOne(Query.All());
-        }
-    }
-
-    public SaveStats Update(int level) {
-        SaveStats newSaveStats = new SaveStats();
-        newSaveStats.ID = 1;
-        newSaveStats.SceneName = SceneManager.GetActiveScene().name;
-        newSaveStats.ManaBase = 10;
-        newSaveStats.Level = level;
-        newSaveStats.ManaTotal = newSaveStats.ManaBase + newSaveStats.Level;
+    public SaveStats Update() {
+        SaveStats saveStats = new SaveStats();
+        saveStats.ID = 1;
+        saveStats.SceneName = SceneManager.GetActiveScene().name;
+        saveStats.ManaBase = 10;
+        saveStats.Level = LevelSystem.Level;
+        saveStats.ManaTotal = saveStats.ManaBase + saveStats.Level;
         Transform player = GameObject.FindGameObjectWithTag("Player").transform;
-        newSaveStats.Player = NewVector3(player.position.x, player.position.y, player.position.z);
-        return newSaveStats;
+        saveStats.Player = NewVector3(player.position.x, player.position.y, player.position.z);
+        return saveStats;
     }
 
     private Vector3Stat NewVector3(float x, float y, float z) {
