@@ -38,7 +38,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _PowerB: 1.5
+    - _PowerB: 2
     - _Velocity: 0.286
     - _WindUp: 0
     m_Colors: []

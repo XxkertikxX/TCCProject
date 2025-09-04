@@ -43,7 +43,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _PowerB: 2
-    - _Velocity: 0.04
+    - _Velocity: 0.168
     - _WindUp: 1
     m_Colors: []
   m_BuildTextureStacks: []
