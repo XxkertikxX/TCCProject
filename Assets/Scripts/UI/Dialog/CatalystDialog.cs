@@ -1,4 +1,5 @@
 public class CatalystDialog {
     static public IDialogWriter Writer;
-    static public LineDialog[] Dialog;
+    static public string[] Dialog;
+	static public IconCharacter[] Icons;
 }

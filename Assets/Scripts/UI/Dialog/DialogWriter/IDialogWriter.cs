@@ -1,4 +1,7 @@
+using System;
+
 public interface IDialogWriter {
-    public void Constructor(LineDialog[] dialogs);
+	public event Action<int> OnPassLine;
+    public void Constructor(string[] dialogs);
     public void StartLine();
 }

@@ -3,7 +3,7 @@ using UnityEngine;
 public class DialogWriterSystem : MonoBehaviour
 {
     private IDialogWriter dialogWriter;
-    private LineDialog[] dialogs;
+    private string[] dialogs;
 
     void OnEnable() {
         DialogManager.OnDialogOpen += Setup;

@@ -1,14 +1,15 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class DialogWriterGeneric : MonoBehaviour, IDialogWriter
 {
-    private LineDialog[] dialogs;
+	public event Action<int> OnPassLine;
+	
+    private string[] dialogs;
 
     [SerializeField] private Text textSpeak;
-    [SerializeField] private Text textName;
-    [SerializeField] private Image imageNPC;
     
     private Coroutine coroutine = null;
 
@@ -23,7 +24,7 @@ public class DialogWriterGeneric : MonoBehaviour, IDialogWriter
         }
     }
 
-    public void Constructor(LineDialog[] dialogs) => this.dialogs = dialogs;
+    public void Constructor(string[] dialogs) => this.dialogs = dialogs;
 
     public void StartLine() {
         inDialog = true;
@@ -34,8 +35,7 @@ public class DialogWriterGeneric : MonoBehaviour, IDialogWriter
     
     private void SetupLine() {
         textSpeak.text = null;
-        textName.text = dialogs[index].NameCharacter;
-        imageNPC.sprite = dialogs[index].ImageCharacter;
+		OnPassLine?.Invoke(index);
     }
     
     private void ContinueDialog() {
@@ -60,12 +60,12 @@ public class DialogWriterGeneric : MonoBehaviour, IDialogWriter
     private void SkipLine() {
         StopCoroutine(coroutine);
         coroutine = null;
-        textSpeak.text = dialogs[index].TextDialog;
+        textSpeak.text = dialogs[index];
     }
 
     private IEnumerator TypingLine() {
         yield return null;
-        foreach (char c in dialogs[index].TextDialog) {
+        foreach (char c in dialogs[index]) {
             textSpeak.text += c;
             yield return new WaitForSeconds(WriteSpeed());
         }

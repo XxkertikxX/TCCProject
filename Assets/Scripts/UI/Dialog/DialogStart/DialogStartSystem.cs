@@ -2,7 +2,9 @@ using UnityEngine;
 
 public class DialogStartSystem : MonoBehaviour
 {
-    [SerializeField] private ScrDialog dialog;
+    [SerializeField] private TextsSO dialog;
+	[SerializeField] private IconsSO icons;
+	
     [SerializeField] private DialogStartBase dialogStart;
 
     void OnEnable() {
@@ -15,6 +17,7 @@ public class DialogStartSystem : MonoBehaviour
 
     private void SetupDialog() {
         CatalystDialog.Dialog = dialog.LineDialog;
+		CatalystDialog.Icons = icons.IconsCharacter;
         CatalystDialog.Writer = GetComponent<IDialogWriter>();
     }
 }
