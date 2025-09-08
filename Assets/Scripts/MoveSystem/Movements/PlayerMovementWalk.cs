@@ -3,6 +3,7 @@ using UnityEngine;
 public class PlayerMovementWalk : MonoBehaviour, IMovement
 {    
     private float inputDirection;
+	private float runningSpeed;
 
     public void Move(Rigidbody2D rb, MovementProperties movementProperties) {
         rb.velocity = new Vector2(inputDirection * GetSpeed(movementProperties), rb.velocity.y);
@@ -10,6 +11,7 @@ public class PlayerMovementWalk : MonoBehaviour, IMovement
 
     public bool Apply(IButtonInput input) {
         InputDirectionCalculator(input);
+		runningSpeed = MultiplierSpeedCalculator(input);
         return true;
     }
 
@@ -24,6 +26,13 @@ public class PlayerMovementWalk : MonoBehaviour, IMovement
     }
     
     private float GetSpeed(MovementProperties movementProperties) {
-        return movementProperties.Speed * movementProperties.MultiplierSpeed;
+        return movementProperties.Speed * movementProperties.MultiplierSpeed * runningSpeed;
+    }
+	
+	private float MultiplierSpeedCalculator(IButtonInput input) {
+        if(input.InputButton("Run")) {
+            return 1.5f;
+        }
+        return 1f;
     }
 }
