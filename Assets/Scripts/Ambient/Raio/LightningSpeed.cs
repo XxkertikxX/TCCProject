@@ -12,7 +12,7 @@ public class LightningSpeed : MonoBehaviour
     }
 
     private IEnumerator ApplyEffect() {
-        movementProperties.MultiplierSpeed = 2;
+        movementProperties.MultiplierSpeed = 3;
         yield return new WaitForSeconds(Duration);
         movementProperties.MultiplierSpeed = 1;
     }
@@ -20,6 +20,7 @@ public class LightningSpeed : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.CompareTag("Player")) {
             StartCoroutine(ApplyEffect());
+            Destroy(this.gameObject);
         }
     }
 }
