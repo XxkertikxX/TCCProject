@@ -3,6 +3,7 @@ using UnityEngine.Tilemaps;
 public class Parallax : MonoBehaviour
 {
     [Range (0, 1)] [SerializeField] private float parallaxSpeed;
+    [SerializeField] private bool willRepeat = true;
 
     private float inicialPosition;
     private float backgroundLength;
@@ -11,7 +12,8 @@ public class Parallax : MonoBehaviour
     void Start() {
         cam = Camera.main.transform;
         inicialPosition = transform.position.x;
-        backgroundLength = GetComponent<SpriteRenderer>().bounds.size.x;
+        if(GetComponent<SpriteRenderer>() != null) 
+            backgroundLength = GetComponent<SpriteRenderer>().bounds.size.x;
     }
 
     void Update() {
@@ -28,11 +30,16 @@ public class Parallax : MonoBehaviour
     }
 
     private void VerifyIfBackgroundOffScreen() {
-        if (OffScreenBackgroundLeft()) {
-            RepositionBackground(-backgroundLength);
-        }
-        if (OffScreenBackgroundRight()) {
-            RepositionBackground(backgroundLength);
+        if (willRepeat)
+        {
+            if (OffScreenBackgroundLeft())
+            {
+                RepositionBackground(-backgroundLength);
+            }
+            if (OffScreenBackgroundRight())
+            {
+                RepositionBackground(backgroundLength);
+            }
         }
     }
 
