@@ -26,6 +26,7 @@ public class SaveSystem
         newSaveStats.Level = 0;
         newSaveStats.ManaTotal = newSaveStats.ManaBase + newSaveStats.Level;
         newSaveStats.Player = NewVector3(0, 0, 0);
+        Debug.Log("Create New Save");
         return newSaveStats;
     }   
 

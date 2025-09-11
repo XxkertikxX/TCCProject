@@ -450,8 +450,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2084512385}
-        m_TargetAssemblyTypeName: CharacterAttack, GameAssembly
+      - m_Target: {fileID: 1541452071}
+        m_TargetAssemblyTypeName: CharacterClick, GameAssembly
         m_MethodName: ClickCharacter
         m_Mode: 2
         m_Arguments:
@@ -514,8 +514,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Character: {fileID: 11400000, guid: b5347eceb2e3bed4db0c3c4457ff456d, type: 2}
   LifeSystem: {fileID: 0}
-  AttackInTheTurn: 0
   Rhythm: {fileID: 0}
+  TurnsForCanAttack: 0
 --- !u!114 &104922901
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -576,7 +576,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 104922892}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4db9d9f11878ee140a0ce10d5db5321c, type: 3}
+  m_Script: {fileID: 11500000, guid: 760669424f96fbe4db1f9b41fd3fbb63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 0
@@ -584,7 +584,6 @@ MonoBehaviour:
   CenterLine: {fileID: 0}
   directions: []
   note: []
-  Input: []
 --- !u!1 &131075771
 GameObject:
   m_ObjectHideFlags: 0
@@ -1775,8 +1774,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2084512385}
-        m_TargetAssemblyTypeName: CharacterAttack, GameAssembly
+      - m_Target: {fileID: 1541452071}
+        m_TargetAssemblyTypeName: CharacterClick, GameAssembly
         m_MethodName: ClickCharacter
         m_Mode: 2
         m_Arguments:
@@ -1801,8 +1800,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Character: {fileID: 11400000, guid: b20e4541823df544885b0cb064a458c1, type: 2}
   LifeSystem: {fileID: 0}
-  AttackInTheTurn: 0
   Rhythm: {fileID: 0}
+  TurnsForCanAttack: 0
 --- !u!114 &525768453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1863,7 +1862,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 525768443}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4db9d9f11878ee140a0ce10d5db5321c, type: 3}
+  m_Script: {fileID: 11500000, guid: 760669424f96fbe4db1f9b41fd3fbb63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 3
@@ -1874,13 +1873,14 @@ MonoBehaviour:
     Direction: {x: 1, y: 0}
     point: {fileID: 1052789845}
     InstantiatePosition: {fileID: 279782331}
+    Input:
+    - Left2
+    - Right2
+    - Up
+    - Down
+    Index: 0
   note:
   - {fileID: 139820855966566637, guid: bb913d5593b4c394aaea05ec4f9a73f2, type: 3}
-  Input:
-  - Left2
-  - Right2
-  - Down
-  - Up
 --- !u!1 &545771673
 GameObject:
   m_ObjectHideFlags: 0
@@ -2835,8 +2835,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2084512385}
-        m_TargetAssemblyTypeName: CharacterAttack, GameAssembly
+      - m_Target: {fileID: 1541452071}
+        m_TargetAssemblyTypeName: CharacterClick, GameAssembly
         m_MethodName: ClickCharacter
         m_Mode: 2
         m_Arguments:
@@ -2899,8 +2899,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Character: {fileID: 11400000, guid: d2a25ce6e3c802c41920adef9dee2814, type: 2}
   LifeSystem: {fileID: 0}
-  AttackInTheTurn: 0
   Rhythm: {fileID: 0}
+  TurnsForCanAttack: 0
 --- !u!114 &814553644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2961,7 +2961,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 814553637}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4db9d9f11878ee140a0ce10d5db5321c, type: 3}
+  m_Script: {fileID: 11500000, guid: 760669424f96fbe4db1f9b41fd3fbb63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 0
@@ -2969,7 +2969,6 @@ MonoBehaviour:
   CenterLine: {fileID: 0}
   directions: []
   note: []
-  Input: []
 --- !u!1 &817324578
 GameObject:
   m_ObjectHideFlags: 0
@@ -4552,7 +4551,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d489aeae0e07d62469e3c7106e476404, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttons: {fileID: 642683606}
+  systemRhythm: {fileID: 1541452073}
+  boxSkill: {fileID: 642683606}
+--- !u!114 &1541452071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1541452065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2deb4b54998e31543adfd8234c78474e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1541452072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1541452065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 173a2a7f431d0794eae2c4ab9e69a63b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boxSkill: {fileID: 642683606}
+--- !u!114 &1541452073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1541452065}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f9806826eb1a6349aebffd8ca4c09a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1623998551
 GameObject:
   m_ObjectHideFlags: 0
@@ -4628,8 +4665,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textSpeak: {fileID: 1919766849}
-  textName: {fileID: 1189364197}
-  imageNPC: {fileID: 385247539}
 --- !u!114 &1623998556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4643,6 +4678,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog: {fileID: 11400000, guid: 9aa2e222d126dfa4a90f30962212826f, type: 2}
+  icons: {fileID: 11400000, guid: afd934a5e74f69948a4ea1812d44dd89, type: 2}
   dialogStart: {fileID: 1623998557}
 --- !u!114 &1623998557
 MonoBehaviour:
@@ -5813,8 +5849,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2084512385}
-        m_TargetAssemblyTypeName: CharacterAttack, GameAssembly
+      - m_Target: {fileID: 1541452071}
+        m_TargetAssemblyTypeName: CharacterClick, GameAssembly
         m_MethodName: ClickCharacter
         m_Mode: 2
         m_Arguments:
@@ -5877,8 +5913,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Character: {fileID: 11400000, guid: 66f3818663af0ce4fa37e18905f10318, type: 2}
   LifeSystem: {fileID: 0}
-  AttackInTheTurn: 0
   Rhythm: {fileID: 0}
+  TurnsForCanAttack: 0
 --- !u!114 &1993797145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5939,7 +5975,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1993797136}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4db9d9f11878ee140a0ce10d5db5321c, type: 3}
+  m_Script: {fileID: 11500000, guid: 760669424f96fbe4db1f9b41fd3fbb63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 0
@@ -5947,7 +5983,6 @@ MonoBehaviour:
   CenterLine: {fileID: 0}
   directions: []
   note: []
-  Input: []
 --- !u!1 &1999216847
 GameObject:
   m_ObjectHideFlags: 0
@@ -6190,8 +6225,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Character: {fileID: 11400000, guid: 66f3818663af0ce4fa37e18905f10318, type: 2}
   LifeSystem: {fileID: 0}
-  AttackInTheTurn: 0
   Rhythm: {fileID: 0}
+  TurnsForCanAttack: 0
 --- !u!114 &2030265214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6230,6 +6265,7 @@ GameObject:
   - component: {fileID: 2034395752}
   - component: {fileID: 2034395751}
   - component: {fileID: 2034395754}
+  - component: {fileID: 2034395755}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -6336,6 +6372,18 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!114 &2034395755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2034395750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b530f5eff1554ca46a83f4a6f98d2f9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2034996690
 GameObject:
   m_ObjectHideFlags: 0
@@ -6613,7 +6661,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2084512384}
-  - component: {fileID: 2084512385}
   m_Layer: 0
   m_Name: TurnoManager
   m_TagString: Untagged
@@ -6636,19 +6683,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2084512385
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2084512382}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d706b7319b515954ab36b8285b74a4b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  caixaTurnAttack: {fileID: 642683606}
 --- !u!1 &2108152954
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,7 +4,7 @@ public class ManaFactory : MonoBehaviour
 {
     void Awake() {
         SaveSystem saveSystem = new SaveSystem();
-        ResourceSystem resourceSystem = ResourceFactory.CreateResourceSystem(gameObject, saveSystem.Load().ManaTotal);
+        ResourceSystem resourceSystem = ResourceFactory.CreateResourceSystem(gameObject, 10/*saveSystem.Load().ManaTotal*/);
         CreateManaSystem(resourceSystem);
     }
     
