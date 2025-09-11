@@ -8,25 +8,21 @@ public class PlayerCharactersSkills : MonoBehaviour
     private SkillBase skill;
 
     public void PressButtonSkill(int posSkill) {
-        StartCoroutine(StartRhythm(CharacterClick.CharacterAttr.Rhythm, posSkill));
-    }
-
-    private IEnumerator StartRhythm(AttackRhythm rhythm, int posSkill) {
+        AttackRhythm rhythm = CharacterClick.CharacterAttr.Rhythm;
         skill = CharStatus().Skills[posSkill];
         boxSkill.SetActive(false);
         ActiveSystemRhythm(rhythm);
-        yield return rhythm.Attack(skill);
         systemRhythm.enabled = false;
-        UseSkill(rhythm.Damage);
+        UseSkill(rhythm);
     }
 
     private void ActiveSystemRhythm(AttackRhythm rhythm) {
         systemRhythm.enabled = true;
-        systemRhythm.Constructor(rhythm);
+        systemRhythm.Constructor(rhythm.gameObject.GetComponent<IUpdateRhythm>());
     }
 
-    private void UseSkill(float rhythmDamage) {
-        StartCoroutine(skill.Skill(CharStatus().Power, rhythmDamage));
+    private void UseSkill(AttackRhythm rhythm) {
+        StartCoroutine(skill.Skill(CharStatus().Power, rhythm));
         CharacterClick.CharacterAttr.TurnsForCanAttack += 1;
     }
     

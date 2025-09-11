@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class SystemRhythm : MonoBehaviour
 {
-    private AttackRhythm attackRhythm;
+    private IUpdateRhythm updateRhythm;
 
-    public void Constructor(AttackRhythm attackRhythm) {
-        this.attackRhythm = attackRhythm;
+    public void Constructor(IUpdateRhythm updateRhythm) {
+        this.updateRhythm = updateRhythm;
     }
 
     void Update() {
-        attackRhythm.UpdateAttack();
+        updateRhythm.UpdateAttack();
     }
 
     void FixedUpdate() {
-        attackRhythm.FixedUpdateAttack();
+        updateRhythm.FixedUpdateAttack();
     }
 }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NoteRhythm : AttackRhythm
+public class NoteRhythm : AttackRhythm, IUpdateRhythm
 {   
     private RhythmProperties rhythmProperties;
 
@@ -15,13 +15,13 @@ public class NoteRhythm : AttackRhythm
         rhythmProperties = GetComponent<RhythmProperties>();
     }
     
-    public override void UpdateAttack() {
+    public void UpdateAttack() {
         Click();
         DequeueLineOutLimits();
         CloseRhythm();
     }
 
-    public override void FixedUpdateAttack() {
+    public void FixedUpdateAttack() {
         foreach(Queue<NoteMovement> queue in notes){
             foreach(NoteMovement note in queue) {
                 Vector2 direction = note.Direction.Direction;
