@@ -14,32 +14,38 @@ public class SaveSystem
     public SaveStats Load() {
         using (var db = new LiteDatabase(Path())) {
             var col = db.GetCollection<SaveStats>("save_stats");
-            return col.FindOne(Query.All());
+			var save = col.FindOne(Query.EQ("ID", 1));
+			if(save == null) {
+				save = CreateNew();
+				col.Upsert(save);
+			}
+			return save;
         }
     }
 
-    public SaveStats CreateNew() {
-        SaveStats newSaveStats = new SaveStats();
-        newSaveStats.ID = 1;
-        newSaveStats.SceneName = "Tutorial1";
-        newSaveStats.ManaBase = 10;
-        newSaveStats.Level = 0;
-        newSaveStats.ManaTotal = newSaveStats.ManaBase + newSaveStats.Level;
-        newSaveStats.Player = NewVector3(0, 0, 0);
-        Debug.Log("Create New Save");
-        return newSaveStats;
+    private SaveStats CreateNew() {
+        var save = new SaveStats {
+            ID = 1,
+            SceneName = "Tutorial1",
+            ManaBase = 10,
+            Level = 0,
+            Player = NewVector3(0,0,0)
+        };
+		save.ManaTotal = save.ManaBase + save.Level;
+        return save;
     }   
 
-    public SaveStats Update() {
-        SaveStats saveStats = new SaveStats();
-        saveStats.ID = 1;
-        saveStats.SceneName = SceneManager.GetActiveScene().name;
-        saveStats.ManaBase = 10;
-        saveStats.Level = LevelSystem.Level;
-        saveStats.ManaTotal = saveStats.ManaBase + saveStats.Level;
-        Transform player = GameObject.FindGameObjectWithTag("Player").transform;
-        saveStats.Player = NewVector3(player.position.x, player.position.y, player.position.z);
-        return saveStats;
+    private SaveStats Update() {
+		Transform player = GameObject.FindGameObjectWithTag("Player").transform;
+
+		SaveStats save = Load();
+
+		save.SceneName = SceneManager.GetActiveScene().name;
+		save.Level = LevelSystem.Level;
+		save.Player = NewVector3(player.position.x, player.position.y, player.position.z);
+		save.ManaTotal = save.ManaBase + save.Level;
+
+		return save;
     }
 
     private Vector3Stat NewVector3(float x, float y, float z) {
