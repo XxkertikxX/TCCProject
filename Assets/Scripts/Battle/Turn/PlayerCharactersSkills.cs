@@ -26,7 +26,9 @@ public class PlayerCharactersSkills : MonoBehaviour
     }
 
     private IEnumerator UseSkill(AttackRhythm rhythm) {
-        yield return StartCoroutine(skill.Skill(CharStatus().Power, rhythm));
+        yield return skill.TargetType.Targets();
+        yield return rhythm.Attack(skill);
+        skill.Skill(CharStatus().Power, rhythm);
         CharacterClick.CharacterAttr.TurnsForCanAttack += 1;
     }
     

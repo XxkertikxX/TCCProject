@@ -15,5 +15,5 @@ public abstract class SkillBase : ScriptableObject
     public int ManaConsume => manaconsume;
     public int SkillPower => skillpower;
 
-    public abstract IEnumerator Skill(float power, AttackRhythm rhythm);
+    public abstract void Skill(float power, AttackRhythm rhythm);
 }
