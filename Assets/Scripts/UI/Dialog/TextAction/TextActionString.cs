@@ -1,3 +1,3 @@
 public interface TextActionString {
-    public string TextAction();
+    public string[] TextAction();
 }
