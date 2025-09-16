@@ -2,7 +2,5 @@ using UnityEngine;
 
 [CreateAssetMenu(menuName = "new dialog")]
 public class TextsSO : ScriptableObject {
-    [SerializeField] private string[] lineDialog;
-
-    public string[] LineDialog => lineDialog;
+    public string[] LineDialog;
 }
