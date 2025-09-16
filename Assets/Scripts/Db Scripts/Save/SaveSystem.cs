@@ -29,7 +29,7 @@ public class SaveSystem
             SceneName = "Tutorial1",
             ManaBase = 10,
             Level = 0,
-            Player = NewVector3(0,0,0)
+            Player = NewVector3(-4.5,-1.33,0)
         };
 		save.ManaTotal = save.ManaBase + save.Level;
         return save;

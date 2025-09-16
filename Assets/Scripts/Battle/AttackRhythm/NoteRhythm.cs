@@ -34,7 +34,7 @@ public class NoteRhythm : AttackRhythm, IUpdateRhythm
         for(int i = 0; i < rhythmProperties.Index(); i++) {
             notes.Add(new Queue<NoteMovement>());
         }
-
+        Debug.Log("?");
         ActiveRhythm(true);
 
         totalLines = skill.TimesForInvoke;
