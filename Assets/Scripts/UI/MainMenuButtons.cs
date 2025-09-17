@@ -1,7 +1,9 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MainMenuButtons : MonoBehaviour
 {
+    bool isFull;
     public void StartGame() {
 
     }
@@ -16,5 +18,24 @@ public class MainMenuButtons : MonoBehaviour
 
     public void ExitGame() {
         Application.Quit();
+    }
+
+    public void Fullscreen()
+    {
+        isFull = Screen.fullScreen;
+        isFullScreen();
+    }
+
+    public void VisualDemosntration(Image activated)
+    {
+        activated.gameObject.SetActive(isFullScreen());
+    }
+
+    private bool isFullScreen()
+    {
+        if (isFull)
+            return Screen.fullScreen = false;
+        else
+            return Screen.fullScreen = true;
     }
 }
