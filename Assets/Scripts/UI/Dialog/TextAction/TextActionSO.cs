@@ -1,7 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+[CreateAssetMenu(menuName = "TextActionSO")]
 public class TextActionSO : TextActionString
 {
     [SerializeField] TextsSO texts;
