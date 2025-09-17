@@ -4,7 +4,8 @@ using LiteDB;
 
 public class Bindings : MonoBehaviour
 {
-    public Dictionary<string, KeyCode> BindingsDic;
+    private Dictionary<string, KeyCode> bindingsDic;
+    public Dictionary<string, KeyCode> BindingsDic => bindingsDic;
 
     void OnEnable() {
         ChangeBinding.OnBindingChanged += UpdateBindings;
@@ -27,12 +28,12 @@ public class Bindings : MonoBehaviour
     }
 
     private void ResetDictionary() {
-        BindingsDic = new Dictionary<string, KeyCode>();
+        bindingsDic = new Dictionary<string, KeyCode>();
     }
 
     private void UpdateDictionary(LiteDatabase db) {
         foreach (var binding in Col(db).FindAll()) {
-            BindingsDic.Add(binding.KeyName, binding.Key);
+            bindingsDic.Add(binding.KeyName, binding.Key);
         }
     }
 

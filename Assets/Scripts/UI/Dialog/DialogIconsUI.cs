@@ -7,7 +7,9 @@ using UnityEngine.UI;
 public class DialogIconsUI : MonoBehaviour
 {
 	private IDialogWriter dialogWriter;
-	
+
+	[SerializeField] private IconsSO icons;
+
 	[SerializeField] private Image imageCharacter;
 	[SerializeField] private Text textName;
 
@@ -24,8 +26,7 @@ public class DialogIconsUI : MonoBehaviour
 	}
 	
 	private void ApplyIcons(int index) {
-		var icon = CatalystDialog.Icons[index];
-		imageCharacter.sprite = icon.ImageCharacter;
-		textName.text = icon.NameCharacter;
+		imageCharacter.sprite = icons.IconsCharacter[index].ImageCharacter;
+		textName.text = icons.IconsCharacter[index].NameCharacter;
 	}
 }
