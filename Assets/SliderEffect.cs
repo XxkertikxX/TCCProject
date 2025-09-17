@@ -5,20 +5,27 @@ public class SliderEffect : MonoBehaviour
 {
     [SerializeField] private Texture2D pencil;
     [SerializeField] private Texture2D eraser;
-    Slider sliderVolume;
+    [SerializeField] private Text volumeVisual;
+    [SerializeField] private Slider[] sliderVolume;
     private float value;
+    private volumeSlider vSlide;
 
     private void Awake()
     {
-        sliderVolume = GetComponent<Slider>();   
+        sliderVolume = GetComponentsInChildren<Slider>();   
     }
 
-    public void SpriteApparence()
+    public void CursorSpriteApparence()
     {
-        Cursor.SetCursor(WhatSprite(), new Vector2(0.04151125f, 0.04400938f), CursorMode.Auto);
+        Cursor.SetCursor(null, new Vector2(0.04151125f, 0.04400938f), CursorMode.Auto);
     }
 
-    private Texture2D WhatSprite()
+    public void ChangeVolume(volumeSlider slider)
+    {
+        volumeVisual.text = Mathf.Round((getSlider(slider) * 100)).ToString();
+    }
+
+    /*private Texture2D WhatSprite()
     {
         value = sliderVolume.value;
         if (sliderVolume.onValueChanged != null)
@@ -32,5 +39,22 @@ public class SliderEffect : MonoBehaviour
         }
         else
             return null;
+    }*/
+    private float getSlider(volumeSlider slider)
+    {
+        if (vSlide == volumeSlider.geral)
+        {
+            return sliderVolume[0].value;
+        }
+        if(vSlide == volumeSlider.musica)
+        {
+            return sliderVolume[1].value;
+        }
+        return 0;
     }
+}
+public enum volumeSlider 
+{
+    geral,
+    musica
 }
