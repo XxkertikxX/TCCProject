@@ -1,3 +1,5 @@
+using UnityEngine;
+
 public abstract class TextActionString : ScriptableObject {
-    public string[] TextAction();
+    public abstract string[] TextAction();
 }
