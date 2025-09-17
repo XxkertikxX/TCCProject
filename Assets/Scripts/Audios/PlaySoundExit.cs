@@ -4,13 +4,9 @@ using UnityEngine;
 
 public class PlaySoundExit : StateMachineBehaviour
 {
-
     [SerializeField] private SoundTypes sound;
-    [SerializeField, Range(0, 1)] private float volume;
-
-    // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        GameAudioManager.PlaySound(sound, volume);
+        GameAudioManager.PlaySound(sound);
     }
 }

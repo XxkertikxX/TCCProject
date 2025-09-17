@@ -17,11 +17,11 @@ public class GameAudioManager : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
-    public static void PlaySound(SoundTypes audioClips, float volume = 1)
+    public static void PlaySound(SoundTypes audioClips)
     {
         AudioClip[] clips = instance.soundsList[(int)audioClips].Sounds;
         AudioClip randomClip = clips[UnityEngine.Random.Range(0,clips.Length)];
-        instance.audioSource.PlayOneShot(randomClip, volume);
+        instance.audioSource.PlayOneShot(randomClip, SliderEffect.volumeGeneral);
     }
 
 #if UNITY_EDITOR
