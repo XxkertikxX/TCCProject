@@ -328,7 +328,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: ab7a417e0f742e344888acecc7db7e91, type: 3}
+    m_Font: {fileID: 12800000, guid: 4e51de87b6c5edb41b39dd040dd5ccad, type: 3}
     m_FontSize: 26
     m_FontStyle: 0
     m_BestFit: 0
@@ -577,7 +577,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: -43.000015, y: 0}
   m_SizeDelta: {x: -76, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -713,7 +713,6 @@ GameObject:
   m_Component:
   - component: {fileID: 724758603}
   - component: {fileID: 724758605}
-  - component: {fileID: 724758604}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
@@ -743,21 +742,6 @@ RectTransform:
   m_AnchoredPosition: {x: 15.7, y: 3.3}
   m_SizeDelta: {x: 436.58, y: 144.94}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &724758604
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 724758602}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 378d9a3791beefd40ab77f8870f40078, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pencil: {fileID: 2800000, guid: cc5801042f7a8944e8eeb844121bfcfa, type: 3}
-  eraser: {fileID: 2800000, guid: a97bd70350d54b748b2172aab4330e63, type: 3}
-  volumeVisual: {fileID: 171575510}
 --- !u!114 &724758605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -765,7 +749,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 724758602}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
   m_Name: 
@@ -809,7 +793,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 724758604}
+      - m_Target: {fileID: 1527688360}
         m_TargetAssemblyTypeName: SliderEffect, Assembly-CSharp
         m_MethodName: ChangeVolume
         m_Mode: 1
@@ -821,7 +805,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 724758604}
+      - m_Target: {fileID: 1527688360}
         m_TargetAssemblyTypeName: SliderEffect, Assembly-CSharp
         m_MethodName: CursorSpriteApparence
         m_Mode: 1
@@ -867,7 +851,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 62.86, y: 42.86}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1593,6 +1577,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1527688359}
+  - component: {fileID: 1527688360}
   m_Layer: 5
   m_Name: VolumeGeral
   m_TagString: Untagged
@@ -1623,6 +1608,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1527688360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1527688358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 378d9a3791beefd40ab77f8870f40078, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pencil: {fileID: 2800000, guid: cc5801042f7a8944e8eeb844121bfcfa, type: 3}
+  eraser: {fileID: 2800000, guid: a97bd70350d54b748b2172aab4330e63, type: 3}
+  volumeVisual: {fileID: 171575510}
+  sliderVolume: []
 --- !u!1 &1581873882
 GameObject:
   m_ObjectHideFlags: 0
