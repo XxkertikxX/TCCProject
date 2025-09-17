@@ -5,7 +5,7 @@ public class SliderEffect : MonoBehaviour
 {
     [SerializeField] private Texture2D pencil;
     [SerializeField] private Texture2D eraser;
-    [SerializeField] private Text volumeVisual;
+    [SerializeField] private Text[] volumeVisual;
     [SerializeField] private Slider[] sliderVolume;
     private float value;
     private volumeSlider vSlide;
@@ -15,14 +15,14 @@ public class SliderEffect : MonoBehaviour
         sliderVolume = GetComponentsInChildren<Slider>();   
     }
 
-    public void CursorSpriteApparence()
+    public void CursorSpriteApparence() //arrumar volume e mouse
     {
         Cursor.SetCursor(null, new Vector2(0.04151125f, 0.04400938f), CursorMode.Auto);
     }
 
-    public void ChangeVolume(volumeSlider slider)
+    public void ChangeVolume()
     {
-        volumeVisual.text = Mathf.Round((getSlider(slider) * 100)).ToString();
+        //volumeVisual.text = Mathf.Round((0.5f * 100)).ToString();
     }
 
     /*private Texture2D WhatSprite()
@@ -40,7 +40,7 @@ public class SliderEffect : MonoBehaviour
         else
             return null;
     }*/
-    private float getSlider(volumeSlider slider)
+    private float getSliderValue(volumeSlider slider)
     {
         if (vSlide == volumeSlider.geral)
         {
