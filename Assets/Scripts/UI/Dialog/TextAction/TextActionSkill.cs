@@ -1,3 +1,6 @@
+using UnityEngine;
+
+[CreateAssetMenu(menuName = "TextActionSkill")]
 public class TextActionSkill : TextActionString {
     public override string[] TextAction() {
         string[] text = {$"{TextBattleData.Character} usou {TextBattleData.SkillName}"};

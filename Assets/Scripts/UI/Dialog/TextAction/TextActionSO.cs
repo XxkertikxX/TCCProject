@@ -1,9 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class TextActionSO : TextActionString
-{
+[CreateAssetMenu(menuName = "TextActionSO")]
+public class TextActionSO : TextActionString {
     [SerializeField] TextsSO texts;
 
     public override string[] TextAction() {
