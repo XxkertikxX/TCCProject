@@ -4,6 +4,7 @@ using UnityEngine;
 public class DialogStartSystem : MonoBehaviour
 {	
     [SerializeField] private DialogStartBase dialogStart;
+    [SerializeField] private TextActionString textAction;
 
     void OnEnable() {
         dialogStart.OnDialogOpen += SetupDialog;
@@ -15,7 +16,7 @@ public class DialogStartSystem : MonoBehaviour
 
     private void SetupDialog() {
         IDialogWriter dialogWriter = GetComponent<IDialogWriter>();
-        string[] texts = GetComponent<TextActionString>().TextAction();
+        string[] texts = textAction.TextAction();
         dialogWriter.Constructor(texts);
         dialogWriter.StartLine();
     }

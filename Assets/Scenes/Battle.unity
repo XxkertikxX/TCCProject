@@ -565,8 +565,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52970d99caa048542aa420b08e79c05d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  valueText: {fileID: 0}
-  valueSlider: {fileID: 0}
+  valueText: {fileID: 1743475826}
+  valueSlider: {fileID: 247390343}
 --- !u!114 &104922906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1058,7 +1058,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 392405561}
   m_HandleRect: {fileID: 0}
@@ -1256,15 +1256,15 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 865131677}
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 100
+  m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 100
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1348,7 +1348,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 513050993}
   m_HandleRect: {fileID: 0}
@@ -2081,8 +2081,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52970d99caa048542aa420b08e79c05d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  valueText: {fileID: 0}
-  valueSlider: {fileID: 0}
+  valueText: {fileID: 1284788955}
+  valueSlider: {fileID: 340634486}
 --- !u!114 &525768458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2191,7 +2191,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 172101859}
   m_HandleRect: {fileID: 0}
@@ -3027,7 +3027,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 304005588}
   m_HandleRect: {fileID: 0}
@@ -3324,8 +3324,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52970d99caa048542aa420b08e79c05d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  valueText: {fileID: 0}
-  valueSlider: {fileID: 0}
+  valueText: {fileID: 684241896}
+  valueSlider: {fileID: 556336606}
 --- !u!114 &814553649
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5250,6 +5250,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogStart: {fileID: 1623998557}
+  textAction: {fileID: 11400000, guid: c5409f1d93ab5794f9a887ae1f9565ea, type: 2}
 --- !u!114 &1623998557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6130,8 +6131,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52970d99caa048542aa420b08e79c05d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  valueText: {fileID: 1743475826}
-  valueSlider: {fileID: 247390343}
+  valueText: {fileID: 1419195653}
+  valueSlider: {fileID: 793644272}
 --- !u!114 &1993797150
 MonoBehaviour:
   m_ObjectHideFlags: 0
