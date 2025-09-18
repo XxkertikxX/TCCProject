@@ -21,7 +21,20 @@ public class GameAudioManager : MonoBehaviour
     {
         AudioClip[] clips = instance.soundsList[(int)audioClips].Sounds;
         AudioClip randomClip = clips[UnityEngine.Random.Range(0,clips.Length)];
-        instance.audioSource.PlayOneShot(randomClip, SliderEffect.volumeGeneral);
+        if(audioClips != SoundTypes.Music)
+        instance.audioSource.PlayOneShot(randomClip, getTypeOfVolume(audioClips));
+    }
+
+    private static float getTypeOfVolume(SoundTypes s)
+    {
+        if(s != SoundTypes.Music)
+        {
+            return SliderEffect.volumeGeneral;
+        }
+        else
+        {
+            return SliderEffect.volumeMusic;
+        }
     }
 
 #if UNITY_EDITOR

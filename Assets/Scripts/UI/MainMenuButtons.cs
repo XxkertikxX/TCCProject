@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MainMenuButtons : MonoBehaviour
@@ -24,6 +25,16 @@ public class MainMenuButtons : MonoBehaviour
     {
         isFull = Screen.fullScreen;
         isFullScreen();
+    }
+
+    public void LoadMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+    
+    public void PlayButtonSound()
+    {
+        GameAudioManager.PlaySound(SoundTypes.ClickButton);
     }
 
     public void VisualDemosntration(Image activated)

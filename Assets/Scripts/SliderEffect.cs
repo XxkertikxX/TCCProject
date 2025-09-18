@@ -1,54 +1,80 @@
+using System;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class SliderEffect : MonoBehaviour
 {
-    [SerializeField] private Texture2D pencil;
-    [SerializeField] private Texture2D eraser;
+    [Header("Class return")]
+    [SerializeField] private ReturnSpriteAndHotspot[] spritesAndHotspots;
+
+    [Header("UI")]
     [SerializeField] private Text[] volumeVisual;
     [SerializeField] private Slider[] sliderVolume;
+
     public static float volumeGeneral;
-    private float value;
+    public static float volumeMusic;
+    private float[] frontValue = new float[2];
+    private float[] backValue = new float[2];
+
+    private void Start()
+    {
+        backValue[0] = frontValue[0];
+        backValue[1] = frontValue[1];
+    }
 
     private void Awake()
     {
         sliderVolume = GetComponentsInChildren<Slider>();
         volumeVisual = GetComponentsInChildren<Text>();
+        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
     }
 
-    public void CursorSpriteApparence(int i) //arrumar volume e mouse
+    public void CursorSpriteApparence(int i)
     {
-        Texture2D mouseTex = pencil;//WhatSprite(i); tem que ver essa coisa
-        Vector2 hotspot = Hotspot(mouseTex);
+        Texture2D mouseTex = WhatSprite(i).texture;
+        Vector2 hotspot = WhatSprite(i).hotspot;
         Cursor.SetCursor(mouseTex, hotspot, CursorMode.Auto);
     }
 
-    public void ChangeVolume(int i)
+    public void ChangeVolume()
     {
-        volumeGeneral = Mathf.Round((getValue(i) * 100));
-        volumeVisual[i].text = volumeGeneral.ToString();
+        volumeGeneral = sliderVolume[0].value;
+        volumeMusic = sliderVolume[1].value;
+        volumeVisual[0].text = Mathf.Round((volumeGeneral * 100)).ToString();
+        volumeVisual[1].text = Mathf.Round((volumeMusic * 100)).ToString();
     }
 
-    private Texture2D WhatSprite(int index)
+    public void PointBackToNormal()
+    {
+        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
+    }
+    private ReturnSpriteAndHotspot WhatSprite(int index)
     {
         Slider sliderVol = sliderVolume[index];
-        value = sliderVol.value;
-        if (value > sliderVol.value)
-            return pencil;
-        if (value < sliderVol.value)
-            return eraser;
-        else
-            return null;
+        frontValue[index] = sliderVol.value;
+        if (frontValue[index] > backValue[index])
+        {
+            backValue[index] = sliderVol.value;
+            return spritesAndHotspots[0];
+        }
+        if (frontValue[index] < backValue[index])
+        {
+            backValue[index] = sliderVol.value;
+            return spritesAndHotspots[1];
+        }
+        return spritesAndHotspots[1];
     }
+}
 
-    private Vector2 Hotspot(Texture tex)
+[Serializable]
+public class ReturnSpriteAndHotspot
+{
+    public Texture2D texture;
+    public Vector2 hotspot;
+    public ReturnSpriteAndHotspot(Texture2D t, Vector2 h)
     {
-        Debug.Log("Porque?");
-        return new Vector2(tex.width, tex.height);
+        t = texture;
+        h = hotspot;
     }
-
-    private float getValue(int index)
-    {
-        return sliderVolume[index].value;
-    }
-} 
+}
