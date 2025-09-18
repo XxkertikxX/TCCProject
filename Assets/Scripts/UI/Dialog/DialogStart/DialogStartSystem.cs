@@ -1,6 +1,10 @@
 
 using UnityEngine;
 
+[RequireComponent(typeof(DialogStartBase))]
+[RequireComponent(typeof(ApplyDialogSetups))]
+[RequireComponent(typeof(IDialogWriter))]
+
 public class DialogStartSystem : MonoBehaviour
 {	
     [SerializeField] private DialogStartBase dialogStart;

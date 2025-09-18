@@ -1,7 +1,7 @@
 using UnityEngine;
 using System;
 
-public class DialogStartBase : MonoBehaviour {
+public abstract class DialogStartBase : MonoBehaviour {
     public event Action OnDialogOpen;
 
     public void StartDialog() {
