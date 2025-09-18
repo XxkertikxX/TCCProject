@@ -11,6 +11,9 @@ public class PlayerMovementSystem : MonoBehaviour
     private Rigidbody2D rb;
     private MovementProperties movementProperties;
 
+    //vai ser tirado depois
+    public Animator anim;
+
     void OnDisable() {
         rb.velocity = Vector2.zero;
     }
@@ -20,6 +23,7 @@ public class PlayerMovementSystem : MonoBehaviour
         movements = GetComponents<IMovement>().ToList();
         mustMovement = Enumerable.Repeat(false, movements.Count).ToList();
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponentInChildren<Animator>();
     }
 
     void Update() {
@@ -34,5 +38,6 @@ public class PlayerMovementSystem : MonoBehaviour
                 movements[i].Move(rb, movementProperties);
             }
         }
+        anim.SetFloat("teste",rb.velocity.x);
     }
 }

@@ -270,7 +270,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 10
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -407,6 +407,7 @@ GameObject:
   - component: {fileID: 1093065695484039121}
   - component: {fileID: 2016878258728642897}
   - component: {fileID: 36487779463606492}
+  - component: {fileID: 7943487571450510262}
   m_Layer: 0
   m_Name: Player(Certo)
   m_TagString: Player
@@ -460,7 +461,7 @@ MonoBehaviour:
   ground:
     serializedVersion: 2
     m_Bits: 8
-  maxHoldTime: 0.3
+  maxHoldTime: 0.2
 --- !u!114 &4342057391610991215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -500,7 +501,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2.5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -522,6 +523,19 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1, y: 2.6}
   m_Direction: 0
+--- !u!114 &7943487571450510262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4041607571191834639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccd2f4f52170da84888751bedc86ae6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerfront: {fileID: 4041607571191834638}
 --- !u!1 &4041607572145054287
 GameObject:
   m_ObjectHideFlags: 0
