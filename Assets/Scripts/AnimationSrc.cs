@@ -5,22 +5,31 @@ using UnityEngine;
 public class AnimationSrc : MonoBehaviour
 {
     private Rigidbody2D rb;
-    private Animator anim;
+    private static Animator anim;
     private SpriteRenderer render;
     private bool lastDirection;
+    private PlayerMovementJump jumpSrc;
 
     private void Awake()
     {
         anim = GetComponent<Animator>();
         render = GetComponent<SpriteRenderer>();
         rb = GetComponentInParent<Rigidbody2D>();
+        jumpSrc = GetComponentInParent<PlayerMovementJump>();
     }
     
     public void UpdateAnimation()
     {
-        anim.SetFloat("X", v().x);
-        anim.SetFloat ("Y", v().y);
+        anim.SetFloat("X", Mathf.Round(v().x));
+        anim.SetFloat ("Y", Mathf.Round(v().y));
+        anim.SetBool("OnAir", jumpSrc._holdingJump);
+        anim.SetBool("Grounded", jumpSrc.grounded());
         render.flipX = flipped();
+    }
+
+    public static void Play(string animName)
+    {
+        anim.Play(animName);
     }
 
     private Vector2 v()

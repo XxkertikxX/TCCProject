@@ -13,8 +13,11 @@ public class PlayerMovementJump : MonoBehaviour, IMovement
     private float holdTimeRemaining = 0f;
     private bool holdingJump = false;
 
+    [HideInInspector] public bool _holdingJump { get { return holdingJump; } set { holdingJump = value; } }
+
     public void Move(Rigidbody2D rb, MovementProperties movementProperties)
     {
+        //AnimationSrc.Play("Jumping");
         if (requestJump)
         {
             float jumpVelocity = movementProperties.JumpForce * movementProperties.MultiplierJumpForce;
@@ -66,5 +69,10 @@ public class PlayerMovementJump : MonoBehaviour, IMovement
         if (isGrounded && requestJump) return true;
         if (isJumping && holdingJump && holdTimeRemaining > 0f) return true;
         return false;
+    }
+
+    public bool grounded()
+    {
+        return Physics2D.Raycast(groundCheck.position, Vector2.down, 0.1f, ground);
     }
 }
