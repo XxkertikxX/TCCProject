@@ -17,7 +17,6 @@ public class PlayerMovementJump : MonoBehaviour, IMovement
 
     public void Move(Rigidbody2D rb, MovementProperties movementProperties)
     {
-        //AnimationSrc.Play("Jumping");
         if (requestJump)
         {
             float jumpVelocity = movementProperties.JumpForce * movementProperties.MultiplierJumpForce;
@@ -32,7 +31,7 @@ public class PlayerMovementJump : MonoBehaviour, IMovement
         {
             float jumpVelocity = movementProperties.JumpForce * movementProperties.MultiplierJumpForce;
             rb.velocity = new Vector2(rb.velocity.x, jumpVelocity);
-            holdTimeRemaining -= Time.fixedDeltaTime;
+            holdTimeRemaining -= Time.time;
         }
 
         if (rb.velocity.y <= 0f && isJumping)
