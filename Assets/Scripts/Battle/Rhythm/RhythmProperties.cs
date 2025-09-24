@@ -6,7 +6,6 @@ public class RhythmProperties : MonoBehaviour
     public float Speed;
 
     public GameObject Rhythm;
-    public Transform CenterLine;
     [SerializeField] private List<Directions> directions;
     
     [SerializeField] private List<GameObject> note;
@@ -31,6 +30,7 @@ public class Directions {
     public CheckerPosition Checker;
 
     public Vector2 Direction;
+	public Transform CenterLine;
     public GameObject point;
     public Transform InstantiatePosition;
 

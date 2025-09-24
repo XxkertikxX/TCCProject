@@ -10,8 +10,8 @@ public class NoteMovement : MonoBehaviour
         Rb.ResetGravityScale();
     }
 
-    public float PerDamage(Transform center, float AreaSize) {
-        float distance = Mathf.Abs(Direction.Checker.Axis(transform) - Direction.Checker.Axis(center));
+    public float PerDamage(float AreaSize) {
+        float distance = Mathf.Abs(Direction.Checker.Axis(transform) - Direction.Checker.Axis(Direction.CenterLine));
         float centerDistance = (distance / (AreaSize / 2f));
         float damage = 0.7f + (1 - centerDistance * 0.3f);
         return damage;

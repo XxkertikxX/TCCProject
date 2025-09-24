@@ -5,6 +5,7 @@ public class PlayerCharactersSkills : MonoBehaviour
 {
     [SerializeField] private SystemRhythm systemRhythm;
     [SerializeField] private GameObject boxSkill;
+	[SerializeField] private GameObject painel;
     private SkillBase skill;
 
     public void PressButtonSkill(int posSkill) {
@@ -27,7 +28,9 @@ public class PlayerCharactersSkills : MonoBehaviour
 
     private IEnumerator UseSkill(AttackRhythm rhythm) {
         yield return skill.TargetType.Targets();
+		painel.SetActive(true);
         yield return rhythm.Attack(skill);
+		painel.SetActive(false);
         skill.Skill(CharStatus().Power, rhythm);
         CharacterClick.CharacterAttr.TurnsForCanAttack += 1;
     }
