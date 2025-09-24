@@ -31,7 +31,7 @@ public class PlayerMovementJump : MonoBehaviour, IMovement
         {
             float jumpVelocity = movementProperties.JumpForce * movementProperties.MultiplierJumpForce;
             rb.velocity = new Vector2(rb.velocity.x, jumpVelocity);
-            holdTimeRemaining -= Time.time;
+            holdTimeRemaining -= Time.fixedDeltaTime;
         }
 
         if (rb.velocity.y <= 0f && isJumping)
