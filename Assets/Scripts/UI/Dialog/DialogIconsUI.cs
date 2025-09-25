@@ -2,10 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 [RequireComponent(typeof(IDialogWriter))]
 public class DialogIconsUI : MonoBehaviour
 {
+	public event Action<string> OnApplyIcons;
+	
 	private IDialogWriter dialogWriter;
 
 	[SerializeField] private IconsSO icons;
@@ -26,7 +29,9 @@ public class DialogIconsUI : MonoBehaviour
 	}
 	
 	private void ApplyIcons(int index) {
+		string nameCharacter = icons.IconsCharacter[index].NameCharacter;
 		imageCharacter.sprite = icons.IconsCharacter[index].ImageCharacter;
-		textName.text = icons.IconsCharacter[index].NameCharacter;
+		textName.text = nameCharacter;
+		OnApplyIcons?.Invoke(nameCharacter);
 	}
 }
