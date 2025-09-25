@@ -5,15 +5,12 @@ using UnityEngine.UI;
 public class MainMenuButtons : MonoBehaviour
 {
     bool isFull;
-    public void StartGame() {
-
-    }
-
     public void OpenMenu(GameObject menu) {
         menu.SetActive(true);
     }
 
     public void CloseMenu(GameObject menu) {
+        Time.timeScale = 1.0f;
         menu.SetActive(false);
     }
 

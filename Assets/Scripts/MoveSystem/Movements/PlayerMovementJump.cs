@@ -13,8 +13,6 @@ public class PlayerMovementJump : MonoBehaviour, IMovement
     private float holdTimeRemaining = 0f;
     private bool holdingJump = false;
 
-    [HideInInspector] public bool _holdingJump { get { return holdingJump; } set { holdingJump = value; } }
-
     public void Move(Rigidbody2D rb, MovementProperties movementProperties)
     {
         if (requestJump)

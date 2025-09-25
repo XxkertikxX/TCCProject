@@ -8,28 +8,34 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 83b51279e50d0a24f9eb77d964f3b9dd
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Tutorial/Tutorial1.unity
     guid: be9714776b3768a4fa179abaa5953e35
   - enabled: 1
-    path: Assets/Scenes/Tutorial/Tutorial3.unity
-    guid: 5debd31eb5b94f24d8024a4cb5a47ced
-  - enabled: 0
-    path: Assets/Scenes/Tutorial/Tutorial4.unity
-    guid: 003822eca9b7cb54087f1e313f19b3af
-  - enabled: 1
     path: Assets/Scenes/Battle.unity
     guid: be42d750e3ae8a242ba58108ab39e3be
+  - enabled: 1
+    path: Assets/Scenes/Tutorial/Tutorial2.unity
+    guid: 889ef7a4d7839ec41a82a814543e1370
+  - enabled: 1
+    path: Assets/Scenes/Tutorial/Tutorial3.unity
+    guid: 003822eca9b7cb54087f1e313f19b3af
+  - enabled: 1
+    path: Assets/Scenes/Fase1_Vento/Vento1.unity
+    guid: b4e983583b0dc1d46ac3adffb451ed21
+  - enabled: 1
+    path: Assets/Scenes/Fase1_Vento/Vento2.unity
+    guid: f8ae44ec20ece27428fe9fdc1836b6c4
+  - enabled: 1
+    path: Assets/Scenes/Fase1_Vento/Vento3.unity
+    guid: 8c6fa241aa2b4d448ad5ef6b2fb864cd
+  - enabled: 1
+    path: Assets/Scenes/Fase1_Vento/Vento4.unity
+    guid: 6b7f79eee0a7a464b9452c8d047021ba
   - enabled: 1
     path: Assets/Scenes/Tests.unity
     guid: 7d22361141c6d53469dbe1014b43873b
   - enabled: 1
     path: Assets/Scenes/TestsRuntime.unity
     guid: c87afa3a15e5e4b43ac9ab987c086fbf
-  - enabled: 1
-    path: Assets/Scenes/Testes/ZSceneTest.unity
-    guid: 107e18fac989ae245864538914034342
   m_configObjects: {}

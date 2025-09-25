@@ -5,10 +5,11 @@ using UnityEngine;
 public class AnimationSrc : MonoBehaviour
 {
     private Rigidbody2D rb;
-    private static Animator anim;
+    private Animator anim;
     private SpriteRenderer render;
     private bool lastDirection;
     private PlayerMovementJump jumpSrc;
+    public static AnimationSrc instance;
 
     private void Awake()
     {
@@ -16,20 +17,15 @@ public class AnimationSrc : MonoBehaviour
         render = GetComponent<SpriteRenderer>();
         rb = GetComponentInParent<Rigidbody2D>();
         jumpSrc = GetComponentInParent<PlayerMovementJump>();
+        instance = this;
     }
     
-    public void UpdateAnimation()
+    public void UpdateAnimation() //posso tentar fazer a animação mudar de velocidade de acordo com uma força opressora ou algo similar, etc
     {
-        anim.SetFloat("X", Mathf.Round(v().x));
-        anim.SetFloat ("Y", Mathf.Round(v().y));
-        anim.SetBool("OnAir", jumpSrc._holdingJump);
+        anim.SetFloat("Direction", Mathf.Round(v().normalized.x));
+        anim.SetFloat ("Velocity", Mathf.Round(v().x));
         anim.SetBool("Grounded", jumpSrc.grounded());
         render.flipX = flipped();
-    }
-
-    public static void Play(string animName)
-    {
-        anim.Play(animName);
     }
 
     private Vector2 v()
@@ -39,12 +35,12 @@ public class AnimationSrc : MonoBehaviour
 
     private bool flipped()
     {
-        if(v().x > 0)
+        if (v().normalized.x > 0)
         {
             lastDirection = false;
             return false;
         }
-        if(v().x < 0)  
+        if (v().normalized.x < 0)
         {
             lastDirection = true;
             return true;

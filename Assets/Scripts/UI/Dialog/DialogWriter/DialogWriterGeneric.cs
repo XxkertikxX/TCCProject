@@ -18,7 +18,7 @@ public class DialogWriterGeneric : MonoBehaviour, IDialogWriter
 
     void Update() {
         if (!inDialog) return;
-        
+
         if (InputCatalyst.input.InputButtonDown("Skip")) {
             ContinueDialog();
         }
