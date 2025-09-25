@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dd0bfdf66b4114439ae51af112a08cf, type: 3}
+  m_Name: LioraFang
+  m_EditorClassIdentifier: 
+  lineDialog:
+  - AH! bruxos de outros reinos?! Que surpresa maravilhosa! sou feng e vcs? Sou Feng
+    uma das bruxas do vento.
+  - "Ol\xE1...? Como assim momento ruim?"
+  - "Ah ent\xE3o... nosso reino ta meio...tipo...fora de controle agora sabe?"
+  - "Sei n\xE3o..."
+  - "* suspiro * ent\xE3o... tem uma criatura voando por ai e dando uma danificada
+    no nossos cristais! ta fazendo uma ventania danada por aqui"
+  - "U\xE9? Mas voc\xEAs n\xE3o conseguem controlar?"
+  - "Estamos tentando! Estou tocando minha flauta a 5 horas! Mas esse bicho n\xE3o
+    para e se eu parar a ventania vai levar minha cidade pros ares!"
+  - "...se n\xF3s resolvermos essa situa\xE7\xE3o vc acha que pode nos dar um cristal
+    para darmos ao rei dos humanos?"
+  - "odeio ele...mas \xE9 um trato justo eu suponho...FEITO! Por favor r\xE1pido
+    to ficando cansada j\xE1..."
