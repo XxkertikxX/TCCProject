@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 401261928}
   - component: {fileID: 401261927}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: DialogDependences
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -937,7 +937,7 @@ GameObject:
   - component: {fileID: 2105013489}
   - component: {fileID: 2105013487}
   m_Layer: 0
-  m_Name: Teste
+  m_Name: Scripts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
