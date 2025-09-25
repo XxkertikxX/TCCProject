@@ -6075,6 +6075,7 @@ GameObject:
   - component: {fileID: 1623998555}
   - component: {fileID: 1623998553}
   - component: {fileID: 1623998559}
+  - component: {fileID: 1623998560}
   m_Layer: 0
   m_Name: Dialog
   m_TagString: Untagged
@@ -6135,7 +6136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogStart: {fileID: 1623998557}
-  textAction: {fileID: 11400000, guid: c5409f1d93ab5794f9a887ae1f9565ea, type: 2}
+  textAction: {fileID: 11400000, guid: 84531db14cf4e544fb9ee12464849078, type: 2}
 --- !u!114 &1623998557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6174,6 +6175,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   screenDialog: {fileID: 17717848}
   screenHUD: {fileID: 2034996690}
+--- !u!114 &1623998560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1623998551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff93ae1c6c6ddc9468c144a7e8b7d077, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  icons: {fileID: 11400000, guid: 2555829619eed3f4f9250d6073127e75, type: 2}
+  imageCharacter: {fileID: 385247539}
+  textName: {fileID: 1189364197}
 --- !u!1 &1683271417
 GameObject:
   m_ObjectHideFlags: 0

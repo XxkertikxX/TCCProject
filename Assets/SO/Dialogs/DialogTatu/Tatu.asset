@@ -12,4 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dd0bfdf66b4114439ae51af112a08cf, type: 3}
   m_Name: Tatu
   m_EditorClassIdentifier: 
-  lineDialog: []
+  lineDialog:
+  - "O que que \xE9 isso?\n"
+  - "\xC9 um tatu!"
+  - 'Isso eu sei mas pq ele ta...assim?
+
+'
+  - 'Eu n sei mas parece q ele vai...
+
+'
+  - ATACAR?!

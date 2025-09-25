@@ -12,4 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41424921678969141b748fe6b011f982, type: 3}
   m_Name: Tatu
   m_EditorClassIdentifier: 
-  iconsCharacter: []
+  iconsCharacter:
+  - NameCharacter: Amber
+    ImageCharacter: {fileID: 21300000, guid: d6cb4534d843ce04ea6e0d6f7cc71b13, type: 3}
+  - NameCharacter: Clementine
+    ImageCharacter: {fileID: 21300000, guid: cffb41383361da6429405226a9c089c6, type: 3}
+  - NameCharacter: Amber
+    ImageCharacter: {fileID: 21300000, guid: d6cb4534d843ce04ea6e0d6f7cc71b13, type: 3}
+  - NameCharacter: Alon
+    ImageCharacter: {fileID: 21300000, guid: 4011f1e8bf2bb3a4fb38b48954f68192, type: 3}
+  - NameCharacter: Liora
+    ImageCharacter: {fileID: 21300000, guid: e427647b81d65b649a01f64c74f372de, type: 3}

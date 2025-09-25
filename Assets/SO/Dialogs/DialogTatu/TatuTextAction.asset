@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c36a8d401b472a94683fa0713aa6cb83, type: 3}
   m_Name: TatuTextAction
   m_EditorClassIdentifier: 
-  texts: {fileID: 0}
+  texts: {fileID: 11400000, guid: 63c860ba71163a543875c5a53fdd6241, type: 2}
