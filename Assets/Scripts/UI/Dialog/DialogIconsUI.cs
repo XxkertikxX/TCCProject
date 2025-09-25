@@ -13,7 +13,7 @@ public class DialogIconsUI : MonoBehaviour
 	[SerializeField] private Image imageCharacter;
 	[SerializeField] private Text textName;
 
-	void Start() {
+	void Awake() {
 		dialogWriter = GetComponent<IDialogWriter>();
 	}
 	
