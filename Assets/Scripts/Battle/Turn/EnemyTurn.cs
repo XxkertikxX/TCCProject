@@ -17,7 +17,6 @@ public class EnemyTurn : MonoBehaviour
     }
     
     void OnDestroy(){
-        EnemyAnim.PlayTrigger("Died");
         SceneManager.LoadScene(scene);
     }
     
