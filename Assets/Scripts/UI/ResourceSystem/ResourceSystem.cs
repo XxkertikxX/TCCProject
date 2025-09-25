@@ -22,12 +22,15 @@ public class ResourceSystem : MonoBehaviour
     public void ModifyValue(float valueChange) {
         actualValue = Mathf.Clamp(actualValue + valueChange, 0, maxValue);
         valueUI.UpdateUI(actualValue, maxValue);
-
         if (actualValue == 0) {
             OnResourceEmpty?.Invoke();
         }
     }
 
+	public float ActualValue() {
+		return actualValue;
+	}
+	
     private void PullComponents() {
         valueUI = GetComponent<IDinamicUI>();
     }

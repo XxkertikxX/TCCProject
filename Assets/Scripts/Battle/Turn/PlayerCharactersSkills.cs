@@ -9,15 +9,18 @@ public class PlayerCharactersSkills : MonoBehaviour
     private SkillBase skill;
 
     public void PressButtonSkill(int posSkill) {
-        StartCoroutine(ActiveSkill(posSkill));
+		float manaConsume = CharStatus().Skills[posSkill].ManaConsume;
+		if(manaConsume <= ManaSystem.Mp.ActualValue()) {
+			StartCoroutine(ActiveSkill(posSkill, manaConsume));
+		}
     }
 
-    private IEnumerator ActiveSkill(int posSkill) {
+    private IEnumerator ActiveSkill(int posSkill, float manaConsume) {
         AttackRhythm rhythm = CharacterClick.CharacterAttr.Rhythm;
         skill = CharStatus().Skills[posSkill];
         boxSkill.SetActive(false);
         ActiveSystemRhythm(rhythm);
-        yield return UseSkill(rhythm);
+        yield return UseSkill(rhythm, manaConsume);
         systemRhythm.enabled = false;
     }
 
@@ -25,14 +28,15 @@ public class PlayerCharactersSkills : MonoBehaviour
         systemRhythm.enabled = true;
         systemRhythm.Constructor(rhythm.gameObject.GetComponent<IUpdateRhythm>());
     }
-
-    private IEnumerator UseSkill(AttackRhythm rhythm) {
+	
+    private IEnumerator UseSkill(AttackRhythm rhythm, float manaConsume) {
         yield return skill.TargetType.Targets();
 		painel.SetActive(true);
         yield return rhythm.Attack(skill);
 		painel.SetActive(false);
         skill.Skill(CharStatus().Power, rhythm);
         CharacterClick.CharacterAttr.TurnsForCanAttack += 1;
+		ManaSystem.Mp.ModifyValue(-manaConsume);
     }
     
     private StatusCharacters CharStatus() {

@@ -1,5 +1,8 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections.Generic;
+using System.Collections;
+using System.Linq;
 
 public class EnemyTurn : MonoBehaviour
 {
@@ -7,8 +10,8 @@ public class EnemyTurn : MonoBehaviour
     [SerializeField] private string scene;
 
     void Update() {
-        if (AllCharactersPlay()) {
-            EnemyAttack();
+        if (AllCharactersPlay() || LowestManaConsume() > ManaSystem.Mp.ActualValue()) {
+            StartCoroutine(EnemyAttack());
             ResetTurn();
         }
     }
@@ -17,9 +20,11 @@ public class EnemyTurn : MonoBehaviour
         SceneManager.LoadScene(scene);
     }
     
-    private void EnemyAttack() {
+    private IEnumerator EnemyAttack() {
         int randomSkill = Random.Range(0, enemy.Skills.Count);
-        enemy.Skills[randomSkill].Skill(enemy.Power, new EnemyRhythm());
+		var skill = enemy.Skills[randomSkill];
+		yield return skill.TargetType.Targets();
+        skill.Skill(enemy.Power, GetComponent<AttackRhythm>());
         GameAudioManager.PlaySound(SoundTypes.EnemyAttack);
     }
 
@@ -35,11 +40,27 @@ public class EnemyTurn : MonoBehaviour
 
     private void ResetTurn() {
         foreach (var character in Characters()) {
-            character.GetComponent<CharacterAttributes>().TurnsForCanAttack -= 1;
+			var characterTurns = character.GetComponent<CharacterAttributes>();
+			if(characterTurns.TurnsForCanAttack > 0) {
+				characterTurns.TurnsForCanAttack -= 1;
+			}
         }
+		
+		ManaSystem.Mp.ModifyValue(5);
     }
 
     private GameObject[] Characters() {
         return GameObject.FindGameObjectsWithTag("Character");
     }
+	
+	private float LowestManaConsume() {
+		List<float> manaConsume = new List<float>();
+		
+		foreach(var character in Characters()) {
+			foreach(var skill in character.GetComponent<CharacterAttributes>().Character.Skills) {
+				manaConsume.Add(skill.ManaConsume);
+			}
+		}
+		return manaConsume.Min();
+	}
 }

@@ -5,8 +5,7 @@ using System.Collections;
 public class ScrSkillsHeal : SkillBase
 {
     public override void Skill(float power, AttackRhythm rhythm) {
-        ManaSystem.Mp.ModifyValue(-ManaConsume);
-        float heal = power * (rhythm.Damage / TimesForInvoke);
+        float heal = power * (rhythm.Damage) + SkillPower;
         float roundHeal = Mathf.Round(heal);
         foreach (var target in TargetType.CharactersAttributes) {
             target.LifeSystem.ModifyValue(roundHeal);
