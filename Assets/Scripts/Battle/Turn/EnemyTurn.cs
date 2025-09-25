@@ -17,10 +17,12 @@ public class EnemyTurn : MonoBehaviour
     }
     
     void OnDestroy(){
+        EnemyAnim.PlayTrigger("Died");
         SceneManager.LoadScene(scene);
     }
     
     private IEnumerator EnemyAttack() {
+        EnemyAnim.PlayTrigger("Attacked");
         int randomSkill = Random.Range(0, enemy.Skills.Count);
 		var skill = enemy.Skills[randomSkill];
 		yield return skill.TargetType.Targets();
