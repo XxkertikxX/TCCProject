@@ -19,10 +19,10 @@ public class GameAudioManager : MonoBehaviour
 
     public static void PlaySound(SoundTypes audioClips)
     {
-       // AudioClip[] clips = instance.soundsList[(int)audioClips].Sounds;
-        //AudioClip randomClip = clips[UnityEngine.Random.Range(0,clips.Length)];
-        //if(audioClips != SoundTypes.Music)
-        //instance.audioSource.PlayOneShot(randomClip, getTypeOfVolume(audioClips));
+        AudioClip[] clips = instance.soundsList[(int)audioClips].Sounds;
+        AudioClip randomClip = clips[UnityEngine.Random.Range(0,clips.Length)];
+        if(audioClips != SoundTypes.Music)
+            instance.audioSource.PlayOneShot(randomClip, getTypeOfVolume(audioClips));
     }
 
     private static float getTypeOfVolume(SoundTypes s)
