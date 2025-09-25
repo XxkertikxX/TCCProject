@@ -6,6 +6,7 @@ public class SceneFade : MonoBehaviour
     Animator fadeAnimator;
     private string nextScene;
     public static SceneFade instance;
+    [SerializeField] Transform Panel;
 
     private void Awake() {
         fadeAnimator = GetComponent<Animator>();
@@ -22,5 +23,13 @@ public class SceneFade : MonoBehaviour
 
     public void OnfadeComplete()  {
         SceneManager.LoadScene(nextScene);
+    }
+    public void OnFadeInComplete()
+    {
+        Panel.gameObject.SetActive(false);
+    }
+    public void OnFadeOutStart()
+    {
+        Panel.gameObject.SetActive(true);
     }
 }

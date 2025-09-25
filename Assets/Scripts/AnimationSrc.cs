@@ -19,7 +19,12 @@ public class AnimationSrc : MonoBehaviour
         jumpSrc = GetComponentInParent<PlayerMovementJump>();
         instance = this;
     }
-    
+
+    private void Update()
+    {
+        UpdateAnimation();
+    }
+
     public void UpdateAnimation() //posso tentar fazer a animação mudar de velocidade de acordo com uma força opressora ou algo similar, etc
     {
         anim.SetFloat("Direction", Mathf.Round(v().normalized.x));
