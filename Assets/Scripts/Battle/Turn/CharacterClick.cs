@@ -11,7 +11,7 @@ public class CharacterClick : MonoBehaviour {
     public void ClickCharacter(CharacterAttributes character) {
         CharacterInteraction.Interaction(character);
 
-        if(CharacterInteraction == new CharacterAttack()) {
+        if(CharacterInteraction == new CharacterSelect()) {
             eventDialog.EventInvoke();
         }
     }

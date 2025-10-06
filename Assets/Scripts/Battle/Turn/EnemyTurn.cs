@@ -8,6 +8,7 @@ public class EnemyTurn : MonoBehaviour
 {
     [SerializeField] private StatusCharacters enemy;
     [SerializeField] private string scene;
+    [SerializeField] private Event eventDialog;
 
     void Update() {
         if (AllCharactersPlay() || LowestManaConsume() > ManaSystem.Mp.ActualValue()) {
@@ -27,6 +28,8 @@ public class EnemyTurn : MonoBehaviour
 		yield return skill.TargetType.Targets();
         skill.Skill(enemy.Power, GetComponent<AttackRhythm>());
         GameAudioManager.PlaySound(SoundTypes.EnemyAttack);
+
+        eventDialog.EventInvoke();
     }
 
     private bool AllCharactersPlay() {
