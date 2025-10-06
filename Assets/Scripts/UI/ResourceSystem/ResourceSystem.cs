@@ -27,8 +27,12 @@ public class ResourceSystem : MonoBehaviour
         }
     }
 
-	public float ActualValue() {
-		return actualValue;
+    public float ActualValue() {
+        return actualValue;
+    }
+    
+	public bool CanChangeResource(float resourceConsume) {
+		return resourceConsume <= actualValue;
 	}
 	
     private void PullComponents() {
