@@ -6,6 +6,9 @@ public class DefineBattleConfigSO : MonoBehaviour
     [SerializeField] private BattleConfigSO newSO;
 
     public void DefineSO() {
-        defaultSO = newSO;
+        defaultSO.EnemyStatus = newSO.EnemyStatus;
+        defaultSO.Background = newSO.Background;
+        defaultSO.EnemySprite = newSO.EnemySprite;
+        defaultSO.EnemyAnimatorController = newSO.EnemyAnimatorController;
     }
 }

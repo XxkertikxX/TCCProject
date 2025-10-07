@@ -6,9 +6,14 @@ using System.Linq;
 
 public class EnemyTurn : MonoBehaviour
 {
-    [SerializeField] private StatusCharacters enemy;
     [SerializeField] private string scene;
     [SerializeField] private Event eventDialog;
+
+    private StatusCharacters enemy;
+
+    void Awake() {
+        enemy = GetComponent<CharacterAttributes>().Character;
+    }
 
     void Update() {
         if (AllCharactersPlay() || LowestManaConsume() > ManaSystem.Mp.ActualValue()) {

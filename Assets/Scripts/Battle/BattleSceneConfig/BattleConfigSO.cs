@@ -1,6 +1,9 @@
 using UnityEngine;
 
+[CreateAssetMenu(menuName = "BattleConfig")]
 public class BattleConfigSO : ScriptableObject {
-    public GameObject Enemy;
+    public StatusCharacters EnemyStatus;
     public GameObject Background;
+    public Sprite EnemySprite;
+    public RuntimeAnimatorController EnemyAnimatorController;
 }
