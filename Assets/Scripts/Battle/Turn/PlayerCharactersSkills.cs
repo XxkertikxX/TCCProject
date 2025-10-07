@@ -19,11 +19,15 @@ public class PlayerCharactersSkills : MonoBehaviour
         AttackRhythm rhythm = CharacterClick.CharacterAttr.Rhythm;
         skill = CharStatus().Skills[posSkill];
         boxSkill.SetActive(false);
+        yield return SystemRhythmCicle(rhythm, manaConsume);
+    }
+
+    private IEnumerator SystemRhythmCicle(AttackRhythm rhythm, float manaConsume) {
         ActiveSystemRhythm(rhythm);
         yield return UseSkill(rhythm, manaConsume);
         systemRhythm.enabled = false;
     }
-
+    
     private void ActiveSystemRhythm(AttackRhythm rhythm) {
         systemRhythm.enabled = true;
         systemRhythm.Constructor(rhythm.gameObject.GetComponent<IUpdateRhythm>());
