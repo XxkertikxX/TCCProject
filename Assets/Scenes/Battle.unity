@@ -5820,7 +5820,7 @@ MonoBehaviour:
   systemRhythm: {fileID: 1541452073}
   boxSkill: {fileID: 642683606}
   painel: {fileID: 201875828}
-  eventDialog: {fileID: 0}
+  eventDialog: {fileID: 1541452074}
 --- !u!114 &1541452071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5833,7 +5833,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2deb4b54998e31543adfd8234c78474e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventDialog: {fileID: 0}
+  eventDialog: {fileID: 1541452075}
 --- !u!114 &1541452072
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5857,6 +5857,30 @@ MonoBehaviour:
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3f9806826eb1a6349aebffd8ca4c09a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1541452074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1541452065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4098ce862860b349ae7543ac69e05ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1541452075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1541452065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4098ce862860b349ae7543ac69e05ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1623998551
@@ -7063,6 +7087,7 @@ GameObject:
   - component: {fileID: 2030265216}
   - component: {fileID: 2030265218}
   - component: {fileID: 2030265217}
+  - component: {fileID: 2030265219}
   m_Layer: 0
   m_Name: Inimigo
   m_TagString: Enemy
@@ -7150,7 +7175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene: Tutorial2
-  eventDialog: {fileID: 0}
+  eventDialog: {fileID: 2030265219}
 --- !u!114 &2030265212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7248,6 +7273,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e5662f58694506244bc779b596dde051, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2030265219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2030265205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4098ce862860b349ae7543ac69e05ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2030383427

@@ -12,4 +12,10 @@ public class DefineBattleConfigSO : MonoBehaviour
         defaultSO.EnemyAnimatorController = newSO.EnemyAnimatorController;
         defaultSO.EnemyPosition = newSO.EnemyPosition;
     }
+
+    void OnTriggerEnter2D(Collider2D collision) {
+        if (collision.CompareTag("Player")) {
+            DefineSO();
+        }
+    }
 }
