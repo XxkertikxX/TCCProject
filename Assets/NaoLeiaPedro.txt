@@ -1,0 +1,2 @@
+Caro Nicholas, eu estou com preguiça neste momento então passarei meu trabalho para você, preciso que salve o resultado das batalhas e a posição que você entrou nelas, para desativar o inimigo e continuar dali, para caso a scene tenha 
+continuação ou não. Dai após a vitória, rodar a save, indo para a scene e para a posição, sem inimigo. Em caso de derrota, voltar para a posição, com o inimigo, ou até antes, veja por si, sei que é bom o suficiente.
