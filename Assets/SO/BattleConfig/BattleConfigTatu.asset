@@ -16,3 +16,4 @@ MonoBehaviour:
   Background: {fileID: 6173943312995063890, guid: 586226abec01719449048e33f0129e20, type: 3}
   EnemySprite: {fileID: 21300000, guid: d50ff11700f0676429eedfc298318cc9, type: 3}
   EnemyAnimatorController: {fileID: 9100000, guid: 50555798f0ad5aa46b9f69cf64bf4382, type: 2}
+  EnemyPosition: {x: 5.17, y: -0.1, z: 0}

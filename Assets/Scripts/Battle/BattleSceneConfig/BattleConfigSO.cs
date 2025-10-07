@@ -6,4 +6,5 @@ public class BattleConfigSO : ScriptableObject {
     public GameObject Background;
     public Sprite EnemySprite;
     public RuntimeAnimatorController EnemyAnimatorController;
+    public Vector3 EnemyPosition;
 }

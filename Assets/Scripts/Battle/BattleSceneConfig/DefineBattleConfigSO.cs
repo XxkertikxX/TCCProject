@@ -10,5 +10,6 @@ public class DefineBattleConfigSO : MonoBehaviour
         defaultSO.Background = newSO.Background;
         defaultSO.EnemySprite = newSO.EnemySprite;
         defaultSO.EnemyAnimatorController = newSO.EnemyAnimatorController;
+        defaultSO.EnemyPosition = newSO.EnemyPosition;
     }
 }
