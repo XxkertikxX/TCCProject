@@ -1043,6 +1043,7 @@ GameObject:
   - component: {fileID: 367800421}
   - component: {fileID: 367800420}
   - component: {fileID: 367800419}
+  - component: {fileID: 367800423}
   m_Layer: 0
   m_Name: kamata
   m_TagString: Untagged
@@ -1062,7 +1063,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc6513abf14a6284386791353cfdf582, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Battle2
+  defineBattleConfigSO: {fileID: 367800423}
+  sceneName: Battle
 --- !u!61 &367800420
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1156,6 +1158,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &367800423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 367800418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77de303fa1e25954cb04cae7400f1edf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultSO: {fileID: 11400000, guid: 5139a95e020ae10408c8d23d9e5795b2, type: 2}
+  newSO: {fileID: 11400000, guid: 28d5d586c50066447a900553e3c1f12c, type: 2}
 --- !u!1001 &381567533
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2422,6 +2438,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc6513abf14a6284386791353cfdf582, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defineBattleConfigSO: {fileID: 0}
   sceneName: Vento4
 --- !u!61 &1380230088
 BoxCollider2D:
