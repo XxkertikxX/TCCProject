@@ -20,7 +20,7 @@ public class EnemyTurn : MonoBehaviour
             StartCoroutine(EnemyAttack());
             ResetTurn();
         }
-        if(Characters().Lenght == 0) {
+        if(Characters().Length == 0) {
             Save(false);
         }
     }
