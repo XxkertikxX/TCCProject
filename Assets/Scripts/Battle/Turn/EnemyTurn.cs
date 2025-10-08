@@ -20,10 +20,13 @@ public class EnemyTurn : MonoBehaviour
             StartCoroutine(EnemyAttack());
             ResetTurn();
         }
+        if(Characters().Lenght == 0) {
+            Save(false);
+        }
     }
     
-    void OnDestroy(){
-        SceneManager.LoadScene(scene);
+    void OnDestroy() {
+        Save(true);
     }
     
     private IEnumerator EnemyAttack() {
@@ -38,8 +41,7 @@ public class EnemyTurn : MonoBehaviour
     }
 
     private bool AllCharactersPlay() {
-        var characters = GameObject.FindGameObjectsWithTag("Character");
-        foreach (var character in characters) {
+        foreach (var character in Characters()) {
             if (character.GetComponent<CharacterAttributes>().TurnsForCanAttack == 0) {
                 return false;
             }
@@ -72,4 +74,10 @@ public class EnemyTurn : MonoBehaviour
 		}
 		return manaConsume.Min();
 	}
+
+    private void Save(bool win) {
+        SaveSystem saveSystem = new SaveSystem();
+        saveSystem.SaveBattle(0, win);
+        GameObject.FindObjectOfType<SaveLoader>().Load();
+    }
 }

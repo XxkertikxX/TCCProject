@@ -11,6 +11,13 @@ public class SaveSystem
         }
     }
     
+    public void SaveBattle(int index, bool win) {
+        using (var db = new LiteDatabase(Path())) {
+            var col = db.GetCollection<SaveStats>("save_stats");
+            col.Upsert(UpdateBattles(index, win));
+        } 
+    }
+
     public SaveStats Load() {
         using (var db = new LiteDatabase(Path())) {
             var col = db.GetCollection<SaveStats>("save_stats");
@@ -29,7 +36,8 @@ public class SaveSystem
             SceneName = "Tutorial1",
             ManaBase = 10,
             Level = 0,
-            Player = NewVector3(-4.5f,-1.33f,0)
+            Player = NewVector3(-4.5f,-1.33f,0),
+            DefeatEnemy = new bool[]{false, false}
         };
 		save.ManaTotal = save.ManaBase + save.Level;
         return save;
@@ -46,6 +54,12 @@ public class SaveSystem
 		save.ManaTotal = save.ManaBase + save.Level;
 
 		return save;
+    }
+
+    private SaveStats UpdateBattles(int index, bool win) {
+        SaveStats save = Load();
+        save.DefeatEnemy[index] = !win;
+        return save;
     }
 
     private Vector3Stat NewVector3(float x, float y, float z) {

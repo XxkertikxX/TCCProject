@@ -13,6 +13,7 @@ public class SaveStats
     public int ManaTotal;
     public int Level;
     public Vector3Stat Player;
+    public bool[] DefeatEnemy; 
 }
 
 public class Vector3Stat{
