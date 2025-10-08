@@ -7,6 +7,7 @@ public class BattleApplyConfig : MonoBehaviour {
     [SerializeField] private CharacterAttributes enemyCharacter;
     [SerializeField] private Animator animEnemy;
     [SerializeField] private Transform enemyTransform;
+    [SerializeField] private EnemyTurn enemyTurn;
 
     void Awake() {
         Instantiate(battleConfigSO.Background);
@@ -14,5 +15,6 @@ public class BattleApplyConfig : MonoBehaviour {
         enemyCharacter.Character = battleConfigSO.EnemyStatus;
         animEnemy.runtimeAnimatorController = battleConfigSO.EnemyAnimatorController;
         enemyTransform.position = battleConfigSO.EnemyPosition;
+        enemyTurn.Index = battleConfigSO.Index;
     }
 }

@@ -3934,6 +3934,7 @@ MonoBehaviour:
   enemyCharacter: {fileID: 2030265213}
   animEnemy: {fileID: 2030265217}
   enemyTransform: {fileID: 131075772}
+  enemyTurn: {fileID: 2030265210}
 --- !u!1 &865131676
 GameObject:
   m_ObjectHideFlags: 0
@@ -7174,6 +7175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e983cf2de33251c44ba6317ba516acc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Index: 0
   scene: Tutorial2
   eventDialog: {fileID: 2030265219}
 --- !u!114 &2030265212

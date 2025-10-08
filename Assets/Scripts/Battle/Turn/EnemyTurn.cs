@@ -6,6 +6,8 @@ using System.Linq;
 
 public class EnemyTurn : MonoBehaviour
 {
+    public int Index;
+
     [SerializeField] private string scene;
     [SerializeField] private Event eventDialog;
 
