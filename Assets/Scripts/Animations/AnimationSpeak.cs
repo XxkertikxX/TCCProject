@@ -21,13 +21,13 @@ public class AnimationSpeak : MonoBehaviour
 	
 	private void PlayAnimation(string name) {
 		if(this.name == name) {
-			anim.SetBool("Talking", true);
+			anim.Play("Talking");
 		} else {
 			IdleAnimation();
 		}
 	}
 	
 	private void IdleAnimation() {
-		anim.SetBool("Talking", false);
+		anim.Play("Idle");
 	}
 }

@@ -11,6 +11,7 @@ TagManager:
   - Hole
   - PlayerArea
   - HideWall
+  - transitionCam
   layers:
   - Default
   - TransparentFX

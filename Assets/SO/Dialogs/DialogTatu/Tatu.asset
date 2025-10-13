@@ -15,10 +15,8 @@ MonoBehaviour:
   lineDialog:
   - "O que que \xE9 isso?\n"
   - "\xC9 um tatu!"
-  - 'Isso eu sei mas pq ele ta...assim?
+  - 'Isso eu sei mas pq ele ta... assim?
 
 '
-  - 'Eu n sei mas parece q ele vai...
-
-'
+  - "Eu n\xE3o sei mas parece que ele vai...\n"
   - ATACAR?!

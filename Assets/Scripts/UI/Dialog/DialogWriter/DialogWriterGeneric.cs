@@ -1,7 +1,8 @@
+using Cinemachine;
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
-using System;
 
 public class DialogWriterGeneric : MonoBehaviour, IDialogWriter
 {
@@ -29,6 +30,7 @@ public class DialogWriterGeneric : MonoBehaviour, IDialogWriter
     public void StartLine() {
         inDialog = true;
         index = 0;
+        CameraManager.SwitchCamera(GetComponentInChildren<CinemachineVirtualCamera>());
         SetupLine();
         coroutine = StartCoroutine(TypingLine());
     }
@@ -55,8 +57,9 @@ public class DialogWriterGeneric : MonoBehaviour, IDialogWriter
         }
         inDialog = false;
         DialogManager.CloseDialog();
+        TestCameraChange.BackToPlayerCamera();
     }
-    
+
     private void SkipLine() {
         StopCoroutine(coroutine);
         coroutine = null;

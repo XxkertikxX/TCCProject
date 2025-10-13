@@ -13,17 +13,19 @@ MonoBehaviour:
   m_Name: LioraFang
   m_EditorClassIdentifier: 
   lineDialog:
-  - AH! bruxos de outros reinos?! Que surpresa maravilhosa! sou feng e vcs? Sou Feng
-    uma das bruxas do vento.
+  - "AH! Bruxos de outros reinos?! Que surpresa maravilhosa! Sou feng, uma das bruxas
+    do vento! E voc\xEAs?"
+  - Oi, somos um grupo de bruxos enviados pelo rei para coletar os cristais.
+  - "S\xE9rio!? Nossa, que momento ruim..."
   - "Ol\xE1...? Como assim momento ruim?"
-  - "Ah ent\xE3o... nosso reino ta meio...tipo...fora de controle agora sabe?"
+  - "Ah ent\xE3o... nosso reino ta meio... tipo... fora de controle agora sabe?"
   - "Sei n\xE3o..."
-  - "* suspiro * ent\xE3o... tem uma criatura voando por ai e dando uma danificada
-    no nossos cristais! ta fazendo uma ventania danada por aqui"
+  - "* suspiro * Ent\xE3o... tem uma criatura voando por ai e dando uma danificada
+    no nossos cristais! Ta fazendo uma ventania danada por aqui."
   - "U\xE9? Mas voc\xEAs n\xE3o conseguem controlar?"
   - "Estamos tentando! Estou tocando minha flauta a 5 horas! Mas esse bicho n\xE3o
     para e se eu parar a ventania vai levar minha cidade pros ares!"
-  - "...se n\xF3s resolvermos essa situa\xE7\xE3o vc acha que pode nos dar um cristal
-    para darmos ao rei dos humanos?"
-  - "odeio ele...mas \xE9 um trato justo eu suponho...FEITO! Por favor r\xE1pido
+  - "... Se n\xF3s resolvermos essa situa\xE7\xE3o voc\xEA acha que pode nos dar
+    um cristal para darmos ao rei dos humanos?"
+  - "Odeio ele... mas \xE9 um trato justo eu suponho... FEITO! Por favor r\xE1pido
     to ficando cansada j\xE1..."
