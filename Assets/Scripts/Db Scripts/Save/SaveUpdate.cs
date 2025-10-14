@@ -6,7 +6,7 @@ public class SaveUpdate : MonoBehaviour {
             SaveSystem saveSystem = new SaveSystem();
             saveSystem.Save();
             var a = saveSystem.OpenLoad();
-            Debug.Log(a.Player.X + a.Player.Y + a.Player.Z);
+            Debug.Log($" X{a.Player.X} Y{a.Player.Y} Z{a.Player.Z}");
         }
     }
 }
