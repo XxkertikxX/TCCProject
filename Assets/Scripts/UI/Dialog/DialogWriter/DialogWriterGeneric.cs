@@ -30,7 +30,7 @@ public class DialogWriterGeneric : MonoBehaviour, IDialogWriter
     public void StartLine() {
         inDialog = true;
         index = 0;
-        CameraManager.SwitchCamera(GetComponentInChildren<CinemachineVirtualCamera>());
+        //CameraManager.SwitchCamera(GetComponentInChildren<CinemachineVirtualCamera>());
         SetupLine();
         coroutine = StartCoroutine(TypingLine());
     }
@@ -57,7 +57,7 @@ public class DialogWriterGeneric : MonoBehaviour, IDialogWriter
         }
         inDialog = false;
         DialogManager.CloseDialog();
-        TestCameraChange.BackToPlayerCamera();
+        //TestCameraChange.BackToPlayerCamera();
     }
 
     private void SkipLine() {

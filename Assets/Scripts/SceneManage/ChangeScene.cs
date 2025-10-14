@@ -7,7 +7,6 @@ public class ChangeScene : MonoBehaviour
     
     void OnTriggerEnter2D(Collider2D collision) {
         if (collision.CompareTag("Player")) {
-            //SceneFade.instance.EnterEnviromentScene(sceneName);
             SceneManager.LoadScene(sceneName);
         }
     }

@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Tutorial/Tutorial2.unity
     guid: 889ef7a4d7839ec41a82a814543e1370
+  - enabled: 1
+    path: Assets/Scenes/Tutorial/Tutorial3.unity
+    guid: 003822eca9b7cb54087f1e313f19b3af
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
@@ -35,9 +38,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Fase1_Vento/Vento4.unity
     guid: 6b7f79eee0a7a464b9452c8d047021ba
-  - enabled: 1
-    path: Assets/Scenes/Battle2.unity
-    guid: 8263ba6a9d1530e47b775bc66a713a50
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Tests.unity
     guid: 7d22361141c6d53469dbe1014b43873b

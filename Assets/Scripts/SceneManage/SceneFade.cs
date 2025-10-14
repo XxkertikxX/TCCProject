@@ -3,10 +3,10 @@ using UnityEngine.SceneManagement;
 
 public class SceneFade : MonoBehaviour
 {
-    Animator fadeAnimator;
+    private Animator fadeAnimator;
     private string nextScene;
     public static SceneFade instance;
-    [SerializeField] Transform Panel;
+    [SerializeField] private Transform Panel;
 
     private void Awake() {
         fadeAnimator = GetComponent<Animator>();
@@ -17,10 +17,6 @@ public class SceneFade : MonoBehaviour
         nextScene = name;
         fadeAnimator.SetTrigger("EnterScene");
     }
-    public void EnterCombatScene() {
-
-    }
-
     public void OnfadeComplete()  {
         SceneManager.LoadScene(nextScene);
     }
