@@ -1,4 +1,5 @@
 using UnityEngine;
+using LiteDB;
 
 public class EnemyActive : MonoBehaviour
 {
@@ -7,7 +8,7 @@ public class EnemyActive : MonoBehaviour
 
     void Awake() { 
         SaveSystem saveSystem = new SaveSystem();
-        SaveStats saveStats = saveSystem.Load();
-        enemy.SetActive(!saveStats.DefeatEnemy[index]);
+        SaveStats saveStats = saveSystem.OpenLoad();
+        enemy.SetActive(saveStats.DefeatEnemy[index]);
     }
 }

@@ -7,27 +7,31 @@ public class SaveSystem
     public void Save() {
         using (var db = new LiteDatabase(Path())) {
             var col = db.GetCollection<SaveStats>("save_stats");
-            col.Upsert(Update());
+            col.Upsert(Update(db));
         }
     }
     
     public void SaveBattle(int index, bool win) {
         using (var db = new LiteDatabase(Path())) {
             var col = db.GetCollection<SaveStats>("save_stats");
-            col.Upsert(UpdateBattles(index, win));
+            col.Upsert(UpdateBattles(db, index, win));
         } 
     }
 
-    public SaveStats Load() {
+    public SaveStats OpenLoad() {
         using (var db = new LiteDatabase(Path())) {
-            var col = db.GetCollection<SaveStats>("save_stats");
-			var save = col.FindOne(Query.EQ("ID", 1));
-			if(save == null) {
-				save = CreateNew();
-				col.Upsert(save);
-			}
-			return save;
+            return Load(db);
         }
+    }
+
+    private SaveStats Load(LiteDatabase db) {
+        var col = db.GetCollection<SaveStats>("save_stats");
+		var save = col.FindOne(Query.EQ("ID", 1));
+		if(save == null) {
+		    save = CreateNew();
+			col.Upsert(save);
+		}
+		return save;
     }
 
     private SaveStats CreateNew() {
@@ -43,10 +47,10 @@ public class SaveSystem
         return save;
     }   
 
-    private SaveStats Update() {
+    private SaveStats Update(LiteDatabase db) {
 		Transform player = GameObject.FindGameObjectWithTag("Player").transform;
 
-		SaveStats save = Load();
+		SaveStats save = Load(db);
 
 		save.SceneName = SceneManager.GetActiveScene().name;
 		save.Level = LevelSystem.Level;
@@ -56,8 +60,8 @@ public class SaveSystem
 		return save;
     }
 
-    private SaveStats UpdateBattles(int index, bool win) {
-        SaveStats save = Load();
+    private SaveStats UpdateBattles(LiteDatabase db, int index, bool win) {
+        SaveStats save = Load(db);
         save.DefeatEnemy[index] = !win;
         return save;
     }

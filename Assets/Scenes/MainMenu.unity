@@ -1294,6 +1294,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 132990900, guid: 1ce2bb43be0dd2e439778cf988b740ca, type: 3}
+      propertyPath: nameEffectScenes.Array.data[2].MainReignScene
+      value: 
+      objectReference: {fileID: 102900000, guid: 5debd31eb5b94f24d8024a4cb5a47ced, type: 3}
     - target: {fileID: 4662060689516187349, guid: 1ce2bb43be0dd2e439778cf988b740ca, type: 3}
       propertyPath: m_Pivot.x
       value: 0
