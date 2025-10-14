@@ -4,10 +4,8 @@ using UnityEngine.SceneManagement;
 
 public class SaveSystem
 {
-    public void Save()
-    {
-        using (var db = new LiteDatabase(Path()))
-        {
+    public void Save() {
+        using (var db = new LiteDatabase(Path())) {
             var col = db.GetCollection<SaveStats>("save_stats");
             var save = Load(db);
             save = Update(save);
@@ -15,10 +13,8 @@ public class SaveSystem
         }
     }
 
-    public void SaveBattle(int index, bool win)
-    {
-        using (var db = new LiteDatabase(Path()))
-        {
+    public void SaveBattle(int index, bool win) {
+        using (var db = new LiteDatabase(Path())) {
             var col = db.GetCollection<SaveStats>("save_stats");
             var save = Load(db);
             save = UpdateBattles(save, index, win);
@@ -26,31 +22,24 @@ public class SaveSystem
         }
     }
 
-    public SaveStats OpenLoad()
-    {
-        using (var db = new LiteDatabase(Path()))
-        {
+    public SaveStats OpenLoad() {
+        using (var db = new LiteDatabase(Path())) {
             return Load(db);
         }
     }
 
-    private SaveStats Load(LiteDatabase db)
-    {
+    private SaveStats Load(LiteDatabase db) {
         var col = db.GetCollection<SaveStats>("save_stats");
         var save = col.FindOne(Query.EQ("_id", 1));
-        if (save == null)
-        {
-            Debug.Log("Nenhum save encontrado, criando novo...");
+        if (save == null) {
             save = CreateNew();
             col.Upsert(save);
         }
         return save;
     }
 
-    private SaveStats CreateNew()
-    {
-        var save = new SaveStats
-        {
+    private SaveStats CreateNew() {
+        var save = new SaveStats {
             ID = 1,
             SceneName = "Tutorial1",
             ManaBase = 10,
@@ -62,8 +51,7 @@ public class SaveSystem
         return save;
     }
 
-    private SaveStats Update(SaveStats save)
-    {
+    private SaveStats Update(SaveStats save) {
         Transform player = GameObject.FindGameObjectWithTag("Player").transform;
 
         save.SceneName = SceneManager.GetActiveScene().name;
@@ -75,19 +63,16 @@ public class SaveSystem
         return save;
     }
 
-    private SaveStats UpdateBattles(SaveStats save, int index, bool win)
-    {
-        save.DefeatEnemy[index] = !win;
+    private SaveStats UpdateBattles(SaveStats save, int index, bool win) {
+        save.DefeatEnemy[index] = win;
         return save;
     }
 
-    private Vector3Stat NewVector3(float x, float y, float z)
-    {
+    private Vector3Stat NewVector3(float x, float y, float z) {
         return new Vector3Stat { X = x, Y = y, Z = z };
     }
 
-    private string Path()
-    {
+    private string Path() {
         return Application.persistentDataPath + "/save_stats.db";
     }
 }
