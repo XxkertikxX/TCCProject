@@ -9,7 +9,6 @@ public class EnemyActive : MonoBehaviour
     void Awake() { 
         SaveSystem saveSystem = new SaveSystem();
         SaveStats saveStats = saveSystem.OpenLoad();
-        enemy.SetActive(!saveStats.DefeatEnemy[index]);
-        Debug.Log(saveStats.DefeatEnemy[index]);
+        enemy.SetActive(saveStats.DefeatEnemy[index]);
     }
 }

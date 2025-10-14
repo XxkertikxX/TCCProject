@@ -6,10 +6,6 @@ using LiteDB;
 [RequireComponent(typeof(DontDestroyOnLoad))]
 public class SaveLoader : MonoBehaviour
 {
-    void Update() {
-        Debug.Log("AAAAAAA");
-    }
-
     public void Load() {
         SaveSystem saveSystem = new SaveSystem();
         StartCoroutine(LoadSave(saveSystem));
@@ -21,7 +17,5 @@ public class SaveLoader : MonoBehaviour
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         player.transform.position = new Vector3(saveStats.Player.X, saveStats.Player.Y, saveStats.Player.Z);
         LevelSystem.Level = saveStats.Level;
-        Debug.Log($" X{saveStats.Player.X} Y{saveStats.Player.Y} Z{saveStats.Player.Z}");
-        Debug.Log(player.name);
     }
 }
