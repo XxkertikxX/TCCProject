@@ -5,6 +5,9 @@ public class PlayerMovementWalk : MonoBehaviour, IMovement
     private float inputDirection;
 	private float runningSpeed;
 
+    private bool running;
+    public bool _running {  get; private set; }
+
     public void Move(Rigidbody2D rb, MovementProperties movementProperties) {
         rb.velocity = new Vector2(inputDirection * GetSpeed(movementProperties), rb.velocity.y);
     }
@@ -31,8 +34,10 @@ public class PlayerMovementWalk : MonoBehaviour, IMovement
 	
 	private float MultiplierSpeedCalculator(IButtonInput input) {
         if(input.InputButton("Run")) {
+            running = true;
             return 1.5f;
         }
+        running = false;
         return 1f;
     }
 }

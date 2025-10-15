@@ -461,7 +461,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -481,12 +481,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1541452071}
-        m_TargetAssemblyTypeName: CharacterClick, GameAssembly
+        m_TargetAssemblyTypeName: CharacterClick, CamMan
         m_MethodName: ClickCharacter
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 104922900}
-          m_ObjectArgumentAssemblyTypeName: CharacterAttributes, GameAssembly
+          m_ObjectArgumentAssemblyTypeName: CharacterAttributes, CamMan
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2332,7 +2332,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -2352,12 +2352,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1541452071}
-        m_TargetAssemblyTypeName: CharacterClick, GameAssembly
+        m_TargetAssemblyTypeName: CharacterClick, CamMan
         m_MethodName: ClickCharacter
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 525768452}
-          m_ObjectArgumentAssemblyTypeName: CharacterAttributes, GameAssembly
+          m_ObjectArgumentAssemblyTypeName: CharacterAttributes, CamMan
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3538,7 +3538,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -3558,12 +3558,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1541452071}
-        m_TargetAssemblyTypeName: CharacterClick, GameAssembly
+        m_TargetAssemblyTypeName: CharacterClick, CamMan
         m_MethodName: ClickCharacter
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 814553643}
-          m_ObjectArgumentAssemblyTypeName: CharacterAttributes, GameAssembly
+          m_ObjectArgumentAssemblyTypeName: CharacterAttributes, CamMan
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -6849,7 +6849,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -6869,12 +6869,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1541452071}
-        m_TargetAssemblyTypeName: CharacterClick, GameAssembly
+        m_TargetAssemblyTypeName: CharacterClick, CamMan
         m_MethodName: ClickCharacter
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1993797144}
-          m_ObjectArgumentAssemblyTypeName: CharacterAttributes, GameAssembly
+          m_ObjectArgumentAssemblyTypeName: CharacterAttributes, CamMan
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
