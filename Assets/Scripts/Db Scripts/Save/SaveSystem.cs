@@ -28,7 +28,7 @@ public class SaveSystem
         }
     }
 
-    private SaveStats Load(LiteDatabase db) {
+    public SaveStats Load(LiteDatabase db) {
         var col = db.GetCollection<SaveStats>("save_stats");
         var save = col.FindOne(Query.EQ("_id", 1));
         if (save == null) {

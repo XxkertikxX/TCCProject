@@ -29,8 +29,9 @@ public class DialogWriterGeneric : MonoBehaviour, IDialogWriter
 
     public void StartLine() {
         inDialog = true;
-        index = 0;
-        //CameraManager.SwitchCamera(GetComponentInChildren<CinemachineVirtualCamera>());
+        index = 0; 
+        CameraManager.SwitchCamera(GetComponentInChildren<CinemachineVirtualCamera>());
+        Debug.Log(GetComponentInChildren<CinemachineVirtualCamera>() == null);
         SetupLine();
         coroutine = StartCoroutine(TypingLine());
     }
@@ -70,6 +71,7 @@ public class DialogWriterGeneric : MonoBehaviour, IDialogWriter
         yield return null;
         foreach (char c in dialogs[index]) {
             textSpeak.text += c;
+            //GameAudioManager.PlaySound()
             yield return new WaitForSeconds(WriteSpeed());
         }
         coroutine = null;

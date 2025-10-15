@@ -254,6 +254,8 @@ MonoBehaviour:
     sounds: []
   - name: LioraEnteringBattle
     sounds: []
+  - name: LioraTalking
+    sounds: []
   - name: AmberAttack1
     sounds: []
   - name: AmberAttack2
@@ -263,6 +265,8 @@ MonoBehaviour:
   - name: AmberDefeat
     sounds: []
   - name: AmberEnteringBattle
+    sounds: []
+  - name: AmberTalking
     sounds: []
   - name: ClementimeAttack1
     sounds: []
@@ -274,6 +278,8 @@ MonoBehaviour:
     sounds: []
   - name: ClementimeEnteringBattle
     sounds: []
+  - name: ClementimeTalking
+    sounds: []
   - name: AlonAttack1
     sounds: []
   - name: AlonAttack2
@@ -284,6 +290,8 @@ MonoBehaviour:
     sounds: []
   - name: AlonEnteringBattle
     sounds: []
+  - name: AlonTalking
+    sounds: []
   - name: EnemyAttack
     sounds: []
   - name: EnemyDamage
@@ -293,6 +301,14 @@ MonoBehaviour:
   - name: BattleVictory
     sounds: []
   - name: GameOver
+    sounds: []
+  - name: KingTalking
+    sounds: []
+  - name: FangTalking
+    sounds: []
+  - name: NPC2Talking
+    sounds: []
+  - name: NPC3Talking
     sounds: []
 --- !u!1 &3449056647170623045
 GameObject:
@@ -307,6 +323,7 @@ GameObject:
   - component: {fileID: 8474915645337886428}
   - component: {fileID: 4048833464930891829}
   - component: {fileID: 1206551868}
+  - component: {fileID: 1719262738}
   m_Layer: 0
   m_Name: Camera
   m_TagString: MainCamera
@@ -322,7 +339,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3449056647170623045}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.923076, y: -0.12230778, z: 2.307692}
+  m_LocalPosition: {x: 0, y: -0.2023077, z: 2.307692}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -447,6 +464,40 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1719262738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3449056647170623045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72ece51f2901e7445ab60da3685d6b5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowDebugText: 0
+  m_ShowCameraFrustum: 1
+  m_IgnoreTimeScale: 0
+  m_WorldUpOverride: {fileID: 0}
+  m_UpdateMethod: 0
+  m_BlendUpdateMethod: 0
+  m_DefaultBlend:
+    m_Style: 1
+    m_Time: 2
+    m_CustomCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  m_CustomBlends: {fileID: 0}
+  m_CameraCutEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_CameraActivatedEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &4041607571160526026
 GameObject:
   m_ObjectHideFlags: 0
@@ -471,7 +522,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4041607571160526026}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.19, y: -1.49, z: 0}
+  m_LocalPosition: {x: 0.19, y: -2.02, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -605,8 +656,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.05, y: 0}
-  m_Size: {x: 1, y: 2.6}
+  m_Offset: {x: 0.05, y: -0.45}
+  m_Size: {x: 1, y: 3.15}
   m_Direction: 0
 --- !u!1 &4041607572145054287
 GameObject:
@@ -636,7 +687,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4041607572145054287}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.08, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:

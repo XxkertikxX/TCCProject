@@ -31,3 +31,7 @@ MonoBehaviour:
     ImageCharacter: {fileID: 21300000, guid: 58f2fee0b0c3ed14ab88c381749ea0e8, type: 3}
   - NameCharacter: Fang
     ImageCharacter: {fileID: 21300000, guid: abeafe7147847ec469cc242cdccea233, type: 3}
+  - NameCharacter: Liora
+    ImageCharacter: {fileID: 21300000, guid: 58f2fee0b0c3ed14ab88c381749ea0e8, type: 3}
+  - NameCharacter: Fang
+    ImageCharacter: {fileID: 21300000, guid: abeafe7147847ec469cc242cdccea233, type: 3}

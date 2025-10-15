@@ -42,8 +42,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _PowerB: 2
-    - _Velocity: 0.168
+    - _PowerB: 15
+    - _Velocity: 0.677
     - _WindUp: 1
     m_Colors: []
   m_BuildTextureStacks: []

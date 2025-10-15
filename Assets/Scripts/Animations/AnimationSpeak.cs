@@ -11,23 +11,23 @@ public class AnimationSpeak : MonoBehaviour
 	
 	void OnEnable() {
 		dialog.OnApplyIcons += PlayAnimation;
-		DialogManager.OnDialogClose += IdleAnimation;
+		DialogManager.OnDialogClose += stopTalking;
 	}
 	
 	void OnDisable() {
 		dialog.OnApplyIcons -= PlayAnimation;
-		DialogManager.OnDialogClose -= IdleAnimation;
+		DialogManager.OnDialogClose -= stopTalking;
 	}
 	
 	private void PlayAnimation(string name) {
 		if(this.name == name) {
-			anim.Play("Talking");
+			anim.SetBool("Talking", true);
 		} else {
-			IdleAnimation();
-		}
+			stopTalking();
+        }
 	}
-	
-	private void IdleAnimation() {
-		anim.Play("Idle");
-	}
+	private void stopTalking()
+	{
+        anim.SetBool("Talking", false);
+    }
 }
