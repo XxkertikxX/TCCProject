@@ -9,7 +9,6 @@ public class AnimationSrc : MonoBehaviour
     private SpriteRenderer render;
     private bool lastDirection;
     private PlayerMovementJump jumpSrc;
-    private PlayerMovementWalk walkSrc;
     public static AnimationSrc instance;
 
     private void Awake()
@@ -18,7 +17,6 @@ public class AnimationSrc : MonoBehaviour
         render = GetComponent<SpriteRenderer>();
         rb = GetComponentInParent<Rigidbody2D>();
         jumpSrc = GetComponentInParent<PlayerMovementJump>();
-        walkSrc = GetComponentInParent<PlayerMovementWalk>();
         instance = this;
     }
 
@@ -32,7 +30,6 @@ public class AnimationSrc : MonoBehaviour
         anim.SetFloat("Direction", (int)Mathf.Round(v().normalized.x));
         anim.SetFloat ("Velocity", Mathf.Round(v().x));
         anim.SetBool("Grounded", jumpSrc.grounded());
-        anim.SetBool("Running", walkSrc._running);
         render.flipX = flipped();
     }
 
