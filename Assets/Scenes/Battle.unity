@@ -6108,6 +6108,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 870227369485140033, guid: 726c0502c57b9a04f953664912d975c3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -392.32742
+      objectReference: {fileID: 0}
+    - target: {fileID: 870227369522217081, guid: 726c0502c57b9a04f953664912d975c3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -90.42743
+      objectReference: {fileID: 0}
+    - target: {fileID: 870227370001286474, guid: 726c0502c57b9a04f953664912d975c3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -380
+      objectReference: {fileID: 0}
     - target: {fileID: 870227370288450712, guid: 726c0502c57b9a04f953664912d975c3, type: 3}
       propertyPath: m_Camera
       value: 
@@ -6199,6 +6211,18 @@ PrefabInstance:
     - target: {fileID: 870227370288450725, guid: 726c0502c57b9a04f953664912d975c3, type: 3}
       propertyPath: m_Name
       value: "Canvas -- Di\xE1logos"
+      objectReference: {fileID: 0}
+    - target: {fileID: 870227370288450725, guid: 726c0502c57b9a04f953664912d975c3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 870227370999932810, guid: 726c0502c57b9a04f953664912d975c3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -224.42743
+      objectReference: {fileID: 0}
+    - target: {fileID: 870227371125162862, guid: 726c0502c57b9a04f953664912d975c3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -377.92743
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 726c0502c57b9a04f953664912d975c3, type: 3}
