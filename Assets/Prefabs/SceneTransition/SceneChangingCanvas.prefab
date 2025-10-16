@@ -137,7 +137,7 @@ MonoBehaviour:
   - MainReignScene: {fileID: 102900000, guid: 889ef7a4d7839ec41a82a814543e1370, type: 3}
     ReignFont: {fileID: 12800000, guid: ab7a417e0f742e344888acecc7db7e91, type: 3}
     ReignName: Reino Humano
-  - MainReignScene: {fileID: 102900000, guid: 003822eca9b7cb54087f1e313f19b3af, type: 3}
+  - MainReignScene: {fileID: 102900000, guid: 5debd31eb5b94f24d8024a4cb5a47ced, type: 3}
     ReignFont: {fileID: 12800000, guid: ab7a417e0f742e344888acecc7db7e91, type: 3}
     ReignName: Camara do Rei
   - MainReignScene: {fileID: 102900000, guid: f8ae44ec20ece27428fe9fdc1836b6c4, type: 3}
