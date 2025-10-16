@@ -1,6 +1,4 @@
-using Codice.Client.Common.GameUI;
 using System;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -19,7 +17,7 @@ public class EnteringNewArea : MonoBehaviour
     {
         for (int i = 0; i < nameEffectScenes.Length; i++) 
         {
-            if (SceneManager.GetActiveScene().name == nameEffectScenes[i].MainReignScene.name)
+            if (SceneManager.GetActiveScene().name == nameEffectScenes[i].MainReignScene)
             {
                 Debug.Log("Cena principal do reino");
                 MakeNameEffect(i);
@@ -43,10 +41,10 @@ public class EnteringNewArea : MonoBehaviour
 [Serializable]
 public struct ScenesWithName
 {
-    public SceneAsset MainReignScene;
+    public string MainReignScene;
     public Font ReignFont;
     public string ReignName;
-    public ScenesWithName(SceneAsset scene,Font rFont, string rName)
+    public ScenesWithName(string scene,Font rFont, string rName)
     {
         MainReignScene = scene;
         ReignFont = rFont;

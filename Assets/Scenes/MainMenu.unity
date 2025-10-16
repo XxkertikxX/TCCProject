@@ -1294,6 +1294,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 132990900, guid: 1ce2bb43be0dd2e439778cf988b740ca, type: 3}
+      propertyPath: nameEffectScenes.Array.data[0].MainReignScene
+      value: Tutorial1
+      objectReference: {fileID: 0}
+    - target: {fileID: 132990900, guid: 1ce2bb43be0dd2e439778cf988b740ca, type: 3}
+      propertyPath: nameEffectScenes.Array.data[1].MainReignScene
+      value: Tutorial2
+      objectReference: {fileID: 0}
+    - target: {fileID: 132990900, guid: 1ce2bb43be0dd2e439778cf988b740ca, type: 3}
+      propertyPath: nameEffectScenes.Array.data[2].MainReignScene
+      value: Tutorial3
+      objectReference: {fileID: 0}
+    - target: {fileID: 132990900, guid: 1ce2bb43be0dd2e439778cf988b740ca, type: 3}
+      propertyPath: nameEffectScenes.Array.data[3].MainReignScene
+      value: Vento1
+      objectReference: {fileID: 0}
     - target: {fileID: 4662060689516187349, guid: 1ce2bb43be0dd2e439778cf988b740ca, type: 3}
       propertyPath: m_Pivot.x
       value: 0
