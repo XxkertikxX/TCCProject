@@ -7,7 +7,7 @@ public class AnimationSpeak : MonoBehaviour
 	[SerializeField] private DialogIconsUI dialog;
 
 	[SerializeField] private Animator anim;
-	[SerializeField] private string name;
+	[SerializeField] private string nameAnim;
 	
 	void OnEnable() {
 		dialog.OnApplyIcons += PlayAnimation;
@@ -20,7 +20,7 @@ public class AnimationSpeak : MonoBehaviour
 	}
 	
 	private void PlayAnimation(string name) {
-		if(this.name == name) {
+		if(this.nameAnim == name) {
 			anim.SetBool("Talking", true);
 		} else {
 			stopTalking();

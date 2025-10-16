@@ -13,6 +13,10 @@ public class PlayerMovementJump : MonoBehaviour, IMovement
     private float holdTimeRemaining = 0f;
     private bool holdingJump = false;
 
+    [Header("Grounded settings")]
+    [SerializeField] private Vector2 boxCast;
+    [SerializeField] private float boxDistance;
+
     public void Move(Rigidbody2D rb, MovementProperties movementProperties)
     {
         if (requestJump)
@@ -48,7 +52,7 @@ public class PlayerMovementJump : MonoBehaviour, IMovement
         try { keyHeld = input.InputButton("Jump"); }
         catch { keyHeld = keyPressed; }
 
-        bool isGrounded = Physics2D.Raycast(groundCheck.position, Vector2.down, 0.1f, ground);
+        bool isGrounded = grounded();
 
         if (keyPressed && isGrounded)
         {
@@ -70,6 +74,18 @@ public class PlayerMovementJump : MonoBehaviour, IMovement
 
     public bool grounded()
     {
-        return Physics2D.Raycast(groundCheck.position, Vector2.down, 0.1f, ground);
+        if(Physics2D.BoxCast(groundCheck.position, boxCast, 0, Vector2.down, boxDistance, ground))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireCube(groundCheck.position - transform.up * boxDistance, boxCast);
     }
 }

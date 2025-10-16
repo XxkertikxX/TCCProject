@@ -260,7 +260,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog: {fileID: 1303770849}
   anim: {fileID: 18614434}
-  name: Rei
+  nameAnim: 
 --- !u!224 &57163476 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4662060689516187349, guid: 1ce2bb43be0dd2e439778cf988b740ca, type: 3}
@@ -2097,10 +2097,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1788139161}
     m_Modifications:
-    - target: {fileID: 132990900, guid: 1ce2bb43be0dd2e439778cf988b740ca, type: 3}
-      propertyPath: nameEffectScenes.Array.data[2].MainReignScene
-      value: 
-      objectReference: {fileID: 102900000, guid: 003822eca9b7cb54087f1e313f19b3af, type: 3}
     - target: {fileID: 4662060689516187349, guid: 1ce2bb43be0dd2e439778cf988b740ca, type: 3}
       propertyPath: m_Pivot.x
       value: 0

@@ -8,7 +8,7 @@ public class CutSceneManager : MonoBehaviour
     private void Awake()
     {
         player = GetComponent<VideoPlayer>();
-    }
+    } 
 
     private void OnEnable()
     {
