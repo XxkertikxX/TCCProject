@@ -7,12 +7,6 @@ public class TestCameraChange : MonoBehaviour
     private List<CinemachineVirtualCamera> cameras = new List<CinemachineVirtualCamera> { };
     public CinemachineVirtualCamera cam = null;
     [SerializeField] CinemachineVirtualCamera playerCam;
-    static CinemachineVirtualCamera pCam;
-
-    private void Start() //mexer
-    {
-        pCam = playerCam;
-    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -28,9 +22,9 @@ public class TestCameraChange : MonoBehaviour
         other.GetComponent<Transform>().root.gameObject.SetActive(false);
     }
 
-    public static void BackToPlayerCamera()
+    public void BackToPlayerCamera()
     {
-        CameraManager.SwitchCamera(pCam);
+        CameraManager.SwitchCamera(playerCam);
     }
 
     bool cameraTag(GameObject Go)

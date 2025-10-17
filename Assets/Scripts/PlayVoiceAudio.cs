@@ -23,9 +23,9 @@ public class PlayVoiceAudio : MonoBehaviour
             case "Clementime":
                 return SoundTypes.ClementimeTalking;
             case "Rei":
-                break;
+                return SoundTypes.KingTalking;
             case "Fang":
-                break;
+                return SoundTypes.FangTalking;
             case "NPC2":
                 break;
             case "NPC3":

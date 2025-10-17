@@ -11,6 +11,7 @@ public class DialogWriterGeneric : MonoBehaviour, IDialogWriter
     private string[] dialogs;
 
     [SerializeField] private Text textSpeak;
+    [SerializeField] TestCameraChange goBackCamera;
     
     private Coroutine coroutine = null;
 
@@ -68,8 +69,10 @@ public class DialogWriterGeneric : MonoBehaviour, IDialogWriter
         }
         inDialog = false;
         DialogManager.CloseDialog();
-        if (verifyCamera()) { }
-            TestCameraChange.BackToPlayerCamera();
+        if (verifyCamera())
+        {
+            goBackCamera.BackToPlayerCamera();
+        }
     }
 
     private void SkipLine() {

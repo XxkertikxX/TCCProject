@@ -8411,6 +8411,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textSpeak: {fileID: 2129208329}
+  goBackCamera: {fileID: 0}
 --- !u!114 &1094421353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8435,6 +8436,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2143a5c8b99c1a647bf9655a0a7f4e51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInteractable: 0
 --- !u!114 &1094421355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9994,7 +9996,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1904230842}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.29, y: 0, z: 0}
+  m_LocalPosition: {x: 19.48, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
