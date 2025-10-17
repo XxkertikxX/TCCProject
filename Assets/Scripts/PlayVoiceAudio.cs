@@ -7,7 +7,6 @@ public class PlayVoiceAudio : MonoBehaviour
     [SerializeField] private Text actualCharacter;
     public void PlayVoice()
     {
-        Debug.Log("Entrou");
         GameAudioManager.PlaySound(CharacterTalking());
     }
 

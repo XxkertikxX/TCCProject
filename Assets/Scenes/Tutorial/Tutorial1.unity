@@ -1860,6 +1860,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1676394331, guid: 0176e239f4823f0448534ea7d9b17aa6, type: 3}
+      propertyPath: dialog
+      value: 
+      objectReference: {fileID: 1094421357}
+    - target: {fileID: 1676394331, guid: 0176e239f4823f0448534ea7d9b17aa6, type: 3}
+      propertyPath: nameAnim
+      value: Liora
+      objectReference: {fileID: 0}
     - target: {fileID: 2953801445547076147, guid: 0176e239f4823f0448534ea7d9b17aa6, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -7725,31 +7733,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &632250052 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4041607571191834639, guid: 0176e239f4823f0448534ea7d9b17aa6, type: 3}
-  m_PrefabInstance: {fileID: 474176240}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &632250060
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 632250052}
-  m_Enabled: 0
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d7f26e34b7cb0b646a8acc2cdf6d1eb9, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &667170526
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10283,9 +10266,9 @@ PlayableDirector:
   - key: {fileID: 0}
     value: {fileID: 1453632963}
   - key: {fileID: 0}
-    value: {fileID: 632250060}
+    value: {fileID: 0}
   - key: {fileID: 0}
-    value: {fileID: 632250060}
+    value: {fileID: 0}
   - key: {fileID: 7837908157149899897, guid: ad1f95f5e8c2d5042acb5c42d9317c26, type: 2}
     value: {fileID: 1453632963}
   - key: {fileID: -7590637887828742978, guid: ad1f95f5e8c2d5042acb5c42d9317c26, type: 2}

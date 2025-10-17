@@ -224,6 +224,7 @@ GameObject:
   - component: {fileID: 95971636}
   - component: {fileID: 95971635}
   - component: {fileID: 95971634}
+  - component: {fileID: 95971643}
   - component: {fileID: 95971642}
   m_Layer: 0
   m_Name: DialogFang
@@ -383,6 +384,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.78, y: 12.45}
   m_EdgeRadius: 0
+--- !u!114 &95971643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 95971630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd3dac8b30c92e0489f8f684de223eed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actualCharacter: {fileID: 401302049}
 --- !u!1 &106956020 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1914029074829427986, guid: 41d391598dcf1b241b06b18e4c0d6656, type: 3}
@@ -877,11 +891,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7329218177428563299, guid: 1b3774a7c8c5fb549ad66f642154b2d9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.75
+      value: 3.13
       objectReference: {fileID: 0}
     - target: {fileID: 7329218177428563299, guid: 1b3774a7c8c5fb549ad66f642154b2d9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.81
+      value: -2.16
       objectReference: {fileID: 0}
     - target: {fileID: 7329218177428563299, guid: 1b3774a7c8c5fb549ad66f642154b2d9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -14551,7 +14565,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4057761975549353569, guid: 41d391598dcf1b241b06b18e4c0d6656, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.24
+      value: -3.32
       objectReference: {fileID: 0}
     - target: {fileID: 4057761975549353569, guid: 41d391598dcf1b241b06b18e4c0d6656, type: 3}
       propertyPath: m_LocalPosition.z
@@ -16047,6 +16061,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1676394331, guid: 0176e239f4823f0448534ea7d9b17aa6, type: 3}
+      propertyPath: dialog
+      value: 
+      objectReference: {fileID: 95971636}
+    - target: {fileID: 1676394331, guid: 0176e239f4823f0448534ea7d9b17aa6, type: 3}
+      propertyPath: nameAnim
+      value: Liora
+      objectReference: {fileID: 0}
     - target: {fileID: 3406809117074333619, guid: 0176e239f4823f0448534ea7d9b17aa6, type: 3}
       propertyPath: cam
       value: 

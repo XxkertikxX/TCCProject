@@ -1,9 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AnimationSrc : MonoBehaviour
 {
+    [SerializeField] private string nameAnim;
+    [SerializeField] private DialogIconsUI dialog;
     private Rigidbody2D rb;
     private Animator anim;
     private SpriteRenderer render;
@@ -25,12 +25,40 @@ public class AnimationSrc : MonoBehaviour
         UpdateAnimation();
     }
 
+    private void OnEnable()
+    {
+        dialog.OnApplyIcons += Talk;
+        DialogManager.OnDialogClose += stoppedTalking;
+    }
+
+    private void OnDisable()
+    {
+        dialog.OnApplyIcons -= Talk;
+        DialogManager.OnDialogClose -= stoppedTalking;
+    }
+
     public void UpdateAnimation() //posso tentar fazer a animação mudar de velocidade de acordo com uma força opressora ou algo similar, etc
     {
         anim.SetFloat("Direction", (int)Mathf.Round(v().normalized.x));
         anim.SetFloat ("Velocity", Mathf.Round(v().x));
         anim.SetBool("Grounded", jumpSrc.grounded());
         render.flipX = flipped();
+    }
+
+    private void Talk(string nome)
+    {
+        if (this.nameAnim == nome)
+        {
+            anim.SetBool("Talking", true);
+        }
+        else
+        {
+            stoppedTalking();
+        }
+    }
+    private void stoppedTalking()
+    {
+        anim.SetBool("Talking", false);
     }
 
     private Vector2 v()
