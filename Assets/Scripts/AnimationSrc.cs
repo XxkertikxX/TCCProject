@@ -52,4 +52,8 @@ public class AnimationSrc : MonoBehaviour
         }
         return lastDirection;
     }
+	
+	void OnDestroy() {
+		instance = null;
+	}
 }

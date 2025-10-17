@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using System;
 
 [RequireComponent(typeof(DontDestroyOnLoad))]
 public class SaveLoader : MonoBehaviour
@@ -13,7 +14,8 @@ public class SaveLoader : MonoBehaviour
     private IEnumerator LoadSave(SaveSystem saveSystem) {
         SaveStats saveStats = saveSystem.OpenLoad();
         yield return SceneManager.LoadSceneAsync(saveStats.SceneName, LoadSceneMode.Single);
-		Resources.UnloadUnusedAssets();
+		yield return Resources.UnloadUnusedAssets();
+		GC.Collect();
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         player.transform.position = new Vector3(saveStats.Player.X, saveStats.Player.Y, saveStats.Player.Z);
         LevelSystem.Level = saveStats.Level;

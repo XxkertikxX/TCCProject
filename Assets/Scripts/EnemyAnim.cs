@@ -14,4 +14,8 @@ public class EnemyAnim : MonoBehaviour
     {
         anim.SetTrigger(trigger);
     }
+	
+	void OnDestroy() {
+		anim = null;
+	}
 }
