@@ -51,6 +51,7 @@ public class tutorial : MonoBehaviour
 [Serializable]
 public struct TutorialConditions
 {
+<<<<<<< HEAD
     public GameObject tutorialGo;
     public string[] bindsPressed;
 
@@ -59,5 +60,9 @@ public struct TutorialConditions
         tutorialGo = t;
         bindsPressed = binds;
     }
+=======
+    public GameObject tutorialObjects;
+    public Input a;
+>>>>>>> 387e047544a61a321fb4a55267b95ae7de32bae0
 }
 
