@@ -79,7 +79,7 @@ public class EnemyTurn : MonoBehaviour
 
     private void Save(bool win) {
         SaveSystem saveSystem = new SaveSystem();
-        saveSystem.SaveBattle(0, win);
+        saveSystem.SaveBattle(Index, win);
         GameObject.FindObjectOfType<SaveLoader>().Load();
     }
 }
