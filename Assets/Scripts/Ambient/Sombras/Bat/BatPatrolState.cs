@@ -27,7 +27,7 @@ public class BatPatrolState : IBatState
     }
     
     private void VerifyIfChangeState() {
-        float chaseProbability = 0.005f;
+        float chaseProbability = 0.002f;
         bool mustChase = Random.value < chaseProbability;
         if (mustChase) {
             bat.ChangeState(bat.ChaseState);
