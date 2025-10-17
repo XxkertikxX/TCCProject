@@ -36,7 +36,9 @@ public class TextureMemoryScanner : MonoBehaviour
             string name = kvp.Key;
             int count = kvp.Value.count;
             float mb = kvp.Value.approxBytes / (1024f * 1024f);
-            Debug.Log($"Texture: {name}, Instances: {count}, Approx. Size: {mb:F2} MB");
+            if(mb > 1 || count > 1) {
+                Debug.Log($"Texture: {name}, Instances: {count}, Approx. Size: {mb:F2} MB");
+            }
         }
 
         Debug.Log($"Total Textures Found: {textures.Length}");

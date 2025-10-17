@@ -6,18 +6,18 @@ using LiteDB;
 public class SaveStats
 { 
     [BsonId]
-    public int ID;
+    public int ID {get; set;}
 
-    public string SceneName;
-    public int ManaBase;
-    public int ManaTotal;
-    public int Level;
-    public Vector3Stat Player;
-    public bool[] DefeatEnemy; 
+    public string SceneName {get; set;}
+    public int ManaBase {get; set;}
+    public int ManaTotal {get; set;}
+    public int Level {get; set;}
+    public Vector3Stat Player {get; set;}
+    public bool[] DefeatEnemy {get; set;}
 }
 
 public class Vector3Stat{
-    public float X;
-    public float Y;
-    public float Z;
+    public float X {get; set;}
+    public float Y {get; set;}
+    public float Z {get; set;}
 }

@@ -34,6 +34,7 @@ public class SaveSystem
         if (save == null) {
             save = CreateNew();
             col.Upsert(save);
+            Debug.Log("New");
         }
         return save;
     }
