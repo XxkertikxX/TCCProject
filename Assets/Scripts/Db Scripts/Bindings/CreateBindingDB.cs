@@ -25,16 +25,18 @@ public class CreateBindingDB : MonoBehaviour
         CreateKey("Jump", KeyCode.Space, col);
         CreateKey("Left", KeyCode.A, col);
         CreateKey("Right", KeyCode.D, col);
+        CreateKey("Down", KeyCode.W, col);
+        CreateKey("Up", KeyCode.S, col);
         CreateKey("Run", KeyCode.LeftShift, col);
         CreateKey("Interact", KeyCode.E, col);
         CreateKey("Skip", KeyCode.Return, col);
         CreateKey("Menu", KeyCode.Escape, col);
-        CreateKey("Down",KeyCode.DownArrow, col);
-        CreateKey("Up", KeyCode.UpArrow, col);
+        CreateKey("Down2",KeyCode.DownArrow, col);
+        CreateKey("Up2", KeyCode.UpArrow, col);
         CreateKey("Left2", KeyCode.LeftArrow, col);
         CreateKey("Right2", KeyCode.RightArrow, col);
         CreateKey("Return", KeyCode.X, col);
-        CreateKey("Save", KeyCode.S, col);
+        CreateKey("Save", KeyCode.F5, col);
     }
 
     private void CreateKey(string KeyName, KeyCode Key, ILiteCollection<KeyBinding> col) {

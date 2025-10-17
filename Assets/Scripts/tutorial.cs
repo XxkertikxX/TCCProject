@@ -1,10 +1,11 @@
+using System;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class tutorial : MonoBehaviour
 {
-    [SerializeField] private GameObject[] Tutorial;
-    private int TutorialIndex;
+    [SerializeField] private TutorialConditions[] tutorialList;
+    private int index = 0;
+    private bool waitingInput;
 
     [Header("Fade Config")]
     [SerializeField] private float FadeDuration;
@@ -14,27 +15,54 @@ public class tutorial : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            for (int i = 0; i < Tutorial.Length; i++)
-            {
+            TutorialConditions();
+            GetComponent<Collider2D>().enabled = false;
+        }
+    }
 
+    private void Update()
+    {
+        if (!waitingInput || index > tutorialList.Length)
+            return;
+
+        foreach (string bind in tutorialList[index].bindsPressed)
+        {
+            if (InputCatalyst.input.InputButtonDown(bind))
+            {
+                CheckIfPressed();
             }
         }
     }
 
     private void TutorialConditions()
     {
-        Image controles;
-        switch (TutorialIndex)
-        {
-            case 0:
-                //controles = 
-                break;
-        }
+        tutorialList[index].tutorialGo.SetActive(true);
+        waitingInput = true;
+    }
+
+    private void CheckIfPressed()
+    {
+        tutorialList[index].tutorialGo.SetActive(false);
+        waitingInput = false;
+        index++;
     }
 }
 
-public struct TutorialRequirements
+[Serializable]
+public struct TutorialConditions
 {
+<<<<<<< HEAD
+    public GameObject tutorialGo;
+    public string[] bindsPressed;
+
+    public TutorialConditions(GameObject t, string[] binds)
+    {
+        tutorialGo = t;
+        bindsPressed = binds;
+    }
+=======
     public GameObject tutorialObjects;
     public Input a;
+>>>>>>> 387e047544a61a321fb4a55267b95ae7de32bae0
 }
+

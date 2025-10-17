@@ -42,7 +42,8 @@ public class PlayerCharactersSkills : MonoBehaviour
     private IEnumerator Attack(AttackRhythm rhythm) {
 		painel.SetActive(true);
         yield return rhythm.Attack(skill);
-		painel.SetActive(false);
+        EnemyAnim.PlayTrigger("TookDamage");
+        painel.SetActive(false);
         eventDialog.EventInvoke();
     }
 
