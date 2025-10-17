@@ -5,7 +5,7 @@ public class BatPatrolState : IBatState
     private BatStateMachine bat;
     private Vector2 patrolTarget;
 
-    private float patrolSpeed = 3f;
+    private float patrolSpeed = 8f;
 
     public BatPatrolState(BatStateMachine bat) {
         this.bat = bat;
@@ -27,7 +27,7 @@ public class BatPatrolState : IBatState
     }
     
     private void VerifyIfChangeState() {
-        float chaseProbability = 0.001f;
+        float chaseProbability = 0.005f;
         bool mustChase = Random.value < chaseProbability;
         if (mustChase) {
             bat.ChangeState(bat.ChaseState);

@@ -8,10 +8,10 @@ TagManager:
   - Character
   - Enemy
   - Checkpoint
-  - Hole
   - PlayerArea
   - HideWall
   - transitionCam
+  - Death
   layers:
   - Default
   - TransparentFX

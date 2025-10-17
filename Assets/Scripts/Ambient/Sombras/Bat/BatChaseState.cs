@@ -3,7 +3,7 @@ using UnityEngine;
 public class BatChaseState : IBatState
 {
     private BatStateMachine bat;
-    private float chaseSpeed = 6f;
+    private float chaseSpeed = 15f;
 
     public BatChaseState(BatStateMachine bat) {
         this.bat = bat;

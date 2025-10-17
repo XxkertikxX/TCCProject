@@ -12,7 +12,7 @@ public class PlayerCheckpoint : MonoBehaviour
         if (collision.CompareTag("Checkpoint")) {
             lastCheckpointPosition = transform.position;
         }
-        else if (collision.CompareTag("Hole")) {
+        else if (collision.CompareTag("Death")) {
             transform.position = lastCheckpointPosition;
         }
     }
