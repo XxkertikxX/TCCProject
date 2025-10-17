@@ -16,9 +16,6 @@ public class TestCameraChange : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag != "Player")
-            return;
-
         if (!cameraTag(other.gameObject))
             return;
         assignNewCamera(other.gameObject);
@@ -26,9 +23,7 @@ public class TestCameraChange : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D other)
     {
-        if(other.tag != "Player")
-            return;
-
+        if(!cameraTag(other.gameObject)) return;
         CameraManager.SwitchCamera(playerCam);
     }
 
