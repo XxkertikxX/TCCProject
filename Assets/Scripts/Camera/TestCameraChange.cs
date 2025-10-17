@@ -25,6 +25,7 @@ public class TestCameraChange : MonoBehaviour
     {
         if(!cameraTag(other.gameObject)) return;
         CameraManager.SwitchCamera(playerCam);
+        other.GetComponent<Transform>().root.gameObject.SetActive(false);
     }
 
     public static void BackToPlayerCamera()

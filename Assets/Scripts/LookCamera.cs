@@ -30,7 +30,7 @@ public class LookCamera : MonoBehaviour
             timer += Time.deltaTime;
             if(timer >= holdTime)
             {
-                bodyConfigs.m_TrackedObjectOffset = defaultOffset + new Vector3(0, lookOffset * verticalInput, 0);
+                bodyConfigs.m_TrackedObjectOffset = (defaultOffset * verticalInput)+ new Vector3(0, lookOffset * verticalInput, 0);
             }
         }
         else
