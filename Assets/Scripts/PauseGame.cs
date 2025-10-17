@@ -3,7 +3,7 @@ using UnityEngine;
 public class PauseGame : MonoBehaviour
 {
     [SerializeField] private GameObject pauseMenu;
-    bool paused = false;
+    [HideInInspector] public bool paused = false;
     private void Update()
     {
         if (InputCatalyst.input.InputButtonDown("Menu"))

@@ -18,7 +18,7 @@ public class SpriteOrder : MonoBehaviour
         }
     }
 
-    private void LateUpdate()
+    private void Update()
     {
         if (PlayerRender == null)
             return;

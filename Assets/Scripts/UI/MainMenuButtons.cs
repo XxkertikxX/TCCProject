@@ -6,11 +6,13 @@ public class MainMenuButtons : MonoBehaviour
 {
     bool isFull;
     public void OpenMenu(GameObject menu) {
+        Time.timeScale = 0;
         menu.SetActive(true);
     }
 
     public void CloseMenu(GameObject menu) {
         Time.timeScale = 1.0f;
+        GetComponent<PauseGame>().paused = false;
         menu.SetActive(false);
     }
 
@@ -26,6 +28,7 @@ public class MainMenuButtons : MonoBehaviour
 
     public void LoadMainMenu()
     {
+        Time.timeScale = 1.0f;
         SceneManager.LoadScene("MainMenu");
     }
     

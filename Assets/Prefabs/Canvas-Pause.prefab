@@ -328,7 +328,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 2883662838879076258}
-        m_TargetAssemblyTypeName: MainMenuButtons, GameAssembly
+        m_TargetAssemblyTypeName: MainMenuButtons, CamMan
         m_MethodName: PlayButtonSound
         m_Mode: 1
         m_Arguments:
@@ -728,7 +728,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 2958483819166555181}
   m_OnClick:
     m_PersistentCalls:
@@ -1313,6 +1313,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 4860915988351164439}
+  paused: 0
 --- !u!1 &4860915988351164439
 GameObject:
   m_ObjectHideFlags: 0

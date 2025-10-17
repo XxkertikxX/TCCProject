@@ -1,6 +1,5 @@
 using System;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class SliderEffect : MonoBehaviour
@@ -12,8 +11,8 @@ public class SliderEffect : MonoBehaviour
     [SerializeField] private Text[] volumeVisual;
     [SerializeField] private Slider[] sliderVolume;
 
-    public static float volumeGeneral;
-    public static float volumeMusic;
+    public static float volumeGeneral = 1;
+    public static float volumeMusic = 1;
     private float[] frontValue = new float[2];
     private float[] backValue = new float[2];
 

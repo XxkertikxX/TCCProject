@@ -33,7 +33,6 @@ public class DialogWriterGeneric : MonoBehaviour, IDialogWriter
         if (verifyCamera())
         {
             CameraManager.SwitchCamera(GetComponentInChildren<CinemachineVirtualCamera>());
-            //Debug.Log(GetComponentInChildren<CinemachineVirtualCamera>() == null);
         }
         SetupLine();
         coroutine = StartCoroutine(TypingLine());
@@ -83,11 +82,20 @@ public class DialogWriterGeneric : MonoBehaviour, IDialogWriter
         yield return null;
         foreach (char c in dialogs[index]) {
             textSpeak.text += c;
-            //GameAudioManager.PlaySound()
+            PlayCharacterVoice();
             yield return new WaitForSeconds(WriteSpeed());
         }
         coroutine = null;
     }
+
+    private PlayVoiceAudio voice;
+    private void PlayCharacterVoice()
+    {
+        if (voice == null)
+            voice = GetComponent<PlayVoiceAudio>();
+        voice.PlayVoice();
+    }
+
 
     private float WriteSpeed() {
         const float lowestSpeed = 0.05f;
