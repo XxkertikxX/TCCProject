@@ -409,6 +409,7 @@ GameObject:
   - component: {fileID: 104922904}
   - component: {fileID: 104922905}
   - component: {fileID: 104922906}
+  - component: {fileID: 104922907}
   m_Layer: 0
   m_Name: Liora
   m_TagString: Character
@@ -546,6 +547,8 @@ MonoBehaviour:
   LifeSystem: {fileID: 0}
   Rhythm: {fileID: 0}
   TurnsForCanAttack: 0
+  Anim: {fileID: 0}
+  AnimString: 
 --- !u!114 &104922901
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -630,6 +633,26 @@ MonoBehaviour:
     Index: 1
   note:
   - {fileID: 8721266030793499493, guid: 4a415d52b3455a24b8d5f97b237088ea, type: 3}
+--- !u!95 &104922907
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 104922892}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &117528627
 GameObject:
   m_ObjectHideFlags: 0
@@ -2242,6 +2265,7 @@ GameObject:
   - component: {fileID: 525768456}
   - component: {fileID: 525768457}
   - component: {fileID: 525768458}
+  - component: {fileID: 525768459}
   m_Layer: 0
   m_Name: Ember
   m_TagString: Character
@@ -2379,6 +2403,8 @@ MonoBehaviour:
   LifeSystem: {fileID: 0}
   Rhythm: {fileID: 0}
   TurnsForCanAttack: 0
+  Anim: {fileID: 0}
+  AnimString: 
 --- !u!114 &525768453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2458,6 +2484,26 @@ MonoBehaviour:
     Index: 0
   note:
   - {fileID: 8721266030793499493, guid: 4a415d52b3455a24b8d5f97b237088ea, type: 3}
+--- !u!95 &525768459
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 525768443}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &556336604
 GameObject:
   m_ObjectHideFlags: 0
@@ -3486,6 +3532,7 @@ GameObject:
   - component: {fileID: 814553647}
   - component: {fileID: 814553648}
   - component: {fileID: 814553649}
+  - component: {fileID: 814553650}
   m_Layer: 0
   m_Name: Alon
   m_TagString: Character
@@ -3623,6 +3670,8 @@ MonoBehaviour:
   LifeSystem: {fileID: 0}
   Rhythm: {fileID: 0}
   TurnsForCanAttack: 0
+  Anim: {fileID: 0}
+  AnimString: 
 --- !u!114 &814553644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3702,6 +3751,26 @@ MonoBehaviour:
     Index: 0
   note:
   - {fileID: 8721266030793499493, guid: 4a415d52b3455a24b8d5f97b237088ea, type: 3}
+--- !u!95 &814553650
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 814553637}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &821819374
 GameObject:
   m_ObjectHideFlags: 0
@@ -5948,6 +6017,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textSpeak: {fileID: 1919766849}
+  goBackCamera: {fileID: 0}
 --- !u!114 &1623998556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6811,6 +6881,7 @@ GameObject:
   - component: {fileID: 1993797148}
   - component: {fileID: 1993797149}
   - component: {fileID: 1993797150}
+  - component: {fileID: 1993797151}
   m_Layer: 0
   m_Name: Clementine
   m_TagString: Character
@@ -6948,6 +7019,8 @@ MonoBehaviour:
   LifeSystem: {fileID: 0}
   Rhythm: {fileID: 0}
   TurnsForCanAttack: 0
+  Anim: {fileID: 0}
+  AnimString: 
 --- !u!114 &1993797145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7034,6 +7107,26 @@ MonoBehaviour:
     Index: 1
   note:
   - {fileID: 8721266030793499493, guid: 4a415d52b3455a24b8d5f97b237088ea, type: 3}
+--- !u!95 &1993797151
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1993797136}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1999216847
 GameObject:
   m_ObjectHideFlags: 0
@@ -7244,6 +7337,8 @@ MonoBehaviour:
   LifeSystem: {fileID: 0}
   Rhythm: {fileID: 0}
   TurnsForCanAttack: 0
+  Anim: {fileID: 0}
+  AnimString: 
 --- !u!114 &2030265214
 MonoBehaviour:
   m_ObjectHideFlags: 0

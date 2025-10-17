@@ -16,7 +16,7 @@ public class PlayerCharactersSkills : MonoBehaviour
     }
 
     private IEnumerator ActiveSkill(int posSkill, float manaConsume) {
-		
+		Character().Anim.SetTrigger(Character().AnimString);
         AttackRhythm rhythm = CharacterClick.CharacterAttr.Rhythm;
         skill = CharStatus().Skills[posSkill];
         boxSkill.SetActive(false);
@@ -50,11 +50,15 @@ public class PlayerCharactersSkills : MonoBehaviour
 
     private void PassTurn(AttackRhythm rhythm, float manaConsume) {
         skill.Skill(CharStatus().Power, rhythm);
-        CharacterClick.CharacterAttr.TurnsForCanAttack += 1;
+        Character().TurnsForCanAttack += 1;
 		ManaSystem.Mp.ModifyValue(-manaConsume);
     }
-
+	
+	private CharacterAttributes Character() {
+		return CharacterClick.CharacterAttr;
+	}
+	
     private StatusCharacters CharStatus() {
-        return CharacterClick.CharacterAttr.Character;
+        return Character().Character;
     }
 }
