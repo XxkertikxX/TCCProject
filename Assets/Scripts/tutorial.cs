@@ -36,5 +36,5 @@ public class tutorial : MonoBehaviour
 public struct TutorialRequirements
 {
     public GameObject tutorialObjects;
-    public Input 
+    public Input a;
 }
