@@ -30,9 +30,11 @@ public class DialogWriterGeneric : MonoBehaviour, IDialogWriter
     public void StartLine() {
         inDialog = true;
         index = 0;
-        if (verifyCamera()) { }
+        if (verifyCamera())
+        {
             CameraManager.SwitchCamera(GetComponentInChildren<CinemachineVirtualCamera>());
-        //Debug.Log(GetComponentInChildren<CinemachineVirtualCamera>() == null);
+            //Debug.Log(GetComponentInChildren<CinemachineVirtualCamera>() == null);
+        }
         SetupLine();
         coroutine = StartCoroutine(TypingLine());
     }
