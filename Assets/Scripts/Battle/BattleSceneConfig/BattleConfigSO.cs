@@ -8,4 +8,6 @@ public class BattleConfigSO : ScriptableObject {
     public RuntimeAnimatorController EnemyAnimatorController;
     public Vector3 EnemyPosition;
     public int Index;
+	public TextActionString Text;
+	public IconsSO Icons;
 }

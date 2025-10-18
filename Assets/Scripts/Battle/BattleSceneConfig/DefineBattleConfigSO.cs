@@ -12,6 +12,8 @@ public class DefineBattleConfigSO : MonoBehaviour
         defaultSO.EnemyAnimatorController = newSO.EnemyAnimatorController;
         defaultSO.EnemyPosition = newSO.EnemyPosition;
         defaultSO.Index = newSO.Index;
+		defaultSO.Text = newSO.Text;
+		defaultSO.Icons = newSO.Icons;
     }
 
     void OnTriggerEnter2D(Collider2D collision) {

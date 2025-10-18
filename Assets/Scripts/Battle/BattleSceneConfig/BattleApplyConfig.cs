@@ -1,7 +1,7 @@
 using UnityEngine;
 
 public class BattleApplyConfig : MonoBehaviour {
-    [SerializeField] private BattleConfigSO battleConfigSO;
+    [SerializeField] public BattleConfigSO battleConfigSO;
 
     [SerializeField] private SpriteRenderer enemySpriteRenderer;
     [SerializeField] private CharacterAttributes enemyCharacter;
