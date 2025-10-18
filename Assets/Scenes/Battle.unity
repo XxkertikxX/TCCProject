@@ -513,7 +513,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 37820c6bcdbda434cb993caddf670437, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1c4346c88e4e3fe40acb89b7b9b36378, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -548,7 +548,7 @@ MonoBehaviour:
   Rhythm: {fileID: 0}
   TurnsForCanAttack: 0
   Anim: {fileID: 0}
-  AnimString: 
+  AnimString: Attacked
 --- !u!114 &104922901
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -643,7 +643,7 @@ Animator:
   m_GameObject: {fileID: 104922892}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f9a08a95e700b6a4eb9c09b34cb80ea0, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2691,7 +2691,7 @@ RectTransform:
   - {fileID: 210538008}
   - {fileID: 1712855115}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3549,7 +3549,7 @@ RectTransform:
   m_GameObject: {fileID: 814553637}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: -1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 955823350}
@@ -3761,7 +3761,7 @@ Animator:
   m_GameObject: {fileID: 814553637}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 97b04c2ebb5cb124c9482c42e6d43510, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -6739,7 +6739,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: d9cd2273fa7cbff45a742db19d46e467, type: 3}
     - target: {fileID: 3197450187991174363, guid: 7cc18415399c7d740bb9be8e8352b824, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3197450187991174363, guid: 7cc18415399c7d740bb9be8e8352b824, type: 3}
       propertyPath: m_LocalPosition.x

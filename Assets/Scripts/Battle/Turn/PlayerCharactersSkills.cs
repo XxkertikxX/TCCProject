@@ -16,11 +16,11 @@ public class PlayerCharactersSkills : MonoBehaviour
     }
 
     private IEnumerator ActiveSkill(int posSkill, float manaConsume) {
-		Character().Anim.SetTrigger(Character().AnimString);
         AttackRhythm rhythm = CharacterClick.CharacterAttr.Rhythm;
         skill = CharStatus().Skills[posSkill];
         boxSkill.SetActive(false);
         yield return SystemRhythmCicle(rhythm, manaConsume);
+        Character().Anim.SetTrigger(Character().AnimString);
     }
 
     private IEnumerator SystemRhythmCicle(AttackRhythm rhythm, float manaConsume) {
