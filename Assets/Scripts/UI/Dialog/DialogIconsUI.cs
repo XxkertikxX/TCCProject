@@ -21,7 +21,7 @@ public class DialogIconsUI : MonoBehaviour
 	}
 	
     void OnEnable() {
-		var battleApplyConfig = GameObject.FindObjectOfType<BattleApplyConfig>()
+		var battleApplyConfig = GameObject.FindObjectOfType<BattleApplyConfig>();
 		if(battleApplyConfig != null) {
 			icons = battleApplyConfig.battleConfigSO.Icons;
 		}
