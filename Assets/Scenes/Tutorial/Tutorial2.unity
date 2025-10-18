@@ -10660,6 +10660,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: SceneChangingCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 4662060690173759424, guid: 1ce2bb43be0dd2e439778cf988b740ca, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4662060690173759453, guid: 1ce2bb43be0dd2e439778cf988b740ca, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4662060690173759453, guid: 1ce2bb43be0dd2e439778cf988b740ca, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ce2bb43be0dd2e439778cf988b740ca, type: 3}
 --- !u!1 &1409972920
@@ -11795,7 +11807,7 @@ Tilemap:
       - {fileID: 21300000, guid: f4bb40f184b2cf84d8118ef62390de56, type: 3}
       - {fileID: 21300000, guid: 911408d9f3382f74bb67936bb01f157f, type: 3}
       - {fileID: 21300000, guid: f4bb40f184b2cf84d8118ef62390de56, type: 3}
-      m_AnimationSpeed: 4.6800184
+      m_AnimationSpeed: 4.5758553
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   - first: {x: 33, y: -1, z: 0}
@@ -11805,7 +11817,7 @@ Tilemap:
       - {fileID: 21300000, guid: c87b2d4e55de5644ca30d84ca4b45f6a, type: 3}
       - {fileID: 21300000, guid: f4134b1a9f5d28847bd3729efc1eb5fc, type: 3}
       - {fileID: 21300000, guid: c87b2d4e55de5644ca30d84ca4b45f6a, type: 3}
-      m_AnimationSpeed: 3.2088604
+      m_AnimationSpeed: 4.26206
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   - first: {x: 31, y: 0, z: 0}
@@ -11815,7 +11827,7 @@ Tilemap:
       - {fileID: 21300000, guid: f4bb40f184b2cf84d8118ef62390de56, type: 3}
       - {fileID: 21300000, guid: 911408d9f3382f74bb67936bb01f157f, type: 3}
       - {fileID: 21300000, guid: f4bb40f184b2cf84d8118ef62390de56, type: 3}
-      m_AnimationSpeed: 3.2060223
+      m_AnimationSpeed: 3.3094287
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   m_TileAssetArray:

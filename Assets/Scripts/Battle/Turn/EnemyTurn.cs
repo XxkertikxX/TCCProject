@@ -38,7 +38,6 @@ public class EnemyTurn : MonoBehaviour
 		yield return skill.TargetType.Targets();
         skill.Skill(enemy.Power, GetComponent<AttackRhythm>());
         GameAudioManager.PlaySound(SoundTypes.EnemyAttack);
-
         eventDialog.EventInvoke();
     }
 

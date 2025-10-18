@@ -4,6 +4,7 @@ using UnityEngine;
 public class tutorial : MonoBehaviour
 {
     [SerializeField] private TutorialConditions[] tutorialList;
+    private TutorialConditions actualTutorial;
     private int index = 0;
     private bool waitingInput;
 
@@ -16,7 +17,16 @@ public class tutorial : MonoBehaviour
         if (collision.tag == "Player")
         {
             TutorialConditions();
-            GetComponent<Collider2D>().enabled = false;
+            actualTutorial = tutorialList[index];
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            Debug.Log(index);
+            actualTutorial.tutorialGo.SetActive(false); //aprimorar
+            actualTutorial.tutorialCol.enabled = false;
         }
     }
 
@@ -42,7 +52,6 @@ public class tutorial : MonoBehaviour
 
     private void CheckIfPressed()
     {
-        tutorialList[index].tutorialGo.SetActive(false);
         waitingInput = false;
         index++;
     }
@@ -53,11 +62,13 @@ public struct TutorialConditions
 {
     public GameObject tutorialGo;
     public string[] bindsPressed;
+    public Collider2D tutorialCol;
 
-    public TutorialConditions(GameObject t, string[] binds)
+    public TutorialConditions(GameObject t, string[] binds, Collider2D col)
     {
         tutorialGo = t;
         bindsPressed = binds;
+        tutorialCol = col;
     }
 }
 

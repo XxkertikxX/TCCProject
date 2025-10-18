@@ -65,6 +65,7 @@ public class NoteRhythm : AttackRhythm, IUpdateRhythm
         GameObject note = Instantiate(rhythmProperties.Note(), direction.InstantiatePosition.position, Quaternion.identity);
         NoteMovement noteMovement = note.AddComponent<NoteMovement>();
         noteMovement.Direction = direction;
+        note.GetComponent<SetSpriteByDirection>().SetSprite(noteMovement);
         notes[direction.Index].Enqueue(noteMovement);
     }
     

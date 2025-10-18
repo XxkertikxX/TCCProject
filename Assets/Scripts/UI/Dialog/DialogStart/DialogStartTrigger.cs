@@ -5,10 +5,11 @@ public class DialogStartTrigger : DialogStartBase
     [SerializeField] private bool isInteractable;
     void OnTriggerEnter2D(Collider2D collision) {
         if (collision.CompareTag("Player")) {
-            if (!isInteractable)
+            StartDialog(); //essa
+            GetComponent<Collider2D>().enabled = false;
+            /*if (!isInteractable)
             {
-                StartDialog();
-                GetComponent<Collider2D>().enabled = false;
+                
             }
             else
             {
@@ -17,7 +18,7 @@ public class DialogStartTrigger : DialogStartBase
                     StartDialog();
                     GetComponent<Collider2D>().enabled = false;
                 }
-            }
+            */
         }
     }
 }

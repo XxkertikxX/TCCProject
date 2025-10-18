@@ -11,7 +11,7 @@ public class DialogWriterGeneric : MonoBehaviour, IDialogWriter
     private string[] dialogs;
 
     [SerializeField] private Text textSpeak;
-    [SerializeField] TestCameraChange goBackCamera;
+    [SerializeField] private TestCameraChange goBackCamera; //manter o olho
     
     private Coroutine coroutine = null;
 

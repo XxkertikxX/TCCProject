@@ -9,7 +9,7 @@ public class DestroyDeath : MonoBehaviour, IDeath
 
     public IEnumerator DeathAnim()
     {
-        EnemyAnim.PlayTrigger("Died");
+        EnemyAnim.PlayBool("Died", true);
         yield return new WaitForSeconds(3f);
         Destroy(gameObject);
     }

@@ -6,6 +6,6 @@ public abstract class DialogStartBase : MonoBehaviour {
 
     public void StartDialog() {
         OnDialogOpen?.Invoke();
-        DialogManager.OpenDialog();
+        DialogManager.OpenDialog(); //essa
     }
 }

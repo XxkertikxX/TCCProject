@@ -27,13 +27,16 @@ public class AnimationSrc : MonoBehaviour
 
     private void OnEnable()
     {
-        dialog.OnApplyIcons += Talk;
+        if(dialog != null)
+            dialog.OnApplyIcons += Talk;
+
         DialogManager.OnDialogClose += stoppedTalking;
     }
 
     private void OnDisable()
     {
-        dialog.OnApplyIcons -= Talk;
+        if (dialog != null)
+            dialog.OnApplyIcons -= Talk;
         DialogManager.OnDialogClose -= stoppedTalking;
     }
 

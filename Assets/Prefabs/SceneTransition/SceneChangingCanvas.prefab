@@ -131,21 +131,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameEffectScenes:
-  - MainReignScene: {fileID: 102900000, guid: be9714776b3768a4fa179abaa5953e35, type: 3}
+  - MainReignScene: Tutorial1
     ReignFont: {fileID: 12800000, guid: ab7a417e0f742e344888acecc7db7e91, type: 3}
     ReignName: Floresta Cristalina
-  - MainReignScene: {fileID: 102900000, guid: 889ef7a4d7839ec41a82a814543e1370, type: 3}
+  - MainReignScene: Tutorial2
     ReignFont: {fileID: 12800000, guid: ab7a417e0f742e344888acecc7db7e91, type: 3}
     ReignName: Reino Humano
-  - MainReignScene: {fileID: 102900000, guid: 5debd31eb5b94f24d8024a4cb5a47ced, type: 3}
+  - MainReignScene: Tutorial3
     ReignFont: {fileID: 12800000, guid: ab7a417e0f742e344888acecc7db7e91, type: 3}
     ReignName: Camara do Rei
-  - MainReignScene: {fileID: 102900000, guid: f8ae44ec20ece27428fe9fdc1836b6c4, type: 3}
+  - MainReignScene: Vento2
     ReignFont: {fileID: 12800000, guid: ab7a417e0f742e344888acecc7db7e91, type: 3}
     ReignName: Reino Do Vento
+  - MainReignScene: Sombra1
+    ReignFont: {fileID: 12800000, guid: ab7a417e0f742e344888acecc7db7e91, type: 3}
+    ReignName: Reino das Sombras
+  - MainReignScene: Sombra2
+    ReignFont: {fileID: 12800000, guid: ab7a417e0f742e344888acecc7db7e91, type: 3}
+    ReignName: Raizes Sombrias
   nomeRegiao: {fileID: 2026252639120658894}
-  alphaTransTime: 3
+  alphaTransTime: 1
   alphaToGo: 0
+  delayTillFade: 2
 --- !u!1 &4662060689516187353
 GameObject:
   m_ObjectHideFlags: 0

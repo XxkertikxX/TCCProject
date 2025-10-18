@@ -12,6 +12,10 @@ public class SceneFade : MonoBehaviour
         fadeAnimator = GetComponent<Animator>();
         instance = this;
     }
+    private void Start()
+    {
+        Panel.gameObject.SetActive(true);
+    }
 
     public void EnterEnviromentScene(string name) {
         nextScene = name;
@@ -19,13 +23,5 @@ public class SceneFade : MonoBehaviour
     }
     public void OnfadeComplete()  {
         SceneManager.LoadScene(nextScene);
-    }
-    public void OnFadeInComplete()
-    {
-        Panel.gameObject.SetActive(false);
-    }
-    public void OnFadeOutStart()
-    {
-        Panel.gameObject.SetActive(true);
     }
 }

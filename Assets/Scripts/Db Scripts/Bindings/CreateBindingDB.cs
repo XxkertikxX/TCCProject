@@ -25,8 +25,8 @@ public class CreateBindingDB : MonoBehaviour
         CreateKey("Jump", KeyCode.Space, col);
         CreateKey("Left", KeyCode.A, col);
         CreateKey("Right", KeyCode.D, col);
-        CreateKey("Down", KeyCode.W, col);
-        CreateKey("Up", KeyCode.S, col);
+        CreateKey("Up", KeyCode.W, col);
+        CreateKey("Down", KeyCode.S, col);
         CreateKey("Run", KeyCode.LeftShift, col);
         CreateKey("Interact", KeyCode.E, col);
         CreateKey("Skip", KeyCode.Space, col);

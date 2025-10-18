@@ -19,7 +19,7 @@ public class ApplyDialogSetups : MonoBehaviour
     }
     
     private void SetupOpenDialog() {
-        SetupAllOpenDialog();
+        SetupAllOpenDialog(); //essa
     }
     
     private void SetupCloseDialog() {
@@ -28,7 +28,7 @@ public class ApplyDialogSetups : MonoBehaviour
     
     private void SetupAllOpenDialog() {
         foreach (var setup in dialogSetup) {
-            setup.SetupOpenDialog();
+            setup.SetupOpenDialog(); //essa
         }
     }
     

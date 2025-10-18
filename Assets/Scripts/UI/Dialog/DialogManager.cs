@@ -6,7 +6,7 @@ public class DialogManager
     static public event Action OnDialogClose;
 
     static public void OpenDialog() {
-        OnDialogOpen?.Invoke();
+        OnDialogOpen?.Invoke(); //essa
     }
     
     static public void CloseDialog() {

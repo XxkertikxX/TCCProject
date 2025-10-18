@@ -14,6 +14,10 @@ public class EnemyAnim : MonoBehaviour
     {
         anim.SetTrigger(trigger);
     }
+    public static void PlayBool(string bName, bool b)
+    {
+        anim.SetBool(bName, b);
+    }
 	
 	void OnDestroy() {
 		anim = null;

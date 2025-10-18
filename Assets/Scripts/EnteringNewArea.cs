@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -12,6 +13,7 @@ public class EnteringNewArea : MonoBehaviour
     [SerializeField] private Text nomeRegiao;
     [SerializeField] private float alphaTransTime;
     [SerializeField] private float alphaToGo;
+    [SerializeField] private float delayTillFade;
 
     private void Start()
     {
@@ -19,19 +21,23 @@ public class EnteringNewArea : MonoBehaviour
         {
             if (SceneManager.GetActiveScene().name == nameEffectScenes[i].MainReignScene)
             {
-                Debug.Log("Cena principal do reino");
                 MakeNameEffect(i);
                 return;
             }
         }
         nomeRegiao.color = Color.clear;
-        Debug.Log("Continuação do Reino");
     }
 
     private void MakeNameEffect(int SceneIndex)
     {
         nomeRegiao.font = nameEffectScenes[SceneIndex].ReignFont;
         nomeRegiao.text = nameEffectScenes[SceneIndex].ReignName;
+        StartCoroutine(AfterDelay());
+    }
+
+    IEnumerator AfterDelay()
+    {
+        yield return new WaitForSeconds(delayTillFade);
         nomeRegiao.CrossFadeAlpha(alphaToGo, alphaTransTime, false);
     }
 
