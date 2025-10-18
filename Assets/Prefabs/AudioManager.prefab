@@ -211,11 +211,14 @@ MonoBehaviour:
     sounds:
     - {fileID: 8300000, guid: 333f0bd45c9afcb44ad8c4ca29dcd0f7, type: 3}
   - name: EnemyAttack
-    sounds: []
+    sounds:
+    - {fileID: 8300000, guid: d4bcc13c2ac716b42a4277a4df55cd9f, type: 3}
   - name: EnemyDamage
-    sounds: []
+    sounds:
+    - {fileID: 8300000, guid: e19dde9d7849d9b48b51df7c86cfb43e, type: 3}
   - name: EnemyDefeaty
-    sounds: []
+    sounds:
+    - {fileID: 8300000, guid: 6a46fbfaf72af7d428905a68db49cdd0, type: 3}
   - name: BattleVictory
     sounds: []
   - name: GameOver

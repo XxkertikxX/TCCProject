@@ -12,7 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff968ba26ddc34b4da8e26b7c340163d, type: 3}
   m_Name: BattleConfigDefault
   m_EditorClassIdentifier: 
-  EnemyStatus: {fileID: 0}
-  Background: {fileID: 0}
-  EnemySprite: {fileID: 0}
-  EnemyAnimatorController: {fileID: 0}
+  EnemyStatus: {fileID: 11400000, guid: 6a7583d51c3a7d140896356cd4a046ca, type: 2}
+  Background: {fileID: 6173943312995063890, guid: 586226abec01719449048e33f0129e20, type: 3}
+  EnemySprite: {fileID: 21300000, guid: d50ff11700f0676429eedfc298318cc9, type: 3}
+  EnemyAnimatorController: {fileID: 9100000, guid: 50555798f0ad5aa46b9f69cf64bf4382, type: 2}
+  EnemyPosition: {x: 5.17, y: -0.1, z: 0}
+  Index: 0
+  Text: {fileID: 0}
+  Icons: {fileID: 0}
+  hasDialog: 0

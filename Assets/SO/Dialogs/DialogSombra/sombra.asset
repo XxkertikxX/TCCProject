@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dd0bfdf66b4114439ae51af112a08cf, type: 3}
+  m_Name: sombra
+  m_EditorClassIdentifier: 
+  lineDialog:
+  - "Ol\xE1?"
+  - "Ol\xE1 viajantes, posso ajudar?"
+  - Pode, sim... estamos no reino das sombras, certo?
+  - Isso mesmo.
+  - "O Rei dos humanos pediu para que n\xF3s viessimos ver o por que de voc\xEAs
+    n\xE3o terem ido no tratado de paz?"
+  - "N\xF3s estamos com problemas... n\xE3o estamos com tempo para ir l\xE1."
+  - "Problemas? Voc\xEAs tamb\xE9m?"
+  - "Como assim tamb\xE9m? Tem um morcego absurdamente grande ferrando com os poderes
+    dos cristais, n\xE3o aguento mais tocar tambor enquanto o resto do meu povo se
+    esconde na floresta..."
+  - "Nossa esquisito, o reino do vento tamb\xE9m estava com um animal grande perturbando
+    o poder deles... enfim, se n\xF3s ajudarmos, voc\xEAs podem n\xF3s dar 1 cristal?"
+  - "N\xE3o vejo por que n\xE3o, mas tomem cuidado, voc\xEAs n\xE3o est\xE3o acostumados
+    andar na escurid\xE3o t\xE3o bem quanto n\xF3s, olhem por onde andam e tentem
+    n\xE3o cair da \xE1rvore... boa sorte,"

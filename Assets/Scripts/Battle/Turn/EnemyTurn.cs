@@ -37,7 +37,6 @@ public class EnemyTurn : MonoBehaviour
 		var skill = enemy.Skills[randomSkill];
 		yield return skill.TargetType.Targets();
         skill.Skill(enemy.Power, GetComponent<AttackRhythm>());
-        GameAudioManager.PlaySound(SoundTypes.EnemyAttack);
         eventDialog.EventInvoke();
     }
 
