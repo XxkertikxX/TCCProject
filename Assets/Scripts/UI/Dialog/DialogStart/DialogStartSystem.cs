@@ -11,9 +11,9 @@ public class DialogStartSystem : MonoBehaviour
     [SerializeField] private TextActionString textAction;
 
     void OnEnable() {
-		var battleApplyConfig = GameObject.FindObjectOfType<BattleApplyConfig>();
-		if(battleApplyConfig != null) {
-			textAction = battleApplyConfig.battleConfigSO.Text;
+		var battleText = GameObject.FindObjectOfType<BattleApplyConfig>().battleConfigSO.Text;
+		if(battleText != null) {
+			textAction = battleText;
 		}
         dialogStart.OnDialogOpen += SetupDialog;
     }
