@@ -14,27 +14,22 @@ public class LookCamera : MonoBehaviour
     [SerializeField] private float timer = 0;
     [SerializeField] private float holdTime;
 
-    private void Start()
-    {
+    private void Start() {
         virtualCam = GetComponent<CinemachineVirtualCamera>();
         bodyConfigs = virtualCam.GetCinemachineComponent<CinemachineFramingTransposer>();
         defaultOffset = bodyConfigs.m_TrackedObjectOffset;
     }
 
-    private void Update()
-    {
+    private void Update() {
         float verticalInput = Input.GetAxisRaw("Vertical");
 
-        if(verticalInput <= -0.2f || verticalInput >= 0.2f)
-        {
+        if(verticalInput <= -0.2f || verticalInput >= 0.2f) {
             timer += Time.deltaTime;
-            if(timer >= holdTime)
-            {
+            if(timer >= holdTime) {
                 bodyConfigs.m_TrackedObjectOffset = (defaultOffset * verticalInput)+ new Vector3(0, lookOffset * verticalInput, 0);
             }
         }
-        else
-        {
+        else {
             timer = 0;
             bodyConfigs.m_TrackedObjectOffset = defaultOffset;
         }

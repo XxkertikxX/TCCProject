@@ -4,22 +4,20 @@ public class SpriteOrder : MonoBehaviour
 {
     private SpriteRenderer PlayerRender;
     private SpriteRenderer thisRender;
-    [SerializeField] Transform objectBorderRight;
-    [SerializeField] Transform objectBorderLeft;
-    private void Start()
-    {
+    [SerializeField] private Transform objectBorderRight;
+    [SerializeField] private Transform objectBorderLeft;
+    
+    private void Start() {
         thisRender = GetComponentInParent<SpriteRenderer>();
     }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.gameObject.tag == "Player")
-        {
+
+    private void OnCollisionEnter2D(Collision2D collision) {
+        if(collision.gameObject.tag == "Player") {
             PlayerRender = collision.gameObject.GetComponentInChildren<SpriteRenderer>();
         }
     }
 
-    private void Update()
-    {
+    private void Update() {
         if (PlayerRender == null)
             return;
         
@@ -27,8 +25,7 @@ public class SpriteOrder : MonoBehaviour
         Vector3 directionRight = DirectionVector(pTransform.position, objectBorderRight.position);
         Vector3 directionLeft = DirectionVector(pTransform.position, objectBorderLeft.position);
 
-        switch (directionRight.normalized.x)
-        {
+        switch (directionRight.normalized.x) {
             case >0:
                 thisRender.sortingOrder = PlayerRender.sortingOrder + 1;
             break;
@@ -36,16 +33,14 @@ public class SpriteOrder : MonoBehaviour
                 thisRender.sortingOrder = PlayerRender.sortingOrder - 1;
                 break ;
         }
-        switch (directionLeft.normalized.x)
-        {
+        switch (directionLeft.normalized.x) {
             case < 0:
                 thisRender.sortingOrder = PlayerRender.sortingOrder - 1;
             break;
         }
     }
 
-    private Vector3 DirectionVector(Vector3 pPos,Vector3 pos)
-    {
+    private Vector3 DirectionVector(Vector3 pPos,Vector3 pos) {
         return pPos - pos;
     }
 }

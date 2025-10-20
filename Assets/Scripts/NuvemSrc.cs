@@ -7,17 +7,14 @@ public class NuvemSrc : MonoBehaviour
     [SerializeField] private Vector3 direction = Vector2.left;
     private int sort;
 
-    private void Start()
-    {
+    private void Start() {
        sort = Random.Range(-20, -70);
         GetComponent<SpriteRenderer>().sortingOrder = sort;
     }
-    private void Update()
-    {
+    private void Update() {
         transform.Translate(direction * speed * Time.deltaTime);
 
-        if(transform.position.x < LimitX)
-        {
+        if(transform.position.x < LimitX) {
             Destroy(gameObject);
         }
     }

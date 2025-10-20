@@ -5,15 +5,12 @@ using UnityEngine;
 public class PlayVoiceAudio : MonoBehaviour
 {
     [SerializeField] private Text actualCharacter;
-    public void PlayVoice()
-    {
+    public void PlayVoice() {
         GameAudioManager.PlaySound(CharacterTalking());
     }
 
-    private SoundTypes CharacterTalking()
-    {
-        switch (actualCharacter.text)
-        {
+    private SoundTypes CharacterTalking() {
+        switch (actualCharacter.text) {
             case "Liora":
                 return SoundTypes.LioraTalking;
             case "Alon":

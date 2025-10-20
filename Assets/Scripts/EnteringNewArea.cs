@@ -15,12 +15,9 @@ public class EnteringNewArea : MonoBehaviour
     [SerializeField] private float alphaToGo;
     [SerializeField] private float delayTillFade;
 
-    private void Start()
-    {
-        for (int i = 0; i < nameEffectScenes.Length; i++) 
-        {
-            if (SceneManager.GetActiveScene().name == nameEffectScenes[i].MainReignScene)
-            {
+    private void Start() {
+        for (int i = 0; i < nameEffectScenes.Length; i++)  {
+            if (SceneManager.GetActiveScene().name == nameEffectScenes[i].MainReignScene) {
                 MakeNameEffect(i);
                 return;
             }
@@ -28,15 +25,13 @@ public class EnteringNewArea : MonoBehaviour
         nomeRegiao.color = Color.clear;
     }
 
-    private void MakeNameEffect(int SceneIndex)
-    {
+    private void MakeNameEffect(int SceneIndex) {
         nomeRegiao.font = nameEffectScenes[SceneIndex].ReignFont;
         nomeRegiao.text = nameEffectScenes[SceneIndex].ReignName;
         StartCoroutine(AfterDelay());
     }
 
-    IEnumerator AfterDelay()
-    {
+    IEnumerator AfterDelay() {
         yield return new WaitForSeconds(delayTillFade);
         nomeRegiao.CrossFadeAlpha(alphaToGo, alphaTransTime, false);
     }
@@ -50,8 +45,7 @@ public struct ScenesWithName
     public string MainReignScene;
     public Font ReignFont;
     public string ReignName;
-    public ScenesWithName(string scene,Font rFont, string rName)
-    {
+    public ScenesWithName(string scene,Font rFont, string rName) {
         MainReignScene = scene;
         ReignFont = rFont;
         ReignName = rName;

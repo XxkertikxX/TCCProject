@@ -12,7 +12,7 @@ public class MainMenuButtons : MonoBehaviour
 
     public void CloseMenu(GameObject menu) {
         Time.timeScale = 1.0f;
-        GetComponent<PauseGame>().paused = false;
+        GetComponent<PauseGame>().Paused = false;
         menu.SetActive(false);
     }
 

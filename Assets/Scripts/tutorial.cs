@@ -12,63 +12,53 @@ public class tutorial : MonoBehaviour
     [SerializeField] private float FadeDuration;
     [SerializeField] private float FadeSpeed;
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.tag == "Player")
-        {
+    private void OnTriggerEnter2D(Collider2D collision) {
+        if (collision.tag == "Player") {
             TutorialConditions();
             actualTutorial = tutorialList[index];
         }
     }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.tag == "Player")
-        {
+
+    private void OnTriggerExit2D(Collider2D collision) {
+        if (collision.tag == "Player") {
             Debug.Log(index);
-            actualTutorial.tutorialGo.SetActive(false); //aprimorar
-            actualTutorial.tutorialCol.enabled = false;
+            actualTutorial.TutorialGO.SetActive(false); //aprimorar
+            actualTutorial.TutorialCol.enabled = false;
         }
     }
 
-    private void Update()
-    {
+    private void Update() {
         if (!waitingInput || index > tutorialList.Length)
             return;
 
-        foreach (string bind in tutorialList[index].bindsPressed)
-        {
-            if (InputCatalyst.input.InputButtonDown(bind))
-            {
+        foreach (string bind in tutorialList[index].BindsPressed) {
+            if (InputCatalyst.input.InputButtonDown(bind)) {
                 CheckIfPressed();
             }
         }
     }
 
-    private void TutorialConditions()
-    {
-        tutorialList[index].tutorialGo.SetActive(true);
+    private void TutorialConditions() {
+        tutorialList[index].TutorialGO.SetActive(true);
         waitingInput = true;
     }
 
-    private void CheckIfPressed()
-    {
+    private void CheckIfPressed() {
         waitingInput = false;
         index++;
     }
 }
 
 [Serializable]
-public struct TutorialConditions
-{
-    public GameObject tutorialGo;
-    public string[] bindsPressed;
-    public Collider2D tutorialCol;
+public struct TutorialConditions {
+    public GameObject TutorialGO;
+    public string[] BindsPressed;
+    public Collider2D TutorialCol;
 
-    public TutorialConditions(GameObject t, string[] binds, Collider2D col)
-    {
-        tutorialGo = t;
-        bindsPressed = binds;
-        tutorialCol = col;
+    public TutorialConditions(GameObject tutorialGO, string[] binds, Collider2D col) {
+        TutorialGO = tutorialGO;
+        BindsPressed = binds;
+        TutorialCol = col;
     }
 }
 
