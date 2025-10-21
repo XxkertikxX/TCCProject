@@ -74,11 +74,8 @@ public class NoteRhythm : AttackRhythm, IUpdateRhythm
     }
     
     private void Click() {
-        foreach(Queue<NoteMovement> queue in notes) {
-            if(queue.Count == 0) continue;
-            if(CheckInput(queue)) {
-                DequeueLine(queue);
-            }
+        if(CheckInput(FirstNote().Peek())) {
+            DequeueLine(FirstNote());
         }
     }
 
@@ -115,8 +112,7 @@ public class NoteRhythm : AttackRhythm, IUpdateRhythm
         return true;
     }
 
-    private bool CheckInput(Queue<NoteMovement> queue) {
-        var firstNote = queue.Peek();
+    private bool CheckInput(NoteMovement firstNote) {
         foreach(string key in firstNote.Note.Input) {
             if(InputCatalyst.input.InputButtonDown(key)) {
                 return true;
@@ -131,5 +127,32 @@ public class NoteRhythm : AttackRhythm, IUpdateRhythm
             Notes notes = queue.Peek().Note;
             dir.SprRendCenterLine.sprite = notes.CenterLineSpr;
         }
+    }
+
+    private Queue<NoteMovement> FirstNote() {
+        Queue<NoteMovement>[] queues = notes.ToArray();
+        Queue<NoteMovement> queue;
+
+        if(queues.Length == 1) {
+            return queues[0];
+        }
+
+        for(int i = 0; i < queues.Length - 1; i++) {
+            if(queues[i].Length == 0 && queues[i+1].Length == 0) continue;
+            if(queues[i+1].Length == 0 || queues[i+1].Length == 0) {
+                if(queues[i+1].Length == 0) {
+                    queue = queues[i];
+                } else {queue = queues[i+1];}
+            }
+
+            if(DistanceToCenter(queues[i+1].Peek()) > DistanceToCenter(queues[i].Peek())) {
+                queue = queues[i+1];
+            } else { queue = queus[i]; }
+        }
+        return queue;
+    }
+
+    private float DistanceToCenter(NoteMovement note) {
+        return 1;
     }
 }

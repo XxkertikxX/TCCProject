@@ -612,26 +612,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 760669424f96fbe4db1f9b41fd3fbb63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 2
+  speedMin: 0
+  speedMax: 0
   Rhythm: {fileID: 906143798}
   directions:
-  - Checker: {fileID: 11400000, guid: 449910b63ce3d684dadcce45610feac9, type: 2}
+  - Speed: 0
+    Checker: {fileID: 11400000, guid: 449910b63ce3d684dadcce45610feac9, type: 2}
     Direction: {x: 0, y: -1}
     SprRendCenterLine: {fileID: 0}
     CenterLine: {fileID: 953333329}
     Point: {fileID: 0}
     InstantiatePosition: {fileID: 1492707440}
-    Input:
-    - Left2
     Index: 0
-  - Checker: {fileID: 11400000, guid: 449910b63ce3d684dadcce45610feac9, type: 2}
+  - Speed: 0
+    Checker: {fileID: 11400000, guid: 449910b63ce3d684dadcce45610feac9, type: 2}
     Direction: {x: 0, y: -1}
     SprRendCenterLine: {fileID: 0}
     CenterLine: {fileID: 492702001}
     Point: {fileID: 0}
     InstantiatePosition: {fileID: 1047377923}
-    Input:
-    - Right2
     Index: 1
   notes: []
 --- !u!95 &104922907
@@ -2596,27 +2595,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 760669424f96fbe4db1f9b41fd3fbb63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 3
+  speedMin: 5
+  speedMax: 8
   Rhythm: {fileID: 1683271417}
   directions:
-  - Checker: {fileID: 11400000, guid: 06d2f74b82369d343b316a9b05db41c9, type: 2}
+  - Speed: 0
+    Checker: {fileID: 11400000, guid: 06d2f74b82369d343b316a9b05db41c9, type: 2}
     Direction: {x: 1, y: 0}
     SprRendCenterLine: {fileID: 1745832855}
     CenterLine: {fileID: 1745832854}
     Point: {fileID: 40576866}
     InstantiatePosition: {fileID: 1124567179}
-    Input:
-    - Right2
     Index: 0
   notes:
   - Note: {fileID: 8721266030793499493, guid: 903b8e2b7df4a474f8b9d652a47c6718, type: 3}
     CenterLineSpr: {fileID: 21300000, guid: a42cace822216944ebf4c9c196761790, type: 3}
+    Input: []
   - Note: {fileID: 8721266030793499493, guid: bd3a98f64032381469958de42ef91190, type: 3}
     CenterLineSpr: {fileID: 21300000, guid: 1ac2b7412a3408b4388739afb0591632, type: 3}
+    Input: []
   - Note: {fileID: 8721266030793499493, guid: 4a415d52b3455a24b8d5f97b237088ea, type: 3}
     CenterLineSpr: {fileID: 21300000, guid: bb79e5786a7905547acde3d0391485f6, type: 3}
+    Input: []
   - Note: {fileID: 8721266030793499493, guid: 38f39b2aecf19354bb195a6016bb14ff, type: 3}
     CenterLineSpr: {fileID: 21300000, guid: 449bc732e880acb41bbd830e6c01bb39, type: 3}
+    Input: []
 --- !u!95 &525768459
 Animator:
   serializedVersion: 4
@@ -3972,17 +3975,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 760669424f96fbe4db1f9b41fd3fbb63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 3
+  speedMin: 0
+  speedMax: 0
   Rhythm: {fileID: 172780317}
   directions:
-  - Checker: {fileID: 11400000, guid: 0f4d323a226287a4b93222f584e67bd6, type: 2}
+  - Speed: 0
+    Checker: {fileID: 11400000, guid: 0f4d323a226287a4b93222f584e67bd6, type: 2}
     Direction: {x: -1, y: 0}
     SprRendCenterLine: {fileID: 0}
     CenterLine: {fileID: 299043517}
     Point: {fileID: 0}
     InstantiatePosition: {fileID: 1412092399}
-    Input:
-    - Left2
     Index: 0
   notes: []
 --- !u!95 &814553650
@@ -7822,26 +7825,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 760669424f96fbe4db1f9b41fd3fbb63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 1.5
+  speedMin: 0
+  speedMax: 0
   Rhythm: {fileID: 117528627}
   directions:
-  - Checker: {fileID: 11400000, guid: 449910b63ce3d684dadcce45610feac9, type: 2}
+  - Speed: 0
+    Checker: {fileID: 11400000, guid: 449910b63ce3d684dadcce45610feac9, type: 2}
     Direction: {x: 0, y: -1}
     SprRendCenterLine: {fileID: 0}
     CenterLine: {fileID: 650925121}
     Point: {fileID: 0}
     InstantiatePosition: {fileID: 2119373845}
-    Input:
-    - Left2
     Index: 0
-  - Checker: {fileID: 11400000, guid: de703c5188335254da67d19cb6ccfdf4, type: 2}
+  - Speed: 0
+    Checker: {fileID: 11400000, guid: de703c5188335254da67d19cb6ccfdf4, type: 2}
     Direction: {x: 0, y: 1}
     SprRendCenterLine: {fileID: 0}
     CenterLine: {fileID: 1437640633}
     Point: {fileID: 0}
     InstantiatePosition: {fileID: 1821551089}
-    Input:
-    - Right2
     Index: 1
   notes: []
 --- !u!95 &1993797151
