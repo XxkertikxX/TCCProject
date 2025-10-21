@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using LiteDB;
 
-public class SaveStats
-{ 
+public class SaveStats { 
     [BsonId]
     public int ID {get; set;}
 
