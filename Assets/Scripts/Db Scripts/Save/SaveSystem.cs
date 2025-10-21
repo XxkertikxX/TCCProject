@@ -43,12 +43,9 @@ public class SaveSystem
         var save = new SaveStats {
             ID = 1,
             SceneName = "Tutorial1",
-            ManaBase = 10,
-            Level = 0,
             Player = NewVector3(-4.5f, -1.33f, 0),
             DefeatEnemy = new bool[] { false, false }
         };
-        save.ManaTotal = save.ManaBase + save.Level;
         SaveStatusCharacter.SaveStatus(save);
         return save;
     }
@@ -57,9 +54,7 @@ public class SaveSystem
         Transform player = GameObject.FindGameObjectWithTag("Player").transform;
 
         save.SceneName = SceneManager.GetActiveScene().name;
-        save.Level = LevelSystem.Level;
         save.Player = NewVector3(player.position.x, player.position.y, player.position.z);
-        save.ManaTotal = save.ManaBase + save.Level;
         SaveStatusCharacter.SaveStatus(save);
         return save;
     }

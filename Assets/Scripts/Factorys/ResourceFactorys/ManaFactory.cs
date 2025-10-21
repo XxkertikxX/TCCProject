@@ -2,9 +2,10 @@ using UnityEngine;
 
 public class ManaFactory : MonoBehaviour
 {
+    [SerializeField] private ManaSO manaSO;
+    
     void Awake() {
-        SaveSystem saveSystem = new SaveSystem();
-        ResourceSystem resourceSystem = ResourceFactory.CreateResourceSystem(gameObject, saveSystem.OpenLoad().ManaTotal);
+        ResourceSystem resourceSystem = ResourceFactory.CreateResourceSystem(gameObject, manaSO.Mana);
         CreateManaSystem(resourceSystem);
     }
     

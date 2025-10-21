@@ -9,9 +9,7 @@ public class SaveStats
     public int ID {get; set;}
 
     public string SceneName {get; set;}
-    public int ManaBase {get; set;}
-    public int ManaTotal {get; set;}
-    public int Level {get; set;}
+    public float Mana {get; set;}
     public Vector3Stat Player {get; set;}
     public bool[] DefeatEnemy {get; set;}
     public Status[] StatusCharacter {get; set;}

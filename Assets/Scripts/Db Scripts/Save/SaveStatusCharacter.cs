@@ -8,6 +8,9 @@ public class SaveStatusCharacter : MonoBehaviour
     [SerializeField] private StatusCharacters[] statusnS;
     static private StatusCharacters[] statusS;
 
+    [SerializeField] private ManaSO mananS;
+    static private ManaSO manaS;
+
     void Awake() {
         statusS = statusnS;
     }
@@ -16,12 +19,14 @@ public class SaveStatusCharacter : MonoBehaviour
         for(int i = 0; i < statusS.Length; i++) {
             SaveCharacter(save.StatusCharacter[i], statusS[i]);
         }
+        save.Mana = manaS.Mana;
     }
 
     static public void LoadStatus(SaveStats save) {
         for(int i = 0; i < statusS.Length; i++) {
             LoadCharacter(save.StatusCharacter[i], statusS[i]);
         }
+        manaS.Mana = save.Mana;
     }
 
     static private void SaveCharacter(Status status, StatusCharacters statusSO) {

@@ -18,6 +18,5 @@ public class SaveLoader : MonoBehaviour
 		GC.Collect();
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         player.transform.position = new Vector3(saveStats.Player.X, saveStats.Player.Y, saveStats.Player.Z);
-        LevelSystem.Level = saveStats.Level;
     }
 }
