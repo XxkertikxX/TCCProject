@@ -44,7 +44,13 @@ public class SaveSystem
             ID = 1,
             SceneName = "Tutorial1",
             Player = NewVector3(-4.5f, -1.33f, 0),
-            DefeatEnemy = new bool[] { false, false }
+            DefeatEnemy = new bool[] { false, false },
+            StatusCharacter = new Status[] {
+                new Status(),
+                new Status(),
+                new Status(),
+                new Status()
+            },
         };
         SaveStatusCharacter.SaveStatus(save);
         return save;

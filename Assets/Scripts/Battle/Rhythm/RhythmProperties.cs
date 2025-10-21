@@ -7,12 +7,11 @@ public class RhythmProperties : MonoBehaviour
 
     public GameObject Rhythm;
     [SerializeField] private List<Directions> directions;
-    
-    [SerializeField] private List<GameObject> note;
+    [SerializeField] private List<Notes> notes;
 
-    public GameObject Note() {
-        int index = Random.Range(0, note.Count);
-        return note[index];
+    public Notes Note() {
+        int index = Random.Range(0, notes.Count);
+        return notes[index];
     }
 
     public Directions Direction() {
@@ -30,11 +29,18 @@ public class Directions {
     public CheckerPosition Checker;
 
     public Vector2 Direction;
+    public SpriteRenderer SprRendCenterLine;
 	public Transform CenterLine;
-    public GameObject point;
+    public GameObject Point;
     public Transform InstantiatePosition;
 
     public List<string> Input;
 
     public int Index;
+}
+
+[System.Serializable]
+public class Notes {
+    public GameObject Note;
+    public Sprite CenterLineSpr;
 }

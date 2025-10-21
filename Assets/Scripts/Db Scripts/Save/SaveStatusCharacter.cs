@@ -13,6 +13,7 @@ public class SaveStatusCharacter : MonoBehaviour
 
     void Awake() {
         statusS = statusnS;
+        manaS = mananS;
     }
 
     static public void SaveStatus(SaveStats save) {

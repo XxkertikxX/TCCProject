@@ -617,22 +617,23 @@ MonoBehaviour:
   directions:
   - Checker: {fileID: 11400000, guid: 449910b63ce3d684dadcce45610feac9, type: 2}
     Direction: {x: 0, y: -1}
+    SprRendCenterLine: {fileID: 0}
     CenterLine: {fileID: 953333329}
-    point: {fileID: 1195983922}
+    Point: {fileID: 0}
     InstantiatePosition: {fileID: 1492707440}
     Input:
     - Left2
     Index: 0
   - Checker: {fileID: 11400000, guid: 449910b63ce3d684dadcce45610feac9, type: 2}
     Direction: {x: 0, y: -1}
+    SprRendCenterLine: {fileID: 0}
     CenterLine: {fileID: 492702001}
-    point: {fileID: 2039850546}
+    Point: {fileID: 0}
     InstantiatePosition: {fileID: 1047377923}
     Input:
     - Right2
     Index: 1
-  note:
-  - {fileID: 8721266030793499493, guid: 4a415d52b3455a24b8d5f97b237088ea, type: 3}
+  notes: []
 --- !u!95 &104922907
 Animator:
   serializedVersion: 4
@@ -2600,14 +2601,22 @@ MonoBehaviour:
   directions:
   - Checker: {fileID: 11400000, guid: 06d2f74b82369d343b316a9b05db41c9, type: 2}
     Direction: {x: 1, y: 0}
+    SprRendCenterLine: {fileID: 1745832855}
     CenterLine: {fileID: 1745832854}
-    point: {fileID: 40576866}
+    Point: {fileID: 40576866}
     InstantiatePosition: {fileID: 1124567179}
     Input:
     - Right2
     Index: 0
-  note:
-  - {fileID: 8721266030793499493, guid: 4a415d52b3455a24b8d5f97b237088ea, type: 3}
+  notes:
+  - Note: {fileID: 8721266030793499493, guid: 903b8e2b7df4a474f8b9d652a47c6718, type: 3}
+    CenterLineSpr: {fileID: 21300000, guid: a42cace822216944ebf4c9c196761790, type: 3}
+  - Note: {fileID: 8721266030793499493, guid: bd3a98f64032381469958de42ef91190, type: 3}
+    CenterLineSpr: {fileID: 21300000, guid: 1ac2b7412a3408b4388739afb0591632, type: 3}
+  - Note: {fileID: 8721266030793499493, guid: 4a415d52b3455a24b8d5f97b237088ea, type: 3}
+    CenterLineSpr: {fileID: 21300000, guid: bb79e5786a7905547acde3d0391485f6, type: 3}
+  - Note: {fileID: 8721266030793499493, guid: 38f39b2aecf19354bb195a6016bb14ff, type: 3}
+    CenterLineSpr: {fileID: 21300000, guid: 449bc732e880acb41bbd830e6c01bb39, type: 3}
 --- !u!95 &525768459
 Animator:
   serializedVersion: 4
@@ -3968,14 +3977,14 @@ MonoBehaviour:
   directions:
   - Checker: {fileID: 11400000, guid: 0f4d323a226287a4b93222f584e67bd6, type: 2}
     Direction: {x: -1, y: 0}
+    SprRendCenterLine: {fileID: 0}
     CenterLine: {fileID: 299043517}
-    point: {fileID: 936438764}
+    Point: {fileID: 0}
     InstantiatePosition: {fileID: 1412092399}
     Input:
     - Left2
     Index: 0
-  note:
-  - {fileID: 8721266030793499493, guid: 4a415d52b3455a24b8d5f97b237088ea, type: 3}
+  notes: []
 --- !u!95 &814553650
 Animator:
   serializedVersion: 4
@@ -6529,6 +6538,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b9b9ad653009d44f9441e87c856d744, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  manaSO: {fileID: 11400000, guid: b9769ccb0a4631e408ac6d10115136c5, type: 2}
 --- !u!114 &1522955569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7399,6 +7409,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6061505847124505713, guid: a32c455b96022364fa316f55bef42579, type: 3}
   m_PrefabInstance: {fileID: 1745832853}
   m_PrefabAsset: {fileID: 0}
+--- !u!212 &1745832855 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 4767783486949814014, guid: a32c455b96022364fa316f55bef42579, type: 3}
+  m_PrefabInstance: {fileID: 1745832853}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1821551088
 GameObject:
   m_ObjectHideFlags: 0
@@ -7812,22 +7827,23 @@ MonoBehaviour:
   directions:
   - Checker: {fileID: 11400000, guid: 449910b63ce3d684dadcce45610feac9, type: 2}
     Direction: {x: 0, y: -1}
+    SprRendCenterLine: {fileID: 0}
     CenterLine: {fileID: 650925121}
-    point: {fileID: 1105196973}
+    Point: {fileID: 0}
     InstantiatePosition: {fileID: 2119373845}
     Input:
     - Left2
     Index: 0
   - Checker: {fileID: 11400000, guid: de703c5188335254da67d19cb6ccfdf4, type: 2}
     Direction: {x: 0, y: 1}
+    SprRendCenterLine: {fileID: 0}
     CenterLine: {fileID: 1437640633}
-    point: {fileID: 749038720}
+    Point: {fileID: 0}
     InstantiatePosition: {fileID: 1821551089}
     Input:
     - Right2
     Index: 1
-  note:
-  - {fileID: 8721266030793499493, guid: 4a415d52b3455a24b8d5f97b237088ea, type: 3}
+  notes: []
 --- !u!95 &1993797151
 Animator:
   serializedVersion: 4

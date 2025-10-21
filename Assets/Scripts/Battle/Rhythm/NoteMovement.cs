@@ -4,6 +4,7 @@ public class NoteMovement : MonoBehaviour
 {
     public RbMovement Rb;
     public Directions Direction;
+    public Notes Note;
     
     void Awake() {
         Rb = gameObject.AddComponent<RbMovement>();
@@ -18,6 +19,6 @@ public class NoteMovement : MonoBehaviour
     }
 
     public bool DestroyLineOutLimits() {
-        return Direction.Checker.PassedDistance(transform, Direction.point.transform);
+        return Direction.Checker.PassedDistance(transform, Direction.Point.transform);
     }
 }

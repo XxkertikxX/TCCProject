@@ -19,6 +19,7 @@ public class NoteRhythm : AttackRhythm, IUpdateRhythm
         Click();
         DequeueLineOutLimits();
         CloseRhythm();
+        ChangeSprites();
     }
 
     public void FixedUpdateAttack() {
@@ -62,10 +63,11 @@ public class NoteRhythm : AttackRhythm, IUpdateRhythm
 
     private void CreateLine() {
         Directions direction = rhythmProperties.Direction();
-        GameObject note = Instantiate(rhythmProperties.Note(), direction.InstantiatePosition.position, Quaternion.identity);
-        NoteMovement noteMovement = note.AddComponent<NoteMovement>();
+        Notes note = rhythmProperties.Note();
+        GameObject noteGO = Instantiate(note.Note, direction.InstantiatePosition.position, Quaternion.identity);
+        NoteMovement noteMovement = noteGO.AddComponent<NoteMovement>();
         noteMovement.Direction = direction;
-        note.GetComponent<SetSpriteByDirection>().SetSprite(noteMovement);
+        noteMovement.Note = note;
         notes[direction.Index].Enqueue(noteMovement);
     }
     
@@ -119,5 +121,13 @@ public class NoteRhythm : AttackRhythm, IUpdateRhythm
             }
         }
         return false;
+    }
+
+    private void ChangeSprites() {
+        foreach(Queue<NoteMovement> queue in notes){
+            Directions dir = queue.Peek().Direction;
+            Notes notes = queue.Peek().Note;
+            dir.SprRendCenterLine.sprite = notes.CenterLineSpr;
+        }
     }
 }
