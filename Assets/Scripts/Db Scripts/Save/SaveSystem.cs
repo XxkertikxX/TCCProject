@@ -8,6 +8,7 @@ public class SaveSystem
         using (var db = new LiteDatabase(Path())) {
             var col = db.GetCollection<SaveStats>("save_stats");
             var save = Load(db);
+            SaveStatusCharacter.LoadStatus(save);
             save = Update(save);
             col.Upsert(save);
         }
@@ -34,7 +35,6 @@ public class SaveSystem
         if (save == null) {
             save = CreateNew();
             col.Upsert(save);
-            Debug.Log("New");
         }
         return save;
     }
@@ -49,6 +49,7 @@ public class SaveSystem
             DefeatEnemy = new bool[] { false, false }
         };
         save.ManaTotal = save.ManaBase + save.Level;
+        SaveStatusCharacter.SaveStatus(save);
         return save;
     }
 
@@ -59,8 +60,7 @@ public class SaveSystem
         save.Level = LevelSystem.Level;
         save.Player = NewVector3(player.position.x, player.position.y, player.position.z);
         save.ManaTotal = save.ManaBase + save.Level;
-
-        Debug.Log($"Atualizado X: {save.Player.X}");
+        SaveStatusCharacter.SaveStatus(save);
         return save;
     }
 

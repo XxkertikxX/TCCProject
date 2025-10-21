@@ -1201,10 +1201,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spritesAndHotspots:
-  - texture: {fileID: 2800000, guid: 46e87660ff86a1846959c1ff9163e4e6, type: 3}
-    hotspot: {x: 20, y: 88}
-  - texture: {fileID: 2800000, guid: a97bd70350d54b748b2172aab4330e63, type: 3}
-    hotspot: {x: 20, y: 88}
+  - Texture: {fileID: 0}
+    Hotspot: {x: 0, y: 0}
+  - Texture: {fileID: 0}
+    Hotspot: {x: 0, y: 0}
   volumeVisual: []
   sliderVolume: []
 --- !u!1 &940199809
@@ -1957,7 +1957,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 2073724168}
-  paused: 0
+  Paused: 0
 --- !u!1 &1446920898
 GameObject:
   m_ObjectHideFlags: 0
@@ -2424,6 +2424,7 @@ GameObject:
   - component: {fileID: 1552735758}
   - component: {fileID: 1552735757}
   - component: {fileID: 1552735756}
+  - component: {fileID: 1552735759}
   m_Layer: 0
   m_Name: SaveLoader
   m_TagString: Untagged
@@ -2470,6 +2471,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1552735759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552735755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 261e4f571323c984a9edb01a1412d0ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  statusnS:
+  - {fileID: 11400000, guid: b20e4541823df544885b0cb064a458c1, type: 2}
+  - {fileID: 11400000, guid: d2a25ce6e3c802c41920adef9dee2814, type: 2}
+  - {fileID: 11400000, guid: b5347eceb2e3bed4db0c3c4457ff456d, type: 2}
+  - {fileID: 11400000, guid: 66f3818663af0ce4fa37e18905f10318, type: 2}
 --- !u!1 &1581873882
 GameObject:
   m_ObjectHideFlags: 0
