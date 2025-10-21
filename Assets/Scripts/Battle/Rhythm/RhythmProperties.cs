@@ -3,7 +3,8 @@ using System.Collections.Generic;
 
 public class RhythmProperties : MonoBehaviour
 {
-    public float Speed;
+    [SerializeField] private float speedMin;
+    [SerializeField] private float speedMax;
 
     public GameObject Rhythm;
     [SerializeField] private List<Directions> directions;
@@ -19,6 +20,10 @@ public class RhythmProperties : MonoBehaviour
         return directions[index];
     }
 
+    public float Speed() {
+        return Random.Range(speedMin, speedMax);
+    }
+
     public int Index() {
         return directions.Count;
     }
@@ -26,6 +31,8 @@ public class RhythmProperties : MonoBehaviour
 
 [System.Serializable]
 public class Directions {
+    public float Speed;
+
     public CheckerPosition Checker;
 
     public Vector2 Direction;
@@ -34,8 +41,6 @@ public class Directions {
     public GameObject Point;
     public Transform InstantiatePosition;
 
-    public List<string> Input;
-
     public int Index;
 }
 
@@ -43,4 +48,5 @@ public class Directions {
 public class Notes {
     public GameObject Note;
     public Sprite CenterLineSpr;
+    public List<string> Input;
 }

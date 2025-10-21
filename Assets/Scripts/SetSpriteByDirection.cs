@@ -1,4 +1,4 @@
-using UnityEngine;
+/*using UnityEngine;
 
 public class SetSpriteByDirection : MonoBehaviour
 {
@@ -22,3 +22,4 @@ public class SetSpriteByDirection : MonoBehaviour
             return null;
     }
 }
+*/

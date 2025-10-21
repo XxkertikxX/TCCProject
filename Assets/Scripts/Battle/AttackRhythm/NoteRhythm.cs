@@ -25,8 +25,9 @@ public class NoteRhythm : AttackRhythm, IUpdateRhythm
     public void FixedUpdateAttack() {
         foreach(Queue<NoteMovement> queue in notes){
             foreach(NoteMovement note in queue) {
-                Vector2 direction = note.Direction.Direction;
-                note.Rb.Move(direction, rhythmProperties.Speed);
+                Directions direction = note.Direction;
+                Vector2 directionV2 = direction.Direction;
+                note.Rb.Move(directionV2, direction.Speed);
             }
         }
     }
@@ -63,6 +64,7 @@ public class NoteRhythm : AttackRhythm, IUpdateRhythm
 
     private void CreateLine() {
         Directions direction = rhythmProperties.Direction();
+        direction.Speed = rhythmProperties.Speed();
         Notes note = rhythmProperties.Note();
         GameObject noteGO = Instantiate(note.Note, direction.InstantiatePosition.position, Quaternion.identity);
         NoteMovement noteMovement = noteGO.AddComponent<NoteMovement>();
@@ -115,7 +117,7 @@ public class NoteRhythm : AttackRhythm, IUpdateRhythm
 
     private bool CheckInput(Queue<NoteMovement> queue) {
         var firstNote = queue.Peek();
-        foreach(string key in firstNote.Direction.Input) {
+        foreach(string key in firstNote.Note.Input) {
             if(InputCatalyst.input.InputButtonDown(key)) {
                 return true;
             }
