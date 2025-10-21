@@ -9,7 +9,7 @@ public class SaveReset : MonoBehaviour
         }
 	}
 	
-	   private string Path() {
+	private string Path() {
         return Application.persistentDataPath + "/save_stats.db";
     }
 }
