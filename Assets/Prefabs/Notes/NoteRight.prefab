@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 356403109962556154}
   - component: {fileID: 5102646348596090341}
-  - component: {fileID: 651221335254449087}
   m_Layer: 0
   m_Name: NoteRight
   m_TagString: Untagged
@@ -85,20 +84,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &651221335254449087
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8721266030793499493}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fdb71723d6e237b44b06522bbce4d08e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  directionSprites:
-  - {fileID: 21300000, guid: b0fa9b418684c1549bf9ca001920f670, type: 3}
-  - {fileID: 21300000, guid: 54fa26f2cd76d634fa5ad40dba63a35a, type: 3}
-  - {fileID: 21300000, guid: ee744a7a2aaa8494c83ead36b41a2d5a, type: 3}
-  - {fileID: 21300000, guid: 4d10935c6a6b2624bba3b4fae6136c8b, type: 3}

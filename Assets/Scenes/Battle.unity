@@ -619,20 +619,36 @@ MonoBehaviour:
   - Speed: 0
     Checker: {fileID: 11400000, guid: 449910b63ce3d684dadcce45610feac9, type: 2}
     Direction: {x: 0, y: -1}
-    SprRendCenterLine: {fileID: 0}
+    SprRendCenterLine: {fileID: 953333330}
     CenterLine: {fileID: 953333329}
-    Point: {fileID: 0}
+    Point: {fileID: 1195983922}
     InstantiatePosition: {fileID: 1492707440}
     Index: 0
   - Speed: 0
     Checker: {fileID: 11400000, guid: 449910b63ce3d684dadcce45610feac9, type: 2}
     Direction: {x: 0, y: -1}
-    SprRendCenterLine: {fileID: 0}
+    SprRendCenterLine: {fileID: 492702002}
     CenterLine: {fileID: 492702001}
-    Point: {fileID: 0}
+    Point: {fileID: 2039850546}
     InstantiatePosition: {fileID: 1047377923}
     Index: 1
-  notes: []
+  notes:
+  - Note: {fileID: 8721266030793499493, guid: 903b8e2b7df4a474f8b9d652a47c6718, type: 3}
+    CenterLineSpr: {fileID: 21300000, guid: a42cace822216944ebf4c9c196761790, type: 3}
+    Input:
+    - Up
+  - Note: {fileID: 8721266030793499493, guid: bd3a98f64032381469958de42ef91190, type: 3}
+    CenterLineSpr: {fileID: 21300000, guid: 1ac2b7412a3408b4388739afb0591632, type: 3}
+    Input:
+    - Left2
+  - Note: {fileID: 8721266030793499493, guid: 4a415d52b3455a24b8d5f97b237088ea, type: 3}
+    CenterLineSpr: {fileID: 21300000, guid: bb79e5786a7905547acde3d0391485f6, type: 3}
+    Input:
+    - Down
+  - Note: {fileID: 8721266030793499493, guid: 38f39b2aecf19354bb195a6016bb14ff, type: 3}
+    CenterLineSpr: {fileID: 21300000, guid: 449bc732e880acb41bbd830e6c01bb39, type: 3}
+    Input:
+    - Right
 --- !u!95 &104922907
 Animator:
   serializedVersion: 4
@@ -1505,6 +1521,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6061505847124505713, guid: a32c455b96022364fa316f55bef42579, type: 3}
   m_PrefabInstance: {fileID: 299043516}
   m_PrefabAsset: {fileID: 0}
+--- !u!212 &299043518 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 4767783486949814014, guid: a32c455b96022364fa316f55bef42579, type: 3}
+  m_PrefabInstance: {fileID: 299043516}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &304005587
 GameObject:
   m_ObjectHideFlags: 0
@@ -2214,6 +2235,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6061505847124505713, guid: a32c455b96022364fa316f55bef42579, type: 3}
   m_PrefabInstance: {fileID: 492702000}
   m_PrefabAsset: {fileID: 0}
+--- !u!212 &492702002 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 4767783486949814014, guid: a32c455b96022364fa316f55bef42579, type: 3}
+  m_PrefabInstance: {fileID: 492702000}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &505104774
 GameObject:
   m_ObjectHideFlags: 0
@@ -2595,8 +2621,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 760669424f96fbe4db1f9b41fd3fbb63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedMin: 5
-  speedMax: 8
+  speedMin: 2
+  speedMax: 3
   Rhythm: {fileID: 1683271417}
   directions:
   - Speed: 0
@@ -2610,16 +2636,20 @@ MonoBehaviour:
   notes:
   - Note: {fileID: 8721266030793499493, guid: 903b8e2b7df4a474f8b9d652a47c6718, type: 3}
     CenterLineSpr: {fileID: 21300000, guid: a42cace822216944ebf4c9c196761790, type: 3}
-    Input: []
+    Input:
+    - Up
   - Note: {fileID: 8721266030793499493, guid: bd3a98f64032381469958de42ef91190, type: 3}
     CenterLineSpr: {fileID: 21300000, guid: 1ac2b7412a3408b4388739afb0591632, type: 3}
-    Input: []
+    Input:
+    - Left2
   - Note: {fileID: 8721266030793499493, guid: 4a415d52b3455a24b8d5f97b237088ea, type: 3}
     CenterLineSpr: {fileID: 21300000, guid: bb79e5786a7905547acde3d0391485f6, type: 3}
-    Input: []
+    Input:
+    - Down
   - Note: {fileID: 8721266030793499493, guid: 38f39b2aecf19354bb195a6016bb14ff, type: 3}
     CenterLineSpr: {fileID: 21300000, guid: 449bc732e880acb41bbd830e6c01bb39, type: 3}
-    Input: []
+    Input:
+    - Right2
 --- !u!95 &525768459
 Animator:
   serializedVersion: 4
@@ -3975,19 +4005,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 760669424f96fbe4db1f9b41fd3fbb63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedMin: 0
-  speedMax: 0
+  speedMin: 2
+  speedMax: 3
   Rhythm: {fileID: 172780317}
   directions:
   - Speed: 0
     Checker: {fileID: 11400000, guid: 0f4d323a226287a4b93222f584e67bd6, type: 2}
     Direction: {x: -1, y: 0}
-    SprRendCenterLine: {fileID: 0}
+    SprRendCenterLine: {fileID: 299043518}
     CenterLine: {fileID: 299043517}
-    Point: {fileID: 0}
+    Point: {fileID: 936438764}
     InstantiatePosition: {fileID: 1412092399}
     Index: 0
-  notes: []
+  notes:
+  - Note: {fileID: 8721266030793499493, guid: 903b8e2b7df4a474f8b9d652a47c6718, type: 3}
+    CenterLineSpr: {fileID: 21300000, guid: a42cace822216944ebf4c9c196761790, type: 3}
+    Input:
+    - Up
+  - Note: {fileID: 8721266030793499493, guid: bd3a98f64032381469958de42ef91190, type: 3}
+    CenterLineSpr: {fileID: 21300000, guid: 1ac2b7412a3408b4388739afb0591632, type: 3}
+    Input:
+    - Left2
+  - Note: {fileID: 8721266030793499493, guid: 4a415d52b3455a24b8d5f97b237088ea, type: 3}
+    CenterLineSpr: {fileID: 21300000, guid: bb79e5786a7905547acde3d0391485f6, type: 3}
+    Input:
+    - Down
+  - Note: {fileID: 8721266030793499493, guid: 38f39b2aecf19354bb195a6016bb14ff, type: 3}
+    CenterLineSpr: {fileID: 21300000, guid: 449bc732e880acb41bbd830e6c01bb39, type: 3}
+    Input:
+    - Right2
 --- !u!95 &814553650
 Animator:
   serializedVersion: 4
@@ -4892,6 +4938,11 @@ PrefabInstance:
 --- !u!4 &953333329 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6061505847124505713, guid: a32c455b96022364fa316f55bef42579, type: 3}
+  m_PrefabInstance: {fileID: 953333328}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &953333330 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 4767783486949814014, guid: a32c455b96022364fa316f55bef42579, type: 3}
   m_PrefabInstance: {fileID: 953333328}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &955823346
@@ -7825,27 +7876,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 760669424f96fbe4db1f9b41fd3fbb63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedMin: 0
-  speedMax: 0
+  speedMin: 2
+  speedMax: 3
   Rhythm: {fileID: 117528627}
   directions:
   - Speed: 0
     Checker: {fileID: 11400000, guid: 449910b63ce3d684dadcce45610feac9, type: 2}
     Direction: {x: 0, y: -1}
-    SprRendCenterLine: {fileID: 0}
+    SprRendCenterLine: {fileID: 953333330}
     CenterLine: {fileID: 650925121}
-    Point: {fileID: 0}
+    Point: {fileID: 1195983922}
     InstantiatePosition: {fileID: 2119373845}
     Index: 0
   - Speed: 0
     Checker: {fileID: 11400000, guid: de703c5188335254da67d19cb6ccfdf4, type: 2}
     Direction: {x: 0, y: 1}
-    SprRendCenterLine: {fileID: 0}
+    SprRendCenterLine: {fileID: 492702002}
     CenterLine: {fileID: 1437640633}
-    Point: {fileID: 0}
+    Point: {fileID: 2039850546}
     InstantiatePosition: {fileID: 1821551089}
     Index: 1
-  notes: []
+  notes:
+  - Note: {fileID: 8721266030793499493, guid: 903b8e2b7df4a474f8b9d652a47c6718, type: 3}
+    CenterLineSpr: {fileID: 21300000, guid: a42cace822216944ebf4c9c196761790, type: 3}
+    Input:
+    - Up
+  - Note: {fileID: 8721266030793499493, guid: bd3a98f64032381469958de42ef91190, type: 3}
+    CenterLineSpr: {fileID: 21300000, guid: 1ac2b7412a3408b4388739afb0591632, type: 3}
+    Input:
+    - Left2
+  - Note: {fileID: 8721266030793499493, guid: 4a415d52b3455a24b8d5f97b237088ea, type: 3}
+    CenterLineSpr: {fileID: 21300000, guid: bb79e5786a7905547acde3d0391485f6, type: 3}
+    Input:
+    - Down
+  - Note: {fileID: 8721266030793499493, guid: 38f39b2aecf19354bb195a6016bb14ff, type: 3}
+    CenterLineSpr: {fileID: 21300000, guid: 449bc732e880acb41bbd830e6c01bb39, type: 3}
+    Input:
+    - Right2
 --- !u!95 &1993797151
 Animator:
   serializedVersion: 4
