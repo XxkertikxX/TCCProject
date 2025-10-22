@@ -12,13 +12,16 @@ public class NoteMovement : MonoBehaviour
     }
 
     public float PerDamage(float AreaSize) {
-        float distance = Mathf.Abs(Direction.Checker.Axis(transform) - Direction.Checker.Axis(Direction.CenterLine));
-        float centerDistance = (distance / (AreaSize / 2f));
+        float centerDistance = (Distance()/ (AreaSize / 2f));
         float damage = 0.7f + (1 - centerDistance * 0.3f);
         return damage;
     }
 
     public bool DestroyLineOutLimits() {
         return Direction.Checker.PassedDistance(transform, Direction.Point.transform);
+    }
+
+    public float Distance() {
+        return Mathf.Abs(Direction.Checker.Axis(transform) - Direction.Checker.Axis(Direction.CenterLine));
     }
 }

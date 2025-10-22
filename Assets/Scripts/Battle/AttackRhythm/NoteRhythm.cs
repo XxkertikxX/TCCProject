@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class NoteRhythm : AttackRhythm, IUpdateRhythm
 {   
@@ -131,28 +132,33 @@ public class NoteRhythm : AttackRhythm, IUpdateRhythm
 
     private Queue<NoteMovement> FirstNote() {
         Queue<NoteMovement>[] queues = notes.ToArray();
-        Queue<NoteMovement> queue;
+        Queue<NoteMovement> queue = new Queue<NoteMovement>();
 
         if(queues.Length == 1) {
             return queues[0];
         }
 
         for(int i = 0; i < queues.Length - 1; i++) {
-            if(queues[i].Length == 0 && queues[i+1].Length == 0) continue;
-            if(queues[i+1].Length == 0 || queues[i+1].Length == 0) {
-                if(queues[i+1].Length == 0) {
+            if(queues[i].Count == 0 && queues[i+1].Count == 0) continue;
+            if(queues[i+1].Count == 0 || queues[i].Count == 0) {
+                if(queues[i+1].Count == 0) {
                     queue = queues[i];
-                } else {queue = queues[i+1];}
+                } else {
+                    queue = queues[i+1];
+                }
+                continue;
             }
 
             if(DistanceToCenter(queues[i+1].Peek()) > DistanceToCenter(queues[i].Peek())) {
                 queue = queues[i+1];
-            } else { queue = queus[i]; }
+            } else { 
+                queue = queues[i]; 
+            }
         }
         return queue;
     }
 
     private float DistanceToCenter(NoteMovement note) {
-        return 1;
+        return note.Distance();
     }
 }
