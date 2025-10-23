@@ -146,9 +146,11 @@ public class NoteRhythm : AttackRhythm, IUpdateRhythm
 
     private void ChangeSprites() {
         foreach (Queue<NoteMovement> queue in notes) {
+            if(queue.Count == 0) continue;
             Directions dir = queue.Peek().Direction;
             Notes notes = queue.Peek().Note;
             dir.SprRendCenterLine.sprite = notes.CenterLineSpr;
+            Debug.Log(notes.CenterLineSpr);
         }
     }
 
