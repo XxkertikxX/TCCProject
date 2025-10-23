@@ -20,11 +20,6 @@ public class AnimationSrc : MonoBehaviour
         instance = this;
     }
 
-    private void Update()
-    {
-        UpdateAnimation();
-    }
-
     private void OnEnable()
     {
         if(dialog != null)
