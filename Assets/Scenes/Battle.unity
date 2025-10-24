@@ -410,6 +410,7 @@ GameObject:
   - component: {fileID: 104922905}
   - component: {fileID: 104922906}
   - component: {fileID: 104922907}
+  - component: {fileID: 104922908}
   m_Layer: 0
   m_Name: Liora
   m_TagString: Character
@@ -669,6 +670,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &104922908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 104922892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a147d8dfd30c8f84883d5ec1319c4abe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterClick: {fileID: 1541452071}
+  key: Right2
+  selectIndicator: {fileID: 0}
+  eventDialog: {fileID: 1541452074}
 --- !u!1 &117528627
 GameObject:
   m_ObjectHideFlags: 0
@@ -2419,6 +2436,7 @@ GameObject:
   - component: {fileID: 525768457}
   - component: {fileID: 525768458}
   - component: {fileID: 525768459}
+  - component: {fileID: 525768460}
   m_Layer: 0
   m_Name: Ember
   m_TagString: Character
@@ -2670,6 +2688,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &525768460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 525768443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a147d8dfd30c8f84883d5ec1319c4abe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterClick: {fileID: 1541452071}
+  key: Up2
+  selectIndicator: {fileID: 0}
+  eventDialog: {fileID: 1541452074}
 --- !u!1 &556336604
 GameObject:
   m_ObjectHideFlags: 0
@@ -3803,6 +3837,7 @@ GameObject:
   - component: {fileID: 814553648}
   - component: {fileID: 814553649}
   - component: {fileID: 814553650}
+  - component: {fileID: 814553651}
   m_Layer: 0
   m_Name: Alon
   m_TagString: Character
@@ -4054,6 +4089,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &814553651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 814553637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a147d8dfd30c8f84883d5ec1319c4abe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterClick: {fileID: 1541452071}
+  key: Down2
+  selectIndicator: {fileID: 0}
+  eventDialog: {fileID: 1541452074}
 --- !u!1 &815150239
 GameObject:
   m_ObjectHideFlags: 0
@@ -7686,6 +7737,7 @@ GameObject:
   - component: {fileID: 1993797149}
   - component: {fileID: 1993797150}
   - component: {fileID: 1993797151}
+  - component: {fileID: 1993797152}
   m_Layer: 0
   m_Name: Clementine
   m_TagString: Character
@@ -7945,6 +7997,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1993797152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1993797136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a147d8dfd30c8f84883d5ec1319c4abe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterClick: {fileID: 1541452071}
+  key: Left2
+  selectIndicator: {fileID: 0}
+  eventDialog: {fileID: 1541452074}
 --- !u!1 &1999216847
 GameObject:
   m_ObjectHideFlags: 0
