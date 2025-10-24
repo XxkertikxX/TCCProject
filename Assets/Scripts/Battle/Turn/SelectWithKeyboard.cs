@@ -15,7 +15,10 @@ public class SelectWithKeyboard : MonoBehaviour
 
     void Update() {
         if(InputCatalyst.input.InputButtonDown(key)) {
-            characterClick.ClickCharacter(GetComponent<CharacterAttributes>(), selectIndicator);
+            characterClick.ClickCharacter(GetComponent<CharacterAttributes>());
+            if(CharacterClick.CharacterInteraction == new CharacterSelect()) {
+                selectIndicator.SetActive(true);
+            }
         }
     }
 

@@ -8,12 +8,12 @@ public class CharacterClick : MonoBehaviour {
 
     [SerializeField] private Event eventDialog;
 
-    public void ClickCharacter(CharacterAttributes character, GameObject selectIndicator) {
+    public void ClickCharacter(CharacterAttributes character) {
         CharacterInteraction.Interaction(character);
 
         if(CharacterInteraction == new CharacterSelect()) {
             eventDialog.EventInvoke();
-            selectIndicator.SetActive(true);
+            
         }
     }
 }
