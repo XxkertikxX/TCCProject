@@ -68,7 +68,7 @@ public class NoteRhythm : AttackRhythm, IUpdateRhythm
         Directions direction = rhythmProperties.Direction();
         direction.Speed = rhythmProperties.Speed();
         Notes note = rhythmProperties.Note();
-        GameObject noteGO = Instantiate(note.Note, direction.InstantiatePosition.position, Quaternion.identity);
+        GameObject noteGO = Instantiate(note.Note, direction.InstantiatePosition.position, Quaternion.identity, rhythmProperties.Rhythm.transform);
         NoteMovement noteMovement = noteGO.AddComponent<NoteMovement>();
         noteMovement.Direction = direction;
         noteMovement.Note = note;
@@ -150,7 +150,6 @@ public class NoteRhythm : AttackRhythm, IUpdateRhythm
             Directions dir = queue.Peek().Direction;
             Notes notes = queue.Peek().Note;
             dir.SprRendCenterLine.sprite = notes.CenterLineSpr;
-            Debug.Log(notes.CenterLineSpr);
         }
     }
 
@@ -171,7 +170,7 @@ public class NoteRhythm : AttackRhythm, IUpdateRhythm
                 continue;
             }
 
-            if (DistanceToCenter(queues[i + 1].Peek()) > DistanceToCenter(queues[i].Peek())) {
+            if (DistanceToCenter(queues[i + 1].Peek()) < DistanceToCenter(queues[i].Peek())) {
                 queue = queues[i + 1];
             } else {
                 queue = queues[i];

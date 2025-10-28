@@ -28,7 +28,9 @@ public class EnemyTurn : MonoBehaviour
     }
     
     void OnDestroy() {
-        Save(true);
+        if(GetComponent<CharacterAttributes>().LifeSystem.ActualValue() <= 0) {
+            Save(true);
+        }
     }
     
     private IEnumerator EnemyAttack() {
