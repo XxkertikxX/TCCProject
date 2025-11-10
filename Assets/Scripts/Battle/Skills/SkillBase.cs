@@ -18,4 +18,6 @@ public abstract class SkillBase : ScriptableObject
     public int SkillPower => skillpower;
 
     public abstract void Skill(float power, AttackRhythm rhythm);
+	
+	public abstract string TargetsString();
 }

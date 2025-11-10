@@ -8,8 +8,22 @@ public class ScrSkillsAttack : SkillBase
         float damage = (1+power)/100 * (rhythm.Damage) * SkillPower;
         float RoundDamage = -Mathf.Round(damage);
 		TextBattleData.Action = $"causou {RoundDamage} de dano em ";
+		TextBattleData.Targets = TargetsString();
         foreach (var target in TargetType.CharactersAttributes) {
             target.LifeSystem.ModifyValue(RoundDamage);
         }
     }
+	
+	public override string TargetsString() {
+		List<CharactersAttributes> attributes = TargetType.CharactersAttributes;
+		if(TargetType.CharactersAttributes.Count == 1) {
+			return $"{attributes[0].CharacterStatus.Name}.";
+		}
+		string a = null;
+        for(int i = 0; i < attributes.Count-1; i++) {
+            a += $"{attributes[i].CharacterStatus.Name}, ";
+        }
+		a += $"{attributes[attributes.Count-1].CharacterStatus.Name}.";
+		return a;
+	}
 }
