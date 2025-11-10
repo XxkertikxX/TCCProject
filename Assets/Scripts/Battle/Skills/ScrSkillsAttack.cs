@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 [CreateAssetMenu(menuName = "SkillsAttackCreator")]
 public class ScrSkillsAttack : SkillBase
@@ -15,15 +16,15 @@ public class ScrSkillsAttack : SkillBase
     }
 	
 	public override string TargetsString() {
-		List<CharactersAttributes> attributes = TargetType.CharactersAttributes;
+		List<CharacterAttributes> attributes = TargetType.CharactersAttributes;
 		if(TargetType.CharactersAttributes.Count == 1) {
-			return $"{attributes[0].CharacterStatus.Name}.";
+			return $"{attributes[0].Character.Name}.";
 		}
 		string a = null;
         for(int i = 0; i < attributes.Count-1; i++) {
-            a += $"{attributes[i].CharacterStatus.Name}, ";
+            a += $"{attributes[i].Character.Name}, ";
         }
-		a += $"{attributes[attributes.Count-1].CharacterStatus.Name}.";
+		a += $"{attributes[attributes.Count-1].Character.Name}.";
 		return a;
 	}
 }
