@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f59b8f607a255544a1343d7f3ca0aa4, type: 3}
   m_Name: Kamata
   m_EditorClassIdentifier: 
+  Name: Kamata
+  Level: 0
   Life: 300
   Power: 15
   Skills:

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70c2c02cb5b1ba241a2409c795f2f7f6, type: 3}
   m_Name: "Pris\xE3oDaMar\xE9"
   m_EditorClassIdentifier: 
+  name: "Pris\xE3o da Mar\xE9"
   timesForInvoke: 10
   timePerInvokeLine: 1
   targetType: {fileID: 11400000, guid: bfc86f864346a4c4ea9f696f75467d71, type: 2}

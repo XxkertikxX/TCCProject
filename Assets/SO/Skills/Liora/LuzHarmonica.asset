@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4709e2f74d86de849a9dbd76036bc1fa, type: 3}
   m_Name: LuzHarmonica
   m_EditorClassIdentifier: 
+  name: "Luz Harm\xF4nica"
   timesForInvoke: 10
   timePerInvokeLine: 1
   targetType: {fileID: 11400000, guid: 9572008376955714ba6e8c2b9c4fb0d9, type: 2}

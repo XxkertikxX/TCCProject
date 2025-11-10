@@ -10,7 +10,8 @@ public class PlayerCharactersSkills : MonoBehaviour
 
     private SkillBase skill;
 
-    public void PressButtonSkill(int posSkill) {
+	public void PressButtonSkill(int posSkill) {
+		Texts(posSkill);
 		float manaConsume = CharStatus().Skills[posSkill].ManaConsume;
 		if(ManaSystem.Mp.CanChangeResource(manaConsume)) StartCoroutine(ActiveSkill(posSkill, manaConsume));
     }
@@ -61,4 +62,9 @@ public class PlayerCharactersSkills : MonoBehaviour
     private StatusCharacters CharStatus() {
         return Character().Character;
     }
+	
+	private void Texts(int posSkill) {
+		TextBattleData.Character = CharStatus().Name;
+		TextBattleData.SkillName = CharStatus.Skills[posSkill].Name;
+	}
 }

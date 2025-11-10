@@ -8,6 +8,12 @@ public class ScrSkillsCrowdControl : SkillBase
         foreach (var target in TargetType.CharactersAttributes) {
 			if(rhythm.Damage >= 0.75f) {
 				target.TurnsForCanAttack += SkillPower;
+						TextBattleData.Action = $"stunou por {SkillPower} rounds ";
+
+			}
+			else{
+				target.TurnsForCanAttack += SkillPower-1;
+				TextBattleData.Action = $"stunou por {SkillPower-1} rounds ";
 			}
         }
     }

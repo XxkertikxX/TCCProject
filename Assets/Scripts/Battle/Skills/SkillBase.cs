@@ -3,12 +3,14 @@ using System.Collections;
 
 public abstract class SkillBase : ScriptableObject
 {
+	[SerializeField] private string name;
     [SerializeField] private int timesForInvoke;
     [SerializeField] private float timePerInvokeLine;
     [SerializeField] private TypeSkill targetType;
     [SerializeField] private int manaconsume;
     [SerializeField] private int skillpower;
 
+	public string Name => name;
     public int TimesForInvoke => timesForInvoke;
     public float TimePerInvokeLine => timePerInvokeLine;
     public TypeSkill TargetType => targetType;
