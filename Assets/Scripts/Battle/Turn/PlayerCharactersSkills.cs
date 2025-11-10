@@ -6,7 +6,8 @@ public class PlayerCharactersSkills : MonoBehaviour
     [SerializeField] private SystemRhythm systemRhythm;
     [SerializeField] private GameObject boxSkill;
 	[SerializeField] private GameObject painel;
-    [SerializeField] private Event eventDialog;
+    [SerializeField] private Event applySkill;
+	[SerializeField] private Event useSkill;
 
     private SkillBase skill;
 
@@ -17,6 +18,8 @@ public class PlayerCharactersSkills : MonoBehaviour
     }
 
     private IEnumerator ActiveSkill(int posSkill, float manaConsume) {
+		useSkill.EventInvoke();
+		yield return new WaitUntil(() => DialogManager.OnDialog == false);
         AttackRhythm rhythm = CharacterClick.CharacterAttr.Rhythm;
         skill = CharStatus().Skills[posSkill];
         boxSkill.SetActive(false);
@@ -46,7 +49,8 @@ public class PlayerCharactersSkills : MonoBehaviour
         yield return rhythm.Attack(skill);
         EnemyAnim.PlayTrigger("TookDamage");
         painel.SetActive(false);
-        eventDialog.EventInvoke();
+        applySkill.EventInvoke();
+		yield return new WaitUntil(() => DialogManager.OnDialog == false);
     }
 
     private void PassTurn(AttackRhythm rhythm, float manaConsume) {

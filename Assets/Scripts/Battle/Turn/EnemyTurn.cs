@@ -9,7 +9,9 @@ public class EnemyTurn : MonoBehaviour
     public int Index;
 
     [SerializeField] private string scene;
-    [SerializeField] private Event eventDialog;
+    [SerializeField] private Event passTurn;
+    [SerializeField] private Event applySkill;
+	
 
     private StatusCharacters enemy;
 
@@ -20,7 +22,7 @@ public class EnemyTurn : MonoBehaviour
     void Update() {
         if (AllCharactersPlay() || LowestManaConsume() > ManaSystem.Mp.ActualValue()) {
             StartCoroutine(EnemyAttack());
-            ResetTurn();
+            StartCoroutine(ResetTurn());
         }
         if(Characters().Length == 0) {
             Save(false);
@@ -39,7 +41,8 @@ public class EnemyTurn : MonoBehaviour
 		var skill = enemy.Skills[randomSkill];
 		yield return skill.TargetType.Targets();
         skill.Skill(enemy.Power, GetComponent<AttackRhythm>());
-        eventDialog.EventInvoke();
+        applySkill.EventInvoke();
+		yield return new WaitUntil(() => DialogManager.OnDialog == false);
     }
 
     private bool AllCharactersPlay() {
@@ -51,7 +54,7 @@ public class EnemyTurn : MonoBehaviour
         return true;
     }
 
-    private void ResetTurn() {
+    private IEnumerator ResetTurn() {
         foreach (var character in Characters()) {
 			var characterTurns = character.GetComponent<CharacterAttributes>();
 			if(characterTurns.TurnsForCanAttack > 0) {
@@ -60,6 +63,8 @@ public class EnemyTurn : MonoBehaviour
         }
 		
 		ManaSystem.Mp.ModifyValue(5);
+		passTurn.EventInvoke();
+		yield return new WaitUntil(() => DialogManager.OnDialog == false);
     }
 
     private GameObject[] Characters() {
