@@ -65,6 +65,6 @@ public class PlayerCharactersSkills : MonoBehaviour
 	
 	private void Texts(int posSkill) {
 		TextBattleData.Character = CharStatus().Name;
-		TextBattleData.SkillName = CharStatus.Skills[posSkill].Name;
+		TextBattleData.SkillName = CharStatus().Skills[posSkill].Name;
 	}
 }
