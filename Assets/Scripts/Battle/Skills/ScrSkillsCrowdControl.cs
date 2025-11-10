@@ -6,7 +6,9 @@ public class ScrSkillsCrowdControl : SkillBase
 {
     public override void Skill(float power, AttackRhythm rhythm) {
         foreach (var target in TargetType.CharactersAttributes) {
-            target.TurnsForCanAttack += SkillPower;
+			if(rhythm.Damage >= 0.75f) {
+				target.TurnsForCanAttack += SkillPower;
+			}
         }
     }
 }
