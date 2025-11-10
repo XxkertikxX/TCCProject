@@ -9,11 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f59b8f607a255544a1343d7f3ca0aa4, type: 3}
-  m_Name: Enemy
+  m_Script: {fileID: 11500000, guid: 4709e2f74d86de849a9dbd76036bc1fa, type: 3}
+  m_Name: CirculoFlorido
   m_EditorClassIdentifier: 
-  Life: 200
-  Power: 10
-  Skills:
-  - {fileID: 11400000, guid: 26ce22d52915f364da41ea3664f6aa15, type: 2}
-  - {fileID: 11400000, guid: 3d2b9d97ae8ad794dbb145e30bb75c0a, type: 2}
+  timesForInvoke: 10
+  timePerInvokeLine: 1
+  targetType: {fileID: 11400000, guid: bfc86f864346a4c4ea9f696f75467d71, type: 2}
+  manaconsume: 10
+  skillpower: 1

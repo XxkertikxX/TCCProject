@@ -9,11 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c2c02cb5b1ba241a2409c795f2f7f6, type: 3}
-  m_Name: New Scr Skills Crowd Control
+  m_Script: {fileID: 11500000, guid: 9f59b8f607a255544a1343d7f3ca0aa4, type: 3}
+  m_Name: Alon
   m_EditorClassIdentifier: 
-  timesForInvoke: 0
-  timePerInvokeLine: 0
-  targetType: {fileID: 0}
-  manaconsume: 0
-  skillpower: 0
+  Life: 100
+  Power: 10
+  Skills:
+  - {fileID: 11400000, guid: ad8bcafb4410c5f4ea9f166e65b7abef, type: 2}
+  - {fileID: 11400000, guid: ad8bcafb4410c5f4ea9f166e65b7abef, type: 2}
