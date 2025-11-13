@@ -1,5 +1,5 @@
 using System;
-
+using UnityEngine;
 public class DialogManager
 {
     static public event Action OnDialogOpen;
