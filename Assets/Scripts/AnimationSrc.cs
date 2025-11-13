@@ -35,7 +35,12 @@ public class AnimationSrc : MonoBehaviour
         DialogManager.OnDialogClose -= stoppedTalking;
     }
 
-    public void UpdateAnimation() //posso tentar fazer a animação mudar de velocidade de acordo com uma força opressora ou algo similar, etc
+    private void Update()
+    {
+        UpdateAnimation();
+    }
+
+    public void UpdateAnimation() 
     {
         anim.SetFloat("Direction", (int)Mathf.Round(v().normalized.x));
         anim.SetFloat ("Velocity", Mathf.Round(v().x));

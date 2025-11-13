@@ -8,9 +8,9 @@ public class tutorial : MonoBehaviour
     private int index = 0;
     private bool waitingInput;
 
-    [Header("Fade Config")]
+    /*[Header("Fade Config")]
     [SerializeField] private float FadeDuration;
-    [SerializeField] private float FadeSpeed;
+    [SerializeField] private float FadeSpeed;*/
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.tag == "Player") {
