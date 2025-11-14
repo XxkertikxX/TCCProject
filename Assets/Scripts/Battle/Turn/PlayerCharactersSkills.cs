@@ -14,15 +14,17 @@ public class PlayerCharactersSkills : MonoBehaviour
 	public void PressButtonSkill(int posSkill) {
 		Texts(posSkill);
 		float manaConsume = CharStatus().Skills[posSkill].ManaConsume;
-		if(ManaSystem.Mp.CanChangeResource(manaConsume)) StartCoroutine(ActiveSkill(posSkill, manaConsume));
+		if(ManaSystem.Mp.CanChangeResource(manaConsume)) {
+            StartCoroutine(ActiveSkill(posSkill, manaConsume));
+        }
     }
 
     private IEnumerator ActiveSkill(int posSkill, float manaConsume) {
 		useSkill.EventInvoke();
+        boxSkill.SetActive(false);
 		yield return new WaitUntil(() => DialogManager.OnDialog == false);
         AttackRhythm rhythm = CharacterClick.CharacterAttr.Rhythm;
         skill = CharStatus().Skills[posSkill];
-        boxSkill.SetActive(false);
         yield return SystemRhythmCicle(rhythm, manaConsume);
         Character().Anim.SetTrigger(Character().AnimString);
     }
