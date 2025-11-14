@@ -11,8 +11,6 @@ public class SliderEffect : MonoBehaviour
     [SerializeField] private Text[] volumeVisual;
     [SerializeField] private Slider[] sliderVolume;
 
-    public static float volumeGeneral = 1;
-    public static float volumeMusic = 1;
     private float[] frontValue = new float[2];
     private float[] backValue = new float[2];
 
@@ -34,10 +32,10 @@ public class SliderEffect : MonoBehaviour
     }
 
     public void ChangeVolume() {
-        volumeGeneral = sliderVolume[0].value;
-        volumeMusic = sliderVolume[1].value;
-        volumeVisual[0].text = Mathf.Round((volumeGeneral * 100)).ToString();
-        volumeVisual[1].text = Mathf.Round((volumeMusic * 100)).ToString();
+        GameAudioManager.soundVolume = sliderVolume[0].value;
+        GameAudioManager.musicVolume = sliderVolume[1].value;
+        volumeVisual[0].text = Mathf.Round((GameAudioManager.soundVolume * 100)).ToString();
+        volumeVisual[1].text = Mathf.Round((GameAudioManager.musicVolume * 100)).ToString();
     }
 
     public void PointBackToNormal() {

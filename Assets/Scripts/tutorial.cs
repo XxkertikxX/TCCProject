@@ -21,7 +21,6 @@ public class tutorial : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision) {
         if (collision.tag == "Player") {
-            Debug.Log(index);
             actualTutorial.TutorialGO.SetActive(false); //aprimorar
             actualTutorial.TutorialCol.enabled = false;
         }

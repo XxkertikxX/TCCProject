@@ -1313,7 +1313,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 4860915988351164439}
-  paused: 0
+  Paused: 0
 --- !u!1 &4860915988351164439
 GameObject:
   m_ObjectHideFlags: 0
@@ -1712,10 +1712,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spritesAndHotspots:
-  - texture: {fileID: 2800000, guid: 46e87660ff86a1846959c1ff9163e4e6, type: 3}
-    hotspot: {x: 20, y: 88}
-  - texture: {fileID: 2800000, guid: a97bd70350d54b748b2172aab4330e63, type: 3}
-    hotspot: {x: 20, y: 88}
+  - Texture: {fileID: 2800000, guid: 46e87660ff86a1846959c1ff9163e4e6, type: 3}
+    Hotspot: {x: 20, y: 88}
+  - Texture: {fileID: 2800000, guid: a97bd70350d54b748b2172aab4330e63, type: 3}
+    Hotspot: {x: 30, y: 82}
   volumeVisual: []
   sliderVolume: []
 --- !u!1 &6789638268587659365
