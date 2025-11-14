@@ -140,6 +140,9 @@ MonoBehaviour:
   - MainReignScene: Tutorial3
     ReignFont: {fileID: 12800000, guid: ab7a417e0f742e344888acecc7db7e91, type: 3}
     ReignName: Camara do Rei
+  - MainReignScene: Vento1
+    ReignFont: {fileID: 12800000, guid: ab7a417e0f742e344888acecc7db7e91, type: 3}
+    ReignName: Margem entre Reinos
   - MainReignScene: Vento2
     ReignFont: {fileID: 12800000, guid: ab7a417e0f742e344888acecc7db7e91, type: 3}
     ReignName: Reino Do Vento

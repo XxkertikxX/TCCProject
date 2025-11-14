@@ -8,6 +8,9 @@ public class GameAudioManager : MonoBehaviour
     private static GameAudioManager instance;
     private AudioSource audioSource;
 
+    public static float soundVolume = 1;
+    public static float musicVolume = 1;
+
     private void Awake() {
         instance = this;
     }
@@ -19,16 +22,31 @@ public class GameAudioManager : MonoBehaviour
     public static void PlaySound(SoundTypes audioClips) {
         AudioClip[] clips = instance.soundsList[(int)audioClips].Sounds;
         AudioClip randomClip = clips[UnityEngine.Random.Range(0,clips.Length)];
-        if(audioClips != SoundTypes.Music)
+        if(CheckIfMusic(audioClips))
             instance.audioSource.PlayOneShot(randomClip, getTypeOfVolume(audioClips));
+    }
+
+    public static void PlayNonRandomSound(SoundTypes audioClips, int clipToPlay)
+    {
+        AudioClip[] clips = instance.soundsList[(int)audioClips].Sounds;
+        if (CheckIfMusic(audioClips))
+            instance.audioSource.PlayOneShot(clips[clipToPlay], getTypeOfVolume(audioClips));
+    }
+
+    private static bool CheckIfMusic(SoundTypes clip)
+    {
+        if(clip != SoundTypes.Music)
+            return false;
+        else
+            return true;
     }
 
     private static float getTypeOfVolume(SoundTypes s) {
         if(s != SoundTypes.Music) {
-            return SliderEffect.volumeGeneral;
+            return soundVolume;
         }
         else {
-            return SliderEffect.volumeMusic;
+            return musicVolume;
         }
     }
 
