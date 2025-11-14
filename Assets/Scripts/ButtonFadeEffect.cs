@@ -47,6 +47,6 @@ public class ButtonFadeEffect : MonoBehaviour
     }
 
     public void ButtonClicked() {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("Tutorial1");
     }
 }

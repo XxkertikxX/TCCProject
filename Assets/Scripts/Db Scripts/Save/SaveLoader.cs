@@ -16,7 +16,9 @@ public class SaveLoader : MonoBehaviour
         yield return SceneManager.LoadSceneAsync(saveStats.SceneName, LoadSceneMode.Single);
 		yield return Resources.UnloadUnusedAssets();
 		GC.Collect();
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
-        player.transform.position = new Vector3(saveStats.Player.X, saveStats.Player.Y, saveStats.Player.Z);
+        if(GameObject.FindGameObjectWithTag("Player") != null) {
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            player.transform.position = new Vector3(saveStats.Player.X, saveStats.Player.Y, saveStats.Player.Z);
+        }
     }
 }

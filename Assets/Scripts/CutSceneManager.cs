@@ -22,6 +22,6 @@ public class CutSceneManager : MonoBehaviour
 
     private void OnVideoEnd(VideoPlayer player)
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("Tutorial1");
     }
 }

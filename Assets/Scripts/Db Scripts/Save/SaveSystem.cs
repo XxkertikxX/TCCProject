@@ -42,7 +42,7 @@ public class SaveSystem
     private SaveStats CreateNew() {
         var save = new SaveStats {
             ID = 1,
-            SceneName = "Tutorial1",
+            SceneName = "CutSceneInicial",
             Player = NewVector3(-4.5f, -1.33f, 0),
             DefeatEnemy = new bool[] { false, false },
             StatusCharacter = new Status[] {
