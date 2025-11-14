@@ -15,13 +15,12 @@ public class SelectWithKeyboard : MonoBehaviour
     }
 
     void Update() {
-        if(InputCatalyst.input.InputButtonDown(key)) {
+        if(InputCatalyst.input.InputButtonDown(key) && !PlayerCharactersSkills.OnBattle) {
             characterClick.ClickCharacter(status);
             if(CharacterClick.CharacterInteraction == new CharacterAttack()) {
                 selectIndicator.SetActive(true);
             }
         }
-
         selectIndicator.SetActive(ActiveIndicator());
     }
 
