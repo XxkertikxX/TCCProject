@@ -70,8 +70,11 @@ public class NoteRhythm : AttackRhythm, IUpdateRhythm
         Notes note = rhythmProperties.Note();
         GameObject noteGO = Instantiate(note.Note, direction.InstantiatePosition.position, Quaternion.identity, rhythmProperties.Rhythm.transform);
         NoteMovement noteMovement = noteGO.AddComponent<NoteMovement>();
+        NoteFadeInFadeOut fade = noteGO.AddComponent<NoteFadeInFadeOut>();
         noteMovement.Direction = direction;
         noteMovement.Note = note;
+        noteMovement.Fade = fade;
+        noteMovement.Fade.FadeIn();
         notes[direction.Index].Enqueue(noteMovement);
     }
 
@@ -120,7 +123,10 @@ public class NoteRhythm : AttackRhythm, IUpdateRhythm
     private void DequeueLineOutLimits() {
         foreach (Queue<NoteMovement> queue in notes) {
             if (queue.Count == 0) continue;
-            if (queue.Peek().DestroyLineOutLimits()) {
+            if (queue.Peek().VerifyLineOutLimits()) {
+                queue.Peek().Fade.FadeOut();
+            }
+            if(queue.Peek().Fade.DestroyObject()) {
                 var note = queue.Dequeue();
                 Destroy(note.gameObject);
             }
