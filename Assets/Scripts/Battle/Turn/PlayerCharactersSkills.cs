@@ -3,8 +3,6 @@ using UnityEngine;
 
 public class PlayerCharactersSkills : MonoBehaviour
 {
-    static public bool OnBattle = false;
-
     [SerializeField] private SystemRhythm systemRhythm;
     [SerializeField] private GameObject boxSkill;
 	[SerializeField] private GameObject painel;
@@ -17,7 +15,6 @@ public class PlayerCharactersSkills : MonoBehaviour
 		Texts(posSkill);
 		float manaConsume = CharStatus().Skills[posSkill].ManaConsume;
 		if(ManaSystem.Mp.CanChangeResource(manaConsume)) {
-            OnBattle = true;
             StartCoroutine(ActiveSkill(posSkill, manaConsume));
         }
     }
@@ -46,7 +43,7 @@ public class PlayerCharactersSkills : MonoBehaviour
     private IEnumerator UseSkill(AttackRhythm rhythm, float manaConsume) {
         yield return skill.TargetType.Targets();
 		yield return Attack(rhythm);
-        yield return PassTurn(rhythm, manaConsume);
+        PassTurn(rhythm, manaConsume);
     }
     
     private IEnumerator Attack(AttackRhythm rhythm) {
@@ -54,15 +51,14 @@ public class PlayerCharactersSkills : MonoBehaviour
         yield return rhythm.Attack(skill);
         EnemyAnim.PlayTrigger("TookDamage");
         painel.SetActive(false);
-    }
-
-    private IEnumerator PassTurn(AttackRhythm rhythm, float manaConsume) {
-        skill.Skill(CharStatus().Power, rhythm);
         applySkill.EventInvoke();
 		yield return new WaitUntil(() => DialogManager.OnDialog == false);
+    }
+
+    private void PassTurn(AttackRhythm rhythm, float manaConsume) {
+        skill.Skill(CharStatus().Power, rhythm);
         Character().TurnsForCanAttack += 1;
 		ManaSystem.Mp.ModifyValue(-manaConsume);
-        OnBattle = false;
     }
 	
 	private CharacterAttributes Character() {
