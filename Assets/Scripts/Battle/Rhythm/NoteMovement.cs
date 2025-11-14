@@ -5,7 +5,8 @@ public class NoteMovement : MonoBehaviour
     public RbMovement Rb;
     public Directions Direction;
     public Notes Note;
-    
+    public NoteFadeInFadeOut Fade;
+
     void Awake() {
         Rb = gameObject.AddComponent<RbMovement>();
         Rb.ResetGravityScale();
@@ -17,7 +18,7 @@ public class NoteMovement : MonoBehaviour
         return damage;
     }
 
-    public bool DestroyLineOutLimits() {
+    public bool VerifyLineOutLimits() {
         return Direction.Checker.PassedDistance(transform, Direction.Point.transform);
     }
 
