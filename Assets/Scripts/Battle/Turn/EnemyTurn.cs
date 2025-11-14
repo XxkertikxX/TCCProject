@@ -11,18 +11,19 @@ public class EnemyTurn : MonoBehaviour
     [SerializeField] private string scene;
     [SerializeField] private Event passTurn;
     [SerializeField] private Event applySkill;
+    [SerializeField] private Event useSkill;
 	
 
     private StatusCharacters enemy;
 
+    private bool inAction;
     void Awake() {
         enemy = GetComponent<CharacterAttributes>().Character;
     }
 
     void Update() {
-        if (AllCharactersPlay() || LowestManaConsume() > ManaSystem.Mp.ActualValue()) {
-            StartCoroutine(EnemyAttack());
-            StartCoroutine(ResetTurn());
+        if (AllCharactersPlay() || LowestManaConsume() > ManaSystem.Mp.ActualValue() && !inAction) {
+            StartCoroutine(Action());
         }
         if(Characters().Length == 0) {
             Save(false);
@@ -35,10 +36,19 @@ public class EnemyTurn : MonoBehaviour
         }
     }
     
+    private IEnumerator Action() {
+        inAction = true;
+        yield return EnemyAttack();
+        yield return ResetTurn();
+    }
+
     private IEnumerator EnemyAttack() {
         EnemyAnim.PlayTrigger("Attacked");
         int randomSkill = Random.Range(0, enemy.Skills.Count);
 		var skill = enemy.Skills[randomSkill];
+        Texts(skill);
+        useSkill.EventInvoke();
+		yield return new WaitUntil(() => DialogManager.OnDialog == false);
 		yield return skill.TargetType.Targets();
         skill.Skill(enemy.Power, GetComponent<AttackRhythm>());
         applySkill.EventInvoke();
@@ -65,6 +75,7 @@ public class EnemyTurn : MonoBehaviour
 		ManaSystem.Mp.ModifyValue(5);
 		passTurn.EventInvoke();
 		yield return new WaitUntil(() => DialogManager.OnDialog == false);
+        inAction = false;
     }
 
     private GameObject[] Characters() {
@@ -87,4 +98,9 @@ public class EnemyTurn : MonoBehaviour
         saveSystem.SaveBattle(Index, win);
         GameObject.FindObjectOfType<SaveLoader>().Load();
     }
+
+    private void Texts(SkillBase skill) {
+		TextBattleData.Character = enemy.Name;
+		TextBattleData.SkillName = skill.Name;
+	}
 }

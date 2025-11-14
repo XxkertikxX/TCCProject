@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df712c756b3eff94eaf78d84e4729a87, type: 3}
   m_Name: Terremoto
   m_EditorClassIdentifier: 
+  name: 31231231
   timesForInvoke: 0
   timePerInvokeLine: 0
   targetType: {fileID: 11400000, guid: 9572008376955714ba6e8c2b9c4fb0d9, type: 2}
   manaconsume: 0
   skillpower: 5
+  spriteTypeSkill: {fileID: 0}

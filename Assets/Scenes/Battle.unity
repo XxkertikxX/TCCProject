@@ -223,6 +223,7 @@ GameObject:
   - component: {fileID: 35922174}
   - component: {fileID: 35922173}
   - component: {fileID: 35922172}
+  - component: {fileID: 35922178}
   m_Layer: 0
   m_Name: DialogApplySkill
   m_TagString: Untagged
@@ -325,6 +326,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 988886e8bcbfc7d4389e2e1e6a6219b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &35922178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 35922170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd3dac8b30c92e0489f8f684de223eed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actualCharacter: {fileID: 454468873}
 --- !u!1 &40576866
 GameObject:
   m_ObjectHideFlags: 0
@@ -3747,6 +3761,7 @@ GameObject:
   - component: {fileID: 773976128}
   - component: {fileID: 773976127}
   - component: {fileID: 773976126}
+  - component: {fileID: 773976132}
   m_Layer: 0
   m_Name: DialogPassTurn
   m_TagString: Untagged
@@ -3849,6 +3864,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 988886e8bcbfc7d4389e2e1e6a6219b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &773976132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 773976124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd3dac8b30c92e0489f8f684de223eed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actualCharacter: {fileID: 1743475826}
 --- !u!1 &776512670
 GameObject:
   m_ObjectHideFlags: 0
@@ -5374,6 +5402,7 @@ GameObject:
   - component: {fileID: 954095171}
   - component: {fileID: 954095170}
   - component: {fileID: 954095169}
+  - component: {fileID: 954095175}
   m_Layer: 0
   m_Name: DialogUseSkill
   m_TagString: Untagged
@@ -5476,6 +5505,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 988886e8bcbfc7d4389e2e1e6a6219b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &954095175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 954095167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd3dac8b30c92e0489f8f684de223eed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actualCharacter: {fileID: 1189364197}
 --- !u!1 &955823346
 GameObject:
   m_ObjectHideFlags: 0
@@ -8911,6 +8953,7 @@ MonoBehaviour:
   scene: Tutorial2
   passTurn: {fileID: 1707589546}
   applySkill: {fileID: 1310397126}
+  useSkill: {fileID: 1100120931}
 --- !u!114 &2030265212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8935,7 +8978,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed34ff53ffa930d468944d3f5f56db72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Character: {fileID: 0}
+  Character: {fileID: 11400000, guid: 6a7583d51c3a7d140896356cd4a046ca, type: 2}
   LifeSystem: {fileID: 0}
   Rhythm: {fileID: 0}
   TurnsForCanAttack: 0

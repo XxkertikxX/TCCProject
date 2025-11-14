@@ -83,7 +83,6 @@ public class DialogWriterGeneric : MonoBehaviour, IDialogWriter
 
     private IEnumerator TypingLine() {
         yield return null;
-        Debug.Log(dialogs[index]);
         foreach (char c in dialogs[index]) {
             textSpeak.text += c;
             PlayCharacterVoice();
@@ -97,7 +96,7 @@ public class DialogWriterGeneric : MonoBehaviour, IDialogWriter
     {
         if (voice == null)
             voice = GetComponent<PlayVoiceAudio>();
-        //voice.PlayVoice();
+        voice.PlayVoice();
     }
 
 
