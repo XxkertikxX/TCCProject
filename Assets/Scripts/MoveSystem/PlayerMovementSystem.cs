@@ -23,7 +23,6 @@ public class PlayerMovementSystem : MonoBehaviour
     }
 
     void Update() {
-        AnimationSrc.instance.UpdateAnimation();
         for (int i = 0; i < movements.Count; i++) {
             mustMovement[i] = movements[i].Apply(InputCatalyst.input);
         }
