@@ -15,7 +15,7 @@ MonoBehaviour:
   name: "C\xEDrculo Florido"
   timesForInvoke: 10
   timePerInvokeLine: 1
-  targetType: {fileID: 11400000, guid: 9572008376955714ba6e8c2b9c4fb0d9, type: 2}
+  targetType: {fileID: 11400000, guid: bfc86f864346a4c4ea9f696f75467d71, type: 2}
   manaconsume: 10
   skillpower: 100
   spriteTypeSkill: {fileID: 0}

@@ -17,7 +17,7 @@ public class RhythmProperties : MonoBehaviour
 
     public Directions Direction() {
         int index = Random.Range(0, directions.Count);
-        return directions[index].Clone();
+        return directions[index];
     }
 
     public float Speed() {
@@ -42,19 +42,6 @@ public class Directions {
     public Transform InstantiatePosition;
 
     public int Index;
-
-    public Directions Clone() {
-        return new Directions {
-            Speed = this.Speed,
-            Checker = this.Checker,
-            Direction = this.Direction,
-            SprRendCenterLine = this.SprRendCenterLine,
-            CenterLine = this.CenterLine,
-            Point = this.Point,
-            InstantiatePosition = this.InstantiatePosition,
-            Index = this.Index
-        };
-    }
 }
 
 [System.Serializable]
