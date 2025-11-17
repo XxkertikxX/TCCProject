@@ -152,7 +152,24 @@ MonoBehaviour:
     sounds: []
   - name: Music
     sounds: []
-  - name: Footsteps
+  - name: GrassFootStep
+    sounds:
+    - {fileID: 8300000, guid: 1363d9547dceb7649aaa2c78e35ab10f, type: 3}
+    - {fileID: 8300000, guid: 529858106bb6bc64b82010b634828922, type: 3}
+    - {fileID: 8300000, guid: bc4f086139e5be74a992bb30d2cefd5e, type: 3}
+  - name: StoneFootStep
+    sounds:
+    - {fileID: 8300000, guid: 56cbfaa4a1e0d494d90b52294c01df61, type: 3}
+    - {fileID: 8300000, guid: 976823b4d3e259c46a743e530ea77524, type: 3}
+    - {fileID: 8300000, guid: 037be30880620a348bc7a8a55bff27a8, type: 3}
+  - name: ClothFoodStep
+    sounds:
+    - {fileID: 8300000, guid: a64f59566db9127439f4b8507b3fecd4, type: 3}
+    - {fileID: 8300000, guid: 8840826f7ddaffd43a37cd70130d9920, type: 3}
+    - {fileID: 8300000, guid: 71868e5c794fe7e4094cffa8c1baba39, type: 3}
+  - name: WoodFootStep
+    sounds: []
+  - name: SandFootStep
     sounds: []
   - name: Jumping
     sounds: []
@@ -161,7 +178,8 @@ MonoBehaviour:
   - name: LioraAttack1
     sounds: []
   - name: LioraAttack2
-    sounds: []
+    sounds:
+    - {fileID: 8300000, guid: b7f5bd83e2147134fa7abbe12d653c1e, type: 3}
   - name: LioraDamage
     sounds: []
   - name: LioraDefeat
@@ -169,12 +187,12 @@ MonoBehaviour:
   - name: LioraEnteringBattle
     sounds: []
   - name: LioraTalking
-    sounds:
-    - {fileID: 8300000, guid: b7f5bd83e2147134fa7abbe12d653c1e, type: 3}
+    sounds: []
   - name: AmberAttack1
     sounds: []
   - name: AmberAttack2
-    sounds: []
+    sounds:
+    - {fileID: 8300000, guid: fc46959f55f4aba499a374eb21f4454f, type: 3}
   - name: AmberDamage
     sounds: []
   - name: AmberDefeat
@@ -182,12 +200,12 @@ MonoBehaviour:
   - name: AmberEnteringBattle
     sounds: []
   - name: AmberTalking
-    sounds:
-    - {fileID: 8300000, guid: fc46959f55f4aba499a374eb21f4454f, type: 3}
+    sounds: []
   - name: ClementimeAttack1
     sounds: []
   - name: ClementimeAttack2
-    sounds: []
+    sounds:
+    - {fileID: 8300000, guid: d99ccdbd1ebf7674b899ac220a4ccd0d, type: 3}
   - name: ClementimeDamage
     sounds: []
   - name: ClementimeDefeat
@@ -195,40 +213,39 @@ MonoBehaviour:
   - name: ClementimeEnteringBattle
     sounds: []
   - name: ClementimeTalking
-    sounds:
-    - {fileID: 8300000, guid: d99ccdbd1ebf7674b899ac220a4ccd0d, type: 3}
+    sounds: []
   - name: AlonAttack1
     sounds: []
   - name: AlonAttack2
-    sounds: []
-  - name: AlonDamage
-    sounds: []
-  - name: AlonDefeat
-    sounds: []
-  - name: AlonEnteringBattle
-    sounds: []
-  - name: AlonTalking
     sounds:
     - {fileID: 8300000, guid: 333f0bd45c9afcb44ad8c4ca29dcd0f7, type: 3}
-  - name: EnemyAttack
+  - name: AlonDamage
     sounds:
     - {fileID: 8300000, guid: d4bcc13c2ac716b42a4277a4df55cd9f, type: 3}
-  - name: EnemyDamage
+  - name: AlonDefeat
     sounds:
     - {fileID: 8300000, guid: e19dde9d7849d9b48b51df7c86cfb43e, type: 3}
-  - name: EnemyDefeaty
+  - name: AlonEnteringBattle
     sounds:
     - {fileID: 8300000, guid: 6a46fbfaf72af7d428905a68db49cdd0, type: 3}
+  - name: AlonTalking
+    sounds: []
+  - name: EnemyAttack
+    sounds: []
+  - name: EnemyDamage
+    sounds:
+    - {fileID: 8300000, guid: 4260fb10f51e1e34996c21f7e0b26043, type: 3}
+  - name: EnemyDefeaty
+    sounds:
+    - {fileID: 8300000, guid: 2c6ffcf3add5c724b9f6a3e34ba2c2fd, type: 3}
   - name: BattleVictory
     sounds: []
   - name: GameOver
     sounds: []
   - name: KingTalking
-    sounds:
-    - {fileID: 8300000, guid: 4260fb10f51e1e34996c21f7e0b26043, type: 3}
+    sounds: []
   - name: FangTalking
-    sounds:
-    - {fileID: 8300000, guid: 2c6ffcf3add5c724b9f6a3e34ba2c2fd, type: 3}
+    sounds: []
   - name: NPC2Talking
     sounds: []
   - name: NPC3Talking

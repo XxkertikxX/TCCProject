@@ -22,7 +22,7 @@ public class GameAudioManager : MonoBehaviour
     public static void PlaySound(SoundTypes audioClips) {
         AudioClip[] clips = instance.soundsList[(int)audioClips].Sounds;
         AudioClip randomClip = clips[UnityEngine.Random.Range(0,clips.Length)];
-        if(CheckIfMusic(audioClips))
+        if (CheckIfMusic(audioClips))
             instance.audioSource.PlayOneShot(randomClip, getTypeOfVolume(audioClips));
     }
 
@@ -36,9 +36,9 @@ public class GameAudioManager : MonoBehaviour
     private static bool CheckIfMusic(SoundTypes clip)
     {
         if(clip != SoundTypes.Music)
-            return false;
-        else
             return true;
+        else
+            return false;
     }
 
     private static float getTypeOfVolume(SoundTypes s) {

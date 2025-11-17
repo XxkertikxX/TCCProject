@@ -1,11 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class FootStep : MonoBehaviour
 {
+    public SoundTypes typeOfGround; 
+
     public void PlapFootSteps()
     {
-        GameAudioManager.PlaySound(SoundTypes.Footsteps);
+        GameAudioManager.PlaySound(typeOfGround);
     }
 }
