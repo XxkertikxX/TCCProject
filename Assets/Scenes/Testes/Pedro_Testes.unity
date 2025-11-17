@@ -5829,7 +5829,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca7a2e9495253e04aba2d6afb6c18cb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  typeOfGround: 5
+  typeOfGround: 7
 --- !u!1 &741293949
 GameObject:
   m_ObjectHideFlags: 0
