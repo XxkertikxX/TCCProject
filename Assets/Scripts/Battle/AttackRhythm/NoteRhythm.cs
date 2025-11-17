@@ -6,6 +6,8 @@ using System.Linq;
 
 public class NoteRhythm : AttackRhythm, IUpdateRhythm 
 {
+    public static event Action OnClick;
+
     private RhythmProperties rhythmProperties;
 
     private int totalLines;
@@ -117,6 +119,7 @@ public class NoteRhythm : AttackRhythm, IUpdateRhythm
     private void DequeueLine(Queue<NoteMovement> queue) {
         var note = queue.Dequeue();
         Damage += note.PerDamage(2) / totalLines;
+        OnClick?.Invoke();
         Destroy(note.gameObject);
     }
 
