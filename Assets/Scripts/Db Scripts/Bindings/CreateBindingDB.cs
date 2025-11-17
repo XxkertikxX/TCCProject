@@ -3,7 +3,7 @@ using LiteDB;
 
 public class CreateBindingDB : MonoBehaviour
 {
-    void Start() {
+    void Awake() {
         DestroyExistentDB();
         using (var db = new LiteDatabase(Path())) {
             var col = db.GetCollection<KeyBinding>("bindings");
