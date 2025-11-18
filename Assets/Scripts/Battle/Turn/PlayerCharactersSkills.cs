@@ -22,14 +22,20 @@ public class PlayerCharactersSkills : MonoBehaviour
         }
     }
 
+    public void MouseIsOverButton(int posSkill)  {
+        float manaConsume = CharStatus().Skills[posSkill].ManaConsume;
+        ManaSliderDiference.manaCust = manaConsume;
+    }
+    
     private IEnumerator ActiveSkill(int posSkill, float manaConsume) {
 		useSkill.EventInvoke();
         boxSkill.SetActive(false);
 		yield return new WaitUntil(() => DialogManager.OnDialog == false);
         AttackRhythm rhythm = CharacterClick.CharacterAttr.Rhythm;
         skill = CharStatus().Skills[posSkill];
-        yield return SystemRhythmCicle(rhythm, manaConsume);
         Character().Anim.SetTrigger(Character().AnimString);
+        yield return SystemRhythmCicle(rhythm, manaConsume);
+        StartCoroutine(CreateSkillVisual(posSkill));
     }
 
     private IEnumerator SystemRhythmCicle(AttackRhythm rhythm, float manaConsume) {
@@ -37,7 +43,14 @@ public class PlayerCharactersSkills : MonoBehaviour
         yield return UseSkill(rhythm, manaConsume);
         systemRhythm.enabled = false;
     }
-    
+
+    private IEnumerator CreateSkillVisual(int posSkill) {
+        for (int i = 0; i < Character().multipleAttacks[posSkill]; i++) {
+            Instantiate(Character().attackAnimations[posSkill]);
+            yield return new WaitForSeconds(0.2f);
+        }
+    }
+
     private void ActiveSystemRhythm(AttackRhythm rhythm) {
         systemRhythm.enabled = true;
         systemRhythm.Constructor(rhythm.gameObject.GetComponent<IUpdateRhythm>());

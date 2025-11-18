@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df712c756b3eff94eaf78d84e4729a87, type: 3}
   m_Name: Meteoro
   m_EditorClassIdentifier: 
+  name: Meteoro
   timesForInvoke: 0
   timePerInvokeLine: 0
   targetType: {fileID: 11400000, guid: 9afabf5bda43e454ba4d0ccc14d7cc84, type: 2}
   manaconsume: 0
-  skillpower: 10
+  skillpower: 100
+  spriteTypeSkill: {fileID: 0}

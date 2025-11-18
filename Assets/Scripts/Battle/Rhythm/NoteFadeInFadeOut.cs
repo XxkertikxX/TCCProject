@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class NoteFadeInFadeOut : MonoBehaviour
 {
     private SpriteRenderer spr;
-    private float fadeDuration = 0.7f;
+    private float fadeDuration = 0.4f;
     private bool destroy = false;
 
     void Awake() {

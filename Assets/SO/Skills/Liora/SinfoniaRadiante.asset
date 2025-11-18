@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Sinfonia Radiante
   timesForInvoke: 10
-  timePerInvokeLine: 1
+  timePerInvokeLine: 0.7
   targetType: {fileID: 11400000, guid: bfc86f864346a4c4ea9f696f75467d71, type: 2}
   manaconsume: 3
   skillpower: 100

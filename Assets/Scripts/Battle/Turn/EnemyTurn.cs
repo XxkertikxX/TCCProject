@@ -6,6 +6,7 @@ using System.Linq;
 
 public class EnemyTurn : MonoBehaviour
 {
+    static public float ManaAdd;
     public int Index;
 
     [SerializeField] private string scene;
@@ -72,8 +73,8 @@ public class EnemyTurn : MonoBehaviour
 				characterTurns.TurnsForCanAttack -= 1;
 			}
         }
-		
-		ManaSystem.Mp.ModifyValue(5);
+		ManaAdd = 10 - ManaSystem.Mp.ActualValue();
+		ManaSystem.Mp.ModifyValue(ManaAdd);
 		passTurn.EventInvoke();
 		yield return new WaitUntil(() => DialogManager.OnDialog == false);
         inAction = false;
