@@ -3,7 +3,7 @@ using LiteDB;
 
 public class SaveReset : MonoBehaviour
 {
-    void Awake() {
+    public void UndoSave() {
 		if (System.IO.File.Exists(Path())) {
             System.IO.File.Delete(Path());
         }

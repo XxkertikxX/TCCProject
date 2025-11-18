@@ -26,6 +26,16 @@ public class MainMenuButtons : MonoBehaviour
         isFullScreen();
     }
 
+    public void PlayCutscene()
+    {
+        SceneManager.LoadScene("CutSceneInicial");
+    }
+
+    public void NewGameChoice(GameObject choice)
+    {
+        choice.SetActive(true);
+    }
+
     public void LoadMainMenu()
     {
         Time.timeScale = 1.0f;

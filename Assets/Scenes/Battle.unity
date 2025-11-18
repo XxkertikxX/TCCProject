@@ -8289,6 +8289,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actualCharacter: {fileID: 1189364197}
+  isCommentedAction: 1
 --- !u!114 &1623998562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8392,6 +8393,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 870227369255367070, guid: 726c0502c57b9a04f953664912d975c3, type: 3}
+      propertyPath: m_Text
+      value: Comentado
+      objectReference: {fileID: 0}
     - target: {fileID: 870227369485140033, guid: 726c0502c57b9a04f953664912d975c3, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -392.32742
