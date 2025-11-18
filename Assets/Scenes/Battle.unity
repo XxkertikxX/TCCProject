@@ -668,8 +668,8 @@ MonoBehaviour:
   Anim: {fileID: 0}
   AnimString: Attacked
   attackAnimations:
-  - {fileID: 4949468604280787064, guid: 878372a54a3298b40a1d5b1bfd2fb054, type: 3}
-  - {fileID: 4949468604280787064, guid: 878372a54a3298b40a1d5b1bfd2fb054, type: 3}
+  - {fileID: 4520688321881399005, guid: 9b845aaadebe80549b3961f025fa79e7, type: 3}
+  - {fileID: 4520688321881399005, guid: 9b845aaadebe80549b3961f025fa79e7, type: 3}
   multipleAttacks: 0100000001000000
 --- !u!114 &104922901
 MonoBehaviour:
@@ -3081,8 +3081,8 @@ MonoBehaviour:
   Anim: {fileID: 0}
   AnimString: Attacked
   attackAnimations:
-  - {fileID: 6808232680582744412, guid: a23345473502a034294b02774df389fa, type: 3}
-  - {fileID: 6808232680582744412, guid: a23345473502a034294b02774df389fa, type: 3}
+  - {fileID: 2284143421472970863, guid: 4735e20620d03dc449e05720fb4c1c22, type: 3}
+  - {fileID: 4911449135707703468, guid: f50caad733f03524abaf65b833996557, type: 3}
   multipleAttacks: 0300000001000000
 --- !u!114 &525768453
 MonoBehaviour:
