@@ -3,7 +3,7 @@ using UnityEngine;
 public class BatPatrolState : IBatState
 {
     private BatStateMachine bat;
-    private Vector2 patrolTarget;
+    private Vector3 patrolTarget;
 
     private float patrolSpeed = 8f;
 
@@ -18,7 +18,9 @@ public class BatPatrolState : IBatState
 
     public void Update() {
         SetNewTarget();
-        bat.Movement.Move(patrolTarget - (Vector2)bat.transform.position, patrolSpeed);
+        Vector3 target = patrolTarget - bat.transform.position;
+        bat.Movement.Move(target, patrolSpeed);
+        bat.Movement.Look(target);
         VerifyIfChangeState();
     }
 
@@ -44,6 +46,6 @@ public class BatPatrolState : IBatState
         Bounds bounds = bat.TriggerArea.bounds;
         float x = Random.Range(bounds.min.x, bounds.max.x);
         float y = Random.Range(bounds.min.y, bounds.max.y);
-        patrolTarget = new Vector2(x, y);
+        patrolTarget = new Vector3(x, y, 0);
     }
 }

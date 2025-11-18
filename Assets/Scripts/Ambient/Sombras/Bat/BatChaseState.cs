@@ -16,8 +16,9 @@ public class BatChaseState : IBatState
             bat.ChangeState(bat.PatrolState);
             return;
         }
-
-        bat.Movement.Move(bat.Player.position - bat.transform.position, chaseSpeed);
+        Vector3 target = bat.Player.position - bat.transform.position;
+        bat.Movement.Move(target, chaseSpeed);
+        bat.Movement.Look(target);
     }
 
     public void Exit() {

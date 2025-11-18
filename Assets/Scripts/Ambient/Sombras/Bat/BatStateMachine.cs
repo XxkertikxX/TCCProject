@@ -23,6 +23,14 @@ public class BatStateMachine : MonoBehaviour
         ChaseState = new BatChaseState(this);
     }
 
+    void Enable() {
+        SaveTrigger.OnDeath += ChangeStateToPatrol;
+    }
+
+    void Disable() {
+        SaveTrigger.OnDeath -= ChangeStateToPatrol;
+    }
+
     void Start() {
         ChangeState(PatrolState);
     }
@@ -35,9 +43,16 @@ public class BatStateMachine : MonoBehaviour
         CurrentState?.Exit();
         CurrentState = newState;
         CurrentState.Enter();
+                Debug.Log(newState);
     }
 
     public bool IsPlayerInsideArea() {
         return TriggerArea.bounds.Contains(Player.position);
+    }
+
+    private void ChangeStateToPatrol() {
+        CurrentState?.Exit();
+        CurrentState = PatrolState;
+        CurrentState.Enter();
     }
 }
