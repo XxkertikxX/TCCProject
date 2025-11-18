@@ -43,7 +43,6 @@ public class BatStateMachine : MonoBehaviour
         CurrentState?.Exit();
         CurrentState = newState;
         CurrentState.Enter();
-                Debug.Log(newState);
     }
 
     public bool IsPlayerInsideArea() {
