@@ -3,7 +3,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "TextActionResult")]
 public class TextActionResult : TextActionString {
     public override string[] TextAction() {
-        string[] text = {$"{TextBattleData.Character} {TextBattleData.Action} em {TextBattleData.Targets}"};
+        string[] text = {$"{TextBattleData.Character} {TextBattleData.Action} {TextBattleData.Targets}"};
         return text;
     }
 }

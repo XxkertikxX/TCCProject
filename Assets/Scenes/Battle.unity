@@ -356,6 +356,55 @@ Transform:
   m_Father: {fileID: 574939101}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &50087366
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 50087368}
+  - component: {fileID: 50087367}
+  m_Layer: 0
+  m_Name: AtaquesVazio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &50087367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 50087366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24af534650630be439bd292a89863b34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backSlider: {fileID: 1288941940}
+  manaSlider: {fileID: 654217005}
+  barStates: 0
+  dampRefSpeed: 0
+  speed: 0.5
+--- !u!4 &50087368
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 50087366}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 50.38497, y: 1.6446427, z: -0.07938873}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &80146696
 GameObject:
   m_ObjectHideFlags: 0
@@ -734,7 +783,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 760669424f96fbe4db1f9b41fd3fbb63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedMin: 1
+  speedMin: 1.5
   speedMax: 2
   Rhythm: {fileID: 906143798}
   directions:
@@ -785,7 +834,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterClick: {fileID: 1541452071}
   key: Right2
-  selectIndicator: {fileID: 0}
+  selectIndicator: {fileID: 1366934706}
 --- !u!1 &117528627
 GameObject:
   m_ObjectHideFlags: 0
@@ -1391,7 +1440,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 642683611}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ManaSliderDiference, CamMan
         m_MethodName: OnMouseDown
         m_Mode: 1
@@ -1470,7 +1519,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 642683611}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: ManaSliderDiference, CamMan
           m_MethodName: OnMouseEnter
           m_Mode: 1
@@ -1486,7 +1535,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 642683611}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: ManaSliderDiference, CamMan
           m_MethodName: OnMouseExit
           m_Mode: 1
@@ -3147,7 +3196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 760669424f96fbe4db1f9b41fd3fbb63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedMin: 2
+  speedMin: 1.5
   speedMax: 2
   Rhythm: {fileID: 574939100}
   directions:
@@ -3190,7 +3239,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterClick: {fileID: 1541452071}
   key: Up2
-  selectIndicator: {fileID: 0}
+  selectIndicator: {fileID: 1366934706}
 --- !u!222 &525768461
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3445,7 +3494,6 @@ GameObject:
   - component: {fileID: 642683609}
   - component: {fileID: 642683608}
   - component: {fileID: 642683607}
-  - component: {fileID: 642683611}
   m_Layer: 5
   m_Name: Ataques
   m_TagString: Untagged
@@ -3536,23 +3584,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &642683611
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 642683606}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24af534650630be439bd292a89863b34, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  backSlider: {fileID: 1288941940}
-  manaSlider: {fileID: 654217005}
-  barStates: 0
-  dampRefSpeed: 0
-  speed: 0.5
 --- !u!1 &647582844
 GameObject:
   m_ObjectHideFlags: 0
@@ -5036,7 +5067,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 760669424f96fbe4db1f9b41fd3fbb63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedMin: 1
+  speedMin: 1.5
   speedMax: 2
   Rhythm: {fileID: 172780317}
   directions:
@@ -5079,7 +5110,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterClick: {fileID: 1541452071}
   key: Down2
-  selectIndicator: {fileID: 0}
+  selectIndicator: {fileID: 1366934706}
 --- !u!1 &815150239
 GameObject:
   m_ObjectHideFlags: 0
@@ -7508,6 +7539,37 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 0/0
+--- !u!1 &1366934706
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1366934707}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1366934707
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1366934706}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 50.38497, y: 1.6446427, z: -0.07938873}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1412092398
 GameObject:
   m_ObjectHideFlags: 0
@@ -8656,7 +8718,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 642683611}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ManaSliderDiference, CamMan
         m_MethodName: OnMouseDown
         m_Mode: 1
@@ -8735,7 +8797,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 642683611}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: ManaSliderDiference, CamMan
           m_MethodName: OnMouseEnter
           m_Mode: 1
@@ -8751,7 +8813,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 642683611}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: ManaSliderDiference, CamMan
           m_MethodName: OnMouseExit
           m_Mode: 1
@@ -9706,7 +9768,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 760669424f96fbe4db1f9b41fd3fbb63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedMin: 1
+  speedMin: 1.5
   speedMax: 2
   Rhythm: {fileID: 1780848479}
   directions:
@@ -9757,7 +9819,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterClick: {fileID: 1541452071}
   key: Left2
-  selectIndicator: {fileID: 0}
+  selectIndicator: {fileID: 1366934706}
 --- !u!1 &1999216847
 GameObject:
   m_ObjectHideFlags: 0
@@ -9978,6 +10040,7 @@ MonoBehaviour:
   scene: Tutorial2
   passTurn: {fileID: 1707589546}
   applySkill: {fileID: 1310397126}
+  useSkill: {fileID: 0}
 --- !u!114 &2030265212
 MonoBehaviour:
   m_ObjectHideFlags: 0
