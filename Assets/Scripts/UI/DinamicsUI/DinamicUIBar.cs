@@ -9,6 +9,6 @@ public class DinamicUIBar : MonoBehaviour, IDinamicUI
 
     public void UpdateUI(float actualValue, float maxValue) {
         valueText.text = $"{actualValue}/{maxValue}";
-        valueSlider.value = actualValue / maxValue;
+        //valueSlider.value = actualValue;
     }
 }
