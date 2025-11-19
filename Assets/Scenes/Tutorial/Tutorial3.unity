@@ -2198,6 +2198,18 @@ PrefabInstance:
       value: -0.14461517
       objectReference: {fileID: 0}
     - target: {fileID: 9072541008982856443, guid: 0176e239f4823f0448534ea7d9b17aa6, type: 3}
+      propertyPath: field of view
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 9072541008982856443, guid: 0176e239f4823f0448534ea7d9b17aa6, type: 3}
+      propertyPath: far clip plane
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 9072541008982856443, guid: 0176e239f4823f0448534ea7d9b17aa6, type: 3}
+      propertyPath: near clip plane
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9072541008982856443, guid: 0176e239f4823f0448534ea7d9b17aa6, type: 3}
       propertyPath: orthographic size
       value: 7
       objectReference: {fileID: 0}
@@ -2440,6 +2452,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actualCharacter: {fileID: 1332327274}
+  isCommentedAction: 0
 --- !u!114 &1332327274 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 870227369255367070, guid: 726c0502c57b9a04f953664912d975c3, type: 3}
@@ -2700,6 +2713,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1788139161}
     m_Modifications:
+    - target: {fileID: 870227370001286475, guid: 726c0502c57b9a04f953664912d975c3, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 5c8425bba3747b34ca752659d5805046, type: 3}
     - target: {fileID: 870227370288450712, guid: 726c0502c57b9a04f953664912d975c3, type: 3}
       propertyPath: m_Camera
       value: 
@@ -2792,6 +2809,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: "Canvas -- Di\xE1logos (1)"
       objectReference: {fileID: 0}
+    - target: {fileID: 870227370999932811, guid: 726c0502c57b9a04f953664912d975c3, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: f66241eaf683f4d4cb79f20545ca2af5, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 726c0502c57b9a04f953664912d975c3, type: 3}
 --- !u!114 &1577914648 stripped

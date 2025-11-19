@@ -400,6 +400,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actualCharacter: {fileID: 401302049}
+  isCommentedAction: 0
 --- !u!1 &106956020 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1914029074829427986, guid: 41d391598dcf1b241b06b18e4c0d6656, type: 3}
@@ -16983,6 +16984,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1252869804}
     m_Modifications:
+    - target: {fileID: 870227370001286475, guid: 726c0502c57b9a04f953664912d975c3, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 5c8425bba3747b34ca752659d5805046, type: 3}
     - target: {fileID: 870227370288450712, guid: 726c0502c57b9a04f953664912d975c3, type: 3}
       propertyPath: m_Camera
       value: 
@@ -17079,6 +17084,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 870227370999932811, guid: 726c0502c57b9a04f953664912d975c3, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: f66241eaf683f4d4cb79f20545ca2af5, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 726c0502c57b9a04f953664912d975c3, type: 3}
 --- !u!224 &2033435918 stripped

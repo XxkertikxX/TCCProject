@@ -9722,6 +9722,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actualCharacter: {fileID: 2129208331}
+  isCommentedAction: 0
 --- !u!1 &1149759004
 GameObject:
   m_ObjectHideFlags: 0
@@ -12404,6 +12405,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1532013989}
     m_Modifications:
+    - target: {fileID: 870227370001286475, guid: 726c0502c57b9a04f953664912d975c3, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 5c8425bba3747b34ca752659d5805046, type: 3}
     - target: {fileID: 870227370288450713, guid: 726c0502c57b9a04f953664912d975c3, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -12492,6 +12497,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: "Canvas -- Di\xE1logos"
       objectReference: {fileID: 0}
+    - target: {fileID: 870227370999932811, guid: 726c0502c57b9a04f953664912d975c3, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: f66241eaf683f4d4cb79f20545ca2af5, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 726c0502c57b9a04f953664912d975c3, type: 3}
 --- !u!114 &2129208329 stripped
