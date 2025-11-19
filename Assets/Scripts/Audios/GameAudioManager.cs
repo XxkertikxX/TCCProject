@@ -42,7 +42,7 @@ public class GameAudioManager : MonoBehaviour
 
 #if UNITY_EDITOR
     private void OnEnable() {
-        string[] names = Enum.GetNames(typeof(SoundTypes));
+        string[] names = Enum.GetNames(typeof(SoundTypes)); 
         Array.Resize(ref soundsList, names.Length);
         for (int i = 0; i < soundsList.Length; i++) {
             soundsList[i].name = names[i];

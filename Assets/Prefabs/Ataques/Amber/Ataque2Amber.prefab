@@ -79,6 +79,7 @@ GameObject:
   - component: {fileID: 2903949719942530976}
   - component: {fileID: 7884346016794406683}
   - component: {fileID: 233199888894283675}
+  - component: {fileID: 3761267176579115603}
   m_Layer: 0
   m_Name: Anim
   m_TagString: Untagged
@@ -147,7 +148,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 4.0692306, y: 4.8076925}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
@@ -289,5 +290,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 252ca84ad84d6564686638c94bf16903, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3761267176579115603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8412350280954911497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 460510d8105ab1848b53305e919b7046, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

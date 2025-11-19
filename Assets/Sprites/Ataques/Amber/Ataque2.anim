@@ -1351,6 +1351,13 @@ AnimationClip:
   m_HasGenericRootTransform: 1
   m_HasMotionFloatCurves: 0
   m_Events:
+  - time: 0
+    functionName: PlaySelectedSound
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 19
+    messageOptions: 0
   - time: 3.0666666
     functionName: NextAnim
     data: 
