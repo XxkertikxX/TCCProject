@@ -10,14 +10,26 @@ public class InputKeyboard : MonoBehaviour, IButtonInput
     }
     
     public bool InputButton(string key) {
-        return Input.GetKey(bindings.BindingsDic[key]);
+		foreach (var k in bindings.BindingsDic[key].Keys) {
+			if (Input.GetKey(k)) 
+				return true;
+		}
+		return false;
     }
     
     public bool InputButtonDown(string key) {
-        return Input.GetKeyDown(bindings.BindingsDic[key]);
+		foreach (var k in bindings.BindingsDic[key].Keys) {
+			if (Input.GetKeyDown(k)) 
+				return true;
+		}
+		return false;
     }
     
     public bool InputButtonUp(string key) {
-        return Input.GetKeyUp(bindings.BindingsDic[key]);
+		foreach (var k in bindings.BindingsDic[key].Keys) {
+			if (Input.GetKeyUp(k)) 
+				return true;
+		}
+		return false;
     }
 }

@@ -807,19 +807,19 @@ MonoBehaviour:
   - Note: {fileID: 8721266030793499493, guid: 903b8e2b7df4a474f8b9d652a47c6718, type: 3}
     CenterLineSpr: {fileID: 21300000, guid: a42cace822216944ebf4c9c196761790, type: 3}
     Input:
-    - Up2
+    - Up
   - Note: {fileID: 8721266030793499493, guid: bd3a98f64032381469958de42ef91190, type: 3}
     CenterLineSpr: {fileID: 21300000, guid: 1ac2b7412a3408b4388739afb0591632, type: 3}
     Input:
-    - Left2
+    - Left
   - Note: {fileID: 8721266030793499493, guid: 4a415d52b3455a24b8d5f97b237088ea, type: 3}
     CenterLineSpr: {fileID: 21300000, guid: bb79e5786a7905547acde3d0391485f6, type: 3}
     Input:
-    - Down2
+    - Down
   - Note: {fileID: 8721266030793499493, guid: 38f39b2aecf19354bb195a6016bb14ff, type: 3}
     CenterLineSpr: {fileID: 21300000, guid: 449bc732e880acb41bbd830e6c01bb39, type: 3}
     Input:
-    - Right2
+    - Right
 --- !u!114 &104922908
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3497,19 +3497,19 @@ MonoBehaviour:
   - Note: {fileID: 8721266030793499493, guid: 903b8e2b7df4a474f8b9d652a47c6718, type: 3}
     CenterLineSpr: {fileID: 21300000, guid: a42cace822216944ebf4c9c196761790, type: 3}
     Input:
-    - Up2
+    - Up
   - Note: {fileID: 8721266030793499493, guid: bd3a98f64032381469958de42ef91190, type: 3}
     CenterLineSpr: {fileID: 21300000, guid: 1ac2b7412a3408b4388739afb0591632, type: 3}
     Input:
-    - Left2
+    - Left
   - Note: {fileID: 8721266030793499493, guid: 4a415d52b3455a24b8d5f97b237088ea, type: 3}
     CenterLineSpr: {fileID: 21300000, guid: bb79e5786a7905547acde3d0391485f6, type: 3}
     Input:
-    - Down2
+    - Down
   - Note: {fileID: 8721266030793499493, guid: 38f39b2aecf19354bb195a6016bb14ff, type: 3}
     CenterLineSpr: {fileID: 21300000, guid: 449bc732e880acb41bbd830e6c01bb39, type: 3}
     Input:
-    - Right2
+    - Right
 --- !u!114 &525768460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5714,19 +5714,19 @@ MonoBehaviour:
   - Note: {fileID: 8721266030793499493, guid: 903b8e2b7df4a474f8b9d652a47c6718, type: 3}
     CenterLineSpr: {fileID: 21300000, guid: a42cace822216944ebf4c9c196761790, type: 3}
     Input:
-    - Up2
+    - Up
   - Note: {fileID: 8721266030793499493, guid: bd3a98f64032381469958de42ef91190, type: 3}
     CenterLineSpr: {fileID: 21300000, guid: 1ac2b7412a3408b4388739afb0591632, type: 3}
     Input:
-    - Left2
+    - Left
   - Note: {fileID: 8721266030793499493, guid: 4a415d52b3455a24b8d5f97b237088ea, type: 3}
     CenterLineSpr: {fileID: 21300000, guid: bb79e5786a7905547acde3d0391485f6, type: 3}
     Input:
-    - Down2
+    - Down
   - Note: {fileID: 8721266030793499493, guid: 38f39b2aecf19354bb195a6016bb14ff, type: 3}
     CenterLineSpr: {fileID: 21300000, guid: 449bc732e880acb41bbd830e6c01bb39, type: 3}
     Input:
-    - Right2
+    - Right
 --- !u!114 &814553651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11191,19 +11191,19 @@ MonoBehaviour:
   - Note: {fileID: 8721266030793499493, guid: 903b8e2b7df4a474f8b9d652a47c6718, type: 3}
     CenterLineSpr: {fileID: 21300000, guid: a42cace822216944ebf4c9c196761790, type: 3}
     Input:
-    - Up2
+    - Up
   - Note: {fileID: 8721266030793499493, guid: bd3a98f64032381469958de42ef91190, type: 3}
     CenterLineSpr: {fileID: 21300000, guid: 1ac2b7412a3408b4388739afb0591632, type: 3}
     Input:
-    - Left2
+    - Left
   - Note: {fileID: 8721266030793499493, guid: 4a415d52b3455a24b8d5f97b237088ea, type: 3}
     CenterLineSpr: {fileID: 21300000, guid: bb79e5786a7905547acde3d0391485f6, type: 3}
     Input:
-    - Down2
+    - Down
   - Note: {fileID: 8721266030793499493, guid: 38f39b2aecf19354bb195a6016bb14ff, type: 3}
     CenterLineSpr: {fileID: 21300000, guid: 449bc732e880acb41bbd830e6c01bb39, type: 3}
     Input:
-    - Right2
+    - Right
 --- !u!114 &1993797152
 MonoBehaviour:
   m_ObjectHideFlags: 0

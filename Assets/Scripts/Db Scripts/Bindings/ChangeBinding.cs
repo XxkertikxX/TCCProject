@@ -19,16 +19,16 @@ public class ChangeBinding : MonoBehaviour
 
             var bind = new KeyBinding {
                 KeyName = keyName,
-                Key = keyCode
+                Keys = new KeyCode[] { keyCode } // ✔ agora funciona
             };
             
-            OnBindingChanged?.Invoke();
             col.Upsert(bind);
+            OnBindingChanged?.Invoke();
         }
     }
 
     private KeyCode PressKey(){
-        foreach (KeyCode key in System.Enum.GetValues(typeof(KeyCode))) {
+        foreach (KeyCode key in Enum.GetValues(typeof(KeyCode))) {
             if (Input.GetKeyDown(key))
                 return key;
         }

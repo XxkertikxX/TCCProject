@@ -22,24 +22,23 @@ public class CreateBindingDB : MonoBehaviour
     }
 
     private void CreateKeys(ILiteCollection<KeyBinding> col){
-        CreateKey("Jump", KeyCode.Space, col);
-        CreateKey("Left", KeyCode.A, col);
-        CreateKey("Right", KeyCode.D, col);
-        CreateKey("Up", KeyCode.W, col);
-        CreateKey("Down", KeyCode.S, col);
-        CreateKey("Run", KeyCode.LeftShift, col);
-        CreateKey("Interact", KeyCode.E, col);
-        CreateKey("Skip", KeyCode.Space, col);
-        CreateKey("Menu", KeyCode.Escape, col);
-        CreateKey("Down2",KeyCode.DownArrow, col);
-        CreateKey("Up2", KeyCode.UpArrow, col);
-        CreateKey("Left2", KeyCode.LeftArrow, col);
-        CreateKey("Right2", KeyCode.RightArrow, col);
-        CreateKey("Return", KeyCode.X, col);
-        CreateKey("Save", KeyCode.F5, col);
+        CreateKey("Jump", col, KeyCode.Space);
+        CreateKey("Left", col, KeyCode.A, KeyCode.LeftArrow);
+        CreateKey("Right", col, KeyCode.D, KeyCode.RightArrow);
+        CreateKey("Up", col, KeyCode.W, KeyCode.UpArrow);
+        CreateKey("Down", col, KeyCode.S, KeyCode.DownArrow);
+        CreateKey("Run", col, KeyCode.LeftShift);
+        CreateKey("Interact", col, KeyCode.E);
+        CreateKey("Skip", col, KeyCode.Space);
+        CreateKey("Menu", col, KeyCode.Escape);
+        CreateKey("Return", col, KeyCode.X);
+        CreateKey("Save", col, KeyCode.F5);
     }
 
-    private void CreateKey(string KeyName, KeyCode Key, ILiteCollection<KeyBinding> col) {
-        col.Upsert(new KeyBinding { KeyName = KeyName, Key = Key});
-    }
+	private void CreateKey(string keyName, ILiteCollection<KeyBinding> col, params KeyCode[] keys) {
+		col.Upsert(new KeyBinding { 
+			KeyName = keyName, 
+			Keys = keys
+		});
+	}
 }

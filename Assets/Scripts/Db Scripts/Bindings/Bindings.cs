@@ -4,8 +4,8 @@ using LiteDB;
 
 public class Bindings : MonoBehaviour
 {
-    private Dictionary<string, KeyCode> bindingsDic;
-    public Dictionary<string, KeyCode> BindingsDic => bindingsDic;
+    private Dictionary<string, KeyBinding> bindingsDic;
+    public Dictionary<string, KeyBinding> BindingsDic => bindingsDic;
 
     void OnEnable() {
         ChangeBinding.OnBindingChanged += UpdateBindings;
@@ -28,12 +28,13 @@ public class Bindings : MonoBehaviour
     }
 
     private void ResetDictionary() {
-        bindingsDic = new Dictionary<string, KeyCode>();
+        bindingsDic = new Dictionary<string, KeyBinding>();
     }
 
     private void UpdateDictionary(LiteDatabase db) {
         foreach (var binding in Col(db).FindAll()) {
-            bindingsDic.Add(binding.KeyName, binding.Key);
+            bindingsDic.Add(binding.KeyName, binding); 
+            // Agora salvamos o objeto KeyBinding completo
         }
     }
 

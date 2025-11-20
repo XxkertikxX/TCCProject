@@ -1,8 +1,9 @@
 using LiteDB;
 using UnityEngine;
-public class KeyBinding{
+
+public class KeyBinding {
     [BsonId]
     public string KeyName { get; set; }
 
-    public KeyCode Key { get; set; }
+    public KeyCode[] Keys { get; set; }
 }
