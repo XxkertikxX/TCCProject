@@ -6,8 +6,4 @@ public class UpgradeMana : UpgradeBase {
     public override void Upgrade(StatusCharacters status, float value) {
         manaSO.Mana += value;
     }
-	
-	public override void UpgradeDetails(StatusCharacters status, float value) {
-		
-	}
 }

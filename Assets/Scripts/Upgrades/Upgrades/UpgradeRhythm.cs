@@ -10,8 +10,4 @@ public class UpgradeRhythm : UpgradeBase
 			skill.SpeedMax -= value;
 		}
     }
-	
-	public override void UpgradeDetails(StatusCharacters status, float value) {
-		
-	}
 }

@@ -9,8 +9,4 @@ public class UpgradeReductionMana : UpgradeBase
 			skill.ManaConsume -= value;
 		}
     }
-	
-	public override void UpgradeDetails(StatusCharacters status, float value) {
-		
-	}
 }
