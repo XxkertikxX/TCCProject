@@ -1,11 +1,11 @@
 using UnityEngine;
 
-public class UpgradeLife : MonoBehaviour, UpgradeBase {
-    public void Upgrade(StatusCharacters status, float value) {
+public class UpgradeLife : UpgradeBase {
+    public override void Upgrade(StatusCharacters status, float value) {
         status.Life += value;
     }
 	
-	public void UpgradeDetails(StatusCharacters status, float value) {
+	public override void UpgradeDetails(StatusCharacters status, float value) {
 		
 	}
 }

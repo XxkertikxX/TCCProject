@@ -1,13 +1,13 @@
 using UnityEngine;
 
-public class UpgradeMana : MonoBehaviour, UpgradeBase {
+public class UpgradeMana : UpgradeBase {
     [SerializeField] private ManaSO manaSO;
 
-    public void Upgrade(StatusCharacters status, float value) {
+    public override void Upgrade(StatusCharacters status, float value) {
         manaSO.Mana += value;
     }
 	
-	public void UpgradeDetails(StatusCharacters status, float value) {
+	public override void UpgradeDetails(StatusCharacters status, float value) {
 		
 	}
 }

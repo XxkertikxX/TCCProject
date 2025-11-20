@@ -2,11 +2,13 @@ using UnityEngine;
 
 public class ChoiceUpgrade : MonoBehaviour
 {
+	private UpgradeBase upgrade;
+	
     void OnEnable() {
-		RandomUpgrade.RandomUpgradeSelect(gameObject);
+		upgrade = RandomUpgrade.RandomUpgradeSelect(gameObject);
 	}
 	
 	void OnDisable() {
-		gameObject.RemoveComponent<UpgradeBase>();
+		Destroy(upgrade);
 	}
 }

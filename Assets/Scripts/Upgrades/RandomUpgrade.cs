@@ -2,32 +2,33 @@ using UnityEngine;
 
 public class RandomUpgrade
 {
-    static public void RandomUpgradeSelect(GameObject upgrade) {
+    static public UpgradeBase RandomUpgradeSelect(GameObject upgrade) {
 		int randomNumber = Random.Range(0, 100);
 		
 		if(randomNumber < 5) {
 			upgrade.AddComponent<UpgradeMana>();
-			return;
+			return new UpgradeMana();
 		}
 		if(randomNumber < 28) {
 			upgrade.AddComponent<UpgradeLife>();
-			return;
+			return new UpgradeLife();
 		}
 		if(randomNumber < 50) {
 			upgrade.AddComponent<UpgradeRhythm>();
-			return;
+			return new UpgradeRhythm();
 		}
 		if(randomNumber < 56) {
 			upgrade.AddComponent<UpgradeReductionMana>();
-			return;
+			return new UpgradeReductionMana();
 		}
 		if(randomNumber < 75) {
 			upgrade.AddComponent<UpgradeDefense>();
-			return;
+			return new UpgradeDefense();
 		}
 		if(randomNumber <= 100) {
 			upgrade.AddComponent<UpgradePower>();
-			return;
+			return new UpgradePower();
 		}
+		return null;
 	}
 }

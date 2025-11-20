@@ -1,11 +1,11 @@
 using UnityEngine;
 
-public class UpgradePower : MonoBehaviour, UpgradeBase {
-    public void Upgrade(StatusCharacters status, float value) {
+public class UpgradePower : UpgradeBase {
+    public override void Upgrade(StatusCharacters status, float value) {
         status.Power += value;
     }
 	
-	public void UpgradeDetails(StatusCharacters status, float value) {
+	public override void UpgradeDetails(StatusCharacters status, float value) {
 		
 	}
 }
