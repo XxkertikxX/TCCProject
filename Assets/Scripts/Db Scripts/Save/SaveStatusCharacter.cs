@@ -34,11 +34,33 @@ public class SaveStatusCharacter : MonoBehaviour
         status.Level = statusSO.Level;
         status.Life = statusSO.Life;
         status.Power = statusSO.Power;
+		status.Defense = statusSO.Defense;
+		
+		int count = statusSO.Skills.Count;
+
+		status.SpeedMin = new float[count];
+		status.SpeedMax = new float[count];
+		status.ConsumeSkills = new float[count];
+
+		for (int i = 0; i < count; i++) {
+			status.SpeedMin[i] = statusSO.Skills[i].SpeedMin;
+			status.SpeedMax[i] = statusSO.Skills[i].SpeedMax;
+			status.ConsumeSkills[i] = statusSO.Skills[i].ManaConsume;
+		}
     }
 
     static private void LoadCharacter(Status status, StatusCharacters statusSO) {
-        statusSO.Level = status.Level;
-        statusSO.Life = status.Life;
-        statusSO.Power = status.Power;
+		statusSO.Level = status.Level;
+		statusSO.Life = status.Life;
+		statusSO.Power = status.Power;
+		statusSO.Defense = status.Defense;
+
+		int count = statusSO.Skills.Count;
+
+		for (int i = 0; i < count; i++)	{
+			statusSO.Skills[i].SpeedMin = status.SpeedMin[i];
+			statusSO.Skills[i].SpeedMax = status.SpeedMax[i];
+			statusSO.Skills[i].ManaConsume = status.ConsumeSkills[i];
+		}
     }
 }

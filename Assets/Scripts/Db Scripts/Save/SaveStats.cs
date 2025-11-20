@@ -22,6 +22,11 @@ public class Vector3Stat {
 
 public class Status {
     public float Level {get; set;}
+	public float Xp {get; set;}
     public float Life {get; set;}
     public float Power {get; set;}
+	public float Defense {get; set;}
+	public float[] SpeedMin {get; set;}
+	public float[] SpeedMax {get; set;}
+	public float[] ConsumeSkills {get; set;}
 }
