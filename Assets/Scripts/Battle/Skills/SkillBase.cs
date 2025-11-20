@@ -7,7 +7,6 @@ public abstract class SkillBase : ScriptableObject
     [SerializeField] private int timesForInvoke;
     [SerializeField] private float timePerInvokeLine;
     [SerializeField] private TypeSkill targetType;
-    [SerializeField] private int manaconsume;
     [SerializeField] private int skillpower;
 	[SerializeField] private Sprite spriteTypeSkill;
     [SerializeField] private Sprite[] spritesEffectsSkill;
@@ -16,11 +15,14 @@ public abstract class SkillBase : ScriptableObject
     public int TimesForInvoke => timesForInvoke;
     public float TimePerInvokeLine => timePerInvokeLine;
     public TypeSkill TargetType => targetType;
-    public int ManaConsume => manaconsume;
     public int SkillPower => skillpower;
 	public Sprite SpriteTypeSkill => spriteTypeSkill;
     public Sprite[] SpritesEffectsSkill => spritesEffectsSkill;
-
+	
+    public float ManaConsume;
+	public float SpeedMin;
+	public float SpeedMax;
+	
     public abstract void Skill(float power, AttackRhythm rhythm);
 	
 	public abstract string TargetsString();

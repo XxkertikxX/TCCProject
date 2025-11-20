@@ -3,8 +3,8 @@ using System.Collections.Generic;
 
 public class RhythmProperties : MonoBehaviour
 {
-    [SerializeField] private float speedMin;
-    [SerializeField] private float speedMax;
+    [HideInInspector] static public float SpeedMin;
+    [HideInInspector] static public float SpeedMax;
 
     public GameObject Rhythm;
     [SerializeField] private List<Directions> directions;
@@ -21,7 +21,7 @@ public class RhythmProperties : MonoBehaviour
     }
 
     public float Speed() {
-        return Random.Range(speedMin, speedMax);
+        return Random.Range(SpeedMin, SpeedMax);
     }
 
     public int Index() {

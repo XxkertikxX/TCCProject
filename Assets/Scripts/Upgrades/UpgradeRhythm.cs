@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class UpgradeRhythm : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    public void Upgrade(StatusCharacters status, float value) {
+        foreach(var skill in status.Skills) {
+			skill.SpeedMin -= value;
+			skill.SpeedMax -= value;
+		}
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+	
+	public void UpgradeDetails(StatusCharacters status, float value) {
+		
+	}
 }

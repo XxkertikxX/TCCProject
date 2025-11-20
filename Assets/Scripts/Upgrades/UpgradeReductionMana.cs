@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class UpgradeReductionMana : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    public void Upgrade(StatusCharacters status, float value) {
+        foreach(var skill in status.Skills) {
+			skill.ManaConsume -= value;
+		}
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+	
+	public void UpgradeDetails(StatusCharacters status, float value) {
+		
+	}
 }

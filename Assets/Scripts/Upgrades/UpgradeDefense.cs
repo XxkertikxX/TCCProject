@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class UpgradeDefense : MonoBehaviour, UpgradeBase
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    public void Upgrade(StatusCharacters status, float value) {
+        status.Defense += value;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+	
+	public void UpgradeDetails(StatusCharacters status, float value) {
+		
+	}
 }

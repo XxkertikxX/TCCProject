@@ -18,6 +18,7 @@ public class PlayerCharactersSkills : MonoBehaviour
 		float manaConsume = CharStatus().Skills[posSkill].ManaConsume;
 		if(ManaSystem.Mp.CanChangeResource(manaConsume)) {
             OnBattle = true;
+			ChangeSpeedRhythm(posSkill);
             StartCoroutine(ActiveSkill(posSkill, manaConsume));
         }
     }
@@ -91,5 +92,10 @@ public class PlayerCharactersSkills : MonoBehaviour
 	private void Texts(int posSkill) {
 		TextBattleData.Character = CharStatus().Name;
 		TextBattleData.SkillName = CharStatus().Skills[posSkill].Name;
+	}
+	
+	private void ChangeSpeedRhythm(int posSkill) {
+		RhythmProperties.SpeedMin = CharStatus().Skills[posSkill].SpeedMin;
+		RhythmProperties.SpeedMax = CharStatus().Skills[posSkill].SpeedMax;
 	}
 }

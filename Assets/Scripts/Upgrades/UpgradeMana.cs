@@ -6,4 +6,8 @@ public class UpgradeMana : MonoBehaviour, UpgradeBase {
     public void Upgrade(StatusCharacters status, float value) {
         manaSO.Mana += value;
     }
+	
+	public void UpgradeDetails(StatusCharacters status, float value) {
+		
+	}
 }
