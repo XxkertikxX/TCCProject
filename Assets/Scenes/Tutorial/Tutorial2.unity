@@ -9260,6 +9260,81 @@ Transform:
   m_Father: {fileID: 1386279411}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1005816402
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1005816405}
+  - component: {fileID: 1005816404}
+  - component: {fileID: 1005816403}
+  m_Layer: 0
+  m_Name: Tutorial
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &1005816403
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1005816402}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 40}
+  m_EdgeRadius: 0
+--- !u!114 &1005816404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1005816402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b6dabb8479c4284a9b560338872bfbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tutorialList:
+  - TutorialGO: {fileID: 0}
+    BindsPressed: []
+    TutorialCol: {fileID: 1005816403}
+--- !u!4 &1005816405
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1005816402}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.92, y: 2.6, z: 0.008278817}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1028352438
 GameObject:
   m_ObjectHideFlags: 0
@@ -11881,7 +11956,7 @@ Tilemap:
       - {fileID: 21300000, guid: f4bb40f184b2cf84d8118ef62390de56, type: 3}
       - {fileID: 21300000, guid: 911408d9f3382f74bb67936bb01f157f, type: 3}
       - {fileID: 21300000, guid: f4bb40f184b2cf84d8118ef62390de56, type: 3}
-      m_AnimationSpeed: 4.8518205
+      m_AnimationSpeed: 3.3404965
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   - first: {x: 33, y: -1, z: 0}
@@ -11891,7 +11966,7 @@ Tilemap:
       - {fileID: 21300000, guid: c87b2d4e55de5644ca30d84ca4b45f6a, type: 3}
       - {fileID: 21300000, guid: f4134b1a9f5d28847bd3729efc1eb5fc, type: 3}
       - {fileID: 21300000, guid: c87b2d4e55de5644ca30d84ca4b45f6a, type: 3}
-      m_AnimationSpeed: 3.2057047
+      m_AnimationSpeed: 3.2836833
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   - first: {x: 31, y: 0, z: 0}
@@ -11901,7 +11976,7 @@ Tilemap:
       - {fileID: 21300000, guid: f4bb40f184b2cf84d8118ef62390de56, type: 3}
       - {fileID: 21300000, guid: 911408d9f3382f74bb67936bb01f157f, type: 3}
       - {fileID: 21300000, guid: f4bb40f184b2cf84d8118ef62390de56, type: 3}
-      m_AnimationSpeed: 4.072885
+      m_AnimationSpeed: 3.7456822
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   m_TileAssetArray:
