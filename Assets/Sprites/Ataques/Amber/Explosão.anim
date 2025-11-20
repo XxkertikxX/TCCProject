@@ -92,7 +92,7 @@ AnimationClip:
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
-    intParameter: 20
+    intParameter: 22
     messageOptions: 0
   - time: 0.5
     functionName: Destroy

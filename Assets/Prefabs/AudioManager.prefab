@@ -176,8 +176,15 @@ MonoBehaviour:
   - name: Landing
     sounds: []
   - name: LioraAttack1
-    sounds: []
+    sounds:
+    - {fileID: 8300000, guid: 3377d9c24743eb14a8a208bdad8e1441, type: 3}
   - name: LioraAttack2
+    sounds:
+    - {fileID: 8300000, guid: 8a84cd46b47a145448622b40cb54167d, type: 3}
+  - name: ImpactoLuz
+    sounds:
+    - {fileID: 8300000, guid: f016a4f46e9656540a2a1098bcf885af, type: 3}
+  - name: LiorasNotasAtaque
     sounds: []
   - name: LioraDamage
     sounds: []
@@ -189,9 +196,17 @@ MonoBehaviour:
     sounds:
     - {fileID: 8300000, guid: b7f5bd83e2147134fa7abbe12d653c1e, type: 3}
   - name: AmberAttack1
-    sounds: []
+    sounds:
+    - {fileID: 8300000, guid: 5e7ae0495486c0c4c93c08fdeaae19e0, type: 3}
   - name: AmberAttack2
-    sounds: []
+    sounds:
+    - {fileID: 8300000, guid: e1a8205c55846994b9ff3fcfba4ee31a, type: 3}
+  - name: Explosao
+    sounds:
+    - {fileID: 8300000, guid: d15a58eaef844384090b800b6810975c, type: 3}
+  - name: AmberNotasAtaque
+    sounds:
+    - {fileID: 8300000, guid: fc46959f55f4aba499a374eb21f4454f, type: 3}
   - name: AmberDamage
     sounds: []
   - name: AmberDefeat
@@ -202,41 +217,58 @@ MonoBehaviour:
     sounds:
     - {fileID: 8300000, guid: fc46959f55f4aba499a374eb21f4454f, type: 3}
   - name: ClementimeAttack1
-    sounds: []
+    sounds:
+    - {fileID: 8300000, guid: de29863a4e9c86e48bc36b3a667da07c, type: 3}
   - name: ClementimeAttack2
+    sounds:
+    - {fileID: 8300000, guid: d4c36ff668edfc54cb96cf5fcc9e260e, type: 3}
+  - name: TerraSaindo
+    sounds:
+    - {fileID: 8300000, guid: 64469abee049c4949a4a37a2c0cab5c7, type: 3}
+  - name: TerraSaindoUltimo
+    sounds:
+    - {fileID: 8300000, guid: 4032a0e0264dc6d4f92463484827bda2, type: 3}
+  - name: ClementineNotasAtaque
     sounds: []
   - name: ClementimeDamage
     sounds: []
   - name: ClementimeDefeat
     sounds: []
   - name: ClementimeEnteringBattle
-    sounds: []
+    sounds:
+    - {fileID: 8300000, guid: 333f0bd45c9afcb44ad8c4ca29dcd0f7, type: 3}
   - name: ClementimeTalking
-    sounds: []
+    sounds:
+    - {fileID: 8300000, guid: d99ccdbd1ebf7674b899ac220a4ccd0d, type: 3}
   - name: AlonAttack1
-    sounds: []
+    sounds:
+    - {fileID: 8300000, guid: d12df14e63b6e2549a5e1c77084a4f82, type: 3}
   - name: AlonAttack2
+    sounds:
+    - {fileID: 8300000, guid: 09a622e4f323b4541acc243acf83555c, type: 3}
+  - name: AlonNotasAtaque
     sounds: []
+  - name: AguaAparecendo
+    sounds:
+    - {fileID: 8300000, guid: 22c4a39f96300854486d35f92d6e61ce, type: 3}
+  - name: AguaSplash
+    sounds:
+    - {fileID: 8300000, guid: 4260fb10f51e1e34996c21f7e0b26043, type: 3}
   - name: AlonDamage
-    sounds:
-    - {fileID: 8300000, guid: d4bcc13c2ac716b42a4277a4df55cd9f, type: 3}
+    sounds: []
   - name: AlonDefeat
-    sounds:
-    - {fileID: 8300000, guid: e19dde9d7849d9b48b51df7c86cfb43e, type: 3}
+    sounds: []
   - name: AlonEnteringBattle
-    sounds:
-    - {fileID: 8300000, guid: 6a46fbfaf72af7d428905a68db49cdd0, type: 3}
+    sounds: []
   - name: AlonTalking
     sounds:
     - {fileID: 8300000, guid: 333f0bd45c9afcb44ad8c4ca29dcd0f7, type: 3}
   - name: EnemyAttack
     sounds: []
   - name: EnemyDamage
-    sounds:
-    - {fileID: 8300000, guid: 4260fb10f51e1e34996c21f7e0b26043, type: 3}
+    sounds: []
   - name: EnemyDefeaty
-    sounds:
-    - {fileID: 8300000, guid: 2c6ffcf3add5c724b9f6a3e34ba2c2fd, type: 3}
+    sounds: []
   - name: BattleVictory
     sounds: []
   - name: GameOver
@@ -248,7 +280,6 @@ MonoBehaviour:
     sounds:
     - {fileID: 8300000, guid: 2c6ffcf3add5c724b9f6a3e34ba2c2fd, type: 3}
   - name: NPC2Talking
-    sounds:
-    - {fileID: 0}
+    sounds: []
   - name: NPC3Talking
     sounds: []

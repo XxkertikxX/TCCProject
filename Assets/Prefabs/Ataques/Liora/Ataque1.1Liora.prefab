@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 529126c2d8d7e60469551362b419562a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackNumber: 3
+  attackNumber: 2
   effect: 0
 --- !u!114 &8264085082303253331
 MonoBehaviour:

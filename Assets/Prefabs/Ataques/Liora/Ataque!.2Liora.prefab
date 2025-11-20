@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 5216975268587499567}
   - component: {fileID: 1085284700487965678}
   - component: {fileID: 1994837747557529277}
+  - component: {fileID: 7191676464699304233}
   m_Layer: 0
   m_Name: Anim
   m_TagString: Untagged
@@ -193,7 +194,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 8.7126045, y: 8.57647}
+  m_Size: {x: 3.5914202, y: 0.968}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
@@ -231,7 +232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 529126c2d8d7e60469551362b419562a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackNumber: 3
+  attackNumber: 0
   effect: 1
 --- !u!114 &1994837747557529277
 MonoBehaviour:
@@ -243,6 +244,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 252ca84ad84d6564686638c94bf16903, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7191676464699304233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5475763019741616618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 460510d8105ab1848b53305e919b7046, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &8893348679978781263

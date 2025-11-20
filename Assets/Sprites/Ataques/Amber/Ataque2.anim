@@ -1356,7 +1356,7 @@ AnimationClip:
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
-    intParameter: 19
+    intParameter: 21
     messageOptions: 0
   - time: 3.0666666
     functionName: NextAnim
