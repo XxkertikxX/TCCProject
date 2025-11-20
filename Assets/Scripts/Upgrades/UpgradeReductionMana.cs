@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UpgradeReductionMana : MonoBehaviour
+public class UpgradeReductionMana : MonoBehaviour, UpgradeBase
 {
     public void Upgrade(StatusCharacters status, float value) {
         foreach(var skill in status.Skills) {
