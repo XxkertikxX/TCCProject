@@ -96,7 +96,8 @@ public class DialogWriterGeneric : MonoBehaviour, IDialogWriter
     {
         if (voice == null)
             voice = GetComponent<PlayVoiceAudio>();
-        //voice.PlayVoice();
+		if(voice != null)
+			voice.PlayVoice();
     }
 
 

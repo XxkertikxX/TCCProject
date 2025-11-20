@@ -223,6 +223,7 @@ GameObject:
   - component: {fileID: 35922174}
   - component: {fileID: 35922173}
   - component: {fileID: 35922172}
+  - component: {fileID: 35922178}
   m_Layer: 0
   m_Name: DialogApplySkill
   m_TagString: Untagged
@@ -325,6 +326,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 988886e8bcbfc7d4389e2e1e6a6219b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &35922178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 35922170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd3dac8b30c92e0489f8f684de223eed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actualCharacter: {fileID: 0}
+  isCommentedAction: 0
 --- !u!1 &40576866
 GameObject:
   m_ObjectHideFlags: 0
@@ -7012,6 +7027,7 @@ GameObject:
   - component: {fileID: 954095171}
   - component: {fileID: 954095170}
   - component: {fileID: 954095169}
+  - component: {fileID: 954095175}
   m_Layer: 0
   m_Name: DialogUseSkill
   m_TagString: Untagged
@@ -7114,6 +7130,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 988886e8bcbfc7d4389e2e1e6a6219b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &954095175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 954095167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd3dac8b30c92e0489f8f684de223eed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actualCharacter: {fileID: 0}
+  isCommentedAction: 0
 --- !u!1 &955823346
 GameObject:
   m_ObjectHideFlags: 0
