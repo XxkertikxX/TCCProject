@@ -18,4 +18,4 @@ MonoBehaviour:
   Power: 10
   Skills:
   - {fileID: 11400000, guid: 2c0b2426d5ea5ac47abf2b9a05eae992, type: 2}
-  - {fileID: 11400000, guid: 6e12c1aff29d3ac4abfb4ec8a6ffaafb, type: 2}
+  - {fileID: 11400000, guid: 9c9cfd4d3f9face469eac1d2b638cd41, type: 2}
