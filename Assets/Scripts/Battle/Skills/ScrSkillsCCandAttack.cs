@@ -10,6 +10,7 @@ public class ScrSkillsCCandAttack : SkillBase
         float RoundDamage = -Mathf.Round(damage);
 		TextBattleData.Targets = TargetsString();
         foreach (var target in TargetType.CharactersAttributes) {
+            target.LifeSystem.ModifyValue(RoundDamage*target.Character.DamageReduction());
 			if(rhythm.Damage >= 0.9f) {
 				target.TurnsForCanAttack += 1;
 				TextBattleData.Action = $"causou {RoundDamage} de dano e stunou por {1} rounds ";

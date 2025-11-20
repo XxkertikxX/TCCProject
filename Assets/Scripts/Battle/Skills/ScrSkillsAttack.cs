@@ -11,7 +11,7 @@ public class ScrSkillsAttack : SkillBase
 		TextBattleData.Action = $"causou {RoundDamage} de dano em ";
 		TextBattleData.Targets = TargetsString();
         foreach (var target in TargetType.CharactersAttributes) {
-            target.LifeSystem.ModifyValue(RoundDamage);
+            target.LifeSystem.ModifyValue(RoundDamage*target.Character.DamageReduction());
         }
     }
 	
