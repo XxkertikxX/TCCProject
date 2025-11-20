@@ -7,7 +7,7 @@ public class PlayVoiceAudio : MonoBehaviour
     [SerializeField] private Text actualCharacter;
     [SerializeField] public bool isCommentedAction = false;
     public void PlayVoice() {
-        GameAudioManager.PlayNonRandomSound(CharacterTalking());
+        GameAudioManager.PlaySound(CharacterTalking());
     }
 
     private SoundTypes CharacterTalking() {
