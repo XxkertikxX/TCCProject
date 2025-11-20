@@ -8,11 +8,13 @@ public class ApplySkillUI : MonoBehaviour
 	[SerializeField] private SpriteRenderer[] iconSubTypeSkill;
 	[SerializeField] private Text damage;
 	[SerializeField] private Text manaConsume;
+	[SerializeField] private Text nameSkill;
 	
 	void OnEnable() {
 		iconTypeSkill.sprite = Skill().SpriteTypeSkill;
 		damage.text = Skill().SkillPower.ToString();
 		manaConsume.text = Skill().ManaConsume.ToString();
+		nameSkill.text = Skill().Name.ToString();
 		SubType();
 	}
 	

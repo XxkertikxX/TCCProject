@@ -6,8 +6,8 @@ public class CharacterAttack : ICharacterInteraction
 
     public void Interaction(CharacterAttributes character){
         if (character.TurnsForCanAttack == 0) {
+			CharacterClick.CharacterAttr = character;
             OnCharacterPreparedAttack?.Invoke();
-            CharacterClick.CharacterAttr = character;
         }
     }
 }
