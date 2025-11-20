@@ -4,6 +4,8 @@ using UnityEngine.UI;
 
 public class LevelUp : MonoBehaviour
 {
+	[SerializeField] private GameObject UI;
+	
     [Header("References")]
     [SerializeField] private StatusCharacters character;
     [SerializeField] private Slider xpSlider;
@@ -47,6 +49,8 @@ public class LevelUp : MonoBehaviour
     }
 
     private IEnumerator OnLevelUp() {
+		UI.SetActive(true);
         yield return new WaitForSeconds(1f);
+		UI.SetActive(false);
     }
 }
