@@ -29,9 +29,23 @@ public class RbMovement : MonoBehaviour
             xRotation = 0f;
         }
 
+        //Debug.Log(SmoothTurn(transform.rotation.x, xRotation));
+        //transform.eulerAngles = new Vector3(SmoothTurn(transform.rotation.x, xRotation),SmoothTurn(transform.rotation.y, yRotation),SmoothTurn(transform.rotation.z,zRotation));
+
         transform.eulerAngles = new Vector3(xRotation, yRotation, zRotation);    
     }
 
+    private float SmoothTurn(float current, float goal)
+    {
+        float reference = 0;
+        float speed = 2;
+
+        while (current < goal)
+        {
+            return Mathf.SmoothDamp(current, goal, ref reference, speed);
+        }
+        return 0;
+    }
 
     public void Stop() => rb.velocity = Vector2.zero;
 

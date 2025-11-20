@@ -31,8 +31,14 @@ public class MusicPlayer : MonoBehaviour
     {
         for (int i = 0; i < musics.Length; i++)
         {
-            if (musics[i].SceneName == actual.name && !musicAudioSource.isPlaying)
-                instance.musicAudioSource.PlayOneShot(musics[i].MusicClip, GameAudioManager.getTypeOfVolume(SoundTypes.Music));
+            for (int j = 0; j < musics[i].ScenesWithMusic.Length; j++)
+            {
+                if (musics[i].ScenesWithMusic[j] == actual.name && !musicAudioSource.isPlaying)
+                {
+                    instance.musicAudioSource.PlayOneShot(musics[i].MusicClip, GameAudioManager.getTypeOfVolume(SoundTypes.Music));
+                    Debug.Log("Cena tocando: " + musics[i].ScenesWithMusic[j]);
+                }
+            }
         }
     }
 
@@ -50,6 +56,7 @@ public class MusicPlayer : MonoBehaviour
 [Serializable]
 public struct LevelsMusic
 {
-    public string SceneName;
+    public string Title;
+    public string[] ScenesWithMusic;
     public AudioClip MusicClip;
 }

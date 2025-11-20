@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4575938445597945395}
   - component: {fileID: 2966807256889945009}
+  - component: {fileID: 2502223785311616259}
   m_Layer: 0
   m_Name: MusicPlayer
   m_TagString: Untagged
@@ -128,6 +129,26 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2502223785311616259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7418987903796051263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89d3b40abe6428544b410e84d884c579, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musics:
+  - Title: "M\xFAsica Tutorial"
+    ScenesWithMusic:
+    - Pedro_Testes
+    - Tutorial1
+    - Tutorial2
+    - Tutorial3
+    MusicClip: {fileID: 8300000, guid: 3eb75eee4f1efcb40987863e83647a1d, type: 3}
 --- !u!1 &8466112927380274407
 GameObject:
   m_ObjectHideFlags: 0
@@ -270,7 +291,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dc5bcd6e63ba694ca8f1fd743f6aba1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musics: []
   soundsList:
   - name: OpenMenu
     sounds: []
