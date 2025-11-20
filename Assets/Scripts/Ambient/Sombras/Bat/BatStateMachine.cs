@@ -46,7 +46,8 @@ public class BatStateMachine : MonoBehaviour
     }
 
     public bool IsPlayerInsideArea() {
-        return TriggerArea.bounds.Contains(Player.position);
+		Vector2 playerPos2D = new Vector2(Player.position.x, Player.position.y);
+		return TriggerArea.OverlapPoint(playerPos2D);
     }
 
     private void ChangeStateToPatrol() {

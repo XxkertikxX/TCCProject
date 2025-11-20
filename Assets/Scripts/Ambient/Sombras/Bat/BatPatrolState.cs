@@ -31,7 +31,7 @@ public class BatPatrolState : IBatState
     private void VerifyIfChangeState() {
         float chaseProbability = 0.002f;
         bool mustChase = Random.value < chaseProbability;
-        if (mustChase) {
+        if (mustChase && bat.IsPlayerInsideArea() && !bat.HideAbility.Hide) {
             bat.ChangeState(bat.ChaseState);
         }
     }
