@@ -9,12 +9,12 @@ public class ScrSkillsCrowdControl : SkillBase
 		TextBattleData.Targets = TargetsString();
         foreach (var target in TargetType.CharactersAttributes) {
 			if(rhythm.Damage >= 0.75f) {
-				target.TurnsForCanAttack += SkillPower;
-				TextBattleData.Action = $"stunou por {SkillPower} rounds ";
+				target.TurnsForCanAttack += 1;
+				TextBattleData.Action = $"stunou por 1 rounds ";
+				CharacterClick.CharacterAttr.Character.Xp += 20;
 			}
 			else{
-				target.TurnsForCanAttack += SkillPower-1;
-				TextBattleData.Action = $"stunou por {SkillPower-1} rounds ";
+				TextBattleData.Action = $"falhou em stunar ";
 			}
         }
     }

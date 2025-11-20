@@ -19,13 +19,16 @@ public class ResourceSystem : MonoBehaviour
         valueUI.UpdateUI(actualValue, maxValue);
     }
 
-    public void ModifyValue(float valueChange) {
+    public float ModifyValue(float valueChange) {
+		float oldActualValue = actualValue;
         actualValue = Mathf.Clamp(actualValue + valueChange, 0, maxValue);
         valueUI.UpdateUI(actualValue, maxValue);
         if (actualValue == 0) {
             OnResourceEmpty?.Invoke();
         }
-    }
+		
+		return ValueModifier(valueChange, oldActualValue, maxValue);
+	}
 
     public float ActualValue() {
         return actualValue;
@@ -33,6 +36,16 @@ public class ResourceSystem : MonoBehaviour
     
 	public bool CanChangeResource(float resourceConsume) {
 		return resourceConsume <= actualValue;
+	}
+	
+	private float ValueModifier(float valueChange, float actualValue, float maxValue) {
+		if(actualValue+valueChange > maxValue) {
+			return maxValue-actualValue;
+		}
+		if(actualValue+valueChange < 0) {
+			return actualValue;
+		}
+		return valueChange;
 	}
 	
     private void PullComponents() {
