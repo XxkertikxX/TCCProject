@@ -1,15 +1,17 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(AudioSource)), ExecuteInEditMode]
 public class GameAudioManager : MonoBehaviour
 {
+
     [SerializeField] private SoundList[] soundsList;
     private static GameAudioManager instance;
     private AudioSource audioSource;
-
-    public static float soundVolume = 1;
-    public static float musicVolume = 1;
+ 
+    public static float soundVolume = .5f;
+    public static float musicVolume = .5f;
 
     private void Awake() {
         instance = this;
@@ -19,19 +21,14 @@ public class GameAudioManager : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
-    public static void PlaySound(SoundTypes audioClips) {
+    public static void PlaySound(SoundTypes audioClips)
+    {
         AudioClip[] clips = instance.soundsList[(int)audioClips].Sounds;
-        AudioClip randomClip = clips[UnityEngine.Random.Range(0,clips.Length)];
+        AudioClip randomClip = clips[UnityEngine.Random.Range(0, clips.Length)];
         instance.audioSource.PlayOneShot(randomClip, getTypeOfVolume(audioClips));
     }
 
-    public static void PlayNonRandomSound(SoundTypes clip)
-    {
-        AudioClip[] clips = instance.soundsList[(int)clip].Sounds;
-        instance.audioSource.PlayOneShot(clips[0], getTypeOfVolume(clip));
-    }
-
-    private static float getTypeOfVolume(SoundTypes s) {
+    public static float getTypeOfVolume(SoundTypes s) {
         if(s != SoundTypes.Music) {
             return soundVolume;
         }
@@ -46,7 +43,7 @@ public class GameAudioManager : MonoBehaviour
         Array.Resize(ref soundsList, names.Length);
         for (int i = 0; i < soundsList.Length; i++) {
             soundsList[i].name = names[i];
-        }
+        }   
     }
 
 #endif
@@ -57,3 +54,4 @@ public struct SoundList {
     [HideInInspector] public string name;
     [SerializeField] private AudioClip[] sounds;
 }
+
