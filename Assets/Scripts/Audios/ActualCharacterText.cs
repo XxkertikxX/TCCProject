@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class AtualCharacterText : MonoBehaviour
+public class ActualCharacterText : MonoBehaviour
 {
     [SerializeField] private Text name;
 	
