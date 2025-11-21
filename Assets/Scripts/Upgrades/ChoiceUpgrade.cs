@@ -3,6 +3,7 @@ using UnityEngine.UI;
 
 public class ChoiceUpgrade : MonoBehaviour
 {
+	static public bool Choice;
 	private UpgradeSO upgrade;
 	
 	[SerializeField] private RandomUpgrade randomUpgrade;
@@ -13,6 +14,7 @@ public class ChoiceUpgrade : MonoBehaviour
 	
 	public void PressButton() {
 		upgrade.Upgrade(LevelUp.CharacterForUp);
+		Choice = true;
 	}
 	
     void OnEnable() {

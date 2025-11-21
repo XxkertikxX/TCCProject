@@ -34,9 +34,16 @@ public class EnemyTurn : MonoBehaviour
     
     void OnDestroy() {
         if(GetComponent<CharacterAttributes>().LifeSystem.ActualValue() <= 0) {
-            Save(true);
+			StartCoroutine(LevelUp());
         }
     }
+	
+	private IEnumerator LevelUp() {
+		foreach(var character in Characters()) {
+			yield return character.GetComponent<LevelUp>().UpLevel();
+		}
+		Save(true);
+	}
     
     private IEnumerator Action() {
         inAction = true;

@@ -24,7 +24,8 @@ public class LevelUp : MonoBehaviour
     private float XpToNext => 100 + character.Level * 100;
 
     public IEnumerator UpLevel() {
-		HUD.SetActive(false);
+		HUD.SetActive(false);		
+		UI.SetActive(true);
         while (character.Xp > 0) {
             float xpRemaining = character.Xp;
             float xpNeeded = XpToNext * (1f - xpSlider.value);
@@ -57,10 +58,10 @@ public class LevelUp : MonoBehaviour
 
     private IEnumerator OnLevelUp() {
 		upgradesUsados = new HashSet<UpgradeSO>();
-		UI.SetActive(true);
 		Level.SetActive(false);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitUntil(() => ChoiceUpgrade.Choice == true);
+		ChoiceUpgrade.Choice = false;
 		UI.SetActive(false);
-		Level.SetActive(true;)
+		Level.SetActive(true);
     }
 }
