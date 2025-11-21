@@ -31,6 +31,8 @@ public class RhythmProperties : MonoBehaviour
 
 [System.Serializable]
 public class Directions {
+	public SpriteRenderer[] Distances;
+	
     public float Speed;
 
     public CheckerPosition Checker;
@@ -45,6 +47,7 @@ public class Directions {
 
     public Directions Clone() {
         return new Directions {
+			Distances = this.Distances,
             Speed = this.Speed,
             Checker = this.Checker,
             Direction = this.Direction,

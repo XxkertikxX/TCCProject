@@ -118,7 +118,7 @@ public class NoteRhythm : AttackRhythm, IUpdateRhythm
     }
     private void DequeueLine(Queue<NoteMovement> queue) {
         var note = queue.Dequeue();
-        Damage += note.PerDamage(2) / totalLines;
+        Damage += note.PerDamage() / totalLines;
         OnClick?.Invoke();
         Destroy(note.gameObject);
     }

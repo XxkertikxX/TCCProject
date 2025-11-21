@@ -12,9 +12,9 @@ public class NoteMovement : MonoBehaviour
         Rb.ResetGravityScale();
     }
 
-    public float PerDamage(float AreaSize) {
-        float centerDistance = (Distance()/ (AreaSize / 2f));
-        float damage = 0.7f + (1 - centerDistance * 0.3f);
+    public float PerDamage() {		
+        float centerDistance = (Distance()/(Bounds()));
+        float damage = 0.7f + (1 - centerDistance) * 0.3f;
         return damage;
     }
 
@@ -25,4 +25,18 @@ public class NoteMovement : MonoBehaviour
     public float Distance() {
         return Mathf.Abs(Direction.Checker.Axis(transform) - Direction.Checker.Axis(Direction.CenterLine));
     }
+	
+	public int Index() {
+		if(Direction.Checker.PassedDistance(transform, Direction.CenterLine.transform)) {
+			return 1;
+		}
+		return 0;
+	}
+	
+	public float Bounds() {
+		if(Direction.Distances[Index()].bounds.size.x > Direction.Distances[Index()].bounds.size.y) {
+			return Direction.Distances[Index()].bounds.size.x;
+		}
+		return Direction.Distances[Index()].bounds.size.y;
+	}
 }
