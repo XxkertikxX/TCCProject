@@ -6,7 +6,7 @@ using System.Collections.Generic;
 public class ScrSkillsCCandAttack : SkillBase
 {
     public override void Skill(float power, AttackRhythm rhythm) {
-		float damage = (1+power)/100 * (rhythm.Damage) * SkillPower;
+		float damage = (power)/100 * (rhythm.Damage) * SkillPower;
         float RoundDamage = -Mathf.Round(damage);
 		TextBattleData.Targets = TargetsString();
         foreach (var target in TargetType.CharactersAttributes) {
