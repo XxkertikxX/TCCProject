@@ -14788,6 +14788,7 @@ MonoBehaviour:
   passTurn: {fileID: 1707589546}
   applySkill: {fileID: 1310397126}
   useSkill: {fileID: 1100120931}
+  mana: {fileID: 11400000, guid: b9769ccb0a4631e408ac6d10115136c5, type: 2}
 --- !u!114 &2030265212
 MonoBehaviour:
   m_ObjectHideFlags: 0
