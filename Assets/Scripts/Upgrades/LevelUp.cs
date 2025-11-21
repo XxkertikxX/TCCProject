@@ -9,6 +9,7 @@ public class LevelUp : MonoBehaviour
 	static public StatusCharacters CharacterForUp;
 	
 	[SerializeField] private GameObject UI;
+	[SerializeField] private GameObject HUD;
 	
     [Header("References")]
     [SerializeField] private StatusCharacters character;
@@ -55,6 +56,7 @@ public class LevelUp : MonoBehaviour
     private IEnumerator OnLevelUp() {
 		upgradesUsados = new HashSet<UpgradeSO>();
 		UI.SetActive(true);
+		HUD.SetActive(false);
         yield return new WaitForSeconds(1f);
 		UI.SetActive(false);
     }
