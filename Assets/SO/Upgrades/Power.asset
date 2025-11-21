@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Power
   m_EditorClassIdentifier: 
   Name: Ataque
-  Description: Aumenta mais 3 de dano
-  Value: 3
+  Description: Aumenta mais 5 de dano
+  Value: 5
   Icon: {fileID: 21300000, guid: de66e33d375088b4b8e655516b388141, type: 3}
