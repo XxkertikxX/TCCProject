@@ -4,8 +4,9 @@ using System.Collections.Generic;
 using System.Collections;
 using System.Linq;
 
-public class EnemyTurn : MonoBehaviour
-{	
+public class EnemyTurn : MonoBehaviour, IDeath
+{
+    [SerializeField] private LevelUp[] charactersLevel;
     static public float ManaAdd;
     public int Index;
 
@@ -23,7 +24,7 @@ public class EnemyTurn : MonoBehaviour
     }
 
     void Update() {
-        if (AllCharactersPlay() || LowestManaConsume() > ManaSystem.Mp.ActualValue() && !inAction) {
+        if (AllCharactersPlay() || LowestManaConsume() > ManaSystem.Mp.ActualValue() && !inAction && !PlayerCharactersSkills.OnBattle) {
             StartCoroutine(Action());
 
         }
@@ -32,12 +33,20 @@ public class EnemyTurn : MonoBehaviour
         }
     }
     
-    void OnDestroy() {
-        if(GetComponent<CharacterAttributes>().LifeSystem.ActualValue() <= 0) {
-            StartCoroutine(LevelUpExternalEnemy.LevelUp(Index));
+    public void Death() {        
+        if (GetComponent<CharacterAttributes>().LifeSystem.ActualValue() <= 0) {
+            StartCoroutine(LevelUp());
         }
     }
-    
+    private IEnumerator LevelUp() {
+        EnemyAnim.PlayBool("Died", true);
+        yield return new WaitForSeconds(3f);
+        foreach (var character in charactersLevel) {
+            yield return character.UpLevel();
+        }
+        Save(true);
+    }
+
     private IEnumerator Action() {
         inAction = true;
         yield return EnemyAttack();

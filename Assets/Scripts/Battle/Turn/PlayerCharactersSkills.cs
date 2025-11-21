@@ -1,10 +1,10 @@
 using System.Collections;
 using UnityEngine;
+using System;
 
 public class PlayerCharactersSkills : MonoBehaviour
 {
     static public bool OnBattle = false;
-
     [SerializeField] private SystemRhythm systemRhythm;
     [SerializeField] private GameObject boxSkill;
 	[SerializeField] private GameObject painel;
@@ -30,6 +30,7 @@ public class PlayerCharactersSkills : MonoBehaviour
     
     private IEnumerator ActiveSkill(int posSkill, float manaConsume) {
 		useSkill.EventInvoke();
+        ManaSystem.Mp.ModifyValue(-manaConsume);
         boxSkill.SetActive(false);
 		yield return new WaitUntil(() => DialogManager.OnDialog == false);
         AttackRhythm rhythm = CharacterClick.CharacterAttr.Rhythm;
@@ -77,7 +78,6 @@ public class PlayerCharactersSkills : MonoBehaviour
         applySkill.EventInvoke();
 		yield return new WaitUntil(() => DialogManager.OnDialog == false);
         Character().TurnsForCanAttack += 1;
-		ManaSystem.Mp.ModifyValue(-manaConsume);
         OnBattle = false;
     }
 	

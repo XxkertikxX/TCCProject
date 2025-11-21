@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Ember
   m_EditorClassIdentifier: 
   Name: Ember
-  Level: 0
-  Xp: 0
+  Level: 5
+  Xp: 122.4198
   Life: 70
   Defense: 3
-  Power: 55
+  Power: 550
   Skills:
   - {fileID: 11400000, guid: 5844983a27e65854fb9add7888d9a584, type: 2}
   - {fileID: 11400000, guid: 2625c88da2de03e418260bba00682bbd, type: 2}
