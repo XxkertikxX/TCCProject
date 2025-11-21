@@ -11,6 +11,7 @@ public class LevelUp : MonoBehaviour
 	[SerializeField] private GameObject UI;
 	[SerializeField] private GameObject HUD;
 	[SerializeField] private GameObject Level;
+	[SerializeField] private GameObject Upgrade;
  	
     [Header("References")]
     [SerializeField] private StatusCharacters character;
@@ -59,9 +60,10 @@ public class LevelUp : MonoBehaviour
     private IEnumerator OnLevelUp() {
 		upgradesUsados = new HashSet<UpgradeSO>();
 		Level.SetActive(false);
+		Upgrade.SetActive(true);
         yield return new WaitUntil(() => ChoiceUpgrade.Choice == true);
 		ChoiceUpgrade.Choice = false;
-		UI.SetActive(false);
+		Upgrade.SetActive(false);
 		Level.SetActive(true);
     }
 }

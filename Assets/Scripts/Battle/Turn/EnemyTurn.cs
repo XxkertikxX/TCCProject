@@ -6,6 +6,8 @@ using System.Linq;
 
 public class EnemyTurn : MonoBehaviour
 {
+	[SerializeField] private LevelUp[] charactersLevel;
+	
     static public float ManaAdd;
     public int Index;
 
@@ -39,8 +41,8 @@ public class EnemyTurn : MonoBehaviour
     }
 	
 	private IEnumerator LevelUp() {
-		foreach(var character in Characters()) {
-			yield return character.GetComponent<LevelUp>().UpLevel();
+		foreach(var character in charactersLevel) {
+			yield return character.UpLevel();
 		}
 		Save(true);
 	}

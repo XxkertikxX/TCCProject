@@ -16,7 +16,7 @@ public class PlayVoiceAudio : MonoBehaviour
                 return SoundTypes.LioraTalking;
             case "Alon":
                 return SoundTypes.AlonTalking;
-            case "Amber":
+            case "Ember":
                 return SoundTypes.AmberTalking;
             case "Clementime":
                 return SoundTypes.ClementimeTalking;
