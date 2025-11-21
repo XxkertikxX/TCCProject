@@ -10,7 +10,8 @@ public class LevelUp : MonoBehaviour
 	
 	[SerializeField] private GameObject UI;
 	[SerializeField] private GameObject HUD;
-	
+	[SerializeField] private GameObject Level;
+ 	
     [Header("References")]
     [SerializeField] private StatusCharacters character;
     [SerializeField] private Slider xpSlider;
@@ -23,6 +24,7 @@ public class LevelUp : MonoBehaviour
     private float XpToNext => 100 + character.Level * 100;
 
     public IEnumerator UpLevel() {
+		HUD.SetActive(false);
         while (character.Xp > 0) {
             float xpRemaining = character.Xp;
             float xpNeeded = XpToNext * (1f - xpSlider.value);
@@ -56,8 +58,9 @@ public class LevelUp : MonoBehaviour
     private IEnumerator OnLevelUp() {
 		upgradesUsados = new HashSet<UpgradeSO>();
 		UI.SetActive(true);
-		HUD.SetActive(false);
+		Level.SetActive(false);
         yield return new WaitForSeconds(1f);
 		UI.SetActive(false);
+		Level.SetActive(true;)
     }
 }
