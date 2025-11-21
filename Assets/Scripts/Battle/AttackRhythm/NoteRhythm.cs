@@ -6,7 +6,7 @@ using System.Linq;
 
 public class NoteRhythm : AttackRhythm, IUpdateRhythm 
 {
-    public static event Action OnClick;
+    public static event Action<float, int> OnClick;
 
     private RhythmProperties rhythmProperties;
 
@@ -116,12 +116,14 @@ public class NoteRhythm : AttackRhythm, IUpdateRhythm
         }
         return false;
     }
-    private void DequeueLine(Queue<NoteMovement> queue) {
-        var note = queue.Dequeue();
-        Damage += note.PerDamage() / totalLines;
-        OnClick?.Invoke();
-        Destroy(note.gameObject);
-    }
+
+	private void DequeueLine(Queue<NoteMovement> queue) {
+		int queueIndex = notes.IndexOf(queue);
+		var note = queue.Dequeue();
+		Damage += note.PerDamage() / totalLines;
+		OnClick?.Invoke(note.PerDamage(), queueIndex);
+		Destroy(note.gameObject);
+	}
 
     private void DequeueLineOutLimits() {
         foreach (Queue<NoteMovement> queue in notes) {
