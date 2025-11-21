@@ -15,7 +15,7 @@ public class EnemyTurn : MonoBehaviour
     [SerializeField] private Event passTurn;
     [SerializeField] private Event applySkill;
     [SerializeField] private Event useSkill;
-	
+	[SerializeField] private ManaSO mana;
 
     private StatusCharacters enemy;
 
@@ -82,7 +82,7 @@ public class EnemyTurn : MonoBehaviour
 				characterTurns.TurnsForCanAttack -= 1;
 			}
         }
-		ManaAdd = 10 - ManaSystem.Mp.ActualValue();
+		ManaAdd = mana.Mana - ManaSystem.Mp.ActualValue();
 		ManaSystem.Mp.ModifyValue(ManaAdd);
 		passTurn.EventInvoke();
 		yield return new WaitUntil(() => DialogManager.OnDialog == false);
