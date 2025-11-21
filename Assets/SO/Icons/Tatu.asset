@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Tatu
   m_EditorClassIdentifier: 
   iconsCharacter:
-  - NameCharacter: Amber
+  - NameCharacter: Ember
     ImageCharacter: {fileID: 21300000, guid: d6cb4534d843ce04ea6e0d6f7cc71b13, type: 3}
   - NameCharacter: Clementine
     ImageCharacter: {fileID: 21300000, guid: cffb41383361da6429405226a9c089c6, type: 3}
-  - NameCharacter: Amber
+  - NameCharacter: Ember
     ImageCharacter: {fileID: 21300000, guid: d6cb4534d843ce04ea6e0d6f7cc71b13, type: 3}
   - NameCharacter: Alon
     ImageCharacter: {fileID: 21300000, guid: 4011f1e8bf2bb3a4fb38b48954f68192, type: 3}
