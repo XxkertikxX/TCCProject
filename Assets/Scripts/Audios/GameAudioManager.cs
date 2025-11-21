@@ -10,8 +10,8 @@ public class GameAudioManager : MonoBehaviour
     private static GameAudioManager instance;
     private AudioSource audioSource;
  
-    public static float soundVolume = .5f;
-    public static float musicVolume = .5f;
+    public static float soundVolume = 0.1f;
+    public static float musicVolume = 0.1f;
 
     private void Awake() {
         instance = this;
