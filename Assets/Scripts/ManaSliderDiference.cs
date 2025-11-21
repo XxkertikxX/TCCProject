@@ -23,6 +23,7 @@ public class ManaSliderDiference : MonoBehaviour
 
     public void OnMouseEnter()
     {
+        actualMana = manaSlider.value;
         manaSlider.value -= manaCust;
     }
 

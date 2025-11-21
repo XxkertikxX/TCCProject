@@ -6,13 +6,14 @@ using UnityEngine;
 [RequireComponent(typeof(IDialogWriter))]
 
 public class DialogStartSystem : MonoBehaviour
-{	
+{
+    [SerializeField] private bool battle;
     [SerializeField] private DialogStartBase dialogStart;
     [SerializeField] private TextActionString textAction;
 
     void OnEnable() {
 		var battleText = GameObject.FindObjectOfType<BattleApplyConfig>()?.battleConfigSO.Text;
-		if(battleText != null) {
+		if(battleText != null && battle) {
 			textAction = battleText;
 		}
         dialogStart.OnDialogOpen += SetupDialog;

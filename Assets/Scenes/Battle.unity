@@ -259,6 +259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d40a55193f91e24bb40c7af53b2822d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  battle: 0
   dialogStart: {fileID: 35922176}
   textAction: {fileID: 11400000, guid: 688d1867bbf64164bb5f17e21e6712d7, type: 2}
 --- !u!114 &35922173
@@ -492,7 +493,7 @@ MonoBehaviour:
   backSlider: {fileID: 1288941940}
   manaSlider: {fileID: 654217005}
   barStates: 0
-  dampRefSpeed: 0
+  dampRefSpeed: 0.1
   speed: 0.5
 --- !u!4 &50087368
 Transform:
@@ -6681,6 +6682,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d40a55193f91e24bb40c7af53b2822d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  battle: 0
   dialogStart: {fileID: 773976130}
   textAction: {fileID: 11400000, guid: 673ab17afd354e048814c4fc578a8657, type: 2}
 --- !u!114 &773976127
@@ -8716,6 +8718,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d40a55193f91e24bb40c7af53b2822d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  battle: 0
   dialogStart: {fileID: 954095173}
   textAction: {fileID: 11400000, guid: e0413c7e23e35c445b1de202d1bb1987, type: 2}
 --- !u!114 &954095170
@@ -9894,7 +9897,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1173154848
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12588,6 +12591,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d40a55193f91e24bb40c7af53b2822d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  battle: 1
   dialogStart: {fileID: 1623998557}
   textAction: {fileID: 11400000, guid: 84531db14cf4e544fb9ee12464849078, type: 2}
 --- !u!114 &1623998557

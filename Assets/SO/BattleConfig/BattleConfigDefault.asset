@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff968ba26ddc34b4da8e26b7c340163d, type: 3}
   m_Name: BattleConfigDefault
   m_EditorClassIdentifier: 
-  EnemyStatus: {fileID: 11400000, guid: e56a093e88fe99f438bbe4cb7e92971f, type: 2}
-  Background: {fileID: 716699110557876125, guid: 3e8be602bb799ec4699ad064cd4884b3, type: 3}
-  EnemySprite: {fileID: 21300000, guid: e8aff54f2ae265d459b753f313fa3b9b, type: 3}
-  EnemyAnimatorController: {fileID: 9100000, guid: b7a6cfceeedd39e4e9965b8b195ace66, type: 2}
-  EnemyPosition: {x: 5.17, y: 1.4, z: 0}
+  EnemyStatus: {fileID: 11400000, guid: 6a7583d51c3a7d140896356cd4a046ca, type: 2}
+  Background: {fileID: 6173943312995063890, guid: 586226abec01719449048e33f0129e20, type: 3}
+  EnemySprite: {fileID: 21300000, guid: 1787324c43454154bb84a799150f20cd, type: 3}
+  EnemyAnimatorController: {fileID: 9100000, guid: 50555798f0ad5aa46b9f69cf64bf4382, type: 2}
+  EnemyPosition: {x: 5.17, y: -0.1, z: 0}
   Index: 1
-  Text: {fileID: 0}
-  Icons: {fileID: 0}
-  hasDialog: 0
+  Text: {fileID: 11400000, guid: 84531db14cf4e544fb9ee12464849078, type: 2}
+  Icons: {fileID: 11400000, guid: 2555829619eed3f4f9250d6073127e75, type: 2}
+  hasDialog: 1
