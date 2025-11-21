@@ -2527,15 +2527,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4767783486949814014, guid: a32c455b96022364fa316f55bef42579, type: 3}
       propertyPath: m_Color.b
-      value: 0.764151
+      value: 0.77254903
       objectReference: {fileID: 0}
     - target: {fileID: 4767783486949814014, guid: a32c455b96022364fa316f55bef42579, type: 3}
       propertyPath: m_Color.g
-      value: 0.764151
+      value: 0.77254903
       objectReference: {fileID: 0}
     - target: {fileID: 4767783486949814014, guid: a32c455b96022364fa316f55bef42579, type: 3}
       propertyPath: m_Color.r
-      value: 0.764151
+      value: 0.77254903
       objectReference: {fileID: 0}
     - target: {fileID: 4767783486949814014, guid: a32c455b96022364fa316f55bef42579, type: 3}
       propertyPath: m_SortingLayer
@@ -3781,15 +3781,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4767783486949814014, guid: a32c455b96022364fa316f55bef42579, type: 3}
       propertyPath: m_Color.b
-      value: 0.6509434
+      value: 0.77254903
       objectReference: {fileID: 0}
     - target: {fileID: 4767783486949814014, guid: a32c455b96022364fa316f55bef42579, type: 3}
       propertyPath: m_Color.g
-      value: 0.6509434
+      value: 0.77254903
       objectReference: {fileID: 0}
     - target: {fileID: 4767783486949814014, guid: a32c455b96022364fa316f55bef42579, type: 3}
       propertyPath: m_Color.r
-      value: 0.6509434
+      value: 0.77254903
       objectReference: {fileID: 0}
     - target: {fileID: 4767783486949814014, guid: a32c455b96022364fa316f55bef42579, type: 3}
       propertyPath: m_SortingLayer
@@ -5225,15 +5225,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4767783486949814014, guid: a32c455b96022364fa316f55bef42579, type: 3}
       propertyPath: m_Color.b
-      value: 0.8301887
+      value: 0.77254903
       objectReference: {fileID: 0}
     - target: {fileID: 4767783486949814014, guid: a32c455b96022364fa316f55bef42579, type: 3}
       propertyPath: m_Color.g
-      value: 0.8301887
+      value: 0.77254903
       objectReference: {fileID: 0}
     - target: {fileID: 4767783486949814014, guid: a32c455b96022364fa316f55bef42579, type: 3}
       propertyPath: m_Color.r
-      value: 0.8301887
+      value: 0.77254903
       objectReference: {fileID: 0}
     - target: {fileID: 4767783486949814014, guid: a32c455b96022364fa316f55bef42579, type: 3}
       propertyPath: m_SortingLayer
@@ -8470,15 +8470,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4767783486949814014, guid: a32c455b96022364fa316f55bef42579, type: 3}
       propertyPath: m_Color.b
-      value: 0.6415094
+      value: 0.77254903
       objectReference: {fileID: 0}
     - target: {fileID: 4767783486949814014, guid: a32c455b96022364fa316f55bef42579, type: 3}
       propertyPath: m_Color.g
-      value: 0.6415094
+      value: 0.77254903
       objectReference: {fileID: 0}
     - target: {fileID: 4767783486949814014, guid: a32c455b96022364fa316f55bef42579, type: 3}
       propertyPath: m_Color.r
-      value: 0.6415094
+      value: 0.77254903
       objectReference: {fileID: 0}
     - target: {fileID: 4767783486949814014, guid: a32c455b96022364fa316f55bef42579, type: 3}
       propertyPath: m_SortingLayer
@@ -11073,15 +11073,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4767783486949814014, guid: a32c455b96022364fa316f55bef42579, type: 3}
       propertyPath: m_Color.b
-      value: 1
+      value: 0.77254903
       objectReference: {fileID: 0}
     - target: {fileID: 4767783486949814014, guid: a32c455b96022364fa316f55bef42579, type: 3}
       propertyPath: m_Color.g
-      value: 1
+      value: 0.77254903
       objectReference: {fileID: 0}
     - target: {fileID: 4767783486949814014, guid: a32c455b96022364fa316f55bef42579, type: 3}
       propertyPath: m_Color.r
-      value: 1
+      value: 0.77254903
       objectReference: {fileID: 0}
     - target: {fileID: 4767783486949814014, guid: a32c455b96022364fa316f55bef42579, type: 3}
       propertyPath: m_SortingLayer
