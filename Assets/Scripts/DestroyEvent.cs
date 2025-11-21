@@ -6,7 +6,7 @@ public class DestroyEvent : MonoBehaviour
 {
     public void Destroy()
     {
-        Destroy(gameObject);
+        Destroy(transform.root.gameObject);
     }
     
     public void DestroySpriteRender()

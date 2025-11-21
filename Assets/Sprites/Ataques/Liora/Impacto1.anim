@@ -199,11 +199,11 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0
-    functionName: 
+    functionName: PlaySelectedSound
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
-    intParameter: 0
+    intParameter: 14
     messageOptions: 0
   - time: 0
     functionName: PlaySelectedSound

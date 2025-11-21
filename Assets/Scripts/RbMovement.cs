@@ -29,6 +29,7 @@ public class RbMovement : MonoBehaviour
             xRotation = 0f;
         }
 
+        //fazer rotação smoothada
         //Debug.Log(SmoothTurn(transform.rotation.x, xRotation));
         //transform.eulerAngles = new Vector3(SmoothTurn(transform.rotation.x, xRotation),SmoothTurn(transform.rotation.y, yRotation),SmoothTurn(transform.rotation.z,zRotation));
 

@@ -419,22 +419,15 @@ AnimationClip:
     floatParameter: 0
     intParameter: 20
     messageOptions: 0
-  - time: 0.25
+  - time: 0.4
     functionName: NextAnim
     data: 
     objectReferenceParameter: {fileID: 3960456884035336953, guid: 0d0a37b89772a754e9d660b7c49d8549, type: 3}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.26666668
+  - time: 0.41666666
     functionName: DestroySpriteRender
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.51666665
-    functionName: Destroy
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
