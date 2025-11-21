@@ -14,8 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Liora
   Level: 0
+  Xp: 0
   Life: 78
+  Defense: 0
   Power: 10
   Skills:
   - {fileID: 11400000, guid: ad8bcafb4410c5f4ea9f166e65b7abef, type: 2}
   - {fileID: 11400000, guid: 149efdeccabfaba4e91c6201b2e915d2, type: 2}
+  Icon: {fileID: 21300000, guid: 58f2fee0b0c3ed14ab88c381749ea0e8, type: 3}

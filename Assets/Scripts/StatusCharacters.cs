@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 [CreateAssetMenu(menuName = "CharacterCreator")]
 public class StatusCharacters : ScriptableObject
@@ -11,6 +12,7 @@ public class StatusCharacters : ScriptableObject
 	public float Defense;
     public float Power;
     public List<SkillBase> Skills;
+	public Sprite Icon;
 	
 	public float DamageReduction() {
 		return 10/(10+Defense);

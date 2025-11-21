@@ -12,10 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f59b8f607a255544a1343d7f3ca0aa4, type: 3}
   m_Name: Amber
   m_EditorClassIdentifier: 
-  Name: Amber
+  Name: Ember
   Level: 0
+  Xp: 0
   Life: 78
+  Defense: 0
   Power: 10
   Skills:
   - {fileID: 11400000, guid: 5844983a27e65854fb9add7888d9a584, type: 2}
   - {fileID: 11400000, guid: 2625c88da2de03e418260bba00682bbd, type: 2}
+  Icon: {fileID: 21300000, guid: d6cb4534d843ce04ea6e0d6f7cc71b13, type: 3}

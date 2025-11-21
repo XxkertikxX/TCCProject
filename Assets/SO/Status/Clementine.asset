@@ -14,8 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Clementine
   Level: 0
+  Xp: 0
   Life: 78
+  Defense: 0
   Power: 10
   Skills:
   - {fileID: 11400000, guid: b1f45778d1150614285ec51648794176, type: 2}
   - {fileID: 11400000, guid: 3b28fc1d92f881846a9c4de2d24e39d4, type: 2}
+  Icon: {fileID: 21300000, guid: cffb41383361da6429405226a9c089c6, type: 3}

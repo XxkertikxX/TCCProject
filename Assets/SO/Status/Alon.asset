@@ -14,8 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Alon
   Level: 0
+  Xp: 0
   Life: 100
+  Defense: 0
   Power: 10
   Skills:
   - {fileID: 11400000, guid: 2c0b2426d5ea5ac47abf2b9a05eae992, type: 2}
   - {fileID: 11400000, guid: 9c9cfd4d3f9face469eac1d2b638cd41, type: 2}
+  Icon: {fileID: 21300000, guid: 4011f1e8bf2bb3a4fb38b48954f68192, type: 3}
