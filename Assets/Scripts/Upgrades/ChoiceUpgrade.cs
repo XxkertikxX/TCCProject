@@ -11,9 +11,15 @@ public class ChoiceUpgrade : MonoBehaviour
 	[SerializeField] private Text textDescription;
 	[SerializeField] private SpriteRenderer icon;
 	
+	public void PressButton() {
+		upgrade.Upgrade(LevelUp.CharacterForUp);
+	}
+	
     void OnEnable() {
-		upgrade = randomUpgrade.RandomUpgradeSelect();
-		ApplyChoice();
+        UpgradeSO original = randomUpgrade.PickOriginal(LevelUp.upgradesUsados);
+        LevelUp.upgradesUsados.Add(original);
+        upgrade = Instantiate(original);
+        ApplyChoice();
 	}
 	
 	private void ApplyChoice() {

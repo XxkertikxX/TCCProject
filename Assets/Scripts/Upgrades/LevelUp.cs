@@ -1,9 +1,13 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class LevelUp : MonoBehaviour
 {
+	static public HashSet<UpgradeSO> upgradesUsados;
+	static public StatusCharacters CharacterForUp;
+	
 	[SerializeField] private GameObject UI;
 	
     [Header("References")]
@@ -49,6 +53,7 @@ public class LevelUp : MonoBehaviour
     }
 
     private IEnumerator OnLevelUp() {
+		upgradesUsados = new HashSet<UpgradeSO>();
 		UI.SetActive(true);
         yield return new WaitForSeconds(1f);
 		UI.SetActive(false);

@@ -627,6 +627,7 @@ GameObject:
   - component: {fileID: 528025073}
   - component: {fileID: 528025072}
   - component: {fileID: 528025071}
+  - component: {fileID: 528025074}
   m_Layer: 5
   m_Name: Botao
   m_TagString: Untagged
@@ -698,7 +699,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 528025072}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 528025074}
+        m_TargetAssemblyTypeName: ChoiceUpgrade, CamMan
+        m_MethodName: PressButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &528025072
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -737,6 +750,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 528025069}
   m_CullTransparentMesh: 1
+--- !u!114 &528025074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 528025069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39a63ef60e4c19b4d8469ff0cb635954, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randomUpgrade: {fileID: 1120845332}
+  textTitle: {fileID: 1160095175}
+  textDescription: {fileID: 465095251}
+  icon: {fileID: 433792970}
 --- !u!1 &729357064
 GameObject:
   m_ObjectHideFlags: 0
@@ -755,7 +784,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &729357065
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -848,6 +877,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1120845330}
   - component: {fileID: 1120845331}
+  - component: {fileID: 1120845332}
   m_Layer: 0
   m_Name: pergaminhoupdate
   m_TagString: Untagged
@@ -925,6 +955,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1120845332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1120845329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 646f7d62bf3920547a9c3bbf1ece5b77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upgrades:
+  - {fileID: 11400000, guid: 21cb0e9d2fb316a448c9c71479d236cc, type: 2}
+  - {fileID: 11400000, guid: df60c51ae6eacad4382f79ad3732682a, type: 2}
+  - {fileID: 11400000, guid: 3abf24de6f9fb2f4cacfa0336cc58465, type: 2}
+  - {fileID: 11400000, guid: 635f0353e9e306f4797bc8905809368b, type: 2}
+  - {fileID: 11400000, guid: 8ada6ac0a1bea9e448b041b683d3c041, type: 2}
+  - {fileID: 11400000, guid: 2b7c23191a9eb9f4c9f35df613424644, type: 2}
 --- !u!1 &1160095173
 GameObject:
   m_ObjectHideFlags: 0
@@ -1171,6 +1220,7 @@ GameObject:
   - component: {fileID: 1624038687}
   - component: {fileID: 1624038686}
   - component: {fileID: 1624038685}
+  - component: {fileID: 1624038688}
   m_Layer: 5
   m_Name: Botao (1)
   m_TagString: Untagged
@@ -1242,7 +1292,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1624038686}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1624038688}
+        m_TargetAssemblyTypeName: ChoiceUpgrade, CamMan
+        m_MethodName: PressButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1624038686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1281,6 +1343,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1624038683}
   m_CullTransparentMesh: 1
+--- !u!114 &1624038688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1624038683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39a63ef60e4c19b4d8469ff0cb635954, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randomUpgrade: {fileID: 1120845332}
+  textTitle: {fileID: 339304286}
+  textDescription: {fileID: 384679001}
+  icon: {fileID: 1302474771}
 --- !u!1 &1741485439
 GameObject:
   m_ObjectHideFlags: 0
@@ -1457,6 +1535,7 @@ GameObject:
   - component: {fileID: 1924923149}
   - component: {fileID: 1924923148}
   - component: {fileID: 1924923147}
+  - component: {fileID: 1924923150}
   m_Layer: 5
   m_Name: Botao (2)
   m_TagString: Untagged
@@ -1528,7 +1607,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1924923148}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1924923150}
+        m_TargetAssemblyTypeName: ChoiceUpgrade, CamMan
+        m_MethodName: PressButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1924923148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1567,3 +1658,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1924923145}
   m_CullTransparentMesh: 1
+--- !u!114 &1924923150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1924923145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39a63ef60e4c19b4d8469ff0cb635954, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randomUpgrade: {fileID: 1120845332}
+  textTitle: {fileID: 1873657699}
+  textDescription: {fileID: 172875752}
+  icon: {fileID: 293148535}
