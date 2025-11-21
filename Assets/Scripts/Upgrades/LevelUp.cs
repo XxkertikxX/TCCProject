@@ -25,6 +25,7 @@ public class LevelUp : MonoBehaviour
     private float XpToNext => 100 + character.Level * 100;
 
     public IEnumerator UpLevel() {
+		character.Xp += 50;
 		HUD.SetActive(false);		
 		UI.SetActive(true);
         while (character.Xp > 0) {
