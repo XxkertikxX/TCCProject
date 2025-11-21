@@ -8,7 +8,8 @@ public class DinamicUIBar : MonoBehaviour, IDinamicUI
 
 
     public void UpdateUI(float actualValue, float maxValue) {
-        valueText.text = $"{actualValue}/{maxValue}";
-        //valueSlider.value = actualValue;
+        var roundValue = Mathf.Round(actualValue);
+        valueText.text = $"{roundValue}/{maxValue}";
+        valueSlider.value = roundValue;
     }
 }
