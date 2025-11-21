@@ -1,18 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class UpgradeSO : MonoBehaviour
+public abstract class UpgradeSO : ScriptableObject
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public string Name;
+	[TextArea]
+	public string Description;
+	public float Value;
+	public Sprite Icon;
+	
+	public abstract void Upgrade(StatusCharacters status);
 }

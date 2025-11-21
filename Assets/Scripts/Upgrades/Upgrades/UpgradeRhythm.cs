@@ -1,13 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class UpgradeRhythm : UpgradeBase
-{
-    public override void Upgrade(StatusCharacters status, float value) {
+[CreateAssetMenu(menuName = "RhythmLentCreator")]
+public class UpgradeRhythm : UpgradeSO {
+    public override void Upgrade(StatusCharacters status) {
         foreach(var skill in status.Skills) {
-			skill.SpeedMin -= value;
-			skill.SpeedMax -= value;
+			skill.SpeedMin -= Value;
+			skill.SpeedMax -= Value;
 		}
     }
 }

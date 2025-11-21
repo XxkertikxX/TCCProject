@@ -1,7 +1,8 @@
 using UnityEngine;
 
-public class UpgradePower : UpgradeBase {
-    public override void Upgrade(StatusCharacters status, float value) {
-        status.Power += value;
+[CreateAssetMenu(menuName = "PowerCreator")]
+public class UpgradePower : UpgradeSO {
+    public override void Upgrade(StatusCharacters status) {
+        status.Power += Value;
     }
 }

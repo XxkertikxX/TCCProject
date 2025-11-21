@@ -1,10 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class UpgradeDefense : UpgradeBase
-{
-    public override void Upgrade(StatusCharacters status, float value) {
-        status.Defense += value;
+[CreateAssetMenu(menuName = "DefenseCreator")]
+public class UpgradeDefense : UpgradeSO {
+    public override void Upgrade(StatusCharacters status) {
+        status.Defense += Value;
     }
 }

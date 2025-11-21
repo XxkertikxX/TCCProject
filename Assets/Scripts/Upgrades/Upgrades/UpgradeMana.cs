@@ -1,9 +1,10 @@
 using UnityEngine;
 
-public class UpgradeMana : UpgradeBase {
+[CreateAssetMenu(menuName = "ManaUpCreator")]
+public class UpgradeMana : UpgradeSO {
     [SerializeField] private ManaSO manaSO;
 
-    public override void Upgrade(StatusCharacters status, float value) {
-        manaSO.Mana += value;
+    public override void Upgrade(StatusCharacters status) {
+        manaSO.Mana += Value;
     }
 }

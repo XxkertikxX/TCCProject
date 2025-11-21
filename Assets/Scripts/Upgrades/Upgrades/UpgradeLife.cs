@@ -1,7 +1,8 @@
 using UnityEngine;
 
-public class UpgradeLife : UpgradeBase {
-    public override void Upgrade(StatusCharacters status, float value) {
-        status.Life += value;
+[CreateAssetMenu(menuName = "LifeCreator")]
+public class UpgradeLife : UpgradeSO {
+    public override void Upgrade(StatusCharacters status) {
+        status.Life += Value;
     }
 }

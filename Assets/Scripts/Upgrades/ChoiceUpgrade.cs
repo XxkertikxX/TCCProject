@@ -1,14 +1,24 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ChoiceUpgrade : MonoBehaviour
 {
-	private UpgradeBase upgrade;
+	private UpgradeSO upgrade;
+	
+	[SerializeField] private RandomUpgrade randomUpgrade;
+	
+	[SerializeField] private Text textTitle;
+	[SerializeField] private Text textDescription;
+	[SerializeField] private SpriteRenderer icon;
 	
     void OnEnable() {
-		upgrade = RandomUpgrade.RandomUpgradeSelect(gameObject);
+		upgrade = randomUpgrade.RandomUpgradeSelect();
+		ApplyChoice();
 	}
 	
-	void OnDisable() {
-		Destroy(upgrade);
+	private void ApplyChoice() {
+		textTitle.text = upgrade.Name;
+		textDescription.text = upgrade.Description;
+		icon.sprite = upgrade.Icon;
 	}
 }

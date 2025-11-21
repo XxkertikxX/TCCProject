@@ -1,12 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class UpgradeReductionMana : UpgradeBase
-{
-    public override void Upgrade(StatusCharacters status, float value) {
+[CreateAssetMenu(menuName = "ReductionManaCreator")]
+public class UpgradeReductionMana : UpgradeSO {
+    public override void Upgrade(StatusCharacters status) {
         foreach(var skill in status.Skills) {
-			skill.ManaConsume -= value;
+			skill.ManaConsume -= Value;
 		}
     }
 }
