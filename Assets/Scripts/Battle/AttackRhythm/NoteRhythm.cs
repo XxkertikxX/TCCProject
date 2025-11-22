@@ -164,31 +164,22 @@ public class NoteRhythm : AttackRhythm, IUpdateRhythm
         }
     }
 
-    private Queue<NoteMovement> FirstNote() {
-        Queue<NoteMovement>[] queues = notes.ToArray();
-        Queue<NoteMovement> queue = new Queue<NoteMovement>();
+	private Queue<NoteMovement> FirstNote() {
+		Queue<NoteMovement> bestQueue = null;
+		float bestDist = float.MaxValue;
 
-        if (queues.Length == 1) return queues[0];
+		foreach (var queue in notes) {
+			if (queue.Count == 0) continue;
 
-        for (int i = 0; i < queues.Length - 1; i++) {
-            if (queues[i].Count == 0 && queues[i + 1].Count == 0) continue;
-            if (queues[i + 1].Count == 0 || queues[i].Count == 0) {
-                if (queues[i + 1].Count == 0) {
-                    queue = queues[i];
-                } else {
-                    queue = queues[i + 1];
-                }
-                continue;
-            }
+			float dist = DistanceToCenter(queue.Peek());
+			if (dist < bestDist) {
+				bestDist = dist;
+				bestQueue = queue;
+			}
+		}
 
-            if (DistanceToCenter(queues[i + 1].Peek()) < DistanceToCenter(queues[i].Peek())) {
-                queue = queues[i + 1];
-            } else {
-                queue = queues[i];
-            }
-        }
-        return queue;
-    }
+		return bestQueue;
+	}
 
     private float DistanceToCenter(NoteMovement note) {
         return note.Distance();
