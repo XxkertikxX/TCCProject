@@ -15,6 +15,6 @@ public class StatusCharacters : ScriptableObject
 	public Sprite Icon;
 	
 	public float DamageReduction() {
-		return 10/(10+Defense);
+		return 50/(50+Defense);
 	}
 }

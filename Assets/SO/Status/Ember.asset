@@ -16,7 +16,7 @@ MonoBehaviour:
   Level: 0
   Xp: 0
   Life: 75
-  Defense: 4
+  Defense: 20
   Power: 65
   Skills:
   - {fileID: 11400000, guid: 5844983a27e65854fb9add7888d9a584, type: 2}
