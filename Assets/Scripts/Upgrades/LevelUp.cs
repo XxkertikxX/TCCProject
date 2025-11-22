@@ -28,8 +28,9 @@ public class LevelUp : MonoBehaviour
 		character.Xp += 50;
 		HUD.SetActive(false);		
 		UI.SetActive(true);
-        while (character.Xp > 0) {
-            float xpRemaining = character.Xp;
+        float x = character.Xp;
+        while (x > 0) {
+            float xpRemaining = x;
             float xpNeeded = XpToNext * (1f - xpSlider.value);
 
             float deltaXP = Mathf.Min(xpRemaining, xpNeeded);
@@ -40,26 +41,25 @@ public class LevelUp : MonoBehaviour
             float endValue = (startValue * XpToNext + deltaXP) / XpToNext;
 
             float t = 0f;
-			
+            x -= deltaXP;
             while (t < 1f) {
                 t += Time.deltaTime * speed;
                 xpSlider.value = Mathf.Lerp(startValue, endValue, t);
                 yield return null;
             }
 
-            character.Xp -= deltaXP;
-
             if (Mathf.Approximately(xpSlider.value, 1f)) {
                 character.Level++;
                 xpSlider.value = 0f;
-
+                character.Xp -= xpNeeded;
                 yield return StartCoroutine(OnLevelUp());
             }
         }
     }
 
     private IEnumerator OnLevelUp() {
-		upgradesUsados = new HashSet<UpgradeSO>();
+        CharacterForUp = character;
+        upgradesUsados = new HashSet<UpgradeSO>();
 		Level.SetActive(false);
 		Upgrade.SetActive(true);
         yield return new WaitUntil(() => ChoiceUpgrade.Choice == true);

@@ -69,8 +69,6 @@ public class PlayerCharactersSkills : MonoBehaviour
         yield return rhythm.Attack(skill);
         EnemyAnim.PlayTrigger("TookDamage");
         painel.SetActive(false);
-
-
     }
 
     private IEnumerator PassTurn(AttackRhythm rhythm, float manaConsume) {

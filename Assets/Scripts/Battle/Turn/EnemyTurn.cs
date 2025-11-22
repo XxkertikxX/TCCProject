@@ -26,7 +26,6 @@ public class EnemyTurn : MonoBehaviour, IDeath
     void Update() {
         if (AllCharactersPlay() || LowestManaConsume() > ManaSystem.Mp.ActualValue() && !inAction && !PlayerCharactersSkills.OnBattle) {
             StartCoroutine(Action());
-
         }
         if(Characters().Length == 0) {
             Save(false);
@@ -48,6 +47,7 @@ public class EnemyTurn : MonoBehaviour, IDeath
     }
 
     private IEnumerator Action() {
+        if (GetComponent<CharacterAttributes>().LifeSystem.ActualValue() <= 0) yield break;
         inAction = true;
         yield return EnemyAttack();
         yield return ResetTurn();

@@ -13,6 +13,7 @@ public class CharacterUpgrade : MonoBehaviour
 	[SerializeField] private Text power;
 	
     void Update() {
+		if (Character() == null) return;
 		icon.sprite = Character().Icon;
 		name.text = Character().Name;
 		level.text = Character().Level.ToString();
