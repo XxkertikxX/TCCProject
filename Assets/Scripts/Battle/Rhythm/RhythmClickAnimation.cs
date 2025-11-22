@@ -7,10 +7,11 @@ public class RhythmClickAnimation : MonoBehaviour
 	
     private SpriteRenderer spriteRenderer;
     private Color originalColor;
-    private float glowDuration = 0.2f;
-    private Color glowColor = Color.white;
-
-    void Awake() {
+    private float glowDuration = 0.1f;
+	private Color greenStrong = new Color(0f, 1f, 0f, 1f);
+	private Color greenSoft   = new Color(0.4f, 1f, 0.4f, 1f);
+	
+	void Awake() {
         spriteRenderer = GetComponent<SpriteRenderer>();
         originalColor = spriteRenderer.color;
     }
@@ -24,12 +25,25 @@ public class RhythmClickAnimation : MonoBehaviour
     }
 
     private void Brilhar(float intensity, int index) {
+		
 		if(this.index != index) return;
-        StartCoroutine(GlowCoroutine(intensity));
+		if(intensity > 0.95f) {
+			StartCoroutine(GlowCoroutine(greenStrong));
+			return;
+		}
+		if(intensity > 0.85f) {
+			StartCoroutine(GlowCoroutine(greenSoft));
+			return;
+		}
+		if(intensity > 0.65f) {
+			StartCoroutine(GlowCoroutine(Color.yellow));
+			return;
+		}
+		StartCoroutine(GlowCoroutine(Color.red));
     }
 
-    private IEnumerator GlowCoroutine(float intensity) {
-        spriteRenderer.color = glowColor * intensity;
+    private IEnumerator GlowCoroutine(Color newColor) {
+        spriteRenderer.color = newColor;
         yield return new WaitForSeconds(glowDuration);
         spriteRenderer.color = originalColor;
     }
