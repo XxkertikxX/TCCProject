@@ -14,7 +14,7 @@ public class NoteMovement : MonoBehaviour
 
     public float PerDamage() {		
         float centerDistance = (Distance()/(Bounds()));
-        float damage = 0.7f + (1 - centerDistance) * 0.3f;
+        float damage = 0.5f + (1 - centerDistance) * 0.5f;
         return damage;
     }
 
