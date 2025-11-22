@@ -16,7 +16,7 @@ MonoBehaviour:
   timesForInvoke: 10
   timePerInvokeLine: 0.7
   targetType: {fileID: 11400000, guid: 3e82a2c034aa5c7498cf96b3e2346736, type: 2}
-  skillpower: 70
+  skillpower: 55
   spriteTypeSkill: {fileID: 21300000, guid: b257ba50ad47ecb4abe3d2dcdfb91211, type: 3}
   spritesEffectsSkill:
   - {fileID: 0}
