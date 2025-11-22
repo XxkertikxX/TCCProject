@@ -6,6 +6,7 @@ using System.Linq;
 
 public class EnemyTurn : MonoBehaviour, IDeath
 {
+	static public bool Finish;
     [SerializeField] private DialogEnableUI[] uis;
     [SerializeField] private LevelUp[] charactersLevel;
     static public float ManaAdd;
@@ -35,6 +36,7 @@ public class EnemyTurn : MonoBehaviour, IDeath
     
     public void Death() {        
         if (GetComponent<CharacterAttributes>().LifeSystem.ActualValue() <= 0) {
+			Finish = true;
             StartCoroutine(LevelUp());
         }
     }
