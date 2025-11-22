@@ -6,6 +6,7 @@ using System.Linq;
 
 public class EnemyTurn : MonoBehaviour, IDeath
 {
+    [SerializeField] private DialogEnableUI[] uis;
     [SerializeField] private LevelUp[] charactersLevel;
     static public float ManaAdd;
     public int Index;
@@ -48,8 +49,10 @@ public class EnemyTurn : MonoBehaviour, IDeath
 
     private IEnumerator Action() {
         if (GetComponent<CharacterAttributes>().LifeSystem.ActualValue() <= 0) yield break;
+        Active(false);
         inAction = true;
         yield return EnemyAttack();
+        Active(true);
         yield return ResetTurn();
     }
 
@@ -98,8 +101,10 @@ public class EnemyTurn : MonoBehaviour, IDeath
 		
 		foreach(var character in Characters()) {
 			foreach(var skill in character.GetComponent<CharacterAttributes>().Character.Skills) {
-				manaConsume.Add(skill.ManaConsume);
-			}
+                if(character.GetComponent<CharacterAttributes>().TurnsForCanAttack == 0) {
+                    manaConsume.Add(skill.ManaConsume);
+                }
+            }
 		}
 		return manaConsume.Min();
 	}
@@ -114,4 +119,10 @@ public class EnemyTurn : MonoBehaviour, IDeath
 		TextBattleData.Character = enemy.Name;
 		TextBattleData.SkillName = skill.Name;
 	}
+
+    private void Active(bool active) { 
+        foreach(var ui in uis) {
+            ui.active = active;
+        }
+    }
 }

@@ -22,6 +22,9 @@ public class ApplySkillUI : MonoBehaviour
 		for(int i = 0; i < Skill().SpritesEffectsSkill.Length; i++) {
 			iconSubTypeSkill[i].sprite = Skill().SpritesEffectsSkill[i];
 		}
+		if(Skill().SpritesEffectsSkill.Length == 1) {
+			iconSubTypeSkill[1].sprite = null;
+		}
 	}
 
 	private SkillBase Skill() {

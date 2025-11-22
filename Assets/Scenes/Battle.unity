@@ -302,6 +302,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   screenDialog: {fileID: 17717848}
   screenHUD: {fileID: 2034996690}
+  active: 0
 --- !u!114 &35922176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6676,6 +6677,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   screenDialog: {fileID: 17717848}
   screenHUD: {fileID: 2034996690}
+  active: 1
 --- !u!114 &773976130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8712,6 +8714,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   screenDialog: {fileID: 17717848}
   screenHUD: {fileID: 2034996690}
+  active: 1
 --- !u!114 &954095173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12583,6 +12586,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   screenDialog: {fileID: 17717848}
   screenHUD: {fileID: 2034996690}
+  active: 1
 --- !u!114 &1623998560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14781,6 +14785,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e983cf2de33251c44ba6317ba516acc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  uis:
+  - {fileID: 954095172}
   charactersLevel:
   - {fileID: 1025881858}
   - {fileID: 575359399}
