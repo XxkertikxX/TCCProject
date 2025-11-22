@@ -13,11 +13,11 @@ public class ScrSkillsCCandAttack : SkillBase
             CharacterClick.CharacterAttr.Character.Xp += Mathf.Abs(target.LifeSystem.ModifyValue(RoundDamage*target.Character.DamageReduction()));
 			if(rhythm.Damage >= 0.9f) {
 				target.TurnsForCanAttack += 1;
-				TextBattleData.Action = $"causou {RoundDamage} de dano e stunou por 1 rounds ";
+				TextBattleData.Action = $"causou {RoundDamage*target.Character.DamageReduction()} de dano e stunou por 1 rounds ";
 				CharacterClick.CharacterAttr.Character.Xp += 20;
 			}
 			else{
-				TextBattleData.Action = $"causou {RoundDamage} de dano e falhou em stunar ";
+				TextBattleData.Action = $"causou {RoundDamage*target.Character.DamageReduction()} de dano e falhou em stunar ";
 			}
         }
     }
