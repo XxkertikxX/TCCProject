@@ -37,6 +37,7 @@ public class NoteRhythm : AttackRhythm, IUpdateRhythm
     }
 
     public override IEnumerator Attack(SkillBase skill) {
+		Damage = 0;
         for (int i = 0; i < rhythmProperties.Index(); i++) {
             notes.Add(new Queue<NoteMovement>());
         }
@@ -132,8 +133,7 @@ public class NoteRhythm : AttackRhythm, IUpdateRhythm
                 queue.Peek().Fade.FadeOut();
             }
             if(queue.Peek().Fade.DestroyObject()) {
-                var note = queue.Dequeue();
-                Destroy(note.gameObject);
+                DequeueLine(queue);
             }
         }
     }
