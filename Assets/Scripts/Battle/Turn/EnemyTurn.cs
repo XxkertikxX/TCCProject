@@ -59,16 +59,15 @@ public class EnemyTurn : MonoBehaviour, IDeath
 				characterTurns.TurnsForCanAttack -= 1;
 			}
         }
-		/*if(enemy.TurnsForCanAttack == 0) {
+		if(GetComponent<CharacterAttributes>().TurnsForCanAttack == 0) {
 			yield return EnemyAttack();
 		}
-		enemy.TurnsForCanAttack = 0;*/
+		GetComponent<CharacterAttributes>().TurnsForCanAttack = 0;
         Active(true);
         yield return ResetTurn();
     }
 
     private IEnumerator EnemyAttack() { 
-	
         EnemyAnim.PlayTrigger("Attacked");
         int randomSkill = Random.Range(0, enemy.Skills.Count);
 		var skill = enemy.Skills[randomSkill];
