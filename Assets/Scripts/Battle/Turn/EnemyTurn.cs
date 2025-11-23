@@ -59,15 +59,15 @@ public class EnemyTurn : MonoBehaviour, IDeath
 				characterTurns.TurnsForCanAttack -= 1;
 			}
         }
-		if(enemy.TurnsForCanAttack == 0) {
+		/*if(enemy.TurnsForCanAttack == 0) {
 			yield return EnemyAttack();
 		}
-		enemy.TurnsForCanAttack = 0;
+		enemy.TurnsForCanAttack = 0;*/
         Active(true);
         yield return ResetTurn();
     }
 
-    private IEnumerator EnemyAttack() 
+    private IEnumerator EnemyAttack() { 
 	
         EnemyAnim.PlayTrigger("Attacked");
         int randomSkill = Random.Range(0, enemy.Skills.Count);
@@ -82,15 +82,16 @@ public class EnemyTurn : MonoBehaviour, IDeath
     }
 
     private bool AllCharactersPlay() {
-        foreach (var character in Characters()) {
-            if (character.GetComponent<CharacterAttributes>().TurnsForCanAttack == 0) {
-                return false;
-            }
+    foreach (var character in Characters()) {
+        if (character.GetComponent<CharacterAttributes>().TurnsForCanAttack == 0) {
+            return false;
         }
-        return true;
     }
+    return true;
 
-    private IEnumerator ResetTurn() {
+}
+
+private IEnumerator ResetTurn() {
 		ManaAdd = mana.Mana - ManaSystem.Mp.ActualValue();
 		ManaSystem.Mp.ModifyValue(ManaAdd);
 		passTurn.EventInvoke();

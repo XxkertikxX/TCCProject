@@ -7,7 +7,7 @@ public class SelectWithKeyboard : MonoBehaviour
     [SerializeField] private CharacterClick characterClick;
     [SerializeField] private string key;
     [SerializeField] private GameObject selectIndicator;
-
+    [SerializeField] private GameObject whoIsActingObject;
     private CharacterAttributes status;
 
     void Start() {
@@ -21,11 +21,16 @@ public class SelectWithKeyboard : MonoBehaviour
                 selectIndicator.SetActive(true);
             }
         }
-
+        whoIsActingObject.SetActive(ActiveIndicator());
         selectIndicator.SetActive(ActiveIndicator());
     }
 
     private bool ActiveIndicator() {
         return CharacterClick.CharacterAttr == status;
+    }
+
+    public void RemoveIndetification(GameObject I)
+    {
+        whoIsActingObject.SetActive(false);
     }
 }
