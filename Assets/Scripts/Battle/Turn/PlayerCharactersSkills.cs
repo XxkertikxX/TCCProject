@@ -48,7 +48,7 @@ public class PlayerCharactersSkills : MonoBehaviour
     private IEnumerator CreateSkillVisual(int posSkill) {
         for (int i = 0; i < Character().multipleAttacks[posSkill]; i++) {
             Instantiate(Character().attackAnimations[posSkill]);
-            yield return new WaitForSeconds(0.2f);
+            yield return new WaitForSeconds(0.5f);
         }
     }
 
