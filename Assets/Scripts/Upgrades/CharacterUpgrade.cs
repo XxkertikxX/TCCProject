@@ -12,7 +12,8 @@ public class CharacterUpgrade : MonoBehaviour
 	[SerializeField] private Text defense;
 	[SerializeField] private Text power;
 	
-    void OnEnable() {
+    void Update() {
+		if (Character() == null) return;
 		icon.sprite = Character().Icon;
 		name.text = Character().Name;
 		level.text = Character().Level.ToString();

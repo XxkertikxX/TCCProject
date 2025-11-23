@@ -11,6 +11,7 @@ public class CharacterClick : MonoBehaviour
     [SerializeField] private Event eventDialog;
 
     public void ClickCharacter(CharacterAttributes character) {
+		if(EnemyTurn.Finish) return;
         CharacterInteraction.Interaction(character);
         if(CharacterInteraction == new CharacterSelect()) {
             eventDialog.EventInvoke();

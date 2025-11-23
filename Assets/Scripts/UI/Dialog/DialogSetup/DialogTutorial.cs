@@ -16,7 +16,8 @@ public class DialogTutorial : MonoBehaviour, IDialogSetup
 	private IEnumerator BattleTutorial() {
 		tutorialGO.SetActive(true);
 		yield return new WaitForKeyDown(bindsPressed);
-		tutorialGO.SetActive(false);
+		Destroy(tutorialGO);
+		Destroy(gameObject);
 	}
 	
 	

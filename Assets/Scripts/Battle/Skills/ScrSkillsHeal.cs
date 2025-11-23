@@ -11,7 +11,7 @@ public class ScrSkillsHeal : SkillBase
 		TextBattleData.Action = $"curou {roundHeal} de vida ";
 		TextBattleData.Targets = TargetsString();
         foreach (var target in TargetType.CharactersAttributes) {
-            CharacterClick.CharacterAttr.Character.Xp += target.LifeSystem.ModifyValue(roundHeal);
+            CharacterClick.CharacterAttr.Character.Xp += Mathf.Abs(target.LifeSystem.ModifyValue(roundHeal));
         }
     }
 	

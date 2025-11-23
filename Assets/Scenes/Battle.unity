@@ -302,6 +302,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   screenDialog: {fileID: 17717848}
   screenHUD: {fileID: 2034996690}
+  active: 0
 --- !u!114 &35922176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -664,7 +665,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 1469963798}
   m_HandleRect: {fileID: 0}
@@ -1381,7 +1382,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 2051862542}
   m_HandleRect: {fileID: 0}
@@ -2540,15 +2541,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6061505847124505713, guid: a32c455b96022364fa316f55bef42579, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.889
+      value: 0.7112
       objectReference: {fileID: 0}
     - target: {fileID: 6061505847124505713, guid: a32c455b96022364fa316f55bef42579, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.889
+      value: 0.7112
       objectReference: {fileID: 0}
     - target: {fileID: 6061505847124505713, guid: a32c455b96022364fa316f55bef42579, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.889
+      value: 0.7112
       objectReference: {fileID: 0}
     - target: {fileID: 6061505847124505713, guid: a32c455b96022364fa316f55bef42579, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2867,55 +2868,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 316627912}
   m_CullTransparentMesh: 1
---- !u!1 &320652287
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 320652289}
-  - component: {fileID: 320652288}
-  m_Layer: 0
-  m_Name: EnemyExternal
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &320652288
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 320652287}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcfcfa4ec46faf040b869cd30f13f478, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  charactersLevel:
-  - {fileID: 1025881858}
-  - {fileID: 575359399}
-  - {fileID: 1540617754}
-  - {fileID: 1039500580}
---- !u!4 &320652289
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 320652287}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 21
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &340634484
 GameObject:
   m_ObjectHideFlags: 0
@@ -5606,7 +5558,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 30
-  m_Sprite: {fileID: 21300000, guid: 58f2fee0b0c3ed14ab88c381749ea0e8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4011f1e8bf2bb3a4fb38b48954f68192, type: 3}
   m_Color: {r: 0.6415094, g: 0.6415094, b: 0.6415094, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5914,7 +5866,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 30
-  m_Sprite: {fileID: 21300000, guid: 58f2fee0b0c3ed14ab88c381749ea0e8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cffb41383361da6429405226a9c089c6, type: 3}
   m_Color: {r: 0.6415094, g: 0.6415094, b: 0.6415094, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -6340,7 +6292,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 1286130362}
   m_HandleRect: {fileID: 0}
@@ -6725,6 +6677,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   screenDialog: {fileID: 17717848}
   screenHUD: {fileID: 2034996690}
+  active: 1
 --- !u!114 &773976130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8637,6 +8590,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6061505847124505713, guid: a32c455b96022364fa316f55bef42579, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a32c455b96022364fa316f55bef42579, type: 3}
 --- !u!4 &953333329 stripped
@@ -8761,6 +8718,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   screenDialog: {fileID: 17717848}
   screenHUD: {fileID: 2034996690}
+  active: 1
 --- !u!114 &954095173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9689,7 +9647,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 30
-  m_Sprite: {fileID: 21300000, guid: 58f2fee0b0c3ed14ab88c381749ea0e8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d6cb4534d843ce04ea6e0d6f7cc71b13, type: 3}
   m_Color: {r: 0.6415094, g: 0.6415094, b: 0.6415094, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -12632,6 +12590,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   screenDialog: {fileID: 17717848}
   screenHUD: {fileID: 2034996690}
+  active: 1
 --- !u!114 &1623998560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14177,7 +14136,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 120471324}
   m_HandleRect: {fileID: 0}
@@ -14737,7 +14696,6 @@ GameObject:
   - component: {fileID: 2030265207}
   - component: {fileID: 2030265206}
   - component: {fileID: 2030265210}
-  - component: {fileID: 2030265212}
   - component: {fileID: 2030265213}
   - component: {fileID: 2030265215}
   - component: {fileID: 2030265214}
@@ -14831,24 +14789,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e983cf2de33251c44ba6317ba516acc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  uis:
+  - {fileID: 954095172}
+  charactersLevel:
+  - {fileID: 1025881858}
+  - {fileID: 575359399}
+  - {fileID: 1540617754}
+  - {fileID: 1039500580}
   Index: 0
   scene: Tutorial2
   passTurn: {fileID: 1707589546}
   applySkill: {fileID: 1310397126}
   useSkill: {fileID: 1100120931}
   mana: {fileID: 11400000, guid: b9769ccb0a4631e408ac6d10115136c5, type: 2}
---- !u!114 &2030265212
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2030265205}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa0376204cec99040b6ce320c66712fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2030265213
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -18,8 +18,9 @@ public class DialogDisableButtons : MonoBehaviour, IDialogSetup
     }
     
     private void StatesUIButton(bool state) {
-        foreach (Button b in buttons) {
-            b.interactable = state;
-        }
+		foreach (var b in buttons) {
+			if (b != null)
+				b.interactable = state;
+		}
     }
 }

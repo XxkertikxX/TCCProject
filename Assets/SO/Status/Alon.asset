@@ -15,9 +15,9 @@ MonoBehaviour:
   Name: Alon
   Level: 0
   Xp: 0
-  Life: 75
-  Defense: 3
-  Power: 35
+  Life: 65
+  Defense: 15
+  Power: 50
   Skills:
   - {fileID: 11400000, guid: 2c0b2426d5ea5ac47abf2b9a05eae992, type: 2}
   - {fileID: 11400000, guid: 9c9cfd4d3f9face469eac1d2b638cd41, type: 2}

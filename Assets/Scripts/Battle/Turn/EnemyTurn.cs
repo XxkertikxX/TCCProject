@@ -4,8 +4,11 @@ using System.Collections.Generic;
 using System.Collections;
 using System.Linq;
 
-public class EnemyTurn : MonoBehaviour
-{	
+public class EnemyTurn : MonoBehaviour, IDeath
+{
+	static public bool Finish;
+    [SerializeField] private DialogEnableUI[] uis;
+    [SerializeField] private LevelUp[] charactersLevel;
     static public float ManaAdd;
     public int Index;
 
@@ -23,24 +26,35 @@ public class EnemyTurn : MonoBehaviour
     }
 
     void Update() {
-        if (AllCharactersPlay() || LowestManaConsume() > ManaSystem.Mp.ActualValue() && !inAction) {
+        if (AllCharactersPlay() || LowestManaConsume() > ManaSystem.Mp.ActualValue() && !inAction && !PlayerCharactersSkills.OnBattle) {
             StartCoroutine(Action());
-
         }
         if(Characters().Length == 0) {
             Save(false);
         }
     }
     
-    void OnDestroy() {
-        if(GetComponent<CharacterAttributes>().LifeSystem.ActualValue() <= 0) {
-            StartCoroutine(LevelUpExternalEnemy.LevelUp(Index));
+    public void Death() {        
+        if (GetComponent<CharacterAttributes>().LifeSystem.ActualValue() <= 0) {
+			Finish = true;
+            StartCoroutine(LevelUp());
         }
     }
-    
+    private IEnumerator LevelUp() {
+        EnemyAnim.PlayBool("Died", true);
+        yield return new WaitForSeconds(3f);
+        foreach (var character in charactersLevel) {
+            yield return character.UpLevel();
+        }
+        Save(true);
+    }
+
     private IEnumerator Action() {
+        if (GetComponent<CharacterAttributes>().LifeSystem.ActualValue() <= 0) yield break;
+        Active(false);
         inAction = true;
         yield return EnemyAttack();
+        Active(true);
         yield return ResetTurn();
     }
 
@@ -89,8 +103,10 @@ public class EnemyTurn : MonoBehaviour
 		
 		foreach(var character in Characters()) {
 			foreach(var skill in character.GetComponent<CharacterAttributes>().Character.Skills) {
-				manaConsume.Add(skill.ManaConsume);
-			}
+                if(character.GetComponent<CharacterAttributes>().TurnsForCanAttack == 0) {
+                    manaConsume.Add(skill.ManaConsume);
+                }
+            }
 		}
 		return manaConsume.Min();
 	}
@@ -105,4 +121,10 @@ public class EnemyTurn : MonoBehaviour
 		TextBattleData.Character = enemy.Name;
 		TextBattleData.SkillName = skill.Name;
 	}
+
+    private void Active(bool active) { 
+        foreach(var ui in uis) {
+            ui.active = active;
+        }
+    }
 }
