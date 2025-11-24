@@ -7879,6 +7879,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   battleConfigSO: {fileID: 11400000, guid: 5139a95e020ae10408c8d23d9e5795b2, type: 2}
   enemySpriteRenderer: {fileID: 2030265206}
+  LifeBar: {fileID: 2030383429}
   enemyCharacter: {fileID: 2030265213}
   animEnemy: {fileID: 2030265217}
   enemyTransform: {fileID: 131075772}
@@ -12194,7 +12195,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -15412,7 +15413,7 @@ MonoBehaviour:
   Rhythm: {fileID: 0}
   TurnsForCanAttack: 0
   Anim: {fileID: 0}
-  AnimString: 
+  AnimString: Attaked
   attackAnimations: []
   multipleAttacks: 
 --- !u!114 &2030265214

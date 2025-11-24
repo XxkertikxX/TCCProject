@@ -37,9 +37,6 @@ AnimatorStateTransition:
   - m_ConditionMode: 6
     m_ConditionEvent: attackN
     m_EventTreshold: 2
-  - m_ConditionMode: 2
-    m_ConditionEvent: Effect
-    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 3328582574753359738}
   m_Solo: 0
@@ -128,9 +125,6 @@ AnimatorStateTransition:
   - m_ConditionMode: 6
     m_ConditionEvent: attackN
     m_EventTreshold: 1
-  - m_ConditionMode: 2
-    m_ConditionEvent: Effect
-    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 8305360729712398493}
   m_Solo: 0

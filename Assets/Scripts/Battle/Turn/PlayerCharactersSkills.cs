@@ -30,13 +30,16 @@ public class PlayerCharactersSkills : MonoBehaviour
     
     private IEnumerator ActiveSkill(int posSkill, float manaConsume) {
 		useSkill.EventInvoke();
+        SelectWithKeyboard.attacking = true;
         ManaSystem.Mp.ModifyValue(-manaConsume);
         boxSkill.SetActive(false);
 		yield return new WaitUntil(() => DialogManager.OnDialog == false);
         AttackRhythm rhythm = CharacterClick.CharacterAttr.Rhythm;
         skill = CharStatus().Skills[posSkill];
-        Character().Anim.SetTrigger(Character().AnimString);
         yield return SystemRhythmCicle(rhythm, manaConsume, posSkill);
+        Character().Anim.SetTrigger(Character().AnimString);
+        SelectWithKeyboard.attacking = false;
+        //CharacterClick.CharacterAttr = null;    
     }
 
     private IEnumerator SystemRhythmCicle(AttackRhythm rhythm, float manaConsume, int posSkill) {
@@ -66,7 +69,6 @@ public class PlayerCharactersSkills : MonoBehaviour
     private IEnumerator Attack(AttackRhythm rhythm) {
 		painel.SetActive(true);
         yield return rhythm.Attack(skill);
-        EnemyAnim.PlayTrigger("TookDamage");
         painel.SetActive(false);
     }
 

@@ -7,6 +7,7 @@ public class SelectWithKeyboard : MonoBehaviour
     [SerializeField] private GameObject selectIndicator;
     [SerializeField] private GameObject whoIsActingObject;
     private CharacterAttributes status;
+    public static bool attacking = false;
 
     void Start() {
         status = GetComponent<CharacterAttributes>();
@@ -16,15 +17,10 @@ public class SelectWithKeyboard : MonoBehaviour
         if(InputCatalyst.input.InputButtonDown(key) && !PlayerCharactersSkills.OnBattle) {
             characterClick.ClickCharacter(status);
             if(CharacterClick.CharacterInteraction == new CharacterAttack()) {
-                selectIndicator.SetActive(true);
+                selectIndicator.SetActive(true); whoIsActingObject.SetActive(true);
             }
-            whoIsActingObject.SetActive(true);
         }
-
-        if(!InputCatalyst.input.InputButtonDown(key))
-            whoIsActingObject.SetActive(false);
-
-
+        DisableAndEnableIndication();
         selectIndicator.SetActive(ActiveIndicator());
     }
 
@@ -32,8 +28,20 @@ public class SelectWithKeyboard : MonoBehaviour
         return CharacterClick.CharacterAttr == status;
     }
 
-    public void RemoveIndetification(GameObject I)
+    private void DisableAndEnableIndication()
     {
-        whoIsActingObject.SetActive(false);
+        if (attacking)
+        {
+            RemoveIndetification();
+        }
+        else
+        {
+            whoIsActingObject.SetActive(ActiveIndicator());
+        }
+    }
+
+    private void RemoveIndetification()
+    {
+        whoIsActingObject.SetActive(!attacking);
     }
 }

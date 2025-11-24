@@ -4,8 +4,8 @@ public enum SoundTypes
     CloseMenu,
     ClickButton,
 
-    Ambient,
     Music,
+    Ambient,
 
     GrassFootStep,
     StoneFootStep,
@@ -15,7 +15,7 @@ public enum SoundTypes
     Jumping,
     Landing,
 
-    LioraAttack1, //Todos
+    LioraAttack1,
     LioraAttack2,
     ImpactoLuz,
     LiorasNotasAtaque,
@@ -24,7 +24,7 @@ public enum SoundTypes
     LioraEnteringBattle,
     LioraTalking,
 
-    AmberAttack1, //Todos
+    AmberAttack1,
     AmberAttack2,
     Explosao,
     AmberNotasAtaque,
@@ -53,9 +53,25 @@ public enum SoundTypes
     AlonEnteringBattle,
     AlonTalking,
 
-    EnemyAttack,
-    EnemyDamage,
-    EnemyDefeaty,
+    TatuAttack,
+    TatuDamage,
+    TatuDefeaty,
+
+    KamataAttack1,
+    KamataAttack2,
+    KamataDamage,
+    KamataDefeaty,
+
+    MorcegoAttack1,
+    MorcegoAttack2,
+    MorcegoDamage,
+    MorcegoDefeaty,
+
+    MarceloAttack1,
+    MarceloAttack2,
+    MarceloDamage,
+    MarceloDefeaty,
+
     BattleVictory,
 
     GameOver,
