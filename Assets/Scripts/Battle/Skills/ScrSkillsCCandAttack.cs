@@ -7,17 +7,16 @@ public class ScrSkillsCCandAttack : SkillBase
 {
     public override void Skill(float power, AttackRhythm rhythm) {
 		float damage = (power)/100 * (rhythm.Damage) * SkillPower;
-        float RoundDamage = -Mathf.Round(damage);
 		TextBattleData.Targets = TargetsString();
         foreach (var target in TargetType.CharactersAttributes) {
-            CharacterClick.CharacterAttr.Character.Xp += Mathf.Abs(target.LifeSystem.ModifyValue(RoundDamage*target.Character.DamageReduction()));
+            CharacterClick.CharacterAttr.Character.Xp += Mathf.Abs(target.LifeSystem.ModifyValue(-Mathf.Round(damage*target.Character.DamageReduction())));
 			if(rhythm.Damage >= 0.9f) {
 				target.TurnsForCanAttack += 1;
-				TextBattleData.Action = $"causou {RoundDamage*target.Character.DamageReduction()} de dano e stunou por 1 rounds ";
+				TextBattleData.Action = $"causou {-Mathf.Round(damage*target.Character.DamageReduction())} de dano e stunou por 1 rounds ";
 				CharacterClick.CharacterAttr.Character.Xp += 20;
 			}
 			else{
-				TextBattleData.Action = $"causou {RoundDamage*target.Character.DamageReduction()} de dano e falhou em stunar ";
+				TextBattleData.Action = $"causou {-Mathf.Round(damage*target.Character.DamageReduction())} de dano e falhou em stunar ";
 			}
         }
     }
