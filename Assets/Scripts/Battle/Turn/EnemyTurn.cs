@@ -68,8 +68,13 @@ public class EnemyTurn : MonoBehaviour, IDeath
     }
 
     private IEnumerator EnemyAttack() { 
-        EnemyAnim.PlayTrigger("Attacked");
         int randomSkill = Random.Range(0, enemy.Skills.Count);
+		if(randomSkill == 0) {
+			EnemyAnim.PlayTrigger("Attacked");
+		}
+		else if(randomSkill == 1) {
+			EnemyAnim.PlayTrigger("Attacked2");
+		}
 		var skill = enemy.Skills[randomSkill];
         Texts(skill);
         useSkill.EventInvoke();
