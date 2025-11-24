@@ -8,7 +8,7 @@ public class ScrSkillsHeal : SkillBase
     public override void Skill(float power, AttackRhythm rhythm) {
         float heal = (power)/100 * (rhythm.Damage) * SkillPower;
         float roundHeal = Mathf.Round(heal);
-		TextBattleData.Action = $"curou {roundHeal} de vida ";
+		TextBattleData.Action = $"curou {roundHeal} de vida de ";
 		TextBattleData.Targets = TargetsString();
         foreach (var target in TargetType.CharactersAttributes) {
             CharacterClick.CharacterAttr.Character.Xp += Mathf.Abs(target.LifeSystem.ModifyValue(roundHeal));
