@@ -6,6 +6,7 @@ public class RhythmClickAnimation : MonoBehaviour
 	[SerializeField] private int index;
 	
     private SpriteRenderer spriteRenderer;
+	private Animator parentAnim;
     private Color originalColor;
     private float glowDuration = 0.1f;
 	private Color greenStrong = new Color(0f, 1f, 0f, 1f);
@@ -28,15 +29,18 @@ public class RhythmClickAnimation : MonoBehaviour
 		
 		if(this.index != index) return;
 		if(intensity > 0.95f) {
+			//parentAnim.Play();
 			StartCoroutine(GlowCoroutine(greenStrong));
 			return;
 		}
 		if(intensity > 0.85f) {
-			StartCoroutine(GlowCoroutine(greenSoft));
+            //parentAnim.Play();
+            StartCoroutine(GlowCoroutine(greenSoft));
 			return;
 		}
 		if(intensity > 0.65f) {
-			StartCoroutine(GlowCoroutine(Color.yellow));
+            //parentAnim.Play();
+            StartCoroutine(GlowCoroutine(Color.yellow));
 			return;
 		}
 		StartCoroutine(GlowCoroutine(Color.red));

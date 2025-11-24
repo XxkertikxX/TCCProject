@@ -1,10 +1,12 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Video;
 
 public class CutSceneManager : MonoBehaviour
 {
-    VideoPlayer player;
+    private VideoPlayer player;
+    [SerializeField] private string NextScene;
     private void Awake()
     {
         player = GetComponent<VideoPlayer>();
@@ -22,6 +24,6 @@ public class CutSceneManager : MonoBehaviour
 
     private void OnVideoEnd(VideoPlayer player)
     {
-        SceneManager.LoadScene("Tutorial1");
+        GetComponent<WaitAndLoad>().Play(NextScene);
     }
 }

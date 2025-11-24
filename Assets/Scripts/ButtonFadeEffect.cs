@@ -43,10 +43,10 @@ public class ButtonFadeEffect : MonoBehaviour
         yield return new WaitForSeconds(2);
         skipButton.CrossFadeAlpha(0.3f, 0.5f, true);
         yield return new WaitForSeconds(0.5f);
-        coroutine   = null;
+        coroutine = null;
     }
 
-    public void ButtonClicked() {
-        SceneManager.LoadScene("Tutorial1");
+    public void ButtonClicked(string sceneName) {
+        GetComponent<WaitAndLoad>().Play(sceneName);
     }
 }

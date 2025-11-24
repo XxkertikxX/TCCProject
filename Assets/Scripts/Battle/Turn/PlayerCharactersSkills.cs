@@ -13,7 +13,7 @@ public class PlayerCharactersSkills : MonoBehaviour
 
     private SkillBase skill;
 
-	public void PressButtonSkill(int posSkill) {
+	public void PressButtonSkill(int posSkill) { // usar character().anim com o posSkill pra botar ambas animações inves do trigger
 		Texts(posSkill);
 		float manaConsume = CharStatus().Skills[posSkill].ManaConsume;
 		if(ManaSystem.Mp.CanChangeResource(manaConsume)) {

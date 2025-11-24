@@ -22,6 +22,7 @@ public class SceneFade : MonoBehaviour
         fadeAnimator.SetTrigger("EnterScene");
     }
     public void OnfadeComplete()  {
-        SceneManager.LoadScene(nextScene);
+        if(nextScene != null) 
+            SceneManager.LoadScene(nextScene);
     }
 }
