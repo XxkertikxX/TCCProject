@@ -18,10 +18,12 @@ public class DialogWriterGeneric : MonoBehaviour, IDialogWriter
     private int index = 0;
     private bool inDialog;
 
+	[SerializeField] private bool alternativeSkip;
+	
     void Update() {
         if (!inDialog) return;
 
-        if (InputCatalyst.input.InputButtonDown("Skip")) {
+        if (InputCatalyst.input.InputButtonDown("Skip") && !alternativeSkip) {
             ContinueDialog();
         }
     }

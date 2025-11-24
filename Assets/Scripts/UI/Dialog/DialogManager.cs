@@ -8,7 +8,7 @@ public class DialogManager
 	static public bool OnDialog;
 
     static public void OpenDialog() {
-        OnDialogOpen?.Invoke(); //essa
+        OnDialogOpen?.Invoke();
 		OnDialog = true;
     }
     

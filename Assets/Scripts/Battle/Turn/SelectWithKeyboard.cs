@@ -1,14 +1,14 @@
 using UnityEngine;
+using System.Collections;
 
 public class SelectWithKeyboard : MonoBehaviour
 {
     [SerializeField] private CharacterClick characterClick;
     [SerializeField] private string key;
     [SerializeField] private GameObject selectIndicator;
-    [SerializeField] private GameObject whoIsActingObject;
     private CharacterAttributes status;
-    public static bool attacking = false;
-
+	private bool select = false;
+	
     void Start() {
         status = GetComponent<CharacterAttributes>();
     }
@@ -17,31 +17,30 @@ public class SelectWithKeyboard : MonoBehaviour
         if(InputCatalyst.input.InputButtonDown(key) && !PlayerCharactersSkills.OnBattle) {
             characterClick.ClickCharacter(status);
             if(CharacterClick.CharacterInteraction == new CharacterAttack()) {
-                selectIndicator.SetActive(true); whoIsActingObject.SetActive(true);
+                selectIndicator.SetActive(true);
             }
         }
-        DisableAndEnableIndication();
-        selectIndicator.SetActive(ActiveIndicator());
+		else{
+			if(InputCatalyst.input.InputButtonDown(key) && CharacterClick.CharacterInteraction is CharacterSelect && !select) {
+				characterClick.ClickCharacter(status);
+				StartCoroutine(Select());
+			}
+		}
+		if(!select) {
+			selectIndicator.SetActive(ActiveIndicator());
+		}
     }
+
+	private IEnumerator Select() {
+		select = true;
+		selectIndicator.SetActive(true);
+		yield return new WaitForSeconds(0.3f);
+		selectIndicator.SetActive(false);
+		yield return new WaitUntil(() => CharacterClick.CharactersSelect.Count == 1);
+		select = false;
+	}
 
     private bool ActiveIndicator() {
         return CharacterClick.CharacterAttr == status;
-    }
-
-    private void DisableAndEnableIndication()
-    {
-        if (attacking)
-        {
-            RemoveIndetification();
-        }
-        else
-        {
-            whoIsActingObject.SetActive(ActiveIndicator());
-        }
-    }
-
-    private void RemoveIndetification()
-    {
-        whoIsActingObject.SetActive(!attacking);
     }
 }
