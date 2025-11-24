@@ -18,7 +18,7 @@ public class CharacterUpgrade : MonoBehaviour
 		icon.sprite = Character().Icon;
 		name.text = Character().Name;
 		level.text = Character().Level.ToString();
-		xp.text = $"{Mathf.Rounde(xpPer*100)}%";
+		xp.text = $"{Mathf.Round(xpPer*100)}%";
 		hp.text = Character().Life.ToString();
 		defense.text = Character().Defense.ToString();
 		power.text = Character().Power.ToString();
