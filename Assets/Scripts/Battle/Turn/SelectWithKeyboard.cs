@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SelectWithKeyboard : MonoBehaviour
@@ -20,8 +18,13 @@ public class SelectWithKeyboard : MonoBehaviour
             if(CharacterClick.CharacterInteraction == new CharacterAttack()) {
                 selectIndicator.SetActive(true);
             }
+            whoIsActingObject.SetActive(true);
         }
-        whoIsActingObject.SetActive(ActiveIndicator());
+
+        if(!InputCatalyst.input.InputButtonDown(key))
+            whoIsActingObject.SetActive(false);
+
+
         selectIndicator.SetActive(ActiveIndicator());
     }
 
