@@ -395,7 +395,11 @@ MonoBehaviour:
     sounds:
     - {fileID: 8300000, guid: 4032a0e0264dc6d4f92463484827bda2, type: 3}
   - name: ClementineNotasAtaque
-    sounds: []
+    sounds:
+    - {fileID: 8300000, guid: 9643bf27ae6597140a678de852f2cfc6, type: 3}
+    - {fileID: 8300000, guid: 73cfde8d0d9073341bfdfd3598b08708, type: 3}
+    - {fileID: 8300000, guid: 6401bb4c84c8d1b47bb87b7edb536c7b, type: 3}
+    - {fileID: 8300000, guid: bb7ae6947a1bc5b4b92eae7de4c6e807, type: 3}
   - name: ClementimeDamage
     sounds: []
   - name: ClementimeDefeat
@@ -413,7 +417,11 @@ MonoBehaviour:
     sounds:
     - {fileID: 8300000, guid: 09a622e4f323b4541acc243acf83555c, type: 3}
   - name: AlonNotasAtaque
-    sounds: []
+    sounds:
+    - {fileID: 8300000, guid: b82a7029edf6ba947bb677691ad35e57, type: 3}
+    - {fileID: 8300000, guid: fed2c30eac8e63143b24644f586dd149, type: 3}
+    - {fileID: 8300000, guid: f497f76bde4b05441a04959b28c70207, type: 3}
+    - {fileID: 8300000, guid: 4b7143322d2eb184f875b9543c763a81, type: 3}
   - name: AguaAparecendo
     sounds:
     - {fileID: 8300000, guid: 22c4a39f96300854486d35f92d6e61ce, type: 3}

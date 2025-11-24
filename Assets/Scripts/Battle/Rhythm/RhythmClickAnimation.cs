@@ -30,7 +30,8 @@ public class RhythmClickAnimation : MonoBehaviour
     }
 
     private void Brilhar(float intensity, int index) {
-		
+
+        GameAudioManager.PlaySound(SoundTypes.ClementineNotasAtaque);
 		if(this.index != index) return;
 		if(intensity > 0.95f) {
             module.startColor = greenStrong;
