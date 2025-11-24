@@ -1,12 +1,12 @@
 using UnityEngine;
 using System.Collections;
+using Unity.VisualScripting.YamlDotNet.Core;
 
 public class RhythmClickAnimation : MonoBehaviour
 {
 	[SerializeField] private int index;
 	
     private SpriteRenderer spriteRenderer;
-	private Animator parentAnim;
     private Color originalColor;
     private float glowDuration = 0.1f;
 	private Color greenStrong = new Color(0f, 1f, 0f, 1f);
@@ -39,12 +39,14 @@ public class RhythmClickAnimation : MonoBehaviour
 			return;
 		}
 		if(intensity > 0.85f) {
-            //parentAnim.Play();
+            module.startColor = greenSoft;
+            particles.Emit(3);
             StartCoroutine(GlowCoroutine(greenSoft));
 			return;
 		}
 		if(intensity > 0.65f) {
-            //parentAnim.Play();
+            module.startColor = Color.yellow;
+            particles.Emit(3);
             StartCoroutine(GlowCoroutine(Color.yellow));
 			return;
 		}
