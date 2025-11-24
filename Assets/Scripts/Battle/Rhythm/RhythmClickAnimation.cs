@@ -5,7 +5,8 @@ using Unity.VisualScripting.YamlDotNet.Core;
 public class RhythmClickAnimation : MonoBehaviour
 {
 	[SerializeField] private int index;
-	
+    [SerializeField] private SoundTypes typeOfnote;
+
     private SpriteRenderer spriteRenderer;
     private Color originalColor;
     private float glowDuration = 0.1f;
@@ -31,27 +32,30 @@ public class RhythmClickAnimation : MonoBehaviour
 
     private void Brilhar(float intensity, int index) {
 
-        GameAudioManager.PlaySound(SoundTypes.ClementineNotasAtaque);
 		if(this.index != index) return;
 		if(intensity > 0.95f) {
+            GameAudioManager.PlaySound(typeOfnote);
             module.startColor = greenStrong;
             particles.Emit(3);
 			StartCoroutine(GlowCoroutine(greenStrong));
 			return;
 		}
 		if(intensity > 0.85f) {
+            GameAudioManager.PlaySound(typeOfnote);
             module.startColor = greenSoft;
             particles.Emit(3);
             StartCoroutine(GlowCoroutine(greenSoft));
 			return;
 		}
 		if(intensity > 0.65f) {
+            GameAudioManager.PlaySound(typeOfnote);
             module.startColor = Color.yellow;
             particles.Emit(3);
             StartCoroutine(GlowCoroutine(Color.yellow));
 			return;
 		}
-		StartCoroutine(GlowCoroutine(Color.red));
+        module.startColor = Color.red;
+        StartCoroutine(GlowCoroutine(Color.red));
     }
 
     private IEnumerator GlowCoroutine(Color newColor) {

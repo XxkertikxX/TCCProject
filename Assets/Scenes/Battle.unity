@@ -849,6 +849,7 @@ GameObject:
   - component: {fileID: 104922905}
   - component: {fileID: 104922906}
   - component: {fileID: 104922908}
+  - component: {fileID: 104922909}
   m_Layer: 0
   m_Name: Liora
   m_TagString: Character
@@ -1113,6 +1114,26 @@ MonoBehaviour:
   characterClick: {fileID: 1541452071}
   key: Right
   selectIndicator: {fileID: 1048998695}
+--- !u!95 &104922909
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 104922892}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 37936cd5081ea18408f22d9f9fa59c58, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &117528627
 GameObject:
   m_ObjectHideFlags: 0
@@ -12252,6 +12273,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
+  typeOfnote: 39
 --- !u!1 &304005587
 GameObject:
   m_ObjectHideFlags: 0
@@ -12784,6 +12806,7 @@ GameObject:
   - component: {fileID: 353896842}
   - component: {fileID: 353896844}
   - component: {fileID: 353896843}
+  - component: {fileID: 353896845}
   m_Layer: 0
   m_Name: RenderAlon
   m_TagString: Untagged
@@ -12884,6 +12907,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &353896845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 353896841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 460510d8105ab1848b53305e919b7046, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &361681895
 GameObject:
   m_ObjectHideFlags: 0
@@ -18391,6 +18426,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 1
+  typeOfnote: 15
 --- !u!1 &498429305
 GameObject:
   m_ObjectHideFlags: 0
@@ -18402,6 +18438,7 @@ GameObject:
   - component: {fileID: 498429306}
   - component: {fileID: 498429308}
   - component: {fileID: 498429307}
+  - component: {fileID: 498429309}
   m_Layer: 0
   m_Name: RenderClementine
   m_TagString: Untagged
@@ -18502,6 +18539,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &498429309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498429305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 460510d8105ab1848b53305e919b7046, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &505104774
 GameObject:
   m_ObjectHideFlags: 0
@@ -18718,6 +18767,7 @@ GameObject:
   - component: {fileID: 525768458}
   - component: {fileID: 525768460}
   - component: {fileID: 525768461}
+  - component: {fileID: 525768463}
   m_Layer: 0
   m_Name: Ember
   m_TagString: Character
@@ -18971,6 +19021,26 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!95 &525768463
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 525768443}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 37936cd5081ea18408f22d9f9fa59c58, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &528625949
 GameObject:
   m_ObjectHideFlags: 0
@@ -19154,7 +19224,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &574939101
 Transform:
   m_ObjectHideFlags: 0
@@ -19512,6 +19582,7 @@ GameObject:
   - component: {fileID: 647582845}
   - component: {fileID: 647582847}
   - component: {fileID: 647582846}
+  - component: {fileID: 647582848}
   m_Layer: 0
   m_Name: RenderLiora
   m_TagString: Untagged
@@ -19612,6 +19683,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &647582848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 647582844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 460510d8105ab1848b53305e919b7046, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &650925120
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19745,6 +19828,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
+  typeOfnote: 32
 --- !u!1 &654217004
 GameObject:
   m_ObjectHideFlags: 0
@@ -21440,6 +21524,7 @@ GameObject:
   - component: {fileID: 814553648}
   - component: {fileID: 814553649}
   - component: {fileID: 814553651}
+  - component: {fileID: 814553652}
   m_Layer: 0
   m_Name: Alon
   m_TagString: Character
@@ -21693,6 +21778,26 @@ MonoBehaviour:
   characterClick: {fileID: 1541452071}
   key: Down
   selectIndicator: {fileID: 1666955718}
+--- !u!95 &814553652
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 814553637}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 37936cd5081ea18408f22d9f9fa59c58, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &815150239
 GameObject:
   m_ObjectHideFlags: 0
@@ -23013,6 +23118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
+  typeOfnote: 15
 --- !u!1 &954095167
 GameObject:
   m_ObjectHideFlags: 0
@@ -24480,7 +24586,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 0.78431374}
+      maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -30961,6 +31067,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 1
+  typeOfnote: 32
 --- !u!1 &1437881400
 GameObject:
   m_ObjectHideFlags: 0
@@ -33475,6 +33582,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
+  typeOfnote: 23
 --- !u!1 &1780848479
 GameObject:
   m_ObjectHideFlags: 0
@@ -33531,6 +33639,7 @@ GameObject:
   - component: {fileID: 1815877704}
   - component: {fileID: 1815877705}
   - component: {fileID: 1815877706}
+  - component: {fileID: 1815877707}
   m_Layer: 0
   m_Name: RenderEmber
   m_TagString: Untagged
@@ -33631,6 +33740,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1815877707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1815877703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 460510d8105ab1848b53305e919b7046, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1816778925
 GameObject:
   m_ObjectHideFlags: 0
@@ -34453,6 +34574,7 @@ GameObject:
   - component: {fileID: 1993797149}
   - component: {fileID: 1993797150}
   - component: {fileID: 1993797152}
+  - component: {fileID: 1993797153}
   m_Layer: 0
   m_Name: Clementine
   m_TagString: Character
@@ -34717,6 +34839,26 @@ MonoBehaviour:
   characterClick: {fileID: 1541452071}
   key: Left
   selectIndicator: {fileID: 1702835900}
+--- !u!95 &1993797153
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1993797136}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 37936cd5081ea18408f22d9f9fa59c58, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1999216847
 GameObject:
   m_ObjectHideFlags: 0
