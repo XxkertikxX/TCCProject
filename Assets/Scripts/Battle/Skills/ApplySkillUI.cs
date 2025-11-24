@@ -11,11 +11,11 @@ public class ApplySkillUI : MonoBehaviour
 	[SerializeField] private Text nameSkill;
 	
 	void Update() {
-		iconTypeSkill.sprite = Skill().SpriteTypeSkill;
+        iconTypeSkill.sprite = Skill().SpriteTypeSkill;
 		damage.text = Skill().SkillPower.ToString();
 		manaConsume.text = Skill().ManaConsume.ToString();
 		nameSkill.text = Skill().Name.ToString();
-		SubType();
+		SubType(); 
 	}
 	
 	private void SubType() {

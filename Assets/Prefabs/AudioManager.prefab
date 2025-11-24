@@ -149,6 +149,23 @@ MonoBehaviour:
     - Tutorial2
     - Tutorial3
     MusicClip: {fileID: 8300000, guid: 3eb75eee4f1efcb40987863e83647a1d, type: 3}
+  - Title: Combate
+    ScenesWithMusic:
+    - Battle
+    MusicClip: {fileID: 0}
+  - Title: Vento
+    ScenesWithMusic:
+    - Vento1
+    - Vento2
+    - Vento3
+    - Vento4
+    MusicClip: {fileID: 0}
+  - Title: Sombra
+    ScenesWithMusic:
+    - Sombra1
+    - Sombra2
+    - Sombra3
+    MusicClip: {fileID: 0}
 --- !u!1 &8466112927380274407
 GameObject:
   m_ObjectHideFlags: 0
@@ -298,9 +315,9 @@ MonoBehaviour:
     sounds: []
   - name: ClickButton
     sounds: []
-  - name: Ambient
-    sounds: []
   - name: Music
+    sounds: []
+  - name: Ambient
     sounds: []
   - name: GrassFootStep
     sounds:

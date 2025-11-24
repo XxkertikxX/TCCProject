@@ -5,7 +5,7 @@ public class BattleApplyConfig : MonoBehaviour {
     [SerializeField] public BattleConfigSO battleConfigSO;
 
     [SerializeField] private SpriteRenderer enemySpriteRenderer;
-    [SerializeField] private Image LifeBar;
+    [SerializeField] private SpriteRenderer LifeBar;
     [SerializeField] private CharacterAttributes enemyCharacter;
     [SerializeField] private Animator animEnemy;
     [SerializeField] private Transform enemyTransform;

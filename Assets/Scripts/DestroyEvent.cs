@@ -8,7 +8,12 @@ public class DestroyEvent : MonoBehaviour
     {
         Destroy(transform.root.gameObject);
     }
-    
+
+    public void SpecificDestroy()
+    {
+        Destroy(gameObject);
+    }
+
     public void DestroySpriteRender()
     {
         Destroy(gameObject.GetComponent<SpriteRenderer>());

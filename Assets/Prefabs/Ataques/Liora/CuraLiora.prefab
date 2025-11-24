@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 4439077857105160243}
   - component: {fileID: 8859453721296864242}
   - component: {fileID: 7949900952387792545}
+  - component: {fileID: 2423126634529071766}
   m_Layer: 0
   m_Name: Anim
   m_TagString: Untagged
@@ -164,6 +165,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 252ca84ad84d6564686638c94bf16903, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2423126634529071766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4467992919953015286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 460510d8105ab1848b53305e919b7046, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &7949900951904713447

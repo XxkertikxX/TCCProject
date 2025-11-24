@@ -9,7 +9,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Attacked1
+    m_ConditionEvent: Attacked
     m_EventTreshold: 0
   - m_ConditionMode: 2
     m_ConditionEvent: Died
@@ -222,7 +222,7 @@ AnimatorController:
   m_Name: Kamata
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: Attacked1
+  - m_Name: Attacked
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0

@@ -368,7 +368,7 @@ AnimationClip:
   - time: 0.16666667
     functionName: NextAnim
     data: 
-    objectReferenceParameter: {fileID: 7402623405360070674, guid: 6b06332dff23ebd4e90a3fe75d8da799, type: 3}
+    objectReferenceParameter: {fileID: 6808232680582744412, guid: a23345473502a034294b02774df389fa, type: 3}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
