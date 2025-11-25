@@ -85,9 +85,12 @@ public class DialogWriterGeneric : MonoBehaviour, IDialogWriter
 
     private IEnumerator TypingLine() {
         yield return null;
+        int i = 0;
         foreach (char c in dialogs[index]) {
             textSpeak.text += c;
-            PlayCharacterVoice();
+            i++;
+            if(i % 2 == 0)
+                PlayCharacterVoice();
             yield return new WaitForSeconds(WriteSpeed());
         }
         coroutine = null;
