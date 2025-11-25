@@ -21,15 +21,18 @@ public class BattleTutorial : MonoBehaviour
     }
 
     private IEnumerator Active() {
+        hasTutorial = false;
         foreach(var tutorial in tutoriais) {
-            yield return null;
+            tutorial.SetActive(true);
+            yield return new WaitForDialogKeyDown();
+            tutorial.SetActive(false);
         }
     }
 }
 public class WaitForDialogKeyDown : CustomYieldInstruction {
     public override bool keepWaiting {
         get {
-            return !Input.anyKeyDown;
+            return InputCatalyst.input.InputButtonDown("Skip");
         }
     }
 }

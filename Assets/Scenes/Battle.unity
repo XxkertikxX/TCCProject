@@ -238,7 +238,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasTutorial: 0
-  tutoriais: []
+  tutoriais:
+  - {fileID: 131729118}
+  - {fileID: 495574744}
+  - {fileID: 1047571042}
+  - {fileID: 1205660492}
+  - {fileID: 2065447589}
 --- !u!4 &30687711
 Transform:
   m_ObjectHideFlags: 0
@@ -34825,7 +34830,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5384934313870806094, guid: 7cc18415399c7d740bb9be8e8352b824, type: 3}
       propertyPath: m_Volume
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8466112927380274407, guid: 7cc18415399c7d740bb9be8e8352b824, type: 3}
       propertyPath: m_Name
