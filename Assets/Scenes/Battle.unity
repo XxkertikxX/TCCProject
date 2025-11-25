@@ -12338,6 +12338,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.14117648
       objectReference: {fileID: 0}
+    - target: {fileID: 1049557604160421571, guid: 046d642e82734e74cbd1009d1bba3947, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 80b270da4790fda42b70cb1563e61312, type: 3}
     - target: {fileID: 1049557604194883836, guid: 046d642e82734e74cbd1009d1bba3947, type: 3}
       propertyPath: m_Color.b
       value: 0.14117648
@@ -12430,6 +12434,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.14117648
       objectReference: {fileID: 0}
+    - target: {fileID: 1049557604506459506, guid: 046d642e82734e74cbd1009d1bba3947, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 80b270da4790fda42b70cb1563e61312, type: 3}
     - target: {fileID: 1049557604683905568, guid: 046d642e82734e74cbd1009d1bba3947, type: 3}
       propertyPath: m_Camera
       value: 
