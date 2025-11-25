@@ -238,7 +238,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasTutorial: 0
-  tutoriais: []
+  tutoriais:
+  - {fileID: 131729118}
+  - {fileID: 495574744}
+  - {fileID: 1047571042}
+  - {fileID: 1205660492}
+  - {fileID: 2065447589}
 --- !u!4 &30687711
 Transform:
   m_ObjectHideFlags: 0
@@ -23207,7 +23212,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -83, y: -27.999996}
+  m_AnchoredPosition: {x: -119.999985, y: -27.999996}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &929638755
@@ -34908,7 +34913,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -83, y: -27.999996}
+  m_AnchoredPosition: {x: -120, y: -27.999996}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1941637401
@@ -34944,7 +34949,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0
+  m_Text: 20-40
 --- !u!222 &1941637402
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -11,8 +11,10 @@ public class ApplySkillUI : MonoBehaviour
 	[SerializeField] private Text nameSkill;
 	
 	void Update() {
+		float minDamage = Mathf.Round((Character().Power) / 100 * (0.5f) * Skill().SkillPower);
+		float maxDamage = Mathf.Round((Character().Power) / 100 * Skill().SkillPower);
         iconTypeSkill.sprite = Skill().SpriteTypeSkill;
-		damage.text = Skill().SkillPower.ToString();
+		damage.text = $"{minDamage}-{maxDamage}";
 		manaConsume.text = Skill().ManaConsume.ToString();
 		nameSkill.text = Skill().Name.ToString();
 		SubType(); 
@@ -29,5 +31,9 @@ public class ApplySkillUI : MonoBehaviour
 
 	private SkillBase Skill() {
         return CharacterClick.CharacterAttr.Character.Skills[position];
+    }
+
+	private StatusCharacters Character() {
+		return CharacterClick.CharacterAttr.Character;
     }
 }
