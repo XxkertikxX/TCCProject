@@ -33,11 +33,12 @@ public class PlayerCharactersSkills : MonoBehaviour
         ManaSystem.Mp.ModifyValue(-manaConsume);
         boxSkill.SetActive(false);
         yield return new WaitUntil(() => DialogManager.OnDialog == false);
-        Character().Anim.SetTrigger(Character().AnimString);
         AttackRhythm rhythm = CharacterClick.CharacterAttr.Rhythm;
         skill = CharStatus().Skills[posSkill];
         yield return SystemRhythmCicle(rhythm, manaConsume, posSkill);
         CharacterClick.CharacterAttr = null;
+        Character().Anim.SetTrigger(Character().AnimString);
+        Debug.Log(Character().Anim != null);
     }
 
     private IEnumerator SystemRhythmCicle(AttackRhythm rhythm, float manaConsume, int posSkill) {

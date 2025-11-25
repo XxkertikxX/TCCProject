@@ -905,7 +905,6 @@ GameObject:
   - component: {fileID: 104922905}
   - component: {fileID: 104922906}
   - component: {fileID: 104922908}
-  - component: {fileID: 104922909}
   m_Layer: 0
   m_Name: Liora
   m_TagString: Character
@@ -1171,26 +1170,6 @@ MonoBehaviour:
   characterClick: {fileID: 1541452071}
   key: Right
   selectIndicator: {fileID: 1048998695}
---- !u!95 &104922909
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 104922892}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 37936cd5081ea18408f22d9f9fa59c58, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &117528627
 GameObject:
   m_ObjectHideFlags: 0
@@ -19273,7 +19252,6 @@ GameObject:
   - component: {fileID: 525768458}
   - component: {fileID: 525768460}
   - component: {fileID: 525768461}
-  - component: {fileID: 525768463}
   m_Layer: 0
   m_Name: Ember
   m_TagString: Character
@@ -19528,26 +19506,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!95 &525768463
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 525768443}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 37936cd5081ea18408f22d9f9fa59c58, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &528625949
 GameObject:
   m_ObjectHideFlags: 0
@@ -22032,7 +21990,6 @@ GameObject:
   - component: {fileID: 814553648}
   - component: {fileID: 814553649}
   - component: {fileID: 814553651}
-  - component: {fileID: 814553652}
   m_Layer: 0
   m_Name: Alon
   m_TagString: Character
@@ -22287,26 +22244,6 @@ MonoBehaviour:
   characterClick: {fileID: 1541452071}
   key: Down
   selectIndicator: {fileID: 1666955718}
---- !u!95 &814553652
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 814553637}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 37936cd5081ea18408f22d9f9fa59c58, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &815150239
 GameObject:
   m_ObjectHideFlags: 0
@@ -35288,7 +35225,6 @@ GameObject:
   - component: {fileID: 1993797149}
   - component: {fileID: 1993797150}
   - component: {fileID: 1993797152}
-  - component: {fileID: 1993797153}
   m_Layer: 0
   m_Name: Clementine
   m_TagString: Character
@@ -35554,26 +35490,6 @@ MonoBehaviour:
   characterClick: {fileID: 1541452071}
   key: Left
   selectIndicator: {fileID: 1702835900}
---- !u!95 &1993797153
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1993797136}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 37936cd5081ea18408f22d9f9fa59c58, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1999216847
 GameObject:
   m_ObjectHideFlags: 0
