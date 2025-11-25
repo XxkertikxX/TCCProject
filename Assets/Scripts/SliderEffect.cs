@@ -25,6 +25,14 @@ public class SliderEffect : MonoBehaviour
         Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
     }
 
+    private void Update()
+    {
+        if (gameObject == null)
+            return;
+
+        ChangeVolume();
+    }
+
     public void CursorSpriteApparence(int i) {
         Texture2D mouseTex = WhatSprite(i).Texture;
         Vector2 hotspot = WhatSprite(i).Hotspot;
@@ -34,6 +42,7 @@ public class SliderEffect : MonoBehaviour
     public void ChangeVolume() {
         GameAudioManager.soundVolume = sliderVolume[0].value;
         GameAudioManager.musicVolume = sliderVolume[1].value;
+        GameAudioManager.instance.ChangeVolumeRoot();
         volumeVisual[0].text = Mathf.Round((GameAudioManager.soundVolume * 100)).ToString();
         volumeVisual[1].text = Mathf.Round((GameAudioManager.musicVolume * 100)).ToString();
     }

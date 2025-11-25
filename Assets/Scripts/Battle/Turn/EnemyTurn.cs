@@ -124,7 +124,7 @@ private IEnumerator ResetTurn() {
     private void Save(bool win) {
         SaveSystem saveSystem = new SaveSystem();
         saveSystem.SaveBattle(Index, win);
-        GameObject.FindObjectOfType<SaveLoader>().Load();
+        GameObject.FindObjectOfType<SaveLoader>().Load();   
     }
 
     private void Texts(SkillBase skill) {
