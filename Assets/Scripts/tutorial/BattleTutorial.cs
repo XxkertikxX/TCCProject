@@ -29,6 +29,7 @@ public class BattleTutorial : MonoBehaviour
         foreach (var tutorial in tutoriais) {
             tutorial.SetActive(true);
             yield return new WaitForDialogKeyDown();
+            yield return null;
             tutorial.SetActive(false);
         }
         StatesUIButton(true);
