@@ -37,8 +37,6 @@ public class PlayerCharactersSkills : MonoBehaviour
         skill = CharStatus().Skills[posSkill];
         yield return SystemRhythmCicle(rhythm, manaConsume, posSkill);
         CharacterClick.CharacterAttr = null;
-        Character().Anim.SetTrigger(Character().AnimString);
-        Debug.Log(Character().Anim != null);
     }
 
     private IEnumerator SystemRhythmCicle(AttackRhythm rhythm, float manaConsume, int posSkill) {
@@ -48,6 +46,7 @@ public class PlayerCharactersSkills : MonoBehaviour
     }
 
     private IEnumerator CreateSkillVisual(int posSkill) {
+        Character().Anim.SetTrigger(Character().AnimString);
         for (int i = 0; i < Character().multipleAttacks[posSkill]; i++) {
             Instantiate(Character().attackAnimations[posSkill]);
             yield return new WaitForSeconds(0.5f);

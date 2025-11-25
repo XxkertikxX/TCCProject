@@ -8,7 +8,7 @@ public class CharacterAttributes : MonoBehaviour
 
     public int TurnsForCanAttack = 0;
 	
-	public Animator Anim;
+	[HideInInspector] public Animator Anim;
 	public string AnimString;
     public GameObject[] attackAnimations;
     public int[] multipleAttacks = {1,1};

@@ -5,6 +5,12 @@ using UnityEngine.UI;
 public class MainMenuButtons : MonoBehaviour
 {
     bool isFull;
+
+    public void ReplayScene()
+    {
+        GameObject.FindObjectOfType<SaveLoader>().Load();
+    }
+
     public void OpenMenu(GameObject menu) {
         Time.timeScale = 0;
         menu.SetActive(true);
