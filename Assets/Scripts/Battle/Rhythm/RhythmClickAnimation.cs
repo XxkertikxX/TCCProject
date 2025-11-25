@@ -48,7 +48,7 @@ public class RhythmClickAnimation : MonoBehaviour
 			return;
 		}
 		if(intensity > 0.65f) {
-            GameAudioManager.PlaySound(typeOfnote);
+            GameAudioManager.PlaySound(typeOfnote); 
             module.startColor = Color.yellow;
             particles.Emit(3);
             StartCoroutine(GlowCoroutine(Color.yellow));

@@ -33,12 +33,13 @@ public class CinematicPlayer : MonoBehaviour
     private void StartCinematic(PlayableDirector aDirector) {
         GetComponent<Collider2D>().enabled = false;
         playerMove.enabled = false;
-        //playerAnim.enabled = false;
+        playerAnim.enabled = false;
     }
 
     private void EndCinematic(PlayableDirector aDirector) {
-        //playerMove.enabled = true;
-        //playerAnim.enabled = true;
+        
+        playerMove.enabled = true;
+        playerAnim.enabled = true;
         gameObject.SetActive(false);
     }
 }

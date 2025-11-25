@@ -504,3 +504,4 @@ MonoBehaviour:
     sounds: []
   - name: NPC3Talking
     sounds: []
+  volumeSO: {fileID: 11400000, guid: f0fe2411630190a43a1e126b80f3def7, type: 2}

@@ -21,8 +21,9 @@ public class MusicPlayer : MonoBehaviour
 
     private void Update()
     {
-        if (musicAudioSource.isPlaying)
-            return;
+        /*if (musicAudioSource.isPlaying)
+            return;*/
+        instance.musicAudioSource.volume = GameAudioManager.musicVolume;
 
         PlayMusic(SceneManager.GetActiveScene(), new Scene());
     }
@@ -35,8 +36,9 @@ public class MusicPlayer : MonoBehaviour
             {
                 if (musics[i].ScenesWithMusic[j] == actual.name && !musicAudioSource.isPlaying)
                 {
-                    instance.musicAudioSource.PlayOneShot(musics[i].MusicClip, GameAudioManager.getTypeOfVolume(SoundTypes.Music));
-                    Debug.Log("Cena tocando: " + musics[i].ScenesWithMusic[j]);
+                    instance.musicAudioSource.clip = musics[i].MusicClip;
+                    instance.musicAudioSource.Play();
+                    Debug.Log("Cena tocando: " + musics[i].ScenesWithMusic[j] + "|| Musica tocando: " + musics[i].MusicClip.name);
                 }
             }
         }

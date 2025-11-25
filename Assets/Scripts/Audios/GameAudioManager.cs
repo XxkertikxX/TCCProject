@@ -7,18 +7,31 @@ public class GameAudioManager : MonoBehaviour
 {
 
     [SerializeField] private SoundList[] soundsList;
-    private static GameAudioManager instance;
+    public static GameAudioManager instance;
     private AudioSource audioSource;
- 
-    public static float soundVolume = 0.1f;
-    public static float musicVolume = 0.1f;
+    [SerializeField] private GameVolumeSO volumeSO;
+
+    public static float soundVolume;
+    public static float musicVolume;
 
     private void Awake() {
         instance = this;
+        soundVolume = volumeSO.soundsVolume;
+        musicVolume = volumeSO.musicVolume;
     }
 
     private void Start() {
         audioSource = GetComponent<AudioSource>();
+    }
+    private void Update()
+    {
+        audioSource.volume = soundVolume;
+    }
+
+    public void ChangeVolumeRoot()
+    {
+        volumeSO.soundsVolume = soundVolume;
+        volumeSO.musicVolume = musicVolume;
     }
 
     public static void PlaySound(SoundTypes audioClips)
