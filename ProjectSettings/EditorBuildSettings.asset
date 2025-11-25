@@ -31,8 +31,5 @@ EditorBuildSettings:
     guid: f8ae44ec20ece27428fe9fdc1836b6c4
   - enabled: 1
     path: Assets/Scenes/Fase1_Vento/Vento3.unity
-    guid: 8c6fa241aa2b4d448ad5ef6b2fb864cd
-  - enabled: 1
-    path: Assets/Scenes/Fase1_Vento/Vento4.unity
     guid: 6b7f79eee0a7a464b9452c8d047021ba
   m_configObjects: {}
