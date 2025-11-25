@@ -33,8 +33,9 @@ public class EnemyTurn : MonoBehaviour, IDeath
         if(Characters().Length == 0) {
             Save(false);
         }
+        Stun.SetActive(GetComponent<CharacterAttributes>().TurnsForCanAttack > 0);
     }
-    
+
     public void Death() {        
         if (GetComponent<CharacterAttributes>().LifeSystem.ActualValue() <= 0) {
 			Finish = true;
@@ -63,7 +64,6 @@ public class EnemyTurn : MonoBehaviour, IDeath
 		if(GetComponent<CharacterAttributes>().TurnsForCanAttack == 0) {
 			yield return EnemyAttack();
 		}
-        Stun.SetActive(GetComponent<CharacterAttributes>().TurnsForCanAttack > 0);
 		GetComponent<CharacterAttributes>().TurnsForCanAttack = 0;
         Active(true);
         yield return ResetTurn();

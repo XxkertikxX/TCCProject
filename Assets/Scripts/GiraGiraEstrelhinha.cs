@@ -5,6 +5,6 @@ using UnityEngine;
 public class GiraGiraEstrelhinha : MonoBehaviour
 {
     private void FixedUpdate() {
-        transform.Rotate(0, 0, 100 * Time.fixedDeltaTime);
+        transform.Rotate(0, 0, 200 * Time.fixedDeltaTime);
     }
 }
