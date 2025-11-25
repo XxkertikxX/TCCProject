@@ -3,6 +3,7 @@ using UnityEngine.Playables;
 
 public class CinematicPlayer : MonoBehaviour 
 {
+    [SerializeField] CinematicPlayed played;
     [SerializeField] private PlayableDirector director;
     private PlayerMovementSystem playerMove;
     private AnimationSrc playerAnim;
@@ -15,8 +16,16 @@ public class CinematicPlayer : MonoBehaviour
     }
 
     private void OnEnable() {
-        director.played += StartCinematic;
-        director.stopped += EndCinematic;
+        if (!played.WasPlayed)
+        {
+            played.WasPlayed = true;
+            director.played += StartCinematic;
+            director.stopped += EndCinematic;
+        }
+        else
+        {
+            gameObject.SetActive(false);
+        }
     }
     private void OnDisable()
     {
