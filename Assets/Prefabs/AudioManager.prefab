@@ -158,8 +158,7 @@ MonoBehaviour:
     - Vento1
     - Vento2
     - Vento3
-    - Vento4
-    MusicClip: {fileID: 0}
+    MusicClip: {fileID: 8300000, guid: 354633853009f144e810eb2aae3eb3f8, type: 3}
   - Title: Sombra
     ScenesWithMusic:
     - Sombra1
@@ -212,7 +211,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.51854706
   m_Pitch: 1
   Loop: 0
   Mute: 0

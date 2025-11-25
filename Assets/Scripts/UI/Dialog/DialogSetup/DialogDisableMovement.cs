@@ -9,7 +9,6 @@ public class DialogDisableMovement : MonoBehaviour, IDialogSetup
     }
 
     public void SetupOpenDialog() {
-        Debug.Log(playerMovement != null);
         playerMovement.enabled = false; //nao encontrou
     }
 
