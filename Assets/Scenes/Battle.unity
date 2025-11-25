@@ -1063,6 +1063,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa0376204cec99040b6ce320c66712fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
 --- !u!114 &104922903
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19392,6 +19393,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa0376204cec99040b6ce320c66712fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 1815877705}
 --- !u!114 &525768455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22188,6 +22190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa0376204cec99040b6ce320c66712fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
 --- !u!114 &814553646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34891,7 +34894,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5384934313870806094, guid: 7cc18415399c7d740bb9be8e8352b824, type: 3}
       propertyPath: m_Volume
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8466112927380274407, guid: 7cc18415399c7d740bb9be8e8352b824, type: 3}
       propertyPath: m_Name
@@ -35427,6 +35430,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa0376204cec99040b6ce320c66712fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
 --- !u!114 &1993797147
 MonoBehaviour:
   m_ObjectHideFlags: 0
