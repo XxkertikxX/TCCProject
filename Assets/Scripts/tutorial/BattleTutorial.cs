@@ -15,6 +15,7 @@ public class BattleTutorial : MonoBehaviour
     }
 
     private void ActiveTutorial() {
+        Debug.Log("Bryanzinho");
         if (hasTutorial) {
             StartCoroutine(Active());
         }
