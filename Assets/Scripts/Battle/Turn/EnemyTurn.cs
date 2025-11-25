@@ -125,7 +125,7 @@ private IEnumerator ResetTurn() {
         return GameObject.FindGameObjectsWithTag("Character");
     }
 	
-	private float LowestManaConsume() {
+	public float LowestManaConsume() {
 		List<float> manaConsume = new List<float>();
 		
 		foreach(var character in Characters()) {

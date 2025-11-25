@@ -12176,8 +12176,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1541452070}
-        m_TargetAssemblyTypeName: PlayerCharactersSkills, GameAssembly
+      - m_Target: {fileID: 1541452076}
+        m_TargetAssemblyTypeName: PlayerCharactersSkills, CamMan
         m_MethodName: PressButtonSkill
         m_Mode: 3
         m_Arguments:
@@ -21239,6 +21239,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1541452070, guid: e1c3cd6ef5202604ebc3e76a6e31d050, type: 3}
+      propertyPath: enemy
+      value: 
+      objectReference: {fileID: 2030265210}
+    - target: {fileID: 1541452070, guid: e1c3cd6ef5202604ebc3e76a6e31d050, type: 3}
       propertyPath: painel
       value: 
       objectReference: {fileID: 201875828}
@@ -21246,6 +21250,10 @@ PrefabInstance:
       propertyPath: boxSkill
       value: 
       objectReference: {fileID: 642683606}
+    - target: {fileID: 1541452070, guid: e1c3cd6ef5202604ebc3e76a6e31d050, type: 3}
+      propertyPath: dialogUI
+      value: 
+      objectReference: {fileID: 35922175}
     - target: {fileID: 1541452070, guid: e1c3cd6ef5202604ebc3e76a6e31d050, type: 3}
       propertyPath: useSkill
       value: 
@@ -21258,6 +21266,10 @@ PrefabInstance:
       propertyPath: eventDialog
       value: 
       objectReference: {fileID: 1623998562}
+    - target: {fileID: 1541452070, guid: e1c3cd6ef5202604ebc3e76a6e31d050, type: 3}
+      propertyPath: useDialogSkill
+      value: 
+      objectReference: {fileID: 954095172}
     - target: {fileID: 1541452072, guid: e1c3cd6ef5202604ebc3e76a6e31d050, type: 3}
       propertyPath: boxSkill
       value: 
@@ -32884,8 +32896,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1541452070}
-        m_TargetAssemblyTypeName: PlayerCharactersSkills, GameAssembly
+      - m_Target: {fileID: 1541452076}
+        m_TargetAssemblyTypeName: PlayerCharactersSkills, CamMan
         m_MethodName: PressButtonSkill
         m_Mode: 3
         m_Arguments:
@@ -33328,23 +33340,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 784d731a072de5643980b30a734b93a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1541452070
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1541452065}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d489aeae0e07d62469e3c7106e476404, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  systemRhythm: {fileID: 1541452073}
-  boxSkill: {fileID: 642683606}
-  painel: {fileID: 201875828}
-  applySkill: {fileID: 1310397126}
-  useSkill: {fileID: 1100120931}
 --- !u!114 &1541452071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35927,7 +35922,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5384934313870806094, guid: 7cc18415399c7d740bb9be8e8352b824, type: 3}
       propertyPath: m_Volume
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8466112927380274407, guid: 7cc18415399c7d740bb9be8e8352b824, type: 3}
       propertyPath: m_Name

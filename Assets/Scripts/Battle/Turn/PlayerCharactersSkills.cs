@@ -4,6 +4,11 @@ using System;
 
 public class PlayerCharactersSkills : MonoBehaviour
 {
+    [SerializeField] private EnemyTurn enemy;
+    [SerializeField] private DialogEnableUI dialogUI;
+    [SerializeField] private DialogEnableUI useDialogSkill;
+
+
     static public bool OnBattle = false;
     [SerializeField] private SystemRhythm systemRhythm;
     [SerializeField] private GameObject boxSkill;
@@ -16,7 +21,12 @@ public class PlayerCharactersSkills : MonoBehaviour
 	public void PressButtonSkill(int posSkill) { // usar character().anim com o posSkill pra botar ambas animações inves do trigger
 		Texts(posSkill);
 		float manaConsume = CharStatus().Skills[posSkill].ManaConsume;
-		if(ManaSystem.Mp.CanChangeResource(manaConsume)) {
+        if(enemy.LowestManaConsume() + manaConsume > ManaSystem.Mp.ActualValue()) {
+            dialogUI.active = true;
+            useDialogSkill.active = true;
+        }
+        else { dialogUI.active = false; useDialogSkill.active = false;}
+        if (ManaSystem.Mp.CanChangeResource(manaConsume)) {
             OnBattle = true;
 			ChangeSpeedRhythm(posSkill);
             StartCoroutine(ActiveSkill(posSkill, manaConsume));
