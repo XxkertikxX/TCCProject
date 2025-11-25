@@ -45,14 +45,14 @@ public class GlobalLightTransition : MonoBehaviour
         float i;
         while (lightColor.color != colorToChange)
         {
-            c = Color.Lerp(lightColor.color, colorToChange, 0.2f);
+            c = Color.Lerp(lightColor.color, colorToChange, changeSpeed);
             lightColor.color = c;
             yield return null;
         }
 
         while (lightColor.intensity != intensity)
         {
-            i = Mathf.Lerp(lightColor.intensity, intensity, 0.2f);
+            i = Mathf.Lerp(lightColor.intensity, intensity, changeSpeed);
             lightColor.intensity = i;
             yield return null;
         }
