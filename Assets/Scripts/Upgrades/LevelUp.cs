@@ -12,13 +12,14 @@ public class LevelUp : MonoBehaviour
 	[SerializeField] private GameObject HUD;
 	[SerializeField] private GameObject Level;
 	[SerializeField] private GameObject Upgrade;
+    [SerializeField] private GameObject Dialogs;
  	
     [Header("References")]
     [SerializeField] private StatusCharacters character;
     [SerializeField] private Slider xpSlider;
 
     [Header("Config")]
-    [SerializeField] private float fillSpeedBase = 0.5f;
+    [SerializeField] private float fillSpeedBase = 0.1f;
     [SerializeField] private float fillSpeedMultiplier = 0.02f;
 
 
@@ -26,7 +27,8 @@ public class LevelUp : MonoBehaviour
 
     public IEnumerator UpLevel() {
 		character.Xp += 50;
-		HUD.SetActive(false);		
+		HUD.SetActive(false);
+        Dialogs.SetActive(false);
 		UI.SetActive(true);
         float x = character.Xp;
         while (x > 0) {
