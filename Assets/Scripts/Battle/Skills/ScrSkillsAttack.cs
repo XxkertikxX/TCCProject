@@ -9,7 +9,7 @@ public class ScrSkillsAttack : SkillBase
         float damage = (power)/100 * (rhythm.Damage) * SkillPower;
 		TextBattleData.Targets = TargetsString();
         foreach (var target in TargetType.CharactersAttributes) {
-			TextBattleData.Action = $"causou {-Mathf.Round(damage*target.Character.DamageReduction())} de dano em ";
+			TextBattleData.Action = $"causou {Mathf.Round(damage*target.Character.DamageReduction())} de dano em ";
             CharacterClick.CharacterAttr.Character.Xp += Mathf.Abs(target.LifeSystem.ModifyValue(-Mathf.Round(damage*target.Character.DamageReduction())));
         }
     }
