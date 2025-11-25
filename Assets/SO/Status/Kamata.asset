@@ -15,9 +15,9 @@ MonoBehaviour:
   Name: Kamata
   Level: 0
   Xp: 62
-  Life: 450
+  Life: 300
   Defense: 0
-  Power: 70
+  Power: 80
   Skills:
   - {fileID: 11400000, guid: 2bbcd28094fbf1042a8583f0726f8ad1, type: 2}
   - {fileID: 11400000, guid: ed9db8d929c530f4b9dd19d29ab11c1f, type: 2}
