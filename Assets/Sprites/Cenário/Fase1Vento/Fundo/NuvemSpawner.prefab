@@ -48,5 +48,5 @@ MonoBehaviour:
   - {fileID: 1431542748740312654, guid: 89e460a5550b9e04d883e7d1a95d40dc, type: 3}
   - {fileID: 5388999611084379496, guid: 96f4d2d1c2671634380d9a1c723881a0, type: 3}
   - {fileID: 3858420225659435523, guid: e29be74d4086d6f40b662083d23a1ddb, type: 3}
-  intervalo: 3
+  intervalo: 8
   altura: {x: 8.8, y: 22.2}
