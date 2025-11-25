@@ -6,6 +6,10 @@ using System.Linq;
 
 public class EnemyTurn : MonoBehaviour, IDeath
 {
+    [SerializeField] private StatusCharacters[] characters;
+    private float[] xpInicial;
+
+
 	static public bool Finish;
     [SerializeField] private DialogEnableUI[] uis;
     [SerializeField] private LevelUp[] charactersLevel;
@@ -22,8 +26,15 @@ public class EnemyTurn : MonoBehaviour, IDeath
     private StatusCharacters enemy;
 
     private bool inAction;
+
+    [SerializeField] private GameObject MorreuMenu;
+
     void Awake() {
         enemy = GetComponent<CharacterAttributes>().Character;
+        xpInicial = new float[characters.Length];
+        for (int i = 0; i < characters.Length; i++) {
+            xpInicial[i] = characters[i].Xp;
+        }
     }
 
     void Update() {
@@ -31,7 +42,10 @@ public class EnemyTurn : MonoBehaviour, IDeath
             StartCoroutine(Action());
         }
         if(Characters().Length == 0) {
-            Save(false);
+            for (int i = 0; i < characters.Length; i++) {
+                characters[i].Xp = xpInicial[i];
+            }
+            MorreuMenu.SetActive(true);
         }
         Stun.SetActive(GetComponent<CharacterAttributes>().TurnsForCanAttack > 0);
     }
@@ -42,6 +56,7 @@ public class EnemyTurn : MonoBehaviour, IDeath
             StartCoroutine(LevelUp());
         }
     }
+
     private IEnumerator LevelUp() {
         EnemyAnim.PlayBool("Died", true);
         yield return new WaitForSeconds(3f);
@@ -123,7 +138,7 @@ private IEnumerator ResetTurn() {
 		return manaConsume.Min();
 	}
 
-    private void Save(bool win) {
+    public void Save(bool win) {
         SaveSystem saveSystem = new SaveSystem();
         saveSystem.SaveBattle(Index, win);
         GameObject.FindObjectOfType<SaveLoader>().Load();   
