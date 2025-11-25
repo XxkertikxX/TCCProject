@@ -10,7 +10,7 @@ public class ChoiceUpgrade : MonoBehaviour
 	
 	[SerializeField] private Text textTitle;
 	[SerializeField] private Text textDescription;
-	[SerializeField] private SpriteRenderer icon;
+	[SerializeField] private Image icon;
 	
 	public void PressButton() {
 		upgrade.Upgrade(LevelUp.CharacterForUp);
