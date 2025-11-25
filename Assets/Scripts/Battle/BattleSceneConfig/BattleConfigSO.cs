@@ -12,4 +12,5 @@ public class BattleConfigSO : ScriptableObject {
 	public TextActionString Text;
 	public IconsSO Icons;
     public bool hasDialog; //temporario
+    public bool hasTutorial;
 }

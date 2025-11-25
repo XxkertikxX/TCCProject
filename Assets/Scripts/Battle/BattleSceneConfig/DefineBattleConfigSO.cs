@@ -14,6 +14,9 @@ public class DefineBattleConfigSO : MonoBehaviour
         defaultSO.Index = newSO.Index;
 		defaultSO.Text = newSO.Text;
 		defaultSO.Icons = newSO.Icons;
+        defaultSO.hasDialog = newSO.hasDialog;
+        defaultSO.hasTutorial = newSO.hasTutorial;
+        defaultSO.LifeBarSprite = newSO.LifeBarSprite;
     }
 
     void OnTriggerEnter2D(Collider2D collision) {

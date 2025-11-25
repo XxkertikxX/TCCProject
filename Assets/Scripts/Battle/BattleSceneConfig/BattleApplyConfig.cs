@@ -12,6 +12,7 @@ public class BattleApplyConfig : MonoBehaviour {
     [SerializeField] private EnemyTurn enemyTurn;
     [SerializeField] private DialogIconsUI iconsUI;
     [SerializeField] private GameObject dialog;
+    [SerializeField] private BattleTutorial tutorial;
 
     void Awake() {
         Instantiate(battleConfigSO.Background);
@@ -21,6 +22,7 @@ public class BattleApplyConfig : MonoBehaviour {
         animEnemy.runtimeAnimatorController = battleConfigSO.EnemyAnimatorController;
         enemyTransform.position = battleConfigSO.EnemyPosition;
         enemyTurn.Index = battleConfigSO.Index;
+        tutorial.hasTutorial = battleConfigSO.hasTutorial;
         dialog.SetActive(battleConfigSO.hasDialog);
     }
 }
