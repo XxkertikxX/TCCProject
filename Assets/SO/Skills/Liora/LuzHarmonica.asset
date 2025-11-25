@@ -19,7 +19,7 @@ MonoBehaviour:
   skillpower: 40
   spriteTypeSkill: {fileID: 21300000, guid: 6643d50405121d248ba1badbafed60e0, type: 3}
   spritesEffectsSkill:
-  - {fileID: 21300000, guid: 0a7ec04bdba2dc843996a59faaa4bed9, type: 3}
+  - {fileID: 21300000, guid: 8f420e3a068dfa241956217356817aa2, type: 3}
   ManaConsume: 6
   SpeedMin: 3.4
   SpeedMax: 3.6
