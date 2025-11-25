@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Alon
   Level: 0
-  Xp: 11
+  Xp: 0
   Life: 65
   Defense: 15
   Power: 50
