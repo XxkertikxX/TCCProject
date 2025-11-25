@@ -240,9 +240,9 @@ MonoBehaviour:
   hasTutorial: 0
   tutoriais:
   - {fileID: 131729118}
+  - {fileID: 1205660492}
   - {fileID: 495574744}
   - {fileID: 1047571042}
-  - {fileID: 1205660492}
   - {fileID: 2065447589}
 --- !u!4 &30687711
 Transform:
@@ -252,7 +252,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 30687709}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.37, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -35373,7 +35373,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5384934313870806094, guid: 7cc18415399c7d740bb9be8e8352b824, type: 3}
       propertyPath: m_Volume
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8466112927380274407, guid: 7cc18415399c7d740bb9be8e8352b824, type: 3}
       propertyPath: m_Name
