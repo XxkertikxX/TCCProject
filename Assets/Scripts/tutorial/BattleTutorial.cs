@@ -26,3 +26,10 @@ public class BattleTutorial : MonoBehaviour
         }
     }
 }
+public class WaitForDialogKeyDown : CustomYieldInstruction {
+    public override bool keepWaiting {
+        get {
+            return !Input.anyKeyDown;
+        }
+    }
+}
