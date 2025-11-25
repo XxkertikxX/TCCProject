@@ -4,7 +4,7 @@ using UnityEngine.Rendering.Universal;
 
 public class GlobalLightTransition : MonoBehaviour
 {
-    private bool changeN1 = false;
+    private bool trasitioning = false;
     [SerializeField] private Light2D lightColor;
     private Color RegularColor;
     private float oldIntensity;
@@ -22,39 +22,42 @@ public class GlobalLightTransition : MonoBehaviour
         oldIntensity = lightColor.intensity;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision != null && collision.gameObject.CompareTag("Player"))
         {
-            if (!changeN1)
+            if (!trasitioning)
             {
-                StartCoroutine(ChangeColorAndIntesity(NewColor, newIntensity));
-                changeN1 = true;
-            }
-            else
-            {
-                StartCoroutine(ChangeColorAndIntesity(RegularColor, oldIntensity));
-                changeN1 = false;
+                float direcao = Mathf.Sign(collision.transform.position.x - transform.position.x);
+
+                if (direcao < 0)
+                {
+                    StartCoroutine(ChangeColorAndIntesity(RegularColor, oldIntensity));
+                }
+
+                if (direcao > 0)
+                {
+                    StartCoroutine(ChangeColorAndIntesity(NewColor, newIntensity));
+                }
             }
         }
     }
 
     private IEnumerator ChangeColorAndIntesity(Color colorToChange, float intensity)
     {
+        trasitioning = true;
         Color c;
         float i;
-        while (lightColor.color != colorToChange)
+        while (Vector4.Distance(lightColor.color, colorToChange) > 0.01f || Mathf.Abs(lightColor.intensity - intensity) > 0.01f)
         {
             c = Color.Lerp(lightColor.color, colorToChange, changeSpeed);
             lightColor.color = c;
-            yield return null;
-        }
-
-        while (lightColor.intensity != intensity)
-        {
             i = Mathf.Lerp(lightColor.intensity, intensity, changeSpeed);
             lightColor.intensity = i;
             yield return null;
         }
+        lightColor.color = colorToChange;
+        lightColor.intensity = intensity;
+        trasitioning = false;
     }
 }
