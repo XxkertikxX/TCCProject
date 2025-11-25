@@ -22,3 +22,4 @@ MonoBehaviour:
   Text: {fileID: 11400000, guid: 84531db14cf4e544fb9ee12464849078, type: 2}
   Icons: {fileID: 11400000, guid: 2555829619eed3f4f9250d6073127e75, type: 2}
   hasDialog: 1
+  hasTutorial: 1
