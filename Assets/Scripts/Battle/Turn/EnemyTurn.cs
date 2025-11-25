@@ -17,6 +17,7 @@ public class EnemyTurn : MonoBehaviour, IDeath
     [SerializeField] private Event applySkill;
     [SerializeField] private Event useSkill;
 	[SerializeField] private ManaSO mana;
+    [SerializeField] private GameObject Stun;
 
     private StatusCharacters enemy;
 
@@ -62,6 +63,7 @@ public class EnemyTurn : MonoBehaviour, IDeath
 		if(GetComponent<CharacterAttributes>().TurnsForCanAttack == 0) {
 			yield return EnemyAttack();
 		}
+        Stun.SetActive(GetComponent<CharacterAttributes>().TurnsForCanAttack > 0);
 		GetComponent<CharacterAttributes>().TurnsForCanAttack = 0;
         Active(true);
         yield return ResetTurn();
