@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a59668ccb2029324c8cc6e61ca6afd40, type: 3}
   m_Name: KamataBattleWon
   m_EditorClassIdentifier: 
-  WasPlayed: 1
+  WasPlayed: 0

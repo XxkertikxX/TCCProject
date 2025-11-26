@@ -33,7 +33,8 @@ public class SliderEffect : MonoBehaviour
 
         sliderVolume[0].value = volumeSO.soundsVolume;
         sliderVolume[1].value = volumeSO.musicVolume;
-        
+
+        //Debug.Log(sliderVolume[1].value);
 
         ChangeVolume();
     }

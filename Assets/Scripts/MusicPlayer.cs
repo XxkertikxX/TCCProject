@@ -9,17 +9,18 @@ public class MusicPlayer : MonoBehaviour
     [SerializeField] private LevelsMusic[] musics;
     public static MusicPlayer instance;
     [SerializeField] private AudioSource musicAudioSource;
-    public static float musicVolume;
+    public static float musicVolume = 0.5f;
 
     private void Awake() //fazer fadeIn e fadeOut no audio
     {
         instance = this;
-        musicAudioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
     {
         musicAudioSource.volume = volumeSO.musicVolume;
+        //Debug.Log("Som variavel " + musicVolume);
+        //Debug.Log("Som armazenado " + volumeSO.musicVolume);
     }
     public void ChangeVolumeRoot()
     {
@@ -32,29 +33,31 @@ public class MusicPlayer : MonoBehaviour
         {
             for (int j = 0; j < musics[i].ScenesWithMusic.Length; j++)
             {
-                if (musicAudioSource.isPlaying)
-                {
-                    Debug.Log("Cena tocando: " + musics[i].ScenesWithMusic[j] + "|| Musica tocando: " + musics[i].MusicClip.name);
-                }
-                
                 if (musics[i].ScenesWithMusic[j] == SceneManager.GetActiveScene().name)
                 {
+                    if (musicAudioSource.clip == musics[i].MusicClip)
+                    {
+                        return;
+                    }
+                    else
+                    {
+                        musicAudioSource.Stop();
+                    }
+
                     instance.musicAudioSource.clip = musics[i].MusicClip;
                     instance.musicAudioSource.Play();
                     return;
                 }
-                else
-                {
-                    musicAudioSource.Stop();
-                }
             }
         }
+        musicAudioSource.Stop();
     }
 
     private void OnEnable()
     {
+
         SceneManager.sceneLoaded += PlayMusic;
-        
+
     }
 
     private void OnDisable()
