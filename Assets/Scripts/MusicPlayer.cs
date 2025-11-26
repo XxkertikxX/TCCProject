@@ -5,25 +5,25 @@ using UnityEngine.SceneManagement;
 [RequireComponent(typeof(AudioSource))]
 public class MusicPlayer : MonoBehaviour
 {
+    [SerializeField] private GameVolumeSO volumeSO;
     [SerializeField] private LevelsMusic[] musics;
-    private MusicPlayer instance;
+    public static MusicPlayer instance;
     [SerializeField] private AudioSource musicAudioSource;
-
-    private void Start()
-    {
-        //PlayMusic(SceneManager.GetActiveScene(), new LoadSceneMode());
-    }
+    public static float musicVolume;
 
     private void Awake() //fazer fadeIn e fadeOut no audio
     {
         instance = this;
         musicAudioSource = GetComponent<AudioSource>();
-        Debug.Log(musicAudioSource.isPlaying);
     }
 
     private void Update()
     {
-        musicAudioSource.volume = GameAudioManager.musicVolume;
+        musicAudioSource.volume = volumeSO.musicVolume;
+    }
+    public void ChangeVolumeRoot()
+    {
+        volumeSO.musicVolume = musicVolume;
     }
 
     private void PlayMusic(Scene actual, LoadSceneMode a)
@@ -35,7 +35,6 @@ public class MusicPlayer : MonoBehaviour
                 if (musicAudioSource.isPlaying)
                 {
                     Debug.Log("Cena tocando: " + musics[i].ScenesWithMusic[j] + "|| Musica tocando: " + musics[i].MusicClip.name);
-                    //return;
                 }
                 
                 if (musics[i].ScenesWithMusic[j] == SceneManager.GetActiveScene().name)

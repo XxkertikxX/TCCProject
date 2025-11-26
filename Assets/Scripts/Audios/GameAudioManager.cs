@@ -12,12 +12,10 @@ public class GameAudioManager : MonoBehaviour
     [SerializeField] private GameVolumeSO volumeSO;
 
     public static float soundVolume;
-    public static float musicVolume;
+
 
     private void Awake() {
         instance = this;
-        soundVolume = volumeSO.soundsVolume;
-        musicVolume = volumeSO.musicVolume;
     }
 
     private void Start() {
@@ -25,29 +23,20 @@ public class GameAudioManager : MonoBehaviour
     }
     private void Update()
     {
-        audioSource.volume = soundVolume;
+        audioSource.volume = volumeSO.soundsVolume;
+        Debug.Log(volumeSO.musicVolume);
     }
 
     public void ChangeVolumeRoot()
     {
         volumeSO.soundsVolume = soundVolume;
-        volumeSO.musicVolume = musicVolume;
     }
 
     public static void PlaySound(SoundTypes audioClips)
     {
         AudioClip[] clips = instance.soundsList[(int)audioClips].Sounds;
         AudioClip randomClip = clips[UnityEngine.Random.Range(0, clips.Length)];
-        instance.audioSource.PlayOneShot(randomClip, getTypeOfVolume(audioClips));
-    }
-
-    public static float getTypeOfVolume(SoundTypes s) {
-        if(s != SoundTypes.Music) {
-            return soundVolume;
-        }
-        else {
-            return musicVolume;
-        }
+        instance.audioSource.PlayOneShot(randomClip, soundVolume);
     }
 
 #if UNITY_EDITOR

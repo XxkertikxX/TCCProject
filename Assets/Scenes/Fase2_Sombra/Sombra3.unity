@@ -3467,6 +3467,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 673746, guid: 0176e239f4823f0448534ea7d9b17aa6, type: 3}
+      propertyPath: m_Intensity
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 673746, guid: 0176e239f4823f0448534ea7d9b17aa6, type: 3}
+      propertyPath: m_FalloffIntensity
+      value: 0.716
+      objectReference: {fileID: 0}
+    - target: {fileID: 673746, guid: 0176e239f4823f0448534ea7d9b17aa6, type: 3}
+      propertyPath: m_PointLightOuterRadius
+      value: 8.29
+      objectReference: {fileID: 0}
     - target: {fileID: 1677828655360256835, guid: 0176e239f4823f0448534ea7d9b17aa6, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -4033,7 +4045,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 350682668811690867, guid: 01aff75cbadfceb48991656464daf0cb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.1844082
+      value: 3.184408
       objectReference: {fileID: 0}
     - target: {fileID: 350682668811690867, guid: 01aff75cbadfceb48991656464daf0cb, type: 3}
       propertyPath: m_LocalPosition.z

@@ -6,20 +6,18 @@ public class SliderEffect : MonoBehaviour
 {
     [Header("Class return")]
     [SerializeField] private ReturnSpriteAndHotspot[] spritesAndHotspots;
+    [SerializeField] private GameVolumeSO volumeSO;
 
     [Header("UI")]
     [SerializeField] private Text[] volumeVisual;
     [SerializeField] private Slider[] sliderVolume;
-
+    
     private float[] frontValue = new float[2];
     private float[] backValue = new float[2];
 
     private void Start() {
         backValue[0] = frontValue[0];
         backValue[1] = frontValue[1];
-
-        sliderVolume[0].value = GameAudioManager.soundVolume;
-        sliderVolume[1].value = GameAudioManager.musicVolume;
     }
 
     private void Awake() {
@@ -33,6 +31,10 @@ public class SliderEffect : MonoBehaviour
         if (gameObject == null)
             return;
 
+        sliderVolume[0].value = volumeSO.soundsVolume;
+        sliderVolume[1].value = volumeSO.musicVolume;
+        
+
         ChangeVolume();
     }
 
@@ -44,10 +46,11 @@ public class SliderEffect : MonoBehaviour
 
     public void ChangeVolume() {
         GameAudioManager.soundVolume = sliderVolume[0].value;
-        GameAudioManager.musicVolume = sliderVolume[1].value;
+        MusicPlayer.musicVolume = sliderVolume[1].value;
         GameAudioManager.instance.ChangeVolumeRoot();
-        volumeVisual[0].text = Mathf.Round((GameAudioManager.soundVolume * 100)).ToString();
-        volumeVisual[1].text = Mathf.Round((GameAudioManager.musicVolume * 100)).ToString();
+        MusicPlayer.instance.ChangeVolumeRoot();
+        volumeVisual[0].text = Mathf.Round((volumeSO.soundsVolume * 100)).ToString();
+        volumeVisual[1].text = Mathf.Round((volumeSO.musicVolume * 100)).ToString();
     }
 
     public void PointBackToNormal() {
