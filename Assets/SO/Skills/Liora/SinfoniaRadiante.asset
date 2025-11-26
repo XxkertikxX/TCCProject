@@ -21,5 +21,5 @@ MonoBehaviour:
   spritesEffectsSkill:
   - {fileID: 21300000, guid: 2d3f8eb2de7f3204f9320f45c22a8f3b, type: 3}
   ManaConsume: 3
-  SpeedMin: 3.4
-  SpeedMax: 3.6
+  SpeedMin: 3.6
+  SpeedMax: 3.8

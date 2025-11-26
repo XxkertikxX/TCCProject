@@ -17,6 +17,7 @@ public class MusicPlayer : MonoBehaviour
     private void Start()
     {
         musicAudioSource = GetComponent<AudioSource>();
+        PlayMusic(SceneManager.GetActiveScene(), new Scene());
     }
 
     private void Update()
@@ -26,7 +27,7 @@ public class MusicPlayer : MonoBehaviour
         if (musicAudioSource.isPlaying)
             return;
 
-        PlayMusic(SceneManager.GetActiveScene(), new Scene());
+        
     }
 
     private void PlayMusic(Scene actual, Scene next)
@@ -40,6 +41,10 @@ public class MusicPlayer : MonoBehaviour
                     instance.musicAudioSource.clip = musics[i].MusicClip;
                     instance.musicAudioSource.Play();
                     Debug.Log("Cena tocando: " + musics[i].ScenesWithMusic[j] + "|| Musica tocando: " + musics[i].MusicClip.name);
+                }
+                if (actual.name != musics[i].ScenesWithMusic[j] && musicAudioSource.isPlaying)
+                {
+                    instance.musicAudioSource.Stop();
                 }
             }
         }

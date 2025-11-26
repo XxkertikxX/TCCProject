@@ -16,7 +16,7 @@ MonoBehaviour:
   timesForInvoke: 0
   timePerInvokeLine: 0
   targetType: {fileID: 11400000, guid: 9afabf5bda43e454ba4d0ccc14d7cc84, type: 2}
-  skillpower: 42
+  skillpower: 65
   spriteTypeSkill: {fileID: 0}
   spritesEffectsSkill: []
   ManaConsume: 0

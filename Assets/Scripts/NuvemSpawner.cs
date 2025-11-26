@@ -10,6 +10,12 @@ public class NuvemSpawner : MonoBehaviour
         InvokeRepeating(nameof(Spawn), 0f, intervalo);
     }
 
+    private void Update()
+    {
+        Camera cam = Camera.main;
+        transform.position = new Vector3(cam.transform.position.x + 50, transform.position.y, transform.position.z);
+    }
+
     private void Spawn() {
         int i = Random.Range(0, nuvens.Length);
         float y = Random.Range(altura.x, altura.y);

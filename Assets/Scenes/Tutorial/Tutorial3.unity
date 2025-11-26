@@ -2455,7 +2455,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actualCharacter: {fileID: 1332327274}
-  isCommentedAction: 0
 --- !u!114 &1332327274 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 870227369255367070, guid: 726c0502c57b9a04f953664912d975c3, type: 3}
@@ -2544,7 +2543,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 8
+  m_SortingOrder: 15
   m_Sprite: {fileID: 21300000, guid: 0fd197b56eebbdd41bd28c4a2d28bbf2, type: 3}
   m_Color: {r: 0.764151, g: 0.764151, b: 0.764151, a: 1}
   m_FlipX: 0
@@ -7589,7 +7588,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 8
+  m_SortingOrder: 11
   m_Sprite: {fileID: 21300000, guid: 0fd197b56eebbdd41bd28c4a2d28bbf2, type: 3}
   m_Color: {r: 0.764151, g: 0.764151, b: 0.764151, a: 1}
   m_FlipX: 0
