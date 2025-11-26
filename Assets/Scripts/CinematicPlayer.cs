@@ -20,21 +20,23 @@ public class CinematicPlayer : MonoBehaviour
     }
 
     private void OnEnable() {
+
+        played.WasPlayed = true;
+        director.played += StartCinematic;
+        director.stopped += EndCinematic;
+    }
+    private void OnDisable()
+    {
         if (!played.WasPlayed)
         {
-            played.WasPlayed = true;
-            director.played += StartCinematic;
-            director.stopped += EndCinematic;
+            played.WasPlayed= true;
+            director.played -= StartCinematic;
+            director.stopped -= EndCinematic;
         }
         else
         {
             gameObject.SetActive(false);
         }
-    }
-    private void OnDisable()
-    {
-        director.played -= StartCinematic;
-        director.stopped -= EndCinematic;
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
