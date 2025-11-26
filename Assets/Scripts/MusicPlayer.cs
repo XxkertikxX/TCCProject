@@ -9,6 +9,11 @@ public class MusicPlayer : MonoBehaviour
     private MusicPlayer instance;
     [SerializeField] private AudioSource musicAudioSource;
 
+    private void Start()
+    {
+        PlayMusic(SceneManager.GetActiveScene(), new LoadSceneMode());
+    }
+
     private void Awake() //fazer fadeIn e fadeOut no audio
     {
         instance = this;
@@ -42,7 +47,6 @@ public class MusicPlayer : MonoBehaviour
                 else
                 {
                     musicAudioSource.Stop();
-                    //PlayMusic(SceneManager.GetActiveScene(), new LoadSceneMode());
                 }
             }
         }

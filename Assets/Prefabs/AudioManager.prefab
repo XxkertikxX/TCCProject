@@ -142,6 +142,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musics:
+  - Title: Menu
+    ScenesWithMusic:
+    - MenuPrincipal
+    MusicClip: {fileID: 8300000, guid: 54206ae04b10f5a48b4e343f20f485df, type: 3}
   - Title: "M\xFAsica Tutorial"
     ScenesWithMusic:
     - Pedro_Testes
@@ -314,7 +318,8 @@ MonoBehaviour:
   - name: CloseMenu
     sounds: []
   - name: ClickButton
-    sounds: []
+    sounds:
+    - {fileID: 8300000, guid: bec637a7310fa4b409811a4bb74f8b04, type: 3}
   - name: Music
     sounds: []
   - name: Ambient
