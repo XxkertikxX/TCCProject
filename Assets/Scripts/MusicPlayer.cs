@@ -11,7 +11,7 @@ public class MusicPlayer : MonoBehaviour
 
     private void Start()
     {
-        PlayMusic(SceneManager.GetActiveScene(), new LoadSceneMode());
+        //PlayMusic(SceneManager.GetActiveScene(), new LoadSceneMode());
     }
 
     private void Awake() //fazer fadeIn e fadeOut no audio
