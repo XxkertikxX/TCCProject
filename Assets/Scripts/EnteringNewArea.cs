@@ -25,6 +25,11 @@ public class EnteringNewArea : MonoBehaviour
         nomeRegiao.color = Color.clear;
     }
 
+    public void MakeTextAppear(string texto)
+    {
+        nomeRegiao.text = texto;
+    }
+
     private void MakeNameEffect(int SceneIndex) {
         nomeRegiao.font = nameEffectScenes[SceneIndex].ReignFont;
         nomeRegiao.text = nameEffectScenes[SceneIndex].ReignName;

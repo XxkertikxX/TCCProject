@@ -5,6 +5,7 @@ public class SaveUpdate : MonoBehaviour {
         if(collision.CompareTag("Player")) {
             SaveSystem saveSystem = new SaveSystem();
             saveSystem.Save();
+            GameObject.FindObjectOfType<EnteringNewArea>().MakeTextAppear("Checkpoint desbloqueado!");
         }
     }
 }

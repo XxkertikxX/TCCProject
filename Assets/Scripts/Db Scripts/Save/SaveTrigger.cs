@@ -12,8 +12,8 @@ public class SaveTrigger : MonoBehaviour
         if(collision.CompareTag("Player") && !morreu) {
             //GameObject.FindObjectOfType<SaveLoader>().Load();
             MorreuMenu.SetActive(true);
-            //OnDeath?.Invoke();
-            //StartCoroutine(Morreu());
+            OnDeath?.Invoke();
+            StartCoroutine(Morreu());
         }
     }
 

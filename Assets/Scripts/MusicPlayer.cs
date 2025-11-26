@@ -25,7 +25,7 @@ public class MusicPlayer : MonoBehaviour
             return;*/
         instance.musicAudioSource.volume = GameAudioManager.musicVolume;
 
-        PlayMusic(SceneManager.GetActiveScene(), new Scene());
+        //PlayMusic(SceneManager.GetActiveScene(), new Scene());
     }
 
     private void PlayMusic(Scene actual, Scene next)
