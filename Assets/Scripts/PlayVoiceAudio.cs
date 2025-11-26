@@ -23,8 +23,8 @@ public class PlayVoiceAudio : MonoBehaviour
                 return SoundTypes.KingTalking;
             case "Fang":
                 return SoundTypes.FangTalking;
-            case "NPC2":
-                break;
+            case "Zambor":
+                return SoundTypes.NPC2Talking;
             case "NPC3":
                 break;
         }
