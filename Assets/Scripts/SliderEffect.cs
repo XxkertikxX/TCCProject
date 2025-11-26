@@ -17,6 +17,9 @@ public class SliderEffect : MonoBehaviour
     private void Start() {
         backValue[0] = frontValue[0];
         backValue[1] = frontValue[1];
+
+        sliderVolume[0].value = GameAudioManager.soundVolume;
+        sliderVolume[1].value = GameAudioManager.musicVolume;
     }
 
     private void Awake() {

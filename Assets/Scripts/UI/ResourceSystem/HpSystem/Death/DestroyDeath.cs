@@ -6,6 +6,7 @@ public class DestroyDeath : MonoBehaviour, IDeath
     [SerializeField] Animator animator;
     public void Death() {
         animator.Play("Morrendo");
+        animator.SetBool("Died", true);
         GetComponent<SelectWithKeyboard>().enabled = false;
         GetComponent<Button>().enabled = false;
         Transform[] selectedObject = GetComponentsInChildren<Transform>();

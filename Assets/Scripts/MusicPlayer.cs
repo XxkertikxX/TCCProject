@@ -9,7 +9,7 @@ public class MusicPlayer : MonoBehaviour
     private MusicPlayer instance;
     private AudioSource musicAudioSource;
 
-    private void Awake()
+    private void Awake() //fazer fadeIn e fadeOut no audio
     {
         instance = this;
     }
@@ -21,11 +21,12 @@ public class MusicPlayer : MonoBehaviour
 
     private void Update()
     {
-        /*if (musicAudioSource.isPlaying)
-            return;*/
-        instance.musicAudioSource.volume = GameAudioManager.musicVolume;
+        musicAudioSource.volume = GameAudioManager.musicVolume;
 
-        //PlayMusic(SceneManager.GetActiveScene(), new Scene());
+        if (musicAudioSource.isPlaying)
+            return;
+
+        PlayMusic(SceneManager.GetActiveScene(), new Scene());
     }
 
     private void PlayMusic(Scene actual, Scene next)
