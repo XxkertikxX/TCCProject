@@ -7,18 +7,6 @@ public class DialogStartTrigger : DialogStartBase
         if (collision.CompareTag("Player")) {
             StartDialog(); //essa
             GetComponent<Collider2D>().enabled = false;
-            /*if (!isInteractable)
-            {
-                
-            }
-            else
-            {
-                if (InputCatalyst.input.InputButtonDown("Interact"))
-                {
-                    StartDialog();
-                    GetComponent<Collider2D>().enabled = false;
-                }
-            */
         }
     }
 }

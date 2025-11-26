@@ -32,4 +32,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Fase1_Vento/Vento3.unity
     guid: 6b7f79eee0a7a464b9452c8d047021ba
+  - enabled: 1
+    path: Assets/Scenes/Fase2_Sombra/Sombra1.unity
+    guid: cc1a779f2fcc3d646a62a9c49e02f8dd
+  - enabled: 1
+    path: Assets/Scenes/Fase2_Sombra/Sombra2.unity
+    guid: 8074677584f6e7d40bfeadead2a385c3
+  - enabled: 1
+    path: Assets/Scenes/Fase2_Sombra/Sombra3.unity
+    guid: 4694bcdde77334b4db2ec6042ab9da55
   m_configObjects: {}

@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayVoiceAudio : MonoBehaviour
 {
     [SerializeField] private Text actualCharacter;
-    [SerializeField] public bool isCommentedAction = false;
     public void PlayVoice() {
         GameAudioManager.PlaySound(CharacterTalking());
     }

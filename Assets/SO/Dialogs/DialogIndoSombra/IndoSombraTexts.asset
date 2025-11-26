@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dd0bfdf66b4114439ae51af112a08cf, type: 3}
+  m_Name: IndoSombraTexts
+  m_EditorClassIdentifier: 
+  lineDialog:
+  - ' Conseguimos o cristal do vento... Mas e agora? Qual reino deveriamos ir agora?
+    O do raio ou das sombras?'
+  - "Por tudo que \xE9 mais sagrado, o dos raios n\xE3o. Eu vou morrer de seca."
+  - "Eu tamb\xE9m, como minhas raizes v\xE3o se ploriferar?"
+  - "T\xE1 t\xE1, tudo bem... Vamos para o Reino das Sombras. "

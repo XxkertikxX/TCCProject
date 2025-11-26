@@ -13,6 +13,10 @@ public class CinematicPlayer : MonoBehaviour
         director = GetComponent<PlayableDirector>();
         playerMove = player.GetComponent<PlayerMovementSystem>();
         playerAnim = player.GetComponentInChildren<AnimationSrc>();
+        if (played.WasPlayed)
+        {
+            gameObject.SetActive(false);
+        }
     }
 
     private void OnEnable() {
