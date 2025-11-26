@@ -1096,6 +1096,7 @@ GameObject:
   - component: {fileID: 104922905}
   - component: {fileID: 104922906}
   - component: {fileID: 104922908}
+  - component: {fileID: 104922909}
   m_Layer: 0
   m_Name: Liora
   m_TagString: Character
@@ -1362,6 +1363,20 @@ MonoBehaviour:
   characterClick: {fileID: 1541452071}
   key: Right
   selectIndicator: {fileID: 1048998695}
+--- !u!114 &104922909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 104922892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: daffa92f850c39045914153df4c4982a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterAttributes: {fileID: 104922900}
+  stunGO: {fileID: 259473142}
 --- !u!1 &117528627
 GameObject:
   m_ObjectHideFlags: 0
@@ -12830,7 +12845,6 @@ GameObject:
   - component: {fileID: 251177512}
   - component: {fileID: 251177515}
   - component: {fileID: 251177514}
-  - component: {fileID: 251177513}
   - component: {fileID: 251177516}
   m_Layer: 0
   m_Name: Cc
@@ -12859,19 +12873,6 @@ RectTransform:
   m_AnchoredPosition: {x: -0.0000104904175, y: 155}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &251177513
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 251177511}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: daffa92f850c39045914153df4c4982a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  characterAttributes: {fileID: 814553643}
 --- !u!114 &251177514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12933,7 +12934,6 @@ GameObject:
   - component: {fileID: 259473143}
   - component: {fileID: 259473146}
   - component: {fileID: 259473145}
-  - component: {fileID: 259473144}
   - component: {fileID: 259473147}
   m_Layer: 0
   m_Name: Cc
@@ -12962,19 +12962,6 @@ RectTransform:
   m_AnchoredPosition: {x: 1, y: 159}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &259473144
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 259473142}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: daffa92f850c39045914153df4c4982a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  characterAttributes: {fileID: 104922900}
 --- !u!114 &259473145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19895,6 +19882,7 @@ GameObject:
   - component: {fileID: 525768458}
   - component: {fileID: 525768460}
   - component: {fileID: 525768461}
+  - component: {fileID: 525768463}
   m_Layer: 0
   m_Name: Ember
   m_TagString: Character
@@ -20150,6 +20138,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &525768463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 525768443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: daffa92f850c39045914153df4c4982a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterAttributes: {fileID: 525768452}
+  stunGO: {fileID: 1567514620}
 --- !u!1 &528625949
 GameObject:
   m_ObjectHideFlags: 0
@@ -22722,6 +22724,7 @@ GameObject:
   - component: {fileID: 814553648}
   - component: {fileID: 814553649}
   - component: {fileID: 814553651}
+  - component: {fileID: 814553652}
   m_Layer: 0
   m_Name: Alon
   m_TagString: Character
@@ -22977,6 +22980,20 @@ MonoBehaviour:
   characterClick: {fileID: 1541452071}
   key: Down
   selectIndicator: {fileID: 1666955718}
+--- !u!114 &814553652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 814553637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: daffa92f850c39045914153df4c4982a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterAttributes: {fileID: 814553643}
+  stunGO: {fileID: 251177511}
 --- !u!1 &815150239
 GameObject:
   m_ObjectHideFlags: 0
@@ -33674,7 +33691,6 @@ GameObject:
   - component: {fileID: 1567514621}
   - component: {fileID: 1567514624}
   - component: {fileID: 1567514623}
-  - component: {fileID: 1567514622}
   - component: {fileID: 1567514625}
   m_Layer: 0
   m_Name: Cc
@@ -33703,19 +33719,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 151}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1567514622
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1567514620}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: daffa92f850c39045914153df4c4982a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  characterAttributes: {fileID: 525768452}
 --- !u!114 &1567514623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35481,7 +35484,6 @@ GameObject:
   - component: {fileID: 1847891009}
   - component: {fileID: 1847891012}
   - component: {fileID: 1847891011}
-  - component: {fileID: 1847891010}
   - component: {fileID: 1847891013}
   m_Layer: 0
   m_Name: Cc
@@ -35510,19 +35512,6 @@ RectTransform:
   m_AnchoredPosition: {x: -9, y: 146}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1847891010
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1847891008}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: daffa92f850c39045914153df4c4982a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  characterAttributes: {fileID: 1993797144}
 --- !u!114 &1847891011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36030,7 +36019,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5384934313870806094, guid: 7cc18415399c7d740bb9be8e8352b824, type: 3}
       propertyPath: m_Volume
-      value: 0.37613565
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8466112927380274407, guid: 7cc18415399c7d740bb9be8e8352b824, type: 3}
       propertyPath: m_Name
@@ -36408,6 +36397,7 @@ GameObject:
   - component: {fileID: 1993797149}
   - component: {fileID: 1993797150}
   - component: {fileID: 1993797152}
+  - component: {fileID: 1993797153}
   m_Layer: 0
   m_Name: Clementine
   m_TagString: Character
@@ -36674,6 +36664,20 @@ MonoBehaviour:
   characterClick: {fileID: 1541452071}
   key: Left
   selectIndicator: {fileID: 1702835900}
+--- !u!114 &1993797153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1993797136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: daffa92f850c39045914153df4c4982a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterAttributes: {fileID: 1993797144}
+  stunGO: {fileID: 1847891008}
 --- !u!1 &1999216847
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,9 +6,10 @@ using UnityEngine.TextCore.Text;
 public class Stun : MonoBehaviour
 {
     [SerializeField] private CharacterAttributes characterAttributes;
+    [SerializeField] private GameObject stunGO;
     void Update() {
         if(!PlayerCharactersSkills.OnBattle) {
-            gameObject.SetActive(characterAttributes.TurnsForCanAttack > 0);
+            stunGO.SetActive(characterAttributes.TurnsForCanAttack > 0);
         }
     }
 }
