@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df712c756b3eff94eaf78d84e4729a87, type: 3}
+  m_Name: PulsoEnegrecido
+  m_EditorClassIdentifier: 
+  name: Pulso Enegrecido
+  timesForInvoke: 0
+  timePerInvokeLine: 0
+  targetType: {fileID: 11400000, guid: 9afabf5bda43e454ba4d0ccc14d7cc84, type: 2}
+  skillpower: 42
+  spriteTypeSkill: {fileID: 0}
+  spritesEffectsSkill: []
+  ManaConsume: 0
+  SpeedMin: 0
+  SpeedMax: 0
