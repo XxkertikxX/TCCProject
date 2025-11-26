@@ -1,16 +1,21 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 
 public class applyiconcharacter : MonoBehaviour
 {
 	[SerializeField] private Text name;
-	void OnEnable()
-	{
+	void OnEnable()	{
 		if (CharacterClick.CharacterAttr != null) {
-			gameObject.GetComponent<Image>().enabled = (CharacterClick.CharacterAttr.Character.Icon != null);
-			gameObject.SetActive(CharacterClick.CharacterAttr.Character.Icon != null);
-			GetComponent<Image>().sprite = CharacterClick.CharacterAttr.Character.Icon;
-			name.text = CharacterClick.CharacterAttr.Character.Name;
+			StartCoroutine(Icons());
 		}
 	}
+
+	private IEnumerator Icons() {
+		yield return null;
+		gameObject.GetComponent<Image>().enabled = (CharacterClick.CharacterAttr.Character.Icon != null);
+		GetComponent<Image>().sprite = CharacterClick.CharacterAttr.Character.Icon;
+		name.text = CharacterClick.CharacterAttr.Character.Name;
+	}
+
 }

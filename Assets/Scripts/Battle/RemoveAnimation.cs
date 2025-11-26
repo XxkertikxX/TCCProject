@@ -1,16 +1,12 @@
 using UnityEngine;
 using System.Collections;
+using System;
 
 public class RemoveAnimation : MonoBehaviour
 {
-    void OnDisable() {
-        if (CharacterClick.CharacterAttr != null) {
-            StartCoroutine(dis());
-        } 
-    }
+    static public event Action OnDisableAnimation;
 
-    private IEnumerator dis() {
-        yield return new WaitForSeconds(1.5f);
-        GetComponent<Animator>().enabled = false;
+    void OnDisable() {
+        OnDisableAnimation?.Invoke();
     }
 }

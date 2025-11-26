@@ -94,9 +94,9 @@ public class EnemyTurn : MonoBehaviour, IDeath
 		}
 		var skill = enemy.Skills[randomSkill];
         Texts(skill);
+        CharacterClick.CharacterAttr = GetComponent<CharacterAttributes>();
         useSkill.EventInvoke();
-		yield return new WaitUntil(() => DialogManager.OnDialog == false);
-		CharacterClick.CharacterAttr = GetComponent<CharacterAttributes>();
+        yield return new WaitUntil(() => DialogManager.OnDialog == false);
 		yield return skill.TargetType.Targets();
         skill.Skill(enemy.Power, GetComponent<AttackRhythm>());
         applySkill.EventInvoke();

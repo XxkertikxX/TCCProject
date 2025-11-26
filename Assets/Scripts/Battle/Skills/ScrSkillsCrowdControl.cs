@@ -8,7 +8,7 @@ public class ScrSkillsCrowdControl : SkillBase
     public override void Skill(float power, AttackRhythm rhythm) {
 		TextBattleData.Targets = TargetsString();
         foreach (var target in TargetType.CharactersAttributes) {
-			if(rhythm.Damage >= 0.75f) {
+			if(rhythm.Damage >= 0.96f) {
 				target.TurnsForCanAttack += 1;
 				TextBattleData.Action = $"stunou por 1 rounds ";
 				CharacterClick.CharacterAttr.Character.Xp += 20;
