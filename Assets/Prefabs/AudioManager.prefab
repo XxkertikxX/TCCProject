@@ -141,6 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d3b40abe6428544b410e84d884c579, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volumeSO: {fileID: 0}
   musics:
   - Title: Menu
     ScenesWithMusic:
@@ -509,5 +510,6 @@ MonoBehaviour:
     sounds:
     - {fileID: 8300000, guid: 4904d3ff014ee244cb7e2cc8b455f46e, type: 3}
   - name: NPC3Talking
-    sounds: []
+    sounds:
+    - {fileID: 8300000, guid: ca955f3ad49ebfc45b3f9f3ff59e208c, type: 3}
   volumeSO: {fileID: 11400000, guid: f0fe2411630190a43a1e126b80f3def7, type: 2}
