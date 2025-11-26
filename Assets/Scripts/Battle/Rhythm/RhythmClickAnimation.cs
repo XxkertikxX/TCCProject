@@ -1,6 +1,5 @@
 using UnityEngine;
 using System.Collections;
-using Unity.VisualScripting.YamlDotNet.Core;
 
 public class RhythmClickAnimation : MonoBehaviour
 {
