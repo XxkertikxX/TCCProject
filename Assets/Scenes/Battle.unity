@@ -23453,7 +23453,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80760242f200112479df621ce1ab2290, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  battleConfigSO: {fileID: 11400000, guid: 4823cc5f0e38c3e4f8d0bbc33af4faec, type: 2}
+  battleConfigSO: {fileID: 11400000, guid: 5139a95e020ae10408c8d23d9e5795b2, type: 2}
   enemySpriteRenderer: {fileID: 2030265206}
   LifeBar: {fileID: 2030383431}
   enemyCharacter: {fileID: 2030265213}
@@ -36023,7 +36023,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5384934313870806094, guid: 7cc18415399c7d740bb9be8e8352b824, type: 3}
       propertyPath: m_Volume
-      value: 0.5
+      value: 0.42618626
       objectReference: {fileID: 0}
     - target: {fileID: 8466112927380274407, guid: 7cc18415399c7d740bb9be8e8352b824, type: 3}
       propertyPath: m_Name

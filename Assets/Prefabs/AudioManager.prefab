@@ -165,6 +165,7 @@ MonoBehaviour:
     - Sombra2
     - Sombra3
     MusicClip: {fileID: 0}
+  musicAudioSource: {fileID: 0}
 --- !u!1 &8466112927380274407
 GameObject:
   m_ObjectHideFlags: 0
@@ -211,7 +212,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.51854706
+  m_Volume: 0.42618626
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -500,7 +501,8 @@ MonoBehaviour:
     sounds:
     - {fileID: 8300000, guid: 2c6ffcf3add5c724b9f6a3e34ba2c2fd, type: 3}
   - name: NPC2Talking
-    sounds: []
+    sounds:
+    - {fileID: 8300000, guid: 4904d3ff014ee244cb7e2cc8b455f46e, type: 3}
   - name: NPC3Talking
     sounds: []
   volumeSO: {fileID: 11400000, guid: f0fe2411630190a43a1e126b80f3def7, type: 2}
