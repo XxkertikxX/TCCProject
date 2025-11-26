@@ -23453,14 +23453,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80760242f200112479df621ce1ab2290, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  battleConfigSO: {fileID: 11400000, guid: 4823cc5f0e38c3e4f8d0bbc33af4faec, type: 2}
+  battleConfigSO: {fileID: 11400000, guid: 5139a95e020ae10408c8d23d9e5795b2, type: 2}
   enemySpriteRenderer: {fileID: 2030265206}
   LifeBar: {fileID: 2030383431}
   enemyCharacter: {fileID: 2030265213}
   animEnemy: {fileID: 2030265217}
   enemyTransform: {fileID: 131075772}
   enemyTurn: {fileID: 2030265210}
-  iconsUI: {fileID: 0}
+  iconsUI: {fileID: 1623998560}
   dialog: {fileID: 1623998551}
   tutorial: {fileID: 30687710}
 --- !u!1 &865131676
