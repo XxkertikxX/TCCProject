@@ -6,7 +6,7 @@ public class applyiconcharacter : MonoBehaviour
 	[SerializeField] private Text name;
     void OnEnable() {
 		if(CharacterClick.CharacterAttr != null) {
-			gameObject.SetActive(CharacterClick.CharacterAttr.Character.Icon != null);
+			gameObject.GetComponent<Image>().enabled = (CharacterClick.CharacterAttr.Character.Icon != null);
 			GetComponent<Image>().sprite = CharacterClick.CharacterAttr.Character.Icon;
 			name.text = CharacterClick.CharacterAttr.Character.Name;
 		}
