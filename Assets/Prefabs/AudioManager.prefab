@@ -141,7 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d3b40abe6428544b410e84d884c579, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volumeSO: {fileID: 0}
+  volumeSO: {fileID: 11400000, guid: f0fe2411630190a43a1e126b80f3def7, type: 2}
   musics:
   - Title: Menu
     ScenesWithMusic:
@@ -170,7 +170,7 @@ MonoBehaviour:
     - Sombra2
     - Sombra3
     MusicClip: {fileID: 0}
-  musicAudioSource: {fileID: 0}
+  musicAudioSource: {fileID: 2966807256889945009}
 --- !u!1 &8466112927380274407
 GameObject:
   m_ObjectHideFlags: 0
@@ -217,7 +217,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -481,13 +481,17 @@ MonoBehaviour:
     sounds:
     - {fileID: 8300000, guid: aa4dac6cc73eff34a871e6d352a8a6d2, type: 3}
   - name: MorcegoAttack1
-    sounds: []
+    sounds:
+    - {fileID: 8300000, guid: cd9b084ec7e4fdf41a4cd294dc13a893, type: 3}
   - name: MorcegoAttack2
-    sounds: []
+    sounds:
+    - {fileID: 8300000, guid: bebd254d61091534a9b09148654e77ef, type: 3}
   - name: MorcegoDamage
-    sounds: []
+    sounds:
+    - {fileID: 8300000, guid: 1d4ecb4904f83d344a865d7c40ae3fec, type: 3}
   - name: MorcegoDefeaty
-    sounds: []
+    sounds:
+    - {fileID: 8300000, guid: 643312ab7455a1343b3698f0fc0d2f88, type: 3}
   - name: MarceloAttack1
     sounds: []
   - name: MarceloAttack2
