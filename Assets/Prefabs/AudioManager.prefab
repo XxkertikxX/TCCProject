@@ -152,7 +152,7 @@ MonoBehaviour:
   - Title: Combate
     ScenesWithMusic:
     - Battle
-    MusicClip: {fileID: 0}
+    MusicClip: {fileID: 8300000, guid: 275c52dbad4d30f4595f4924080012e3, type: 3}
   - Title: Vento
     ScenesWithMusic:
     - Vento1
@@ -212,7 +212,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.42618626
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
