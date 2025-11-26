@@ -52,9 +52,10 @@ public class CinematicPlayer : MonoBehaviour
     }
 
     private void EndCinematic(PlayableDirector aDirector) {
-        
-        playerMove.enabled = true;
-        playerAnim.enabled = true;
+        if(playerMove != null)
+            playerMove.enabled = true;
+        if (playerAnim != null)
+            playerAnim.enabled = true;
         gameObject.SetActive(false);
     }
 }

@@ -5,6 +5,8 @@ using UnityEngine;
 public class RemoveAnimationFora : MonoBehaviour
 {
     [SerializeField] private Animator anim;
+    [SerializeField] BattleApplyConfig battleConfig;
+
 
     void OnEnable() {
         RemoveAnimation.OnDisableAnimation += Remove;
@@ -15,6 +17,9 @@ public class RemoveAnimationFora : MonoBehaviour
     }
 
     void Remove() {
+        if (battleConfig.battleConfigSO.hasDialog) {
+            return;
+        }
         StartCoroutine(dis());
     }
 

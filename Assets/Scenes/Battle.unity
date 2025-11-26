@@ -33528,6 +33528,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 938928767}
+  battleConfig: {fileID: 862944646}
 --- !u!1 &1545013774
 GameObject:
   m_ObjectHideFlags: 0
@@ -36036,7 +36037,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5384934313870806094, guid: 7cc18415399c7d740bb9be8e8352b824, type: 3}
       propertyPath: m_Volume
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8466112927380274407, guid: 7cc18415399c7d740bb9be8e8352b824, type: 3}
       propertyPath: m_Name
