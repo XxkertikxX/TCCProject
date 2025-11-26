@@ -23460,7 +23460,7 @@ MonoBehaviour:
   animEnemy: {fileID: 2030265217}
   enemyTransform: {fileID: 131075772}
   enemyTurn: {fileID: 2030265210}
-  iconsUI: {fileID: 1623998560}
+  iconsUI: {fileID: 0}
   dialog: {fileID: 1623998551}
   tutorial: {fileID: 30687710}
 --- !u!1 &865131676
@@ -36906,7 +36906,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b5347eceb2e3bed4db0c3c4457ff456d, type: 2}
   - {fileID: 11400000, guid: 66f3818663af0ce4fa37e18905f10318, type: 2}
   - {fileID: 11400000, guid: d2a25ce6e3c802c41920adef9dee2814, type: 2}
-  uis: []
+  uis:
+  - {fileID: 954095172}
   charactersLevel:
   - {fileID: 1025881858}
   - {fileID: 575359399}
