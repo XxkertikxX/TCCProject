@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Tatu
   Level: 0
   Xp: 0
-  Life: 1
+  Life: 150
   Defense: 0
   Power: 70
   Skills:
