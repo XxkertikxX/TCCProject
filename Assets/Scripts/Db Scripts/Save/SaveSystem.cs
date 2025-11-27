@@ -44,7 +44,7 @@ public class SaveSystem
             ID = 1,
             SceneName = "CutSceneInicial",
             Player = NewVector3(-4.5f, -1.33f, 0),
-            DefeatEnemy = new bool[] { false, false },
+            DefeatEnemy = new bool[] { false, false, false},
             StatusCharacter = new Status[] {
                 new Status(),
                 new Status(),
