@@ -104,16 +104,15 @@ public class EnemyTurn : MonoBehaviour, IDeath
     }
 
     private bool AllCharactersPlay() {
-    foreach (var character in Characters()) {
-        if (character.GetComponent<CharacterAttributes>().TurnsForCanAttack == 0) {
-            return false;
-        }
-    }
-    return true;
+		foreach (var character in Characters()) {
+			if (character.GetComponent<CharacterAttributes>().TurnsForCanAttack == 0) {
+				return false;
+			}
+		}
+		return true;
+	}
 
-}
-
-private IEnumerator ResetTurn() {
+	private IEnumerator ResetTurn() {
 		ManaAdd = mana.Mana - ManaSystem.Mp.ActualValue();
 		ManaSystem.Mp.ModifyValue(ManaAdd);
 		passTurn.EventInvoke();
@@ -139,6 +138,7 @@ private IEnumerator ResetTurn() {
 	}
 
     public void Save(bool win) {
+		PlayerCharactersSkills.OnBattle = false;
         SaveSystem saveSystem = new SaveSystem();
         saveSystem.SaveBattle(Index, win);
         GameObject.FindObjectOfType<SaveLoader>().Load();   
