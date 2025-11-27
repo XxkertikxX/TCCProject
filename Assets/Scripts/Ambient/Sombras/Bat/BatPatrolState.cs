@@ -32,6 +32,9 @@ public class BatPatrolState : IBatState
         float chaseProbability = 0.0025f;
         bool mustChase = Random.value < chaseProbability;
         if (mustChase && bat.IsPlayerInsideArea() && !bat.HideAbility.Hide) {
+            Debug.Log("bat.HideAbility.Hide é nulo? " + bat.HideAbility.Hide != null);
+            Debug.Log("MustChase não é nulo? " + mustChase != null);
+            Debug.Log("bat.IsPlayerInsideArea() não é nulo? " + bat.IsPlayerInsideArea() != null);
             bat.ChangeState(bat.ChaseState);
         }
     }

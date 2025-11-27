@@ -36,6 +36,7 @@ public class BatStateMachine : MonoBehaviour
     }
 
     void FixedUpdate() {
+        Debug.Log("Diferente de nulo?" + CurrentState != null);
         CurrentState?.Update();
     }
 
@@ -46,6 +47,7 @@ public class BatStateMachine : MonoBehaviour
     }
 
     public bool IsPlayerInsideArea() {
+        Debug.Log("Trigger existe?" + TriggerArea != null);
 		Vector2 playerPos2D = new Vector2(Player.position.x, Player.position.y);
 		return TriggerArea.OverlapPoint(playerPos2D);
     }
