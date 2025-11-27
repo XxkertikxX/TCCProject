@@ -7,16 +7,14 @@ public class BatStateMachine : MonoBehaviour
 
     public Collider2D TriggerArea;
     public RbMovement Movement { get; private set; }
-    public Transform Player { get; private set; }
-    public HideAbility HideAbility { get; private set; }
+    public Transform Player;
+    public HideAbility HideAbility;
 
     public IBatState CurrentState { get; private set; }
     public BatPatrolState PatrolState { get; private set; }
     public BatChaseState ChaseState { get; private set; }
 
     private void Awake() {
-        Player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        HideAbility = Player.GetComponent<HideAbility>();
         Movement = GetComponent<RbMovement>();
 
         PatrolState = new BatPatrolState(this);
