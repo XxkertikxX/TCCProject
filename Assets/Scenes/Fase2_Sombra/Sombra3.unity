@@ -2308,6 +2308,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1357934787}
     m_Modifications:
+    - target: {fileID: 2040559180773277334, guid: cee35fb33ff75744db6e95507773116c, type: 3}
+      propertyPath: MorreuMenu
+      value: 
+      objectReference: {fileID: 1555875653}
     - target: {fileID: 7007849402136912954, guid: cee35fb33ff75744db6e95507773116c, type: 3}
       propertyPath: m_Name
       value: Morcego
@@ -3634,6 +3638,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9235a2fcabeb2c7499fa735bad5338ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1555875653 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2090471924716802025, guid: 95cb21c43a4ac834b91571a0801ef698, type: 3}
+  m_PrefabInstance: {fileID: 1992158481}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1608351666
 GameObject:
   m_ObjectHideFlags: 0
@@ -4109,7 +4118,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 350682668811690867, guid: 01aff75cbadfceb48991656464daf0cb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.1844082
+      value: 3.184408
       objectReference: {fileID: 0}
     - target: {fileID: 350682668811690867, guid: 01aff75cbadfceb48991656464daf0cb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4957,6 +4966,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1305962}
     m_Modifications:
+    - target: {fileID: 2090471924716802025, guid: 95cb21c43a4ac834b91571a0801ef698, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3558941405181168225, guid: 95cb21c43a4ac834b91571a0801ef698, type: 3}
       propertyPath: m_Pivot.x
       value: 0
