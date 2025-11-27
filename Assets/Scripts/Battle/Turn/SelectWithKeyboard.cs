@@ -14,6 +14,10 @@ public class SelectWithKeyboard : MonoBehaviour
     }
 
     void Update() {
+
+		Debug.Log(PlayerCharactersSkills.OnBattle);
+		Debug.Log(CharacterClick.CharacterAttr != null);
+		Debug.Log(InputCatalyst.input.InputButtonDown(key));
         if(InputCatalyst.input.InputButtonDown(key) && !PlayerCharactersSkills.OnBattle) {
             characterClick.ClickCharacter(status);
             if(CharacterClick.CharacterInteraction == new CharacterAttack()) {
