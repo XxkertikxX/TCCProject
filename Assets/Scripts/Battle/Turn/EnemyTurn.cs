@@ -139,6 +139,7 @@ public class EnemyTurn : MonoBehaviour, IDeath
 
     public void Save(bool win) {
 		PlayerCharactersSkills.OnBattle = false;
+		Finish = false;
         SaveSystem saveSystem = new SaveSystem();
         saveSystem.SaveBattle(Index, win);
         GameObject.FindObjectOfType<SaveLoader>().Load();   
