@@ -52,7 +52,7 @@ public class SaveStatusCharacter : MonoBehaviour
 
     static private void LoadCharacter(Status status, StatusCharacters statusSO) {
 		statusSO.Level = status.Level;
-		status.Xp = statusSO.Xp;
+		statusSO.Xp = status.Xp;
 		statusSO.Life = status.Life;
 		statusSO.Power = status.Power;
 		statusSO.Defense = status.Defense;

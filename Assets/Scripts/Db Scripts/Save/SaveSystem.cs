@@ -15,12 +15,13 @@ public class SaveSystem
     }
 
     public void SaveBattle(int index, bool win) {
-        using (var db = new LiteDatabase(Path())) {
-            var col = db.GetCollection<SaveStats>("save_stats");
-            var save = Load(db);
-            save = UpdateBattles(save, index, win);
-            col.Upsert(save);
-        }
+		using (var db = new LiteDatabase(Path())) {
+			var col = db.GetCollection<SaveStats>("save_stats");
+			var save = Load(db);
+			save = UpdateBattles(save, index, win);
+			SaveStatusCharacter.SaveStatus(save);
+			col.Upsert(save);
+		}
     }
 
     public SaveStats OpenLoad() {
