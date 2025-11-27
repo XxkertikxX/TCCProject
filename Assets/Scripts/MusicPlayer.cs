@@ -9,24 +9,26 @@ public class MusicPlayer : MonoBehaviour
     [SerializeField] private LevelsMusic[] musics;
     public static MusicPlayer instance;
     [SerializeField] private AudioSource musicAudioSource;
-    public static float musicVolume = 0.5f;
+    public static float musicVolume;
 
-    private void Awake() //fazer fadeIn e fadeOut no audio
+    private void Awake() //fazer fade in e out da musica
     {
         instance = this;
     }
 
+    private void Start()
+    {
+        musicAudioSource = GetComponent<AudioSource>();
+    }
     private void Update()
     {
         musicAudioSource.volume = volumeSO.musicVolume;
-        //Debug.Log("Som variavel " + musicVolume);
-        //Debug.Log("Som armazenado " + volumeSO.musicVolume);
     }
+
     public void ChangeVolumeRoot()
     {
         volumeSO.musicVolume = musicVolume;
     }
-
     private void PlayMusic(Scene actual, LoadSceneMode a)
     {
         for (int i = 0; i < musics.Length; i++)

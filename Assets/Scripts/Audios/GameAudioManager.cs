@@ -24,7 +24,6 @@ public class GameAudioManager : MonoBehaviour
     private void Update()
     {
         audioSource.volume = volumeSO.soundsVolume;
-        Debug.Log(volumeSO.musicVolume);
     }
 
     public void ChangeVolumeRoot()

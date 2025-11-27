@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 using System.Collections;
 using System.Linq;
+using UnityEngine.UI;
 
 public class EnemyTurn : MonoBehaviour, IDeath
 {
@@ -20,6 +21,7 @@ public class EnemyTurn : MonoBehaviour, IDeath
     [SerializeField] private Event passTurn;
     [SerializeField] private Event applySkill;
     [SerializeField] private Event useSkill;
+    [SerializeField] private Slider hiddenMana;
 	[SerializeField] private ManaSO mana;
     [SerializeField] private GameObject Stun;
 
@@ -98,6 +100,7 @@ public class EnemyTurn : MonoBehaviour, IDeath
         useSkill.EventInvoke();
         yield return new WaitUntil(() => DialogManager.OnDialog == false);
 		yield return skill.TargetType.Targets();
+        Debug.Log(skill.TargetType.Targets().Current);
         skill.Skill(enemy.Power, GetComponent<AttackRhythm>());
         applySkill.EventInvoke();
 		yield return new WaitUntil(() => DialogManager.OnDialog == false);
@@ -115,7 +118,8 @@ public class EnemyTurn : MonoBehaviour, IDeath
 	private IEnumerator ResetTurn() {
 		ManaAdd = mana.Mana - ManaSystem.Mp.ActualValue();
 		ManaSystem.Mp.ModifyValue(ManaAdd);
-		passTurn.EventInvoke();
+        hiddenMana.value = hiddenMana.maxValue;
+        passTurn.EventInvoke();
 		yield return new WaitUntil(() => DialogManager.OnDialog == false);
         inAction = false;
     }

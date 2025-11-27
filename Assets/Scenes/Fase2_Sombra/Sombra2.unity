@@ -7804,6 +7804,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4041607572145054287, guid: 0176e239f4823f0448534ea7d9b17aa6, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 4806356728186344492, guid: 0176e239f4823f0448534ea7d9b17aa6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10.214292
@@ -7948,6 +7952,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MorreuMenu: {fileID: 1878112486}
+  video: 0
+  VideoPlayer: {fileID: 0}
 --- !u!60 &1376224981 stripped
 PolygonCollider2D:
   m_CorrespondingSourceObject: {fileID: 6506848041841377403, guid: 4095de6bda613fe4286ccf0e3864dea5, type: 3}
@@ -8025,6 +8031,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MorreuMenu: {fileID: 1878112486}
+  video: 0
+  VideoPlayer: {fileID: 0}
 --- !u!1 &1682420126
 GameObject:
   m_ObjectHideFlags: 0
@@ -8321,7 +8329,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 350682668811690867, guid: 01aff75cbadfceb48991656464daf0cb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.9359994
+      value: 3.9359996
       objectReference: {fileID: 0}
     - target: {fileID: 350682668811690867, guid: 01aff75cbadfceb48991656464daf0cb, type: 3}
       propertyPath: m_LocalPosition.z

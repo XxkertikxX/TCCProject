@@ -24,6 +24,10 @@ public class SliderEffect : MonoBehaviour
         sliderVolume = GetComponentsInChildren<Slider>();
         volumeVisual = GetComponentsInChildren<Text>();
         Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
+        Debug.Log(sliderVolume[1].value);
+        Debug.Log(volumeSO.musicVolume);
+        sliderVolume[0].value = volumeSO.soundsVolume;
+        sliderVolume[1].value = volumeSO.musicVolume;
     }
 
     private void Update()
@@ -33,8 +37,6 @@ public class SliderEffect : MonoBehaviour
 
         sliderVolume[0].value = volumeSO.soundsVolume;
         sliderVolume[1].value = volumeSO.musicVolume;
-
-        //Debug.Log(sliderVolume[1].value);
 
         ChangeVolume();
     }
