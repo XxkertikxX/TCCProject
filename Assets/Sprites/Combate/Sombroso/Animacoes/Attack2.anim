@@ -318,10 +318,38 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
+  - time: 0.05
+    functionName: NextAnim
+    data: 
+    objectReferenceParameter: {fileID: 1625925228919435910, guid: b714997c1a6f47c42af02c1c2447c07c, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
   - time: 0.083333336
     functionName: PlaySound
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 54
+    messageOptions: 0
+  - time: 0.083333336
+    functionName: NextAnim
+    data: 
+    objectReferenceParameter: {fileID: 5501218192872745951, guid: 99d5d970fabdec3488970d8558fd2d5c, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.21666667
+    functionName: NextAnim
+    data: 
+    objectReferenceParameter: {fileID: 7148015028396310971, guid: acb690f46e1f22643a69061b57881226, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.26666668
+    functionName: NextAnim
+    data: 
+    objectReferenceParameter: {fileID: 8125225723169749927, guid: a76cc93c507b39d4885cbec83b8d7e6a, type: 3}
+    floatParameter: 0
+    intParameter: 0
     messageOptions: 0

@@ -8,6 +8,7 @@ public class MainMenuButtons : MonoBehaviour
 
     public void ReplayScene()
     {
+        Time.timeScale = 1f;
         GameObject.FindObjectOfType<SaveLoader>().Load();
     }
 

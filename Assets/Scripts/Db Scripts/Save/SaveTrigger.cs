@@ -38,6 +38,7 @@ public class SaveTrigger : MonoBehaviour
     private IEnumerator tocarVideo()
     {
         yield return new WaitForSeconds(3f);
+        Time.timeScale = 0f;
         MorreuMenu.SetActive(true);
         OnDeath?.Invoke();
         StartCoroutine(Morreu());
