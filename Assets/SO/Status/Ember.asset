@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Ember
   m_EditorClassIdentifier: 
   Name: Ember
-  Level: 0
-  Xp: 349
+  Level: 2
+  Xp: 251
   Life: 70
   Defense: 20
   Power: 65
