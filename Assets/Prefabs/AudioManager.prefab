@@ -146,7 +146,7 @@ MonoBehaviour:
   - Title: Menu
     ScenesWithMusic:
     - MainMenu
-    MusicClip: {fileID: 8300000, guid: 54206ae04b10f5a48b4e343f20f485df, type: 3}
+    MusicClip: {fileID: 8300000, guid: 5057c69a7608b6046a9a351c51bfc8c0, type: 3}
   - Title: "M\xFAsica Tutorial"
     ScenesWithMusic:
     - Pedro_Testes
@@ -157,7 +157,7 @@ MonoBehaviour:
   - Title: Combate
     ScenesWithMusic:
     - Battle
-    MusicClip: {fileID: 8300000, guid: 275c52dbad4d30f4595f4924080012e3, type: 3}
+    MusicClip: {fileID: 8300000, guid: 1815ceeccaf24bf4fb7512aa5ff232b9, type: 3}
   - Title: Vento
     ScenesWithMusic:
     - Vento1
@@ -169,7 +169,7 @@ MonoBehaviour:
     - Sombra1
     - Sombra2
     - Sombra3
-    MusicClip: {fileID: 0}
+    MusicClip: {fileID: 8300000, guid: 49d96ad4c49912746aed6e46ff88e2f8, type: 3}
   musicAudioSource: {fileID: 2966807256889945009}
 --- !u!1 &8466112927380274407
 GameObject:
@@ -218,7 +218,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.7098067
   m_Pitch: 1
   Loop: 0
   Mute: 0
