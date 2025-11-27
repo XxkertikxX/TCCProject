@@ -8,7 +8,10 @@ public class ResetBossChecjers : MonoBehaviour
 
     public void ResetValue()
     {
-        foreach(var c in SOs)
+        SOs[0].WasPlayed = false;
+        SOs[1].WasPlayed = false;
+        SOs[2].WasPlayed = false;
+        foreach (var c in SOs)
         {
             c.WasPlayed = false;
         }

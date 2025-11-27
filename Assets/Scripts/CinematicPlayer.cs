@@ -21,16 +21,8 @@ public class CinematicPlayer : MonoBehaviour
 
     private void OnEnable() {
 
-        if (!played.WasPlayed)
-        {
-            played.WasPlayed = true;
-            director.played += StartCinematic;
-            director.stopped += EndCinematic;
-        }
-        else
-        {
-            gameObject.SetActive(false);
-        }
+        director.played += StartCinematic;
+        director.stopped += EndCinematic;
     }
     private void OnDisable()
     {
@@ -41,6 +33,7 @@ public class CinematicPlayer : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.tag == "Player") { 
             director.Play();
+            played.WasPlayed = true;
         }
     }
 

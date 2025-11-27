@@ -1361,7 +1361,7 @@ MonoBehaviour:
     Hotspot: {x: 30, y: 82}
   - Texture: {fileID: 2800000, guid: a97bd70350d54b748b2172aab4330e63, type: 3}
     Hotspot: {x: 20, y: 88}
-  volumeSO: {fileID: 0}
+  volumeSO: {fileID: 11400000, guid: f0fe2411630190a43a1e126b80f3def7, type: 2}
   volumeVisual: []
   sliderVolume: []
 --- !u!1 &940199809
@@ -1733,23 +1733,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1097694427}
   m_CullTransparentMesh: 1
---- !u!1 &1205438239 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8466112927380274407, guid: 7cc18415399c7d740bb9be8e8352b824, type: 3}
-  m_PrefabInstance: {fileID: 2098740961}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1205438243
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1205438239}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2b75b0eaaea85248a093f107f4dfaaf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1211929652
 GameObject:
   m_ObjectHideFlags: 0
@@ -2144,7 +2127,6 @@ GameObject:
   - component: {fileID: 1410265489}
   - component: {fileID: 1410265488}
   - component: {fileID: 1410265493}
-  - component: {fileID: 1410265494}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2264,22 +2246,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 2073724168}
   Paused: 0
---- !u!114 &1410265494
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1410265487}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d92883d5cd9ce144a69a55b2612ee36, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SOs:
-  - {fileID: 11400000, guid: 57eddc8506e3ad24a9ef30d7fba3cd96, type: 2}
-  - {fileID: 11400000, guid: dac5321513affb54cb462d260cef8abc, type: 2}
-  - {fileID: 11400000, guid: b5e622eee2cf8ca409e69654fa0f776e, type: 2}
 --- !u!1 &1446920898
 GameObject:
   m_ObjectHideFlags: 0
@@ -2882,6 +2848,7 @@ GameObject:
   - component: {fileID: 1552735756}
   - component: {fileID: 1552735759}
   - component: {fileID: 1552735760}
+  - component: {fileID: 1552735761}
   m_Layer: 0
   m_Name: SaveLoader
   m_TagString: Untagged
@@ -2958,6 +2925,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c2a05ac52b62d24a994720a36bd4146, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1552735761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552735755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d92883d5cd9ce144a69a55b2612ee36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SOs:
+  - {fileID: 11400000, guid: 57eddc8506e3ad24a9ef30d7fba3cd96, type: 2}
+  - {fileID: 11400000, guid: dac5321513affb54cb462d260cef8abc, type: 2}
+  - {fileID: 11400000, guid: b5e622eee2cf8ca409e69654fa0f776e, type: 2}
 --- !u!1 &1581873882
 GameObject:
   m_ObjectHideFlags: 0
@@ -3287,7 +3270,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1410265494}
+      - m_Target: {fileID: 1552735761}
         m_TargetAssemblyTypeName: ResetBossChecjers, CamMan
         m_MethodName: ResetValue
         m_Mode: 1

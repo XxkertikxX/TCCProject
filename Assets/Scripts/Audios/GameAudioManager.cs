@@ -8,7 +8,7 @@ public class GameAudioManager : MonoBehaviour
 
     [SerializeField] private SoundList[] soundsList;
     public static GameAudioManager instance;
-    private AudioSource audioSource;
+    [SerializeField] private AudioSource audioSource;
     [SerializeField] private GameVolumeSO volumeSO;
 
     public static float soundVolume;
