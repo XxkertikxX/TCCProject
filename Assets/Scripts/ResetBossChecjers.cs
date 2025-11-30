@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ResetBossChecjers : MonoBehaviour
@@ -14,6 +12,7 @@ public class ResetBossChecjers : MonoBehaviour
         foreach (var c in SOs)
         {
             c.WasPlayed = false;
+            Debug.Log("Was battle finished?: " + c.WasPlayed);
         }
     }
 }

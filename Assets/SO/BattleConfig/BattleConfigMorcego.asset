@@ -15,6 +15,7 @@ MonoBehaviour:
   EnemyStatus: {fileID: 11400000, guid: 4d594e431ad750d429b53ef730ddb8d0, type: 2}
   Background: {fileID: 7809033932422097030, guid: 67dd806979bd6154d9eefb5bba5ed40c, type: 3}
   EnemySprite: {fileID: 21300000, guid: 9dcfe9fa62ef2ee4b8fac3946879b0a3, type: 3}
+  enemyDeathMaterial: {fileID: 2100000, guid: a2f96544141f9884c9512d196ef33b8f, type: 2}
   LifeBarSprite: {fileID: 21300000, guid: 0a69a4ab404afb54c87fccb5a82cfc13, type: 3}
   EnemyAnimatorController: {fileID: 9100000, guid: 3df6a3c7740ac7d4e89d387605f3df56, type: 2}
   EnemyPosition: {x: 5.17, y: 0.94, z: 0}

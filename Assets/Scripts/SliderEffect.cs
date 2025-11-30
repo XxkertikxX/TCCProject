@@ -24,8 +24,6 @@ public class SliderEffect : MonoBehaviour
         sliderVolume = GetComponentsInChildren<Slider>();
         volumeVisual = GetComponentsInChildren<Text>();
         Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
-        Debug.Log(sliderVolume[1].value);
-        Debug.Log(volumeSO.musicVolume);
         sliderVolume[0].value = volumeSO.soundsVolume;
         sliderVolume[1].value = volumeSO.musicVolume;
     }
@@ -34,9 +32,6 @@ public class SliderEffect : MonoBehaviour
     {
         if (gameObject == null)
             return;
-
-        sliderVolume[0].value = volumeSO.soundsVolume;
-        sliderVolume[1].value = volumeSO.musicVolume;
 
         ChangeVolume();
     }
@@ -48,6 +43,7 @@ public class SliderEffect : MonoBehaviour
     }
 
     public void ChangeVolume() {
+
         GameAudioManager.soundVolume = sliderVolume[0].value;
         MusicPlayer.musicVolume = sliderVolume[1].value;
         GameAudioManager.instance.ChangeVolumeRoot();

@@ -79,7 +79,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Floresta Cristalina
+  m_Text: Ta olhando o que?
 --- !u!1 &2655192487453218233
 GameObject:
   m_ObjectHideFlags: 0
@@ -110,6 +110,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6904365461580346786}
+  - {fileID: 3842427702356131923}
   m_Father: {fileID: 4662060689516187349}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -134,28 +135,116 @@ MonoBehaviour:
   - MainReignScene: Tutorial1
     ReignFont: {fileID: 12800000, guid: ab7a417e0f742e344888acecc7db7e91, type: 3}
     ReignName: Floresta Cristalina
+    ReignDescription: "Onde tudo come\xE7a..."
   - MainReignScene: Tutorial2
     ReignFont: {fileID: 12800000, guid: ab7a417e0f742e344888acecc7db7e91, type: 3}
     ReignName: Reino Humano
+    ReignDescription: 
   - MainReignScene: Tutorial3
     ReignFont: {fileID: 12800000, guid: ab7a417e0f742e344888acecc7db7e91, type: 3}
-    ReignName: Camara do Rei
+    ReignName: "C\xE2mara do Rei"
+    ReignDescription: ...
   - MainReignScene: Vento1
     ReignFont: {fileID: 12800000, guid: ab7a417e0f742e344888acecc7db7e91, type: 3}
     ReignName: Margem entre Reinos
-  - MainReignScene: Vento2
+    ReignDescription: Pode-se sentir a leve brisa do vento...
+  - MainReignScene: Vento3
     ReignFont: {fileID: 12800000, guid: ab7a417e0f742e344888acecc7db7e91, type: 3}
-    ReignName: Reino Do Vento
+    ReignName: Acima das Nuvens
+    ReignDescription: "N\xE3o da nem para ver o ch\xE3o!"
   - MainReignScene: Sombra1
     ReignFont: {fileID: 12800000, guid: ab7a417e0f742e344888acecc7db7e91, type: 3}
     ReignName: Reino das Sombras
-  - MainReignScene: Sombra2
+    ReignDescription: A noite de dia e o breo de noite
+  - MainReignScene: Sombra3
     ReignFont: {fileID: 12800000, guid: ab7a417e0f742e344888acecc7db7e91, type: 3}
-    ReignName: Raizes Sombrias
+    ReignName: "Cora\xE7\xE3o da Escurid\xE3o"
+    ReignDescription: "Mais sombrio que a pr\xF3pria escurid\xE3o..."
   nomeRegiao: {fileID: 2026252639120658894}
+  reinoDescricao: {fileID: 8218602135526706515}
   alphaTransTime: 1
   alphaToGo: 0
   delayTillFade: 2
+--- !u!1 &3632393844948775843
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3842427702356131923}
+  - component: {fileID: 6252405428797129036}
+  - component: {fileID: 8218602135526706515}
+  m_Layer: 5
+  m_Name: Text (Legacy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &3842427702356131923
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3632393844948775843}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5025184452198950399}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -473.65634, y: 369.99994}
+  m_SizeDelta: {x: 978.6874, y: 150.4464}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &6252405428797129036
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3632393844948775843}
+  m_CullTransparentMesh: 1
+--- !u!114 &8218602135526706515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3632393844948775843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.8301887, g: 0.8301887, b: 0.8301887, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: ab7a417e0f742e344888acecc7db7e91, type: 3}
+    m_FontSize: 61
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 100
+    m_Alignment: 3
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: ...
 --- !u!1 &4662060689516187353
 GameObject:
   m_ObjectHideFlags: 0

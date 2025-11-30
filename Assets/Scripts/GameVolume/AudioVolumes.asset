@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7469bff070f9035439479d2c3e04a288, type: 3}
   m_Name: AudioVolumes
   m_EditorClassIdentifier: 
-  soundsVolume: 0.85161656
-  musicVolume: 0.192
+  soundsVolume: 0.6822631
+  musicVolume: 0.5

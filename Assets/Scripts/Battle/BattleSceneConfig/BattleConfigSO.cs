@@ -5,12 +5,13 @@ public class BattleConfigSO : ScriptableObject {
     public StatusCharacters EnemyStatus;
     public GameObject Background;
     public Sprite EnemySprite;
+    public Material enemyDeathMaterial;
     public Sprite LifeBarSprite;
     public RuntimeAnimatorController EnemyAnimatorController;
     public Vector3 EnemyPosition;
     public int Index;
 	public TextActionString Text;
 	public IconsSO Icons;
-    public bool hasDialog; //temporario
+    public bool hasDialog; 
     public bool hasTutorial;
 }

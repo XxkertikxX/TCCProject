@@ -68,6 +68,7 @@ public class EnemyTurn : MonoBehaviour, IDeath
         Save(true);
     }
 
+
     private IEnumerator Action() {
         if (GetComponent<CharacterAttributes>().LifeSystem.ActualValue() <= 0) yield break;
         Active(false);

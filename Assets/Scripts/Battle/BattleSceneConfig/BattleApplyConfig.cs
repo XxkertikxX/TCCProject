@@ -8,6 +8,7 @@ public class BattleApplyConfig : MonoBehaviour {
     [SerializeField] private SpriteRenderer LifeBar;
     [SerializeField] private CharacterAttributes enemyCharacter;
     [SerializeField] private Animator animEnemy;
+    [SerializeField] private GameObject particlesMaterial;
     [SerializeField] private Transform enemyTransform;
     [SerializeField] private EnemyTurn enemyTurn;
     [SerializeField] private DialogIconsUI iconsUI;
@@ -24,5 +25,6 @@ public class BattleApplyConfig : MonoBehaviour {
         enemyTurn.Index = battleConfigSO.Index;
         tutorial.hasTutorial = battleConfigSO.hasTutorial;
         dialog.SetActive(battleConfigSO.hasDialog);
+        particlesMaterial.GetComponent<ParticleSystemRenderer>().material = battleConfigSO.enemyDeathMaterial;
     }
 }

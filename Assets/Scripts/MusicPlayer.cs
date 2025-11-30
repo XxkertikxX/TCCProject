@@ -11,6 +11,8 @@ public class MusicPlayer : MonoBehaviour
     [SerializeField] private AudioSource musicAudioSource;
     public static float musicVolume;
 
+    private bool fadeTransition = false;
+
     private void Awake() //fazer fade in e out da musica
     {
         instance = this;
@@ -24,11 +26,12 @@ public class MusicPlayer : MonoBehaviour
     {
         musicAudioSource.volume = volumeSO.musicVolume;
     }
-
+    
     public void ChangeVolumeRoot()
     {
         volumeSO.musicVolume = musicVolume;
     }
+
     private void PlayMusic(Scene actual, LoadSceneMode a)
     {
         for (int i = 0; i < musics.Length; i++)
@@ -57,9 +60,7 @@ public class MusicPlayer : MonoBehaviour
 
     private void OnEnable()
     {
-
         SceneManager.sceneLoaded += PlayMusic;
-
     }
 
     private void OnDisable()

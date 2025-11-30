@@ -11,36 +11,49 @@ public class EnteringNewArea : MonoBehaviour
 
     [Header("Propriedades de efeito")]
     [SerializeField] private Text nomeRegiao;
+    [SerializeField] private Text reinoDescricao;
     [SerializeField] private float alphaTransTime;
     [SerializeField] private float alphaToGo;
     [SerializeField] private float delayTillFade;
+    private bool isAlreadyDisplaying = false;
+    private Coroutine playingCoroutine = null;
 
     private void Start() {
         for (int i = 0; i < nameEffectScenes.Length; i++)  {
             if (SceneManager.GetActiveScene().name == nameEffectScenes[i].MainReignScene) {
+                isAlreadyDisplaying = true;
                 MakeNameEffect(i);
                 return;
             }
         }
         nomeRegiao.color = Color.clear;
-    }
-
-    public void MakeTextAppear(string texto)
-    {
-        nomeRegiao.text = texto;
+        reinoDescricao.color = Color.clear;
     }
 
     private void MakeNameEffect(int SceneIndex) {
         nomeRegiao.font = nameEffectScenes[SceneIndex].ReignFont;
         nomeRegiao.text = nameEffectScenes[SceneIndex].ReignName;
-        StartCoroutine(AfterDelay());
+        reinoDescricao.font = nameEffectScenes[SceneIndex].ReignFont;
+        reinoDescricao.text = nameEffectScenes[SceneIndex].ReignDescription;
+        playingCoroutine =  StartCoroutine(AfterDelay(nomeRegiao.text, reinoDescricao.text));
     }
 
-    IEnumerator AfterDelay() {
+    IEnumerator AfterDelay(string nome, string descricao) {
+        isAlreadyDisplaying = true;
+
+        nomeRegiao.text = nome;
+        reinoDescricao.text = descricao;
+        nomeRegiao.CrossFadeAlpha(1f, 0f, false);
+        yield return new WaitForSeconds(0.2f);
+        reinoDescricao.CrossFadeAlpha(1f, 0.5f, false);
         yield return new WaitForSeconds(delayTillFade);
         nomeRegiao.CrossFadeAlpha(alphaToGo, alphaTransTime, false);
+        yield return new WaitForSeconds(0.2f);
+        reinoDescricao.CrossFadeAlpha(alphaToGo, alphaTransTime, false);
+        while(Mathf.Abs(reinoDescricao.color.a - alphaToGo) > 0.01f)
+            yield return null;
+        isAlreadyDisplaying = false;
     }
-
 }
 
 
@@ -50,9 +63,11 @@ public struct ScenesWithName
     public string MainReignScene;
     public Font ReignFont;
     public string ReignName;
-    public ScenesWithName(string scene,Font rFont, string rName) {
+    [TextArea] public string ReignDescription;
+    public ScenesWithName(string scene,Font rFont, string rName, string des) {
         MainReignScene = scene;
         ReignFont = rFont;
         ReignName = rName;
+        ReignDescription = des;
     }
 }

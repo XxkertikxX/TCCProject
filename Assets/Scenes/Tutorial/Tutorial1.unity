@@ -923,15 +923,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4587156928216817273, guid: 63947757673c62241a30fdc7fe2514b1, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7552818
+      value: 0.82442266
       objectReference: {fileID: 0}
     - target: {fileID: 4587156928216817273, guid: 63947757673c62241a30fdc7fe2514b1, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.65540016
+      value: 0.56597465
       objectReference: {fileID: 0}
     - target: {fileID: 4587156928216817273, guid: 63947757673c62241a30fdc7fe2514b1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 81.9
+      value: 68.94
       objectReference: {fileID: 0}
     - target: {fileID: 4587156928216817275, guid: 63947757673c62241a30fdc7fe2514b1, type: 3}
       propertyPath: ShapeModule.m_Scale.x
@@ -3166,6 +3166,22 @@ PrefabInstance:
       propertyPath: dialog
       value: 
       objectReference: {fileID: 1094421357}
+    - target: {fileID: 1677828655360256835, guid: 0176e239f4823f0448534ea7d9b17aa6, type: 3}
+      propertyPath: m_Size.x
+      value: 2.928
+      objectReference: {fileID: 0}
+    - target: {fileID: 1677828655360256835, guid: 0176e239f4823f0448534ea7d9b17aa6, type: 3}
+      propertyPath: m_Size.y
+      value: 4.019131
+      objectReference: {fileID: 0}
+    - target: {fileID: 1677828655360256835, guid: 0176e239f4823f0448534ea7d9b17aa6, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5c67bd9ce989c6e49b1370618a694680, type: 3}
+    - target: {fileID: 1677828655360256835, guid: 0176e239f4823f0448534ea7d9b17aa6, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3406809117074333619, guid: 0176e239f4823f0448534ea7d9b17aa6, type: 3}
       propertyPath: cam
       value: 
@@ -14486,7 +14502,7 @@ GameObject:
   - component: {fileID: 1586226042}
   - component: {fileID: 1586226044}
   - component: {fileID: 1586226043}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}

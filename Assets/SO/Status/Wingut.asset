@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Wingut
   Level: 0
-  Xp: 0
+  Xp: 350
   Life: 320
   Defense: 0
   Power: 95

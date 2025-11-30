@@ -12,6 +12,9 @@ public class EnemyDamage : MonoBehaviour
 
     public void EnemyTakingDamage()
     {
-        eAnim.Play("TakingDamage");
+        if (eAnim.GetBool("Died") != true)
+        {
+            eAnim.Play("TakingDamage");
+        }
     }
 }
