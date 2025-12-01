@@ -12,7 +12,8 @@ public class DialogEnableUI : MonoBehaviour, IDialogSetup
     }
     
     public void SetupCloseDialog(){
-        screenDialog.SetActive(false);
-        screenHUD.SetActive(active);
+		Debug.Log("Active =" + active);
+        screenDialog.SetActive(active);
+        screenHUD.SetActive(!active);
     }
 }

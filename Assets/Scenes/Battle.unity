@@ -313,6 +313,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca56b2eb74afd4c40b1118ae0424d205, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  config: {fileID: 862944646}
   hasTutorial: 0
   tutoriais:
   - {fileID: 131729118}
@@ -411,6 +412,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63781faa013405244b0041d83ad1bc6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogBase: {fileID: 0}
 --- !u!114 &35922174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22423,6 +22425,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63781faa013405244b0041d83ad1bc6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogBase: {fileID: 0}
 --- !u!114 &773976128
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22452,7 +22455,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   screenDialog: {fileID: 17717848}
   screenHUD: {fileID: 2034996690}
-  active: 1
+  active: 0
 --- !u!114 &773976130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24513,6 +24516,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63781faa013405244b0041d83ad1bc6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogBase: {fileID: 0}
 --- !u!114 &954095171
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24542,7 +24546,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   screenDialog: {fileID: 17717848}
   screenHUD: {fileID: 2034996690}
-  active: 1
+  active: 0
 --- !u!114 &954095173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38168,6 +38172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63781faa013405244b0041d83ad1bc6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogBase: {fileID: 0}
 --- !u!114 &1499478484
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38908,6 +38913,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63781faa013405244b0041d83ad1bc6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogBase: {fileID: 0}
 --- !u!114 &1623998555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38976,7 +38982,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   screenDialog: {fileID: 17717848}
   screenHUD: {fileID: 2034996690}
-  active: 1
+  active: 0
 --- !u!114 &1623998560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40493,7 +40499,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a0b37de3ce7abd47abea27a80c554c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemy: {fileID: 2030265213}
   name: {fileID: 1189364197}
+  config: {fileID: 862944646}
 --- !u!1 &1847891008
 GameObject:
   m_ObjectHideFlags: 0
