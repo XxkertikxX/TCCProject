@@ -1721,7 +1721,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &367800419
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1856,6 +1856,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 367800418}
   index: 1
+  ifWasDefeated: {fileID: 11400000, guid: dac5321513affb54cb462d260cef8abc, type: 2}
 --- !u!95 &367800425
 Animator:
   serializedVersion: 4
@@ -4519,6 +4520,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MorreuMenu: {fileID: 170265860}
+  video: 0
+  VideoPlayer: {fileID: 0}
 --- !u!4 &1462011539
 Transform:
   m_ObjectHideFlags: 0
@@ -5542,7 +5545,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -48469103
-  m_SortingLayer: -3
+  m_SortingLayer: -4
   m_SortingOrder: -255
   m_Sprite: {fileID: 21300000, guid: 9a2630759bcde5f429e78e29ff4391d9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

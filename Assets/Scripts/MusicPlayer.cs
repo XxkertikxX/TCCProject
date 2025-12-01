@@ -32,6 +32,11 @@ public class MusicPlayer : MonoBehaviour
         volumeSO.musicVolume = musicVolume;
     }
 
+    public void StopMusic()
+    {
+        musicAudioSource.Stop();
+    }
+
     private void PlayMusic(Scene actual, LoadSceneMode a)
     {
         for (int i = 0; i < musics.Length; i++)
@@ -48,7 +53,7 @@ public class MusicPlayer : MonoBehaviour
                     {
                         musicAudioSource.Stop();
                     }
-
+                    instance.musicAudioSource.enabled = true;
                     instance.musicAudioSource.clip = musics[i].MusicClip;
                     instance.musicAudioSource.Play();
                     return;

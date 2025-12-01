@@ -1434,7 +1434,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1291711619
   m_SortingLayer: 3
-  m_SortingOrder: 9
+  m_SortingOrder: 8
   m_Sprite: {fileID: 21300000, guid: 2e436bf699914be458255217138297d3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -7036,9 +7036,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -1291711619
+  m_SortingLayer: 3
+  m_SortingOrder: 12
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -12084,9 +12084,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -1291711619
+  m_SortingLayer: 3
+  m_SortingOrder: 12
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -12857,7 +12857,19 @@ MonoBehaviour:
   m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 647582849}
+        m_TargetAssemblyTypeName: TookDamageAnim, CamMan
+        m_MethodName: TomouHit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &251177511
 GameObject:
   m_ObjectHideFlags: 0
@@ -13504,7 +13516,19 @@ MonoBehaviour:
   m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1815877708}
+        m_TargetAssemblyTypeName: TookDamageAnim, CamMan
+        m_MethodName: TomouHit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &347908227
 GameObject:
   m_ObjectHideFlags: 0
@@ -13862,6 +13886,7 @@ GameObject:
   - component: {fileID: 353896844}
   - component: {fileID: 353896843}
   - component: {fileID: 353896845}
+  - component: {fileID: 353896846}
   m_Layer: 0
   m_Name: RenderAlon
   m_TagString: Untagged
@@ -13974,6 +13999,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 460510d8105ab1848b53305e919b7046, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &353896846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 353896841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47fa011bd0f128449a8188a55b2e3324, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  charLife: 0
+  lifeSlider: {fileID: 556336606}
 --- !u!1 &361681895
 GameObject:
   m_ObjectHideFlags: 0
@@ -19578,6 +19617,7 @@ GameObject:
   - component: {fileID: 498429308}
   - component: {fileID: 498429307}
   - component: {fileID: 498429309}
+  - component: {fileID: 498429310}
   m_Layer: 0
   m_Name: RenderClementine
   m_TagString: Untagged
@@ -19690,6 +19730,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 460510d8105ab1848b53305e919b7046, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &498429310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498429305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47fa011bd0f128449a8188a55b2e3324, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  charLife: 0
+  lifeSlider: {fileID: 793644272}
 --- !u!1 &505104774
 GameObject:
   m_ObjectHideFlags: 0
@@ -20343,7 +20397,19 @@ MonoBehaviour:
   m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 353896846}
+        m_TargetAssemblyTypeName: TookDamageAnim, CamMan
+        m_MethodName: TomouHit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &574939100
 GameObject:
   m_ObjectHideFlags: 0
@@ -20593,7 +20659,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1291711619
   m_SortingLayer: 3
-  m_SortingOrder: 10
+  m_SortingOrder: 12
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -20623,7 +20689,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &642683607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20719,6 +20785,7 @@ GameObject:
   - component: {fileID: 647582847}
   - component: {fileID: 647582846}
   - component: {fileID: 647582848}
+  - component: {fileID: 647582849}
   m_Layer: 0
   m_Name: RenderLiora
   m_TagString: Untagged
@@ -20831,6 +20898,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 460510d8105ab1848b53305e919b7046, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &647582849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 647582844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47fa011bd0f128449a8188a55b2e3324, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  charLife: 0
+  lifeSlider: {fileID: 247390343}
 --- !u!1 &650293723
 GameObject:
   m_ObjectHideFlags: 0
@@ -20940,7 +21021,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4767783486949814014, guid: a32c455b96022364fa316f55bef42579, type: 3}
       propertyPath: m_SortingOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4767783486949814014, guid: a32c455b96022364fa316f55bef42579, type: 3}
       propertyPath: m_SortingLayerID
@@ -21815,7 +21896,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1291711619
   m_SortingLayer: 3
-  m_SortingOrder: 10
+  m_SortingOrder: 12
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -22469,7 +22550,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1291711619
   m_SortingLayer: 3
-  m_SortingOrder: 10
+  m_SortingOrder: 8
   m_Sprite: {fileID: 21300000, guid: a5475f25099a46f45a981ea44ca7b250, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.27058825}
   m_FlipX: 0
@@ -22648,7 +22729,19 @@ MonoBehaviour:
   m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 498429310}
+        m_TargetAssemblyTypeName: TookDamageAnim, CamMan
+        m_MethodName: TomouHit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &807423295
 GameObject:
   m_ObjectHideFlags: 0
@@ -24061,67 +24154,6 @@ Transform:
   m_Father: {fileID: 172780319}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &937767088
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3197450187991174363, guid: 7cc18415399c7d740bb9be8e8352b824, type: 3}
-      propertyPath: m_RootOrder
-      value: 22
-      objectReference: {fileID: 0}
-    - target: {fileID: 3197450187991174363, guid: 7cc18415399c7d740bb9be8e8352b824, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -2.1838045
-      objectReference: {fileID: 0}
-    - target: {fileID: 3197450187991174363, guid: 7cc18415399c7d740bb9be8e8352b824, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.4507112
-      objectReference: {fileID: 0}
-    - target: {fileID: 3197450187991174363, guid: 7cc18415399c7d740bb9be8e8352b824, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -10.333436
-      objectReference: {fileID: 0}
-    - target: {fileID: 3197450187991174363, guid: 7cc18415399c7d740bb9be8e8352b824, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3197450187991174363, guid: 7cc18415399c7d740bb9be8e8352b824, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3197450187991174363, guid: 7cc18415399c7d740bb9be8e8352b824, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3197450187991174363, guid: 7cc18415399c7d740bb9be8e8352b824, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3197450187991174363, guid: 7cc18415399c7d740bb9be8e8352b824, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3197450187991174363, guid: 7cc18415399c7d740bb9be8e8352b824, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3197450187991174363, guid: 7cc18415399c7d740bb9be8e8352b824, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5384934313870806094, guid: 7cc18415399c7d740bb9be8e8352b824, type: 3}
-      propertyPath: m_Volume
-      value: 0.6822631
-      objectReference: {fileID: 0}
-    - target: {fileID: 8466112927380274407, guid: 7cc18415399c7d740bb9be8e8352b824, type: 3}
-      propertyPath: m_Name
-      value: AudioManager
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 7cc18415399c7d740bb9be8e8352b824, type: 3}
 --- !u!1 &938928764
 GameObject:
   m_ObjectHideFlags: 0
@@ -24879,7 +24911,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1291711619
   m_SortingLayer: 3
-  m_SortingOrder: 10
+  m_SortingOrder: 12
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -25155,7 +25187,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1291711619
   m_SortingLayer: 3
-  m_SortingOrder: 10
+  m_SortingOrder: 12
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -32412,9 +32444,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -1291711619
+  m_SortingLayer: 3
+  m_SortingOrder: 12
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -32496,9 +32528,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -1291711619
+  m_SortingLayer: 3
+  m_SortingOrder: 12
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -38323,7 +38355,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1291711619
   m_SortingLayer: 3
-  m_SortingOrder: 10
+  m_SortingOrder: 12
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -38638,7 +38670,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1291711619
   m_SortingLayer: 3
-  m_SortingOrder: 10
+  m_SortingOrder: 12
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -39715,7 +39747,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1291711619
   m_SortingLayer: 3
-  m_SortingOrder: 10
+  m_SortingOrder: 12
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -40192,6 +40224,7 @@ GameObject:
   - component: {fileID: 1815877705}
   - component: {fileID: 1815877706}
   - component: {fileID: 1815877707}
+  - component: {fileID: 1815877708}
   m_Layer: 0
   m_Name: RenderEmber
   m_TagString: Untagged
@@ -40304,6 +40337,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 460510d8105ab1848b53305e919b7046, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1815877708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1815877703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47fa011bd0f128449a8188a55b2e3324, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  charLife: 0
+  lifeSlider: {fileID: 340634486}
 --- !u!1 &1816778925
 GameObject:
   m_ObjectHideFlags: 0

@@ -47,9 +47,18 @@ public class EnemyTurn : MonoBehaviour, IDeath
             for (int i = 0; i < characters.Length; i++) {
                 characters[i].Xp = xpInicial[i];
             }
-            MorreuMenu.SetActive(true);
+            StartCoroutine(EveryoneDied());
+            
         }
         Stun.SetActive(GetComponent<CharacterAttributes>().TurnsForCanAttack > 0);
+    }
+
+    IEnumerator EveryoneDied()
+    {
+        yield return new WaitForSeconds(2f);
+        MorreuMenu.SetActive(true);
+        GameAudioManager.StopSound();
+        MusicPlayer.instance.StopMusic();
     }
 
     public void Death() {        
@@ -101,10 +110,9 @@ public class EnemyTurn : MonoBehaviour, IDeath
         useSkill.EventInvoke();
         yield return new WaitUntil(() => DialogManager.OnDialog == false);
 		yield return skill.TargetType.Targets();
-        Debug.Log(skill.TargetType.Targets().Current);
         skill.Skill(enemy.Power, GetComponent<AttackRhythm>());
         applySkill.EventInvoke();
-		yield return new WaitUntil(() => DialogManager.OnDialog == false);
+        yield return new WaitUntil(() => DialogManager.OnDialog == false);
     }
 
     private bool AllCharactersPlay() {

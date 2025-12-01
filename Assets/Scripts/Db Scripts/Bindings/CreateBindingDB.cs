@@ -30,6 +30,7 @@ public class CreateBindingDB : MonoBehaviour
         CreateKey("Run", col, KeyCode.LeftShift);
         CreateKey("Interact", col, KeyCode.E);
         CreateKey("Skip", col, KeyCode.Space);
+        CreateKey("Tab", col, KeyCode.Tab);
         CreateKey("Menu", col, KeyCode.Escape);
         CreateKey("Return", col, KeyCode.X);
         CreateKey("Save", col, KeyCode.F5);

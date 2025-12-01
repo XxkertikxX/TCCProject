@@ -16,9 +16,18 @@ public class GameAudioManager : MonoBehaviour
 
     private void Awake() {
         instance = this;
+
+        /*var objects = FindObjectsOfType<GameAudioManager>();
+
+        if(objects.Length > 1)
+        {
+            Destroy(gameObject);
+        }
+        DontDestroyOnLoad(gameObject);*/
     }
 
     private void Start() {
+        Debug.Log(audioSource != null);
         audioSource = GetComponent<AudioSource>();
     }
     private void Update()
@@ -36,6 +45,11 @@ public class GameAudioManager : MonoBehaviour
         AudioClip[] clips = instance.soundsList[(int)audioClips].Sounds;
         AudioClip randomClip = clips[UnityEngine.Random.Range(0, clips.Length)];
         instance.audioSource.PlayOneShot(randomClip);
+    }
+
+    public static void StopSound()
+    {
+        instance.audioSource.Stop();
     }
 
 #if UNITY_EDITOR

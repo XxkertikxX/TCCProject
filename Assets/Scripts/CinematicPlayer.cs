@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Playables;
 
@@ -13,10 +14,21 @@ public class CinematicPlayer : MonoBehaviour
         director = GetComponent<PlayableDirector>();
         playerMove = player.GetComponent<PlayerMovementSystem>();
         playerAnim = player.GetComponentInChildren<AnimationSrc>();
+    }
+
+    private void Start()
+    {
+        CheckIfDefeated();
+    }
+
+    private void CheckIfDefeated()
+    {
         if (played.WasPlayed)
         {
             gameObject.SetActive(false);
+            return;
         }
+        gameObject.SetActive(true);
     }
 
     private void OnEnable() {
@@ -33,7 +45,7 @@ public class CinematicPlayer : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.tag == "Player") { 
             director.Play();
-            played.WasPlayed = true;
+            //played.WasPlayed = true;
         }
     }
 

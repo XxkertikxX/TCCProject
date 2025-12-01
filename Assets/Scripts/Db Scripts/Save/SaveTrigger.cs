@@ -22,6 +22,7 @@ public class SaveTrigger : MonoBehaviour
             }
             else
             {
+                Time.timeScale = 0f;
                 MorreuMenu.SetActive(true);
                 OnDeath?.Invoke();
                 StartCoroutine(Morreu());
