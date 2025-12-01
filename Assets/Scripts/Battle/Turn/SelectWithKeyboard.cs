@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 
 public class SelectWithKeyboard : MonoBehaviour
-{
+{	
     [SerializeField] private CharacterClick characterClick;
     [SerializeField] private string key;
     [SerializeField] private GameObject selectIndicator;
