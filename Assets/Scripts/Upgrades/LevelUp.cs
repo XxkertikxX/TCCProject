@@ -25,38 +25,40 @@ public class LevelUp : MonoBehaviour
 
     private float XpToNext => 100 + character.Level * 100;
 
-    public IEnumerator UpLevel() {
-		character.Xp += 50;
+	public IEnumerator UpLevel() {
+		float xpToAdd = 50f;
+
+		float xpRemainingToAnimate = xpToAdd;
+
 		HUD.SetActive(false);
-        Dialogs.SetActive(false);
+		Dialogs.SetActive(false);
 		UI.SetActive(true);
-        float x = character.Xp;
-        while (x > 0) {
-            float xpRemaining = x;
-            float xpNeeded = XpToNext * (1f - xpSlider.value);
 
-            float deltaXP = Mathf.Min(xpRemaining, xpNeeded);
+		while (xpRemainingToAnimate > 0) {
+			float xpNeeded = XpToNext - (character.Xp % XpToNext);
+			float delta = Mathf.Min(xpRemainingToAnimate, xpNeeded);
 
-            float speed = fillSpeedBase + character.Xp * fillSpeedMultiplier;
+			float startValue = xpSlider.value;
+			float endValue = (character.Xp % XpToNext + delta) / XpToNext;
 
-            float startValue = xpSlider.value;
-            float endValue = (startValue * XpToNext + deltaXP) / XpToNext;
+			float t = 0f;
+			float speed = fillSpeedBase + (character.Level * fillSpeedMultiplier);
 
-            float t = 0f;
-            x -= deltaXP;
-            while (t < 1f) {
-                t += Time.deltaTime * speed;
-                xpSlider.value = Mathf.Lerp(startValue, endValue, t);
-                yield return null;
-            }
+			while (t < 1f) {
+				t += Time.deltaTime * speed;
+				xpSlider.value = Mathf.Lerp(startValue, endValue, t);
+				yield return null;
+			}
 
-            if (Mathf.Approximately(xpSlider.value, 1f)) {
-                character.Level++;
-                xpSlider.value = 0f;
-                character.Xp -= xpNeeded;
-                yield return StartCoroutine(OnLevelUp());
-            }
-        }
+			character.Xp += delta;
+			xpRemainingToAnimate -= delta;
+
+			if (Mathf.Approximately(xpSlider.value, 1f)) {
+				character.Level++;
+				xpSlider.value = 0f;
+				yield return StartCoroutine(OnLevelUp());
+			}
+		}
     }
 
     private IEnumerator OnLevelUp() {
