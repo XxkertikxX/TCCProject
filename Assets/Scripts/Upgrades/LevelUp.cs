@@ -19,8 +19,8 @@ public class LevelUp : MonoBehaviour
     [SerializeField] private Slider xpSlider;
 
     [Header("Config")]
-    [SerializeField] private float fillSpeedBase = 0.1f;
-    [SerializeField] private float fillSpeedMultiplier = 0.02f;
+    [SerializeField] private float fillSpeedBase = 0.001f;
+    [SerializeField] private float fillSpeedMultiplier = 0.002f;
 
 
     private float XpToNext => 100 + character.Level * 100;
@@ -33,6 +33,7 @@ public class LevelUp : MonoBehaviour
 		HUD.SetActive(false);
 		Dialogs.SetActive(false);
 		UI.SetActive(true);
+		Level.SetActive(true);
 
 		while (xpRemainingToAnimate > 0) {
 			float xpNeeded = XpToNext - (character.Xp % XpToNext);

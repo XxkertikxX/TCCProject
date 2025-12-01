@@ -40,12 +40,41 @@ public class GameAudioManager : MonoBehaviour
         volumeSO.soundsVolume = soundVolume;
     }
 
-    public static void PlaySound(SoundTypes audioClips)
-    {
-        AudioClip[] clips = instance.soundsList[(int)audioClips].Sounds;
-        AudioClip randomClip = clips[UnityEngine.Random.Range(0, clips.Length)];
-        instance.audioSource.PlayOneShot(randomClip);
-    }
+	public static void PlaySound(SoundTypes audioClips) {
+		if (instance == null) {
+			Debug.LogError("GameAudioManager.instance == NULL");
+			return;
+		}
+
+		if (instance.audioSource == null) {
+			Debug.LogError("GameAudioManager.audioSource == NULL");
+			return;
+		}
+
+		if (instance.soundsList == null) {
+			Debug.LogError("GameAudioManager.soundsList == NULL");
+			return;
+		}
+
+		if ((int)audioClips >= instance.soundsList.Length) {
+			Debug.LogError($"soundList não contém índice {(int)audioClips}");
+			return;
+		}
+
+		if (instance.soundsList[(int)audioClips].Sounds == null) {
+			Debug.LogError($"soundsList[{(int)audioClips}] existe, mas Sounds == NULL");
+			return;
+		}
+
+		if (instance.soundsList[(int)audioClips].Sounds.Length == 0) {
+			Debug.LogError($"soundsList[{(int)audioClips}].Sounds está vazio");
+			return;
+		}
+		AudioClip[] clips = instance.soundsList[(int)audioClips].Sounds;
+		AudioClip randomClip = clips[UnityEngine.Random.Range(0, clips.Length)];
+		instance.audioSource.PlayOneShot(randomClip);
+	}
+
 
     public static void StopSound()
     {
