@@ -14618,6 +14618,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63781faa013405244b0041d83ad1bc6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogBase: {fileID: 0}
 --- !u!114 &1094421354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14685,7 +14686,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   screenDialog: {fileID: 2129208332}
   screenHUD: {fileID: 49442170}
-  active: 1
+  active: 0
 --- !u!61 &1094421359
 BoxCollider2D:
   m_ObjectHideFlags: 0

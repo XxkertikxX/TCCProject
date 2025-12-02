@@ -6141,7 +6141,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   screenDialog: {fileID: 107619418}
   screenHUD: {fileID: 2054733524}
-  active: 1
+  active: 0
 --- !u!114 &1987445910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6184,6 +6184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63781faa013405244b0041d83ad1bc6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogBase: {fileID: 0}
 --- !u!114 &1987445913
 MonoBehaviour:
   m_ObjectHideFlags: 0

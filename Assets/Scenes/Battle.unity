@@ -47848,7 +47848,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   screenDialog: {fileID: 17717848}
   screenHUD: {fileID: 2034996690}
-  active: 1
+  active: 0
 --- !u!114 &1499478486
 MonoBehaviour:
   m_ObjectHideFlags: 0
