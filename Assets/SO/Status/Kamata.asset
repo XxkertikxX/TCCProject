@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Kamata
   Level: 0
-  Xp: 2443
+  Xp: 0
   Life: 300
   Defense: 0
   Power: 80

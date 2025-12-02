@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Tatu
   Level: 0
-  Xp: 162
+  Xp: 0
   Life: 150
   Defense: 0
   Power: 70
