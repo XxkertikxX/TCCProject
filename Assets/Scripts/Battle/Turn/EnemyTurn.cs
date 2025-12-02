@@ -24,6 +24,7 @@ public class EnemyTurn : MonoBehaviour, IDeath
     [SerializeField] private Slider hiddenMana;
 	[SerializeField] private ManaSO mana;
     [SerializeField] private GameObject Stun;
+    private bool everyoneDied = false;
 
     private StatusCharacters enemy;
 
@@ -39,26 +40,34 @@ public class EnemyTurn : MonoBehaviour, IDeath
         }
     }
 
-    void Update() {
-        if (AllCharactersPlay() || LowestManaConsume() > ManaSystem.Mp.ActualValue() && !inAction && !PlayerCharactersSkills.OnBattle) {
-            StartCoroutine(Action());
-        }
-        if(Characters().Length == 0) {
-            for (int i = 0; i < characters.Length; i++) {
-                characters[i].Xp = xpInicial[i];
+    void Update()
+    {
+        if (!everyoneDied)
+        {
+            if (AllCharactersPlay() || LowestManaConsume() > ManaSystem.Mp.ActualValue() && !inAction && !PlayerCharactersSkills.OnBattle)
+            {
+                StartCoroutine(Action());
             }
-            StartCoroutine(EveryoneDied());
-            
+            if (Characters().Length == 0)
+            {
+                for (int i = 0; i < characters.Length; i++)
+                {
+                    characters[i].Xp = xpInicial[i];
+                }
+                StartCoroutine(EveryoneDied());
+
+            }
+            Stun.SetActive(GetComponent<CharacterAttributes>().TurnsForCanAttack > 0);
         }
-        Stun.SetActive(GetComponent<CharacterAttributes>().TurnsForCanAttack > 0);
     }
 
-    IEnumerator EveryoneDied()
+        IEnumerator EveryoneDied()
     {
         yield return new WaitForSeconds(2f);
         MorreuMenu.SetActive(true);
         GameAudioManager.StopSound();
         MusicPlayer.instance.StopMusic();
+        everyoneDied = true;
     }
 
     public void Death() {        
