@@ -13793,7 +13793,7 @@ MonoBehaviour:
   normalColor: {r: 0, g: 0, b: 0, a: 1}
   selectedColor: {r: 0.33962262, g: 0.33962262, b: 0.33962262, a: 1}
   render: {fileID: 1815877706}
-  changeSpeed: 0.08
+  changeSpeed: 0.8
 --- !u!1 &351812669
 GameObject:
   m_ObjectHideFlags: 0
@@ -33216,7 +33216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80760242f200112479df621ce1ab2290, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  battleConfigSO: {fileID: 11400000, guid: 861fb6d47ae0fb0458ebea067adc04e4, type: 2}
+  battleConfigSO: {fileID: 11400000, guid: 5139a95e020ae10408c8d23d9e5795b2, type: 2}
   enemySpriteRenderer: {fileID: 2030265206}
   LifeBar: {fileID: 2030383431}
   enemyCharacter: {fileID: 2030265213}
@@ -35260,7 +35260,7 @@ MonoBehaviour:
   normalColor: {r: 0, g: 0, b: 0, a: 1}
   selectedColor: {r: 0.33962262, g: 0.33962262, b: 0.33962262, a: 1}
   render: {fileID: 647582846}
-  changeSpeed: 0.08
+  changeSpeed: 0.8
 --- !u!1 &1050614772
 GameObject:
   m_ObjectHideFlags: 0
@@ -48786,7 +48786,7 @@ MonoBehaviour:
   normalColor: {r: 0, g: 0, b: 0, a: 1}
   selectedColor: {r: 0.33962262, g: 0.33962262, b: 0.33962262, a: 1}
   render: {fileID: 353896843}
-  changeSpeed: 0.08
+  changeSpeed: 0.8
 --- !u!1 &1683271417
 GameObject:
   m_ObjectHideFlags: 0
@@ -49095,7 +49095,7 @@ MonoBehaviour:
   normalColor: {r: 0, g: 0, b: 0, a: 1}
   selectedColor: {r: 0.33962262, g: 0.33962262, b: 0.33962262, a: 1}
   render: {fileID: 498429307}
-  changeSpeed: 0.08
+  changeSpeed: 0.8
 --- !u!1001 &1705712453
 PrefabInstance:
   m_ObjectHideFlags: 0
