@@ -42,7 +42,16 @@ public class AnimationSrc : MonoBehaviour
 
     public void UpdateAnimation() 
     {
-        anim.SetFloat("Direction", (int)Mathf.Round(v().normalized.x));
+        if (InputCatalyst.input.InputButton("Run"))
+        {
+            anim.SetBool("Running", true);
+        }
+        if (InputCatalyst.input.InputButtonUp("Run"))
+        {
+            anim.SetBool("Running", false);
+        }
+
+            anim.SetFloat("Direction", (int)Mathf.Round(v().normalized.x));
         anim.SetFloat ("Velocity", Mathf.Round(v().x));
         anim.SetBool("Grounded", jumpSrc.grounded());
         render.flipX = flipped();

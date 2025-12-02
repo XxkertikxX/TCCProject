@@ -8,7 +8,7 @@ public class ShowIsSelected : MonoBehaviour
     [SerializeField] private SpriteRenderer render;
     [SerializeField] private float changeSpeed;
     Coroutine coroutine;
-    bool targetIsNormalColor = true;
+    bool targetIsNormalColor = false;
     void Start()
     {
         normalColor = render.color;
@@ -16,9 +16,10 @@ public class ShowIsSelected : MonoBehaviour
 
     private void Update()
     {
+        Debug.Log(render.color);
         if (coroutine != null)
             return;
-
+        
         coroutine = StartCoroutine(StartColoring());
     }
 
@@ -39,18 +40,27 @@ public class ShowIsSelected : MonoBehaviour
     private IEnumerator StartColoring()
     {
         Color c = target();
-        while (render.color != c)
+        float t = 0f;
+        while (t < 1f)
         {
-            render.color = Color.Lerp(render.color, c, changeSpeed);
+            t += Time.deltaTime * changeSpeed;
+            render.color = Color.Lerp(render.color, c, t);
             yield return null;
         }
-
+        Debug.Log(render.color != c);
+        //render.color = c;
         coroutine = null;
     }
 
     private void OnDisable()
     {
-        coroutine = null;
-        render.color = normalColor;
+        if (coroutine != null)
+        {
+            StopCoroutine(coroutine);
+            coroutine = null;
+        }
+
+        if (render != null)
+            render.color = normalColor;
     }
 }

@@ -27,7 +27,6 @@ public class GameAudioManager : MonoBehaviour
     }
 
     private void Start() {
-        Debug.Log(audioSource != null);
         audioSource = GetComponent<AudioSource>();
     }
     private void Update()

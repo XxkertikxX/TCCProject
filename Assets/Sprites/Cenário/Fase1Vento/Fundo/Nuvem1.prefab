@@ -97,6 +97,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0434464f0e78ed74e991d8d874012fae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LimitX: -200
+  LimitX: -400
   speed: 5
   direction: {x: -1, y: 0, z: 0}

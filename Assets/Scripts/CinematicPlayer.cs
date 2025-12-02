@@ -45,14 +45,13 @@ public class CinematicPlayer : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.tag == "Player") { 
             director.Play();
-            //played.WasPlayed = true;
         }
     }
 
     private void StartCinematic(PlayableDirector aDirector) {
         GetComponent<Collider2D>().enabled = false;
+
         playerMove.enabled = false;
-        playerAnim.enabled = false;
     }
 
     private void EndCinematic(PlayableDirector aDirector) {

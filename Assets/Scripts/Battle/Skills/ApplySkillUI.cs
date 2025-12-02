@@ -11,7 +11,6 @@ public class ApplySkillUI : MonoBehaviour
 	[SerializeField] private Text nameSkill;
 	
 	void Update() {
-		Debug.Log(Character());
 		if(Character() != null)
 		{
 			float minDamage = Mathf.Round((Character().Power) / 100 * (0.5f) * Skill().SkillPower);
