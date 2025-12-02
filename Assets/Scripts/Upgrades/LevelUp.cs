@@ -62,7 +62,7 @@ public class LevelUp : MonoBehaviour
     }
 
     private IEnumerator OnLevelUp() {
-        CharacterForUp = character;
+        CharacterForUp = character.Clone();
         upgradesUsados = new HashSet<UpgradeSO>();
 		Level.SetActive(false);
 		Upgrade.SetActive(true);

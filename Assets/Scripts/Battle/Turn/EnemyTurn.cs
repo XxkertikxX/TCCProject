@@ -89,7 +89,7 @@ public class EnemyTurn : MonoBehaviour, IDeath
 
     private IEnumerator Action() {
         if (GetComponent<CharacterAttributes>().LifeSystem.ActualValue() <= 0) yield break;
-        Active(false);
+        Active(true);
         inAction = true;
 		foreach (var character in Characters()) {
 			var characterTurns = character.GetComponent<CharacterAttributes>();
@@ -101,7 +101,7 @@ public class EnemyTurn : MonoBehaviour, IDeath
 			yield return EnemyAttack();
 		}
 		GetComponent<CharacterAttributes>().TurnsForCanAttack = 0;
-        Active(true);
+        Active(false);
         yield return ResetTurn();
     }
 

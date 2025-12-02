@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class BattleTutorial : MonoBehaviour
 {
+	[SerializeField] private BattleApplyConfig config;
     public bool hasTutorial;
     [SerializeField] private GameObject[] tutoriais;
     [SerializeField] private SelectWithKeyboard[] keyboard;
@@ -22,6 +23,7 @@ public class BattleTutorial : MonoBehaviour
     }
 
     private IEnumerator Active() {
+		config.battleConfigSO.hasDialog = false;
         hasTutorial = false;
         StatesUIButton(false);
         StatesKeyboardSelect(false);

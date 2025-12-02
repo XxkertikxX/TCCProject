@@ -23,7 +23,7 @@ public class PlayerCharactersSkills : MonoBehaviour
 		float manaConsume = CharStatus().Skills[posSkill].ManaConsume;
         if(enemy.LowestManaConsume() + manaConsume > ManaSystem.Mp.ActualValue()) {
             dialogUI.active = true;
-            useDialogSkill.active = true;
+            useDialogSkill.active = false;
         }
         else { dialogUI.active = false; useDialogSkill.active = false;}
         if (ManaSystem.Mp.CanChangeResource(manaConsume)) {

@@ -17,4 +17,8 @@ public class StatusCharacters : ScriptableObject
 	public float DamageReduction() {
 		return 50/(50+Defense);
 	}
+	
+	public StatusCharacters Clone() {
+        return (StatusCharacters)this.MemberwiseClone();
+    }
 }
