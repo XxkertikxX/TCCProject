@@ -46,7 +46,9 @@ public class EnemyTurn : MonoBehaviour, IDeath
         if(Characters().Length == 0) {
             for (int i = 0; i < characters.Length; i++) {
                 characters[i].Xp = xpInicial[i];
-            }            
+            }
+            StartCoroutine(EveryoneDied());
+            
         }
         Stun.SetActive(GetComponent<CharacterAttributes>().TurnsForCanAttack > 0);
     }
@@ -72,7 +74,7 @@ public class EnemyTurn : MonoBehaviour, IDeath
         foreach (var character in charactersLevel) {
             yield return character.UpLevel();
         }
-        StartCoroutine(EveryoneDied());
+        Save(true);
     }
 
 
