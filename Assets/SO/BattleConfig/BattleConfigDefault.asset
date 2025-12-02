@@ -22,5 +22,5 @@ MonoBehaviour:
   Index: 1
   Text: {fileID: 0}
   Icons: {fileID: 0}
-  hasDialog: 1
+  hasDialog: 0
   hasTutorial: 0

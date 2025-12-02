@@ -33,6 +33,7 @@ public class LevelUp : MonoBehaviour
 		HUD.SetActive(false);
 		Dialogs.SetActive(false);
 		UI.SetActive(true);
+		Level.SetActive(true);
 
 		while (xpRemainingToAnimate > 0) {
 			float xpNeeded = XpToNext - (character.Xp % XpToNext);
