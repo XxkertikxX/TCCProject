@@ -218,7 +218,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.6822631
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -488,13 +488,17 @@ MonoBehaviour:
   - name: MorcegoDamage
     sounds:
     - {fileID: 8300000, guid: 1d4ecb4904f83d344a865d7c40ae3fec, type: 3}
+    - {fileID: 8300000, guid: 04e0f8ee669a8fe438f7237c3e481de6, type: 3}
   - name: MorcegoDefeaty
     sounds:
     - {fileID: 8300000, guid: 643312ab7455a1343b3698f0fc0d2f88, type: 3}
+    - {fileID: 8300000, guid: 560cf4c80eb0b66428ec2bf38cf08055, type: 3}
   - name: MarceloAttack1
-    sounds: []
+    sounds:
+    - {fileID: 8300000, guid: a749f2d3d7ecee749b85f484ea1a274e, type: 3}
   - name: MarceloAttack2
-    sounds: []
+    sounds:
+    - {fileID: 8300000, guid: be0bb76e82a28d94183d2fb006a226d5, type: 3}
   - name: MarceloDamage
     sounds: []
   - name: MarceloDefeaty

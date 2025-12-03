@@ -11,8 +11,6 @@ public class MusicPlayer : MonoBehaviour
     [SerializeField] private AudioSource musicAudioSource;
     public static float musicVolume;
 
-    private bool fadeTransition = false;
-
     private void Awake() //fazer fade in e out da musica
     {
         instance = this;

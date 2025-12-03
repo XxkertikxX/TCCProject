@@ -15,4 +15,9 @@ public class ChangeScene : MonoBehaviour
             _sceneFade.EnterEnviromentScene(sceneName);
         }
     }
+
+    public void PlayScene()
+    {
+        _sceneFade.EnterEnviromentScene(sceneName);
+    }
 }

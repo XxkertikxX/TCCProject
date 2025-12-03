@@ -4,12 +4,8 @@ using UnityEngine;
 public class PingPongCloud : MonoBehaviour
 {
     [SerializeField] private Transform[] positionGOs;
-    private bool reachedPointRight = false;
-    private Coroutine coroutine = null;
     [SerializeField] private float moveSpeed = 2f;
     [SerializeField] private float waitTime = 2f;
-
-    private bool isMoving = false;
 
 
     private void OnCollisionEnter2D(Collision2D collision)

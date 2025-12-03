@@ -47,6 +47,6 @@ public class ButtonFadeEffect : MonoBehaviour
     }
 
     public void ButtonClicked(string sceneName) {
-        GetComponent<WaitAndLoad>().Play(sceneName);
+        SceneFade.instance.EnterEnviromentScene(sceneName);
     }
 }

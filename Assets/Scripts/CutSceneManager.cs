@@ -24,6 +24,6 @@ public class CutSceneManager : MonoBehaviour
 
     private void OnVideoEnd(VideoPlayer player)
     {
-        GetComponent<WaitAndLoad>().Play(NextScene);
+        SceneFade.instance.EnterEnviromentScene(NextScene);
     }
 }
